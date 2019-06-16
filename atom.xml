@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://borber.github.io</id>
     <title>BORBER</title>
-    <updated>2019-06-16T17:52:38.720Z</updated>
+    <updated>2019-06-16T17:55:12.324Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://borber.github.io"/>
     <link rel="self" href="https://borber.github.io/atom.xml"/>
@@ -16,7 +16,13 @@
         <link href="https://borber.github.io/post/kde">
         </link>
         <updated>2019-06-16T17:51:16.000Z</updated>
-        <content type="html"><![CDATA[<h2 id="1-系统部分">1. 系统部分：</h2>
+        <summary type="html"><![CDATA[<p>困于Linux美化良久
+今作教程记录历程</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>困于Linux美化良久
+今作教程记录历程</p>
+<!-- more -->
+<h2 id="1-系统部分">1. 系统部分：</h2>
 <p>​</p>
 <h4 id="1主题">1.主题</h4>
 <p>​
