@@ -1,329 +1,281 @@
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8" />
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>BORBER</title>
-<link rel="shortcut icon" href="https://borber.github.io/favicon.ico?v=1560791634204">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<title>
+    BUG | BORBER
+</title>
+<link rel="shortcut icon" href="https://borber.github.io/favicon.ico?v=1560791736327">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://borber.github.io/styles/main.css">
-
-
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://borber.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
 <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
 <script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
 
-<!-- DEMO JS -->
-<script src="media/scripts/index.js"></script>
 
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-142130514-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
 
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
 
-  </head>
-  <body>
-    <div class="main layout">
-      <header class="header">
-  <h1>
-    <a href="/" title="BORBER">
-      BORBER
-    </a>
-  </h1>
-  <nav>
-    <h2>导航</h2>
+        gtag('config', 'UA-142130514-1');
+    </script>
     
-      <li>
-        
-          <a
-            href="/"
-            title="首页"
-            class="">首页</a>
-        
-      </li>
-    
-      <li>
-        
-          <a
-            href="/post/about"
-            title="关于"
-            class="">关于</a>
-        
-      </li>
-    
-      <li>
-        
-          <a
-            href="https://borber.github.io/tag/oH1pINPLi"
-            title="BUG"
-            class="active">BUG</a>
-        
-      </li>
-    
-      <li>
-        
-          <a
-            href="https://borber.github.io/tag/JlXEuRwI4"
-            title="Manjaro"
-            class="">Manjaro</a>
-        
-      </li>
-    
-      <li>
-        
-          <a
-            href="https://borber.github.io/tag/CnDx3GpBp"
-            title="KDE"
-            class="">KDE</a>
-        
-      </li>
-    
-      <li>
-        
-          <a
-            href="https://borber.github.io/tag/Wes_HVTVd"
-            title="Linux"
-            class="">Linux</a>
-        
-      </li>
-    
-      <li>
-        
-          <a
-            href="https://borber.github.io/tag/3YQBc-530"
-            title="桌面"
-            class="">桌面</a>
-        
-      </li>
-    
-      <li>
-        
-          <a
-            href="https://borber.github.io/tag/gridea"
-            title="Gridea"
-            class="">Gridea</a>
-        
-      </li>
-    
-      <li>
-        
-          <a
-            href="https://borber.github.io/tag/7WZTvl4GD"
-            title="美化"
-            class="">美化</a>
-        
-      </li>
-    
-  </nav>
-</header>
-      <div class="main">
-        <article class="main-banner">
-  <h2 id="banner">推荐内容</h2>
-  <div class="main-banner-content">
-    <img class="banner-img" src="https://www.z4a.net/images/2019/06/17/LonelyParade.jpg" :alt="post.frontmatter['cover-title']" :title="post.frontmatter['cover-title']"/>
-    <div class="slot">
-      <img
-        class="avatar"
-        src="https://borber.github.io/images/avatar.png"
-        title="作者头像"/>
-      <ul>
-        <li class="label">
-          
-            <span>BUG</span>
-          
-            <span>Manjaro</span>
-          
-            <span>KDE</span>
-          
-            <span>Linux</span>
-          
-            <span>桌面</span>
-          
-        </li>
-        <li class="author-title">
-          <a
-            href="https://borber.github.io/post/kde-without-bug"
-            title="KDE without BUG"
-            >KDE without BUG</a>
-        </li>
-        <li class="author-desc">
-          <span></span> 
-          <span class="split-symbol">|</span>
-          <span>2019-06-17</span></li>
-      </ul>
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://borber.github.io">
+                <img class="avatar" src="https://borber.github.io/images/avatar.png?v=1560791736327" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    BORBER
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
     </div>
-  </div>
-  <ul class="img-list">
-   
-      <li :class="{
-          'active': index === bannerIndex
-        }">
-        <img src="https://www.z4a.net/images/2019/06/17/LonelyParade.jpg" title="KDE without BUG" />
-        <div class="mask"></div>
-        <a href="https://borber.github.io/post/kde-without-bug"></a>
-      </li>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-container main-container">
+                <div id="content" class="main-container-left">
+                    
+    <div class="i-card">
+        <b>标签：#
+        BUG</b>
+    </div>
     
-      <li :class="{
-          'active': index === bannerIndex
-        }">
-        <img src="https://www.z4a.net/images/2019/06/17/wlop-6.jpg" title="Linux Gridea repair" />
-        <div class="mask"></div>
-        <a href="https://borber.github.io/post/linux-gridea-repair"></a>
-      </li>
-    
-  </ul>
-</article>
-        <article class="main-list">
-  <h2 id="page">
-    <span class="txt">
-      最新BUG
-    </span>
-    <span class="line"></span>
-  </h2>
-  <ul class="main-list-content">
-    
-      
-        <li>
-          <ul>
-            <li class="mask">
-  <img
-  class="avatar"
-  src="https://borber.github.io/images/avatar.png"
-  title="作者头像" />
-  <ul>
-    <li class="label">
-  
-    <span>BUG</span>
-  
-    <span>Manjaro</span>
-  
-    <span>KDE</span>
-  
-    <span>Linux</span>
-  
-    <span>桌面</span>
-  
-</li>
-    <li class="title">
-  <a
-    href="https://borber.github.io/post/kde-without-bug"
-    title="KDE without BUG"
-    >KDE without BUG</a>
-</li>
-    <li class="author">
-      <span>JackLiu</span>
-<span class="split-symbol">|</span>
-<span>2019-06-17</span>
-    </li>
-  </ul>
-</li>
+        
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://borber.github.io/post/kde-without-bug">
+                        KDE without BUG
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-06-17</time>
+                    
+                        <a href="https://borber.github.io/tag/oH1pINPLi" class="post-tag i-tag
+                            i-tag-warning">
+            #BUG
+        </a>
+                        
+                        <a href="https://borber.github.io/tag/JlXEuRwI4" class="post-tag i-tag
+                            i-tag-other_2">
+            #Manjaro
+        </a>
+                        
+                        <a href="https://borber.github.io/tag/CnDx3GpBp" class="post-tag i-tag
+                            i-tag-other_1">
+            #KDE
+        </a>
+                        
+                        <a href="https://borber.github.io/tag/Wes_HVTVd" class="post-tag i-tag
+                            i-tag-">
+            #Linux
+        </a>
+                        
+                        <a href="https://borber.github.io/tag/3YQBc-530" class="post-tag i-tag
+                            i-tag-warning">
+            #桌面
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://borber.github.io/post/kde-without-bug" class="post-feature-image" style="background-image:url(https://www.z4a.net/images/2019/06/17/LonelyParade.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                    <div class="post-content-abstract">
+                                        <p>​		本文旨在收集Manjaro KDE 系统在日常使用中的BUG解决办法.与君共享.</p>
+
+                                    </div>
+                                    
+                                            <a class="btn btn-text" href="https://borber.github.io/post/kde-without-bug">Read More ~</a>
+                            </div>
+                </div>
+            </article>
             
-<li class="img-wrapper">
-  <img 
-    src="https://www.z4a.net/images/2019/06/17/LonelyParade.jpg" 
-    title="awa" />
-</li>
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://borber.github.io/post/linux-gridea-repair">
+                        Linux Gridea repair
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-06-17</time>
+                    
+                        <a href="https://borber.github.io/tag/oH1pINPLi" class="post-tag i-tag
+                            i-tag-warning">
+            #BUG
+        </a>
+                        
+                        <a href="https://borber.github.io/tag/Wes_HVTVd" class="post-tag i-tag
+                            i-tag-other_3">
+            #Linux
+        </a>
+                        
+                        <a href="https://borber.github.io/tag/gridea" class="post-tag i-tag
+                            i-tag-warning">
+            #Gridea
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://borber.github.io/post/linux-gridea-repair" class="post-feature-image" style="background-image:url(https://www.z4a.net/images/2019/06/17/wlop-6.jpg) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                    <div class="post-content-abstract">
+                                        <p>​		在我从原始的Hexo 管理博客,转向 <strong><a href="https://gridea.dev">Gridea</a></strong> 时,我遇到了如下的错误:</p>
 
-
-            <li class="desc-text">&lt;p&gt;​		本文旨在收集Manjaro KDE 系统在日常使用中的BUG解决办法.与君共享.&lt;/p&gt;
-</li>
-
-          </ul>
-        </li>
-      
-      
-      
-      
-      
-    
-      
-      
-        <li>
-          <ul>
+                                    </div>
+                                    
+                                            <a class="btn btn-text" href="https://borber.github.io/post/linux-gridea-repair">Read More ~</a>
+                            </div>
+                </div>
+            </article>
             
-<li class="img-wrapper">
-  <img 
-    src="https://www.z4a.net/images/2019/06/17/wlop-6.jpg" 
-    title="awa" />
-</li>
+                <!-- 翻页 -->
+                
+                </div>
+                <!--  -->
+                <div class="main-container-middle"></div>
+                <!--  -->
+                <div id="sidebar" class="main-container-right">
+
+                    <!-- 个人信息 -->
+                    
+    <div class="id_card i-card">
+        <div class="id_card-avatar" style="background-image: url(https://borber.github.io/images/avatar.png?v=1560791736327)">
+        </div>
+        <h1 class="id_card-title">
+            BORBER
+        </h1>
+        <h2 class="id_card-description">
+            世俗为枷锁 世人皆自缚
+        </h2>
+        <!--  -->
+        <div class="id_card-sns">
+            <!-- github -->
+            
+                <a href="https://github.com/Borber" target="_blank" rel="noopener noreferrer"><i
+                class="fa fa-github"></i></a>
+                
+                    <!-- twitter -->
+                    
+                            <!-- weibo -->
+                            
+                                    <!-- facebook -->
+                                    
+
+        </div>
+    </div>
+    
+
+                        <!-- 公告栏 -->
+                        
+    <div class="notice-card i-card ">
+        <div class="notice-title i-card-title">公告</div>
+        <div class="notice-content">
+            寥寥
+        </div>
+    </div>
+    
+
+                </div>
+            </div>
 
 
-            <li class="desc-text">&lt;p&gt;​		在我从原始的Hexo 管理博客,转向 &lt;strong&gt;&lt;a href=&#34;https://gridea.dev&#34;&gt;Gridea&lt;/a&gt;&lt;/strong&gt; 时,我遇到了如下的错误:&lt;/p&gt;
-</li>
 
-            <li class="mask">
-  <img
-  class="avatar"
-  src="https://borber.github.io/images/avatar.png"
-  title="作者头像" />
-  <ul>
-    <li class="label">
-  
-    <span>BUG</span>
-  
-    <span>Linux</span>
-  
-    <span>Gridea</span>
-  
-</li>
-    <li class="title">
-  <a
-    href="https://borber.github.io/post/linux-gridea-repair"
-    title="Linux Gridea repair"
-    >Linux Gridea repair</a>
-</li>
-    <li class="author">
-      <span>JackLiu</span>
-<span class="split-symbol">|</span>
-<span>2019-06-17</span>
-    </li>
-  </ul>
-</li>
-          </ul>
-        </li>
-      
-      
-      
-      
-    
-  </ul>
-  <ul class="page-turn">
-    
-    
-  </ul>
-</article>
-        <footer class="footer">
-  <ul class="footer-left">
-    <li>
-      <a
-        @click.stop.prevent="$router.push('/other/disclaimer.html')"
-        href="/disclaimer.html"
-        title="免责声明">免责声明</a>
-    </li>
-    <li>© 2016-2019 dddog.com.cn</li>
-  </ul>
-  <ul class="footer-right">
-    <li class="">
-      开发 <a href="https://github.com/xianyukeji" target="_blank">咸鱼科技</a>，设计 <a href="https://dribbble.com/unnoman" target="_blank">Abdullah Un Noman</a></li>
-    <li>湘ICP备16020843号</li>
-  </ul>
-</footer>
+            <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | 
+  <a class="rss" href="https://borber.github.io/atom.xml" target="_blank">RSS</a>
+</div>
 
 <script>
   hljs.initHighlightingOnLoad()
 </script>
 
-      </div>
     </div>
-    <script src="https://cdn.bootcss.com/vue/2.6.10/vue.common.dev.js"></script>
     <script>
-      const posts = [{"content":"<p>​\t\t本文旨在收集Manjaro KDE 系统在日常使用中的BUG解决办法.与君共享.</p>\n<!-- more -->\n<p>​\t\t在 KDE的日常使用中,不免会有很多的BUG,这其中有一部分是Linux系统本身的不和谐导致的.但是不可否认的是,有一部分就是因为简单的打包不当,或者因为一个特殊的设置原因罢了.</p>\n<ol>\n<li>\n<p>搜狗输入法 安装 及 BUG 修复</p>\n<pre><code>#使用 yay 包管理\nsudo pacman -S yay\n#下面的默认全选\nsudo yay -S fcitx-sogoupinyin fcitx-configtool fcitx-im\n#因为源的问题 往后如果恢复 可不做\nsudo pacman -U https://arch-archive.tuna.tsinghua.edu.cn/2019/04-29/community/os/x86_64/fcitx-qt4-4.2.9.6-1-x86_64.pkg.tar.xz\n#建议写入 .xprofile 没有的话 就没关系 vim会自己创建\nvim ~/.xprofie\n#在文件末尾写入以下三行：\nGTK_IM_MODULE=fcitx\nQT_IM_MODULE=fcitx\nXMODIFIERS=&quot;@im=fcitx&quot;\n按 ESC \n输入 :wq 回车\n#要是重启后搜狗还是麻烦用要是重启后搜狗还是麻烦用，应该是少了fcitx-qt4，\n#执行下面的命令\nsudo yay -S fcitx-qt4\nreboot\n</code></pre>\n</li>\n<li>\n<p>deepin.com.qq.office 无法启动 (其他基于deepin-wine的同理)</p>\n<pre><code>yay -S gnome-settings-daemon\nsudo cp /etc/xdg/autostart/org.gnome.SettingsDaemon.XSettings.desktop ~/.config/autostart/\n\n#将GNOME Setting的自启动选项打上勾即可。\n</code></pre>\n</li>\n<li>\n<p>网易云音乐 无法输入中文</p>\n<pre><code>vim /usr/share/applications/netease-cloud-music.desktop\n#修改\nExec=/opt/netease/netease-cloud-music/netease-cloud-music %U\nyay -S vlc\nrebooot\n</code></pre>\n</li>\n<li>\n<p>Deepin-TIM或Deepin-QQ调整界面DPI字体大小的方法</p>\n<pre><code>#首先退出 QQ 或 TIM\n#进 gotop dd 可以彻底关闭\nnv WINEPREFIX=&quot;$HOME/.deepinwine/Deepin-TIM&quot; winecfg\n#显示 中 设置dpi 建议120\n</code></pre>\n</li>\n<li>\n<p>科学上网 <a href=\"https://github.com/shadowsocksrr/electron-ssr/releases/download/v0.2.7/electron-ssr-0.2.7.tar.gz\">下载地址</a></p>\n<pre><code>#先下载文件进入下载目录\nyay -U electron-ssr-0.2.7.tar.gz\n</code></pre>\n</li>\n<li>\n<p>远程协助软件 TeamViewer 无法连接</p>\n<pre><code>sudo systemctl enable teamviewerd\nreboot\n</code></pre>\n</li>\n<li>\n<p>Manjaro安装virtualbox并安装扩展</p>\n<pre><code>#包管理器搜索virtualbox\n#安装一下包\n#Oracle VM VirtualBox (virtualbox)\nvirtualbox-ext-oracle\nlinux XXX(内核版本)-virtualbox-guest-mmodules\nlinux XXX(内核版本)-virtualbox-host-mmodules\n#扩展包已经安装但是需要设置\nsudo gpasswd -a $USER vboxusers\nsudo modprobe vboxdrv\nreboot\n</code></pre>\n<p>待续</p>\n<p>​    解决方法部分来自 网络 部分来自 QQ群: <a href=\"https://jq.qq.com/?_wv=1027&amp;k=5zjyKCP\">478058928</a> [Manjaro-Linux交流群] 在此感谢</p>\n</li>\n</ol>\n","fileName":"kde-without-bug","abstract":"<p>​\t\t本文旨在收集Manjaro KDE 系统在日常使用中的BUG解决办法.与君共享.</p>\n","title":"KDE without BUG","tags":[{"index":-1,"name":"BUG","slug":"oH1pINPLi","used":true,"link":"https://borber.github.io/tag/oH1pINPLi"},{"index":-1,"name":"Manjaro","slug":"JlXEuRwI4","used":true,"link":"https://borber.github.io/tag/JlXEuRwI4"},{"index":-1,"name":"KDE","slug":"CnDx3GpBp","used":true,"link":"https://borber.github.io/tag/CnDx3GpBp"},{"index":-1,"name":"Linux","slug":"Wes_HVTVd","used":true,"link":"https://borber.github.io/tag/Wes_HVTVd"},{"index":-1,"name":"桌面","slug":"3YQBc-530","used":true,"link":"https://borber.github.io/tag/3YQBc-530"}],"date":"2019-06-17 18:00:43","dateFormat":"2019-06-17","feature":"https://www.z4a.net/images/2019/06/17/LonelyParade.jpg","link":"https://borber.github.io/post/kde-without-bug","hideInList":false,"toc":""},{"content":"<p>​\t\t在我从原始的Hexo 管理博客,转向 <strong><a href=\"https://gridea.dev\">Gridea</a></strong> 时,我遇到了如下的错误:</p>\n<!-- more -->\n<p><img src=\"https://www.z4a.net/images/2019/06/17/18.png\" alt=\"18.png\"></p>\n<p>​\t\t这是在我点击尝试远程连接时,调试台出现的报错信息.但是我不知道问题具体出在哪里,我尝试过与 <strong>Gridea</strong> 的官方人员进行交流,在进行了TeamViewer的远程协助之后,还是无法解决,但是在我询问官方人员,能否直接进行git初始化时,他回到道:“那样可能可以链接,但同步可能不行”,我意识到了这可能是一个正确的方向.</p>\n<p>​\t\t于是我成功了.</p>\n<p>​\t\t我的平台是: Manjaro KDE,Git</p>\n<h3 id=\"解决方案\">解决方案:</h3>\n<ol>\n<li>\n<p>按照官方的配置,设置好所有选项.</p>\n</li>\n<li>\n<p>进入 <strong>Gridea</strong> 的根目录 删除 output 文件夹</p>\n<pre><code>rm -rf optput\n</code></pre>\n</li>\n<li>\n<p>将你将要部署的仓库clone到 <strong>Gridea</strong> 根目录下</p>\n<pre><code>git clone git@github.com:NAME/RNAME.git\n</code></pre>\n</li>\n<li>\n<p>修改 clone到本地的仓库文件夹名 为 output</p>\n<pre><code>mv RNAME output\n</code></pre>\n</li>\n<li>\n<p>测试连接性 : <mark oncopy=\" \">成功</mark></p>\n</li>\n</ol>\n<p>以上.</p>\n<p>​\t\t以及在使用 <strong>Gridea</strong> 部署时出现网站显示效果与本地预览不一致时,请尝试使用浏览器无痕模式访问查看.如果是正确的那么是OK的.等一段时间,正常的浏览也会变回正确样式</p>\n<p><span class=\"katex\"><span class=\"katex-mathml\"><math><semantics><mrow><mstyle mathcolor=\"DarkTurquoise\"><mrow><mi mathvariant=\"normal\">以</mi><mi mathvariant=\"normal\">及</mi><mo>:</mo></mrow></mstyle></mrow><annotation encoding=\"application/x-tex\">\\color{DarkTurquoise}{以及:}</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"base\"><span class=\"strut\" style=\"height:0.43056em;vertical-align:0em;\"></span><span class=\"mord\" style=\"color:DarkTurquoise;\"><span class=\"mord cjk_fallback\" style=\"color:DarkTurquoise;\">以</span><span class=\"mord cjk_fallback\" style=\"color:DarkTurquoise;\">及</span><span class=\"mspace\" style=\"color:DarkTurquoise;margin-right:0.2777777777777778em;\"></span><span class=\"mrel\" style=\"color:DarkTurquoise;\">:</span></span></span></span></span>  在自定义设置中设置 rss 链接为 /atom.xml 就好</p>\n","fileName":"linux-gridea-repair","abstract":"<p>​\t\t在我从原始的Hexo 管理博客,转向 <strong><a href=\"https://gridea.dev\">Gridea</a></strong> 时,我遇到了如下的错误:</p>\n","title":"Linux Gridea repair","tags":[{"index":-1,"name":"BUG","slug":"oH1pINPLi","used":true,"link":"https://borber.github.io/tag/oH1pINPLi"},{"index":-1,"name":"Linux","slug":"Wes_HVTVd","used":true,"link":"https://borber.github.io/tag/Wes_HVTVd"},{"name":"Gridea","slug":"gridea","used":true,"link":"https://borber.github.io/tag/gridea"}],"date":"2019-06-17 13:47:08","dateFormat":"2019-06-17","feature":"https://www.z4a.net/images/2019/06/17/wlop-6.jpg","link":"https://borber.github.io/post/linux-gridea-repair","hideInList":false,"toc":"<ul class=\"markdownIt-TOC\">\n<li>\n<ul>\n<li>\n<ul>\n<li><a href=\"#%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88\">解决方案:</a></li>\n</ul>\n</li>\n</ul>\n</li>\n</ul>\n"}]
-      new Vue({
-        el: '#swiper',
-        data() {
-          return {
-            posts
-          }
-        }
-      })
-      console.log(posts)
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
     </script>
-  </body>
-</html>
+</body>
 
+</html>
