@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://borber.github.io</id>
     <title>BORBER</title>
-    <updated>2019-06-17T07:42:06.511Z</updated>
+    <updated>2019-06-17T08:03:21.785Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://borber.github.io"/>
     <link rel="self" href="https://borber.github.io/atom.xml"/>
@@ -45,7 +45,7 @@
 </code></pre>
 </li>
 <li>
-<p>测试连接性 : <code>成功</code></p>
+<p>测试连接性 : <mark oncopy=" ">成功</mark></p>
 </li>
 </ol>
 <p>以上.</p>
