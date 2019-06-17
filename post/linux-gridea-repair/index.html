@@ -1,193 +1,198 @@
-<!DOCTYPE html>
+
 <html>
-  <head>
-    <meta charset="utf-8" >
+  <head lang="zh">
+        <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"/>
+        <meta content="yes" name="apple-mobile-web-app-capable"/>
+        <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+        <meta content="telephone=no" name="format-detection"/>
+        <meta name="renderer" content="webkit">
+    <title>Linux Gridea repair | BORBER</title>
+<link href="https://borber.github.io/styles/main.css" type="text/css" rel="stylesheet"/>
+<script type="text/javascript" src="https://borber.github.io/media/scripts/jquery.js"></script>
+<script type="text/javascript" src="https://borber.github.io/media/scripts/basic.js"></script>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
 
-<title>Linux Gridea repair | BORBER</title>
-<meta name="description" content="世俗为枷锁 世人皆自缚">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://borber.github.io/favicon.ico?v=1560791349396">
-<!--字体-->
-<link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Libre+Barcode+39" rel="stylesheet">
-<!--主要CSS-->
-<link rel="stylesheet" href="https://borber.github.io/styles/main.css">
-<style type="text/css">
-      .tilt{
-        margin: 0;
-        overflow: hidden;
-        width: 100vw;
-        height: 100vh;
-        background: #49beb7;
-        background: linear-gradient(to top left, #4CB8C4 -40%, #2196F3);
-        position:fixed;
-        top:0;
-        left:0;
-        z-index: 999 !important;
-      }
-      .container {
-        position: absolute;
-        top:0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        width: 250px;
-        height: 250px;
-        margin: auto;
-      }
-
-      .part {
-        width: 250px;
-        position: absolute;
-      }
-
-      .svgpath {
-        fill: rgba(145,220,90,0);
-        stroke: aqua;
-        stroke-width: 1.5px;
-        stroke-dasharray: 1000;
-        stroke-linecap: round;
-        z-index: 2;
-      }
-
-      .svgbg {
-        fill: rgba(255,255,255,0.2);
-        z-index: 1;
-       }
-
-      #playload {
-        animation: dash 2.5s reverse ease-in-out infinite;
-      }
-
-      @keyframes dash {
-        to {
-          stroke-dashoffset: 2000;
-        }
-      }</style>
-
-
-  
-    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
-  
-
-  
-
-
-
-<script src="https://borber.github.io/media/dict/js/Vue.js"></script>
-<script src="https://borber.github.io/media/dict/js/JQuery.js"></script>
-<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
-<link rel="stylesheet" href="https://borber.github.io/media/dict/css/aos.css" />
-
-
-
-
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-142130514-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-142130514-1');
+</script>
 
   </head>
+
   <body>
-    <div class="tilt">
-      <div class='container'>
-        <svg class='part' x="0px" y="0px" viewBox="0 0 256 256" style="enable-background:new 0 0 256 256;" xml:space="preserve">
-          <path class="svgpath" id="playload" d="M189.5,140.5c-6.6,29.1-32.6,50.9-63.7,50.9c-36.1,0-65.3-29.3-65.3-65.3
-        c0,0,17,0,23.5,0c10.4,0,6.6-45.9,11-46c5.2-0.1,3.6,94.8,7.4,94.8c4.1,0,4.1-92.9,8.2-92.9c4.1,0,4.1,83,8.1,83
-        c4.1,0,4.1-73.6,8.1-73.6c4.1,0,4.1,63.9,8.1,63.9c4.1,0,4.1-53.9,8.1-53.9c4.1,0,4.1,44.1,8.2,44.1c4.1,0,3.1-34.5,7.2-34.5
-        c4.1,0,3.1,24.6,7.2,24.6c4.1,0,2.5-14.5,5.2-14.5c2.2,0,0.8,5.1,4.2,4.9c0.4,0,13.1,0,13.1,0c0-34.4-27.9-62.3-62.3-62.3
-        c-27.4,0-50.7,17.7-59,42.3" />
+     <div class="header">
+      <div class="logo_title">
+		  
+        <div class="title animated fadeInDown"><img src="https://borber.github.io/images/avatar.png?v=1560791478409"/>
 
-          <path class="svgbg" d="M61,126c0,0,16.4,0,23,0c10.4,0,6.6-45.9,11-46c5.2-0.1,3.6,94.8,7.4,94.8c4.1,0,4.1-92.9,8.2-92.9
-        c4.1,0,4.1,83,8.1,83c4.1,0,4.1-73.6,8.1-73.6c4.1,0,4.1,63.9,8.1,63.9c4.1,0,4.1-53.9,8.1-53.9c4.1,0,4.1,44.1,8.2,44.1
-        c4.1,0,3.1-34.5,7.2-34.5c4.1,0,3.1,24.6,7.2,24.6c4.1,0,2.5-14.5,5.2-14.5c2.2,0,0.8,5.1,4.2,4.9c0.4,0,22.5,0,23,0" />
-        </svg></div> 
+          <h1 title="BORBER" class="weaklink"><a href="/">BORBER</a>
+
+          </h1>
+
+          <div class="navbar weaklink">
+            <div class="normal_nav">
+
+<div class="bitcron_nav_container">
+
+
+  <div class="bitcron_nav">
+    <div class="mixed_site_nav_wrap site_nav_wrap">
+		
+      <ul class="mixed_site_nav site_nav sm sm-base">
+ 
+  <li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/" class="selected active current nav__item" >首页</a>
+
+  </li>
+ 
+  <li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/archives" class="selected active current nav__item" >归档</a>
+
+  </li>
+ 
+  <li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/tags" class="selected active current nav__item" >标签</a>
+
+  </li>
+ 
+  <li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/post/about" class="selected active current nav__item" >关于</a>
+
+  </li>
+ 
+
+      </ul>
+
+      <div class="clear clear_nav_inline_end"></div>
+
     </div>
-    <div id="app" class="main">
-
-      <div class="sidebar" :class="{ 'full-height': menuVisible }">
-
-  <div class="overlay"></div>
-  <div class="top-container" data-aos="fade-right">
-    <!--头像-->
-    <div class="top-header-container">
-      <a class="site-title-container" href="https://borber.github.io">
-        <img src="https://borber.github.io/images/avatar.png?v=1560791349396" class="site-logo">
-      </a>
-      <h1 class="site-title">
-            BORBER
-            <p>寥寥</p>
-        </h1>
-    </div>
-    <!--导航-->
-    <div class="top-header-nav">
-
-
-      
-        
-          <a href="/" class="site-nav">
-            首页
-          </a>
-        
-      
-        
-          <a href="/archives" class="site-nav">
-            归档
-          </a>
-        
-      
-        
-          <a href="/tags" class="site-nav">
-            标签
-          </a>
-        
-      
-        
-          <a href="/post/about" class="site-nav">
-            关于
-          </a>
-        
-      
-    </div>
-    <div class="icons">
-        <ul>
-          <li v-for="(le,index) in alin.like">
-            <a :href="le.aim" :alt="le.alt">
-              <img :src="le.src" />
-            </a>
-          </li>
-        </ul>
-    </div> 
 
   </div>
 
 
-  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
-      <div class="site-footer">
-          Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
-      </div>
-      <div class="site-description">
-          <p>©2019<a href="#">世俗为枷锁 世人皆自缚</a></p>
-          <p>
-            X0
-            <span>&nbsp;</span>
-            Powered by <a href="https://gridea.dev">Gridea</a>
-            <span>•</span>Theme <a href="http://www.itaolaity.com/">Alin</a>
-          </p>
-      </div>
-  </div>
+
+  <div class="clear clear_nav_end"></div>
+
 </div>
 
+            </div>
+
+            <div class="hamberger"><i class="fa fa-bars"></i>
+<i class="fa fa-times"></i>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="hidden_nav animated fadeInDown">
+
+<div class="bitcron_nav_container">
 
 
-      <div class="main-container">
-        <div class="content-container" data-aos="fade-up">
-          <div class="post-detail">
-            <h2 class="post-title">Linux Gridea repair</h2>
-            <div class="post-date">2019-06-17</div>
-            
-              <div class="feature-container" style="background-image: url('https://www.z4a.net/images/2019/06/17/wlop-6.jpg')">
-              </div>
-            
-            <div class="post-content">
-              <p>​		在我从原始的Hexo 管理博客,转向 <strong><a href="https://gridea.dev">Gridea</a></strong> 时,我遇到了如下的错误:</p>
+  <div class="bitcron_nav">
+    <div class="mixed_site_nav_wrap site_nav_wrap">
+      <ul class="mixed_site_nav site_nav sm sm-base">
+		  
+	
+  <li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/" class="selected active current nav__item" >首页</a>
+
+  </li>
+
+
+  <li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/archives" class="selected active current nav__item" >归档</a>
+
+  </li>
+
+
+  <li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/tags" class="selected active current nav__item" >标签</a>
+
+  </li>
+
+
+  <li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/post/about" class="selected active current nav__item" >关于</a>
+
+  </li>
+
+
+
+
+
+      </ul>
+
+      <div class="clear clear_nav_inline_end"></div>
+
+    </div>
+
+  </div>
+
+
+
+  <div class="clear clear_nav_end"></div>
+
+</div>
+
+      </div>
+
+    </div>
+
+
+    <div class="main">
+      <div class="main-inner">
+
+
+<div class="content">
+
+
+
+
+
+
+  <div class="post_page" >
+
+<div class="post">
+  <div class="post_title sm_margin">
+    <h2><a>Linux Gridea repair</a>
+
+
+
+    </h2>
+  </div>
+
+  <div class="post_details">
+    <div class="info"><i class="fa fa-clock-o"></i>
+<span class="date_info">2019-06-17</span>
+<i class="fa fa-eye"></i>
+
+<span class="date_info"><span id="busuanzi_value_page_pv"></span> Views</span>
+
+
+<i class="fa fa-bookmark-o"></i>
+<span class="tags_info weaklink">
+	
+	<a href="https://borber.github.io/tag/oH1pINPLi" class="tag">BUG</a>
+
+	<a href="https://borber.github.io/tag/Wes_HVTVd" class="tag">Linux</a>
+
+	<a href="https://borber.github.io/tag/gridea" class="tag">Gridea</a>
+
+
+</span>
+
+
+    </div>
+
+  </div>
+
+
+
+
+
+  <div class="post_content markdown"><p class="md_block">
+    <span class="md_line md_line_start md_line_end"><p>​		在我从原始的Hexo 管理博客,转向 <strong><a href="https://gridea.dev">Gridea</a></strong> 时,我遇到了如下的错误:</p>
 <!-- more -->
 <p><img src="https://www.z4a.net/images/2019/06/17/18.png" alt="18.png"></p>
 <p>​		这是在我点击尝试远程连接时,调试台出现的报错信息.但是我不知道问题具体出在哪里,我尝试过与 <strong>Gridea</strong> 的官方人员进行交流,在进行了TeamViewer的远程协助之后,还是无法解决,但是在我询问官方人员,能否直接进行git初始化时,他回到道:“那样可能可以链接,但同步可能不行”,我意识到了这可能是一个正确的方向.</p>
@@ -220,156 +225,157 @@
 <p>以上.</p>
 <p>​		以及在使用 <strong>Gridea</strong> 部署时出现网站显示效果与本地预览不一致时,请尝试使用浏览器无痕模式访问查看.如果是正确的那么是OK的.等一段时间,正常的浏览也会变回正确样式</p>
 <p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mstyle mathcolor="DarkTurquoise"><mrow><mi mathvariant="normal">以</mi><mi mathvariant="normal">及</mi><mo>:</mo></mrow></mstyle></mrow><annotation encoding="application/x-tex">\color{DarkTurquoise}{以及:}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord" style="color:DarkTurquoise;"><span class="mord cjk_fallback" style="color:DarkTurquoise;">以</span><span class="mord cjk_fallback" style="color:DarkTurquoise;">及</span><span class="mspace" style="color:DarkTurquoise;margin-right:0.2777777777777778em;"></span><span class="mrel" style="color:DarkTurquoise;">:</span></span></span></span></span>  在自定义设置中设置 rss 链接为 /atom.xml 就好</p>
+</p>
 
-            </div>
-            
-              <div class="tag-container">
-                
-                  <a href="https://borber.github.io/tag/oH1pINPLi" class="tag">
-                    BUG
-                  </a>
-                
-                  <a href="https://borber.github.io/tag/Wes_HVTVd" class="tag">
-                    Linux
-                  </a>
-                
-                  <a href="https://borber.github.io/tag/gridea" class="tag">
-                    Gridea
-                  </a>
-                
-              </div>
-            
-            
-              <div class="next-post">
-                <div class="next">下一篇</div>
-                <a href="https://borber.github.io/post/kde">
-                  <h3 class="post-title">
-                    KDE Beautify
-                  </h3>
-                </a>
-              </div>
-            
+     <p class="md_block">
+    <div class="reward"><div class="reward-button">赏 <span class="reward-code"> <span class="alipay-code"> <img class="alipay-img" src="https://borber.github.io/media/images/alipay.png"><b>支付宝扫码打赏</b> </span> <span class="wechat-code"> <img class="wechat-img" src="https://borber.github.io/media/images/wechat.png"><b>微信打赏</b> </span> </span></div></div>
+</p> 
+</div>
 
-            
-              
-                <div id="gitalk-container" data-aos="fade-in"></div>
-              
-
-              
-            
-
-          </div>
-
-        </div>
-      </div>
-    </div>
-
-    <footer>
-	<div class="foo-con">
-    	<p>©2019<a href="#">世俗为枷锁 世人皆自缚</a></p>
-      	<p>
-	        X0
-	        <span>&nbsp;</span>
-	        Powered by <a href="https://gridea.dev">Gridea</a>
-	        <span>•</span>Theme <a href="http://www.itaolaity.com/">Alin</a>
-     	</p>
-    </div>
-</footer>
+</div>
 
 
 
-<script src="https://borber.github.io/media/dict/js/aos.js"></script>
+<link href="https://borber.github.io/styles/main.css" type="text/css" rel="stylesheet"/>
 
-<!--Self-->
+<div class="doc_comments">
+
+          
+            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+
 <script>
-    $(window).on('load',function(){ 
-  　　$('.tilt').fadeOut(1000);
-　　}); 
+
+  var gitalk = new Gitalk({
+    clientID: '46faa605211a1eadeb3a',
+    clientSecret: 'ac6abe30a4d9f21248acb00499811e3d0537f849',
+    repo: 'gitment-comments',
+    owner: 'Borber',
+    admin: ['Borber'],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+
 </script>
 
+          
+			  
+          
+        
+</div>
 
-<script type="application/javascript">
 
-/*动画初始化*/
-AOS.init(
-  {
-  offset: 200,
-  duration: 600,
-  easing: 'ease-in-sine',
-  delay: 100,
-  }
-);
 
-/*代码高亮*/
-hljs.initHighlightingOnLoad()
+  </div>
+</div>
 
-var app = new Vue({
-  el: '#app',
-  data: {
-    menuVisible:false,
-    alin:{
-      like:[
-          {
-            "alt":"我的博客",
-            "aim":"http://www.itaolaity.com/index.php",
-            "src":"http://itaolaity.com/20190429220545.png"
-          },
-          {
-            "alt":"GitHub",
-            "aim":"https://github.com/taoya7",
-            "src":"http://itaolaity.com/20190429220612.png"
-          },
-          {
-            "alt":"Email",
-            "aim":"mailto:569781231@qq.com",
-            "src":"http://itaolaity.com/20190429220636.png"
-          }
-      ]
+
+
+      </div>
+
+
+
+
+    </div>
+
+   <div class="footer">
+<link href="https://borber.github.io/styles/main.css" type="text/css" rel="stylesheet"/><div class="site_footer_wrap"><div class="site_footer">
+
+      <div class="mysocials"><div class="my_socials">
+		   
+			   
+    
+			   
+    
+			   
+    
+			   
+<a href="https://github.com/Borber" title="telegram"><i class="fa fa-github"></i></a>
+
+    
+</div><link href="https://borber.github.io/styles/main.css" type="text/css" rel="stylesheet"/>
+
+      </div>
+
+      <div class="copyright">Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+      </div>
+
+</div></div>
+
+    </div>
+
+
+<style type="text/css">a.back_to_top {
+    text-decoration: none;
+    position: fixed;
+    bottom: 40px;
+    right: 30px;
+    background: #f0f0f0;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    line-height: 36px;
+    font-size: 18px;
+    text-align: center;
+    transition-duration: .5s;
+    transition-propety: background-color;
+    display: none;
+}
+
+a.back_to_top span {
+    color: #888;
+}
+
+a.back_to_top:hover {
+    cursor: pointer;
+    background: #dfdfdf;
+}
+
+a.back_to_top:hover span {
+    color: #555;
+}
+
+@media print, screen and (max-width: 580px) {
+    .back_to_top {
+        display: none !important;
     }
-  }
-});
+}
 
+
+
+</style><a id="back_to_top" href="#" class="back_to_top"><span>△</span>
+</a>
+<script type="text/javascript" src="https://borber.github.io/media/scripts/jquery.js"></script>
+
+<script>$(document).ready((function(_this) {
+  return function() {
+    var bt;
+    bt = $('#back_to_top');
+    if ($(document).width() > 480) {
+      $(window).scroll(function() {
+        var st;
+        st = $(window).scrollTop();
+        if (st > 30) {
+          return bt.css('display', 'block');
+        } else {
+          return bt.css('display', 'none');
+        }
+      });
+      return bt.click(function() {
+        $('body,html').animate({
+          scrollTop: 0
+        }, 800);
+        return false;
+      });
+    }
+  };
+})(this));
 </script>
 
+</body>
 
-
-
-  
-  
-    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
-    <script>
-
-      var gitalk = new Gitalk({
-        clientID: '46faa605211a1eadeb3a',
-        clientSecret: 'ac6abe30a4d9f21248acb00499811e3d0537f849',
-        repo: 'gitment-comments',
-        owner: 'Borber',
-        admin: ['Borber'],
-        id: location.pathname,      // Ensure uniqueness and length less than 50
-        distractionFreeMode: false  // Facebook-like distraction free mode
-      })
-
-      gitalk.render('gitalk-container')
-
-    </script>
-  
-
-  
-
-
-
-
-    <script>
-      //添加SVG代码
-      var svg = '<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="14" viewBox="20"><g fill="none" fill-rule="evenodd" transform="translate(1 1)"><circle cx="6" cy="6" r="6" fill="#FF5F56" stroke="#E0443E" stroke-width=".5"></circle><circle cx="26" cy="6" r="6" fill="#FFBD2E" stroke="#DEA123" stroke-width=".5"></circle><circle cx="46" cy="6" r="6" fill="#27C93F" stroke="#1AAB29" stroke-width=".5"></circle></g></svg>';
-      var code = document.querySelectorAll(".post-content pre code");
-      for(var i=0; i<code.length; i++){
-          code[i].insertAdjacentHTML("beforebegin", svg);
-      }
-      //注册添加Class
-      $('.post-detail h1,h2,h3,h4,h5').addClass("iconfont");
-
-
-    </script>
-  </body>
 </html>
