@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>Hello Gridea | BORBER</title>
+<meta name="description" content="世俗为枷锁 世人皆自缚">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://borber.github.io/favicon.ico?v=1560791349396">
+<!--字体-->
+<link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Libre+Barcode+39" rel="stylesheet">
+<!--主要CSS-->
+<link rel="stylesheet" href="https://borber.github.io/styles/main.css">
+<style type="text/css">
+      .tilt{
+        margin: 0;
+        overflow: hidden;
+        width: 100vw;
+        height: 100vh;
+        background: #49beb7;
+        background: linear-gradient(to top left, #4CB8C4 -40%, #2196F3);
+        position:fixed;
+        top:0;
+        left:0;
+        z-index: 999 !important;
+      }
+      .container {
+        position: absolute;
+        top:0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 250px;
+        height: 250px;
+        margin: auto;
+      }
+
+      .part {
+        width: 250px;
+        position: absolute;
+      }
+
+      .svgpath {
+        fill: rgba(145,220,90,0);
+        stroke: aqua;
+        stroke-width: 1.5px;
+        stroke-dasharray: 1000;
+        stroke-linecap: round;
+        z-index: 2;
+      }
+
+      .svgbg {
+        fill: rgba(255,255,255,0.2);
+        z-index: 1;
+       }
+
+      #playload {
+        animation: dash 2.5s reverse ease-in-out infinite;
+      }
+
+      @keyframes dash {
+        to {
+          stroke-dashoffset: 2000;
+        }
+      }</style>
+
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
+
+
+
+<script src="https://borber.github.io/media/dict/js/Vue.js"></script>
+<script src="https://borber.github.io/media/dict/js/JQuery.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<link rel="stylesheet" href="https://borber.github.io/media/dict/css/aos.css" />
+
+
+
+
+
+  </head>
+  <body>
+    <div class="tilt">
+      <div class='container'>
+        <svg class='part' x="0px" y="0px" viewBox="0 0 256 256" style="enable-background:new 0 0 256 256;" xml:space="preserve">
+          <path class="svgpath" id="playload" d="M189.5,140.5c-6.6,29.1-32.6,50.9-63.7,50.9c-36.1,0-65.3-29.3-65.3-65.3
+        c0,0,17,0,23.5,0c10.4,0,6.6-45.9,11-46c5.2-0.1,3.6,94.8,7.4,94.8c4.1,0,4.1-92.9,8.2-92.9c4.1,0,4.1,83,8.1,83
+        c4.1,0,4.1-73.6,8.1-73.6c4.1,0,4.1,63.9,8.1,63.9c4.1,0,4.1-53.9,8.1-53.9c4.1,0,4.1,44.1,8.2,44.1c4.1,0,3.1-34.5,7.2-34.5
+        c4.1,0,3.1,24.6,7.2,24.6c4.1,0,2.5-14.5,5.2-14.5c2.2,0,0.8,5.1,4.2,4.9c0.4,0,13.1,0,13.1,0c0-34.4-27.9-62.3-62.3-62.3
+        c-27.4,0-50.7,17.7-59,42.3" />
+
+          <path class="svgbg" d="M61,126c0,0,16.4,0,23,0c10.4,0,6.6-45.9,11-46c5.2-0.1,3.6,94.8,7.4,94.8c4.1,0,4.1-92.9,8.2-92.9
+        c4.1,0,4.1,83,8.1,83c4.1,0,4.1-73.6,8.1-73.6c4.1,0,4.1,63.9,8.1,63.9c4.1,0,4.1-53.9,8.1-53.9c4.1,0,4.1,44.1,8.2,44.1
+        c4.1,0,3.1-34.5,7.2-34.5c4.1,0,3.1,24.6,7.2,24.6c4.1,0,2.5-14.5,5.2-14.5c2.2,0,0.8,5.1,4.2,4.9c0.4,0,22.5,0,23,0" />
+        </svg></div> 
+    </div>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+
+  <div class="overlay"></div>
+  <div class="top-container" data-aos="fade-right">
+    <!--头像-->
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://borber.github.io">
+        <img src="https://borber.github.io/images/avatar.png?v=1560791349396" class="site-logo">
+      </a>
+      <h1 class="site-title">
+            BORBER
+            <p>寥寥</p>
+        </h1>
+    </div>
+    <!--导航-->
+    <div class="top-header-nav">
+
+
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+    <div class="icons">
+        <ul>
+          <li v-for="(le,index) in alin.like">
+            <a :href="le.aim" :alt="le.alt">
+              <img :src="le.src" />
+            </a>
+          </li>
+        </ul>
+    </div> 
+
+  </div>
+
+
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+      <div class="site-footer">
+          Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+      </div>
+      <div class="site-description">
+          <p>©2019<a href="#">世俗为枷锁 世人皆自缚</a></p>
+          <p>
+            X0
+            <span>&nbsp;</span>
+            Powered by <a href="https://gridea.dev">Gridea</a>
+            <span>•</span>Theme <a href="http://www.itaolaity.com/">Alin</a>
+          </p>
+      </div>
+  </div>
+</div>
+
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">Hello Gridea</h2>
+            <div class="post-date">2018-12-12</div>
+            
+              <div class="feature-container" style="background-image: url('https://borber.github.io/post-images/hello-gridea.png')">
+              </div>
+            
+            <div class="post-content">
+              <p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
+✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
+<!-- more -->
+<p><a href="https://github.com/getgridea/gridea">Github</a><br>
+<a href="http://hvenotes.fehey.com/">Gridea 主页</a><br>
+<a href="http://fehey.com/">示例网站</a></p>
+<h2 id="特性">特性👇</h2>
+<p>📝  你可以使用最酷的 <strong>Markdown</strong> 语法，进行快速创作</p>
+<p>🌉  你可以给文章配上精美的封面图和在文章任意位置插入图片</p>
+<p>🏷️  你可以对文章进行标签分组</p>
+<p>📋  你可以自定义菜单，甚至可以创建外部链接菜单</p>
+<p>💻  你可以在 <strong>𝖶𝗂𝗇𝖽𝗈𝗐𝗌</strong> 或 <strong>𝖬𝖺𝖼𝖮𝖲</strong> 设备上使用此客户端</p>
+<p>🌎  你可以使用 <strong>𝖦𝗂𝗍𝗁𝗎𝖻 𝖯𝖺𝗀𝖾𝗌</strong> 或 <strong>Coding Pages</strong> 向世界展示，未来将支持更多平台</p>
+<p>💬  你可以进行简单的配置，接入 <a href="https://github.com/gitalk/gitalk">Gitalk</a> 或 <a href="https://github.com/SukkaW/DisqusJS">DisqusJS</a> 评论系统</p>
+<p>🇬🇧  你可以使用<strong>中文简体</strong>或<strong>英语</strong></p>
+<p>🌁  你可以任意使用应用内默认主题或任意第三方主题，强大的主题自定义能力</p>
+<p>🖥  你可以自定义源文件夹，利用 OneDrive、百度网盘、iCloud、Dropbox 等进行多设备同步</p>
+<p>🌱 当然 <strong>Gridea</strong> 还很年轻，有很多不足，但请相信，它会不停向前🏃</p>
+<p>未来，它一定会成为你离不开的伙伴</p>
+<p>尽情发挥你的才华吧！</p>
+<p>😘 Enjoy~</p>
+<iframe src="//player.bilibili.com/player.html?aid=54010923&cid=94482876&page=1" scrolling="yes" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://borber.github.io/tag/gridea" class="tag">
+                    Gridea
+                  </a>
+                
+              </div>
+            
+            
+
+            
+              
+                <div id="gitalk-container" data-aos="fade-in"></div>
+              
+
+              
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <footer>
+	<div class="foo-con">
+    	<p>©2019<a href="#">世俗为枷锁 世人皆自缚</a></p>
+      	<p>
+	        X0
+	        <span>&nbsp;</span>
+	        Powered by <a href="https://gridea.dev">Gridea</a>
+	        <span>•</span>Theme <a href="http://www.itaolaity.com/">Alin</a>
+     	</p>
+    </div>
+</footer>
+
+
+
+<script src="https://borber.github.io/media/dict/js/aos.js"></script>
+
+<!--Self-->
+<script>
+    $(window).on('load',function(){ 
+  　　$('.tilt').fadeOut(1000);
+　　}); 
+</script>
+
+
+<script type="application/javascript">
+
+/*动画初始化*/
+AOS.init(
+  {
+  offset: 200,
+  duration: 600,
+  easing: 'ease-in-sine',
+  delay: 100,
+  }
+);
+
+/*代码高亮*/
+hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible:false,
+    alin:{
+      like:[
+          {
+            "alt":"我的博客",
+            "aim":"http://www.itaolaity.com/index.php",
+            "src":"http://itaolaity.com/20190429220545.png"
+          },
+          {
+            "alt":"GitHub",
+            "aim":"https://github.com/taoya7",
+            "src":"http://itaolaity.com/20190429220612.png"
+          },
+          {
+            "alt":"Email",
+            "aim":"mailto:569781231@qq.com",
+            "src":"http://itaolaity.com/20190429220636.png"
+          }
+      ]
+    }
+  }
+});
+
+</script>
+
+
+
+
+  
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: '46faa605211a1eadeb3a',
+        clientSecret: 'ac6abe30a4d9f21248acb00499811e3d0537f849',
+        repo: 'gitment-comments',
+        owner: 'Borber',
+        admin: ['Borber'],
+        id: location.pathname,      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
+
+
+
+
+    <script>
+      //添加SVG代码
+      var svg = '<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="14" viewBox="20"><g fill="none" fill-rule="evenodd" transform="translate(1 1)"><circle cx="6" cy="6" r="6" fill="#FF5F56" stroke="#E0443E" stroke-width=".5"></circle><circle cx="26" cy="6" r="6" fill="#FFBD2E" stroke="#DEA123" stroke-width=".5"></circle><circle cx="46" cy="6" r="6" fill="#27C93F" stroke="#1AAB29" stroke-width=".5"></circle></g></svg>';
+      var code = document.querySelectorAll(".post-content pre code");
+      for(var i=0; i<code.length; i++){
+          code[i].insertAdjacentHTML("beforebegin", svg);
+      }
+      //注册添加Class
+      $('.post-detail h1,h2,h3,h4,h5').addClass("iconfont");
+
+
+    </script>
+  </body>
+</html>
