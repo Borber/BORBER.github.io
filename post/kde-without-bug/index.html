@@ -6,7 +6,7 @@
 <meta name="robots" content="all,follow">
 <meta name="googlebot" content="index,follow,snippet,archive">
 <title>KDE without BUG | BORBER</title>
-<link rel="shortcut icon" href="https://borber.github.io/favicon.ico?v=1560792642782">
+<link rel="shortcut icon" href="https://borber.github.io/favicon.ico?v=1560793463000">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 <link rel="stylesheet" href="https://borber.github.io/styles/main.css" type='text/css' media='all'>
 
@@ -130,7 +130,7 @@
 <ol>
 <li>
 <p>搜狗输入法 安装 及 BUG 修复</p>
-<pre><code>#使用 yay 包管理
+<pre><code class="language-bash">#使用 yay 包管理
 sudo pacman -S yay
 #下面的默认全选
 sudo yay -S fcitx-sogoupinyin fcitx-configtool fcitx-im
@@ -152,7 +152,7 @@ reboot
 </li>
 <li>
 <p>deepin.com.qq.office 无法启动 (其他基于deepin-wine的同理)</p>
-<pre><code>yay -S gnome-settings-daemon
+<pre><code class="language-bash">yay -S gnome-settings-daemon
 sudo cp /etc/xdg/autostart/org.gnome.SettingsDaemon.XSettings.desktop ~/.config/autostart/
 
 #将GNOME Setting的自启动选项打上勾即可。
@@ -160,7 +160,7 @@ sudo cp /etc/xdg/autostart/org.gnome.SettingsDaemon.XSettings.desktop ~/.config/
 </li>
 <li>
 <p>网易云音乐 无法输入中文</p>
-<pre><code>vim /usr/share/applications/netease-cloud-music.desktop
+<pre><code class="language-bash">vim /usr/share/applications/netease-cloud-music.desktop
 #修改
 Exec=/opt/netease/netease-cloud-music/netease-cloud-music %U
 yay -S vlc
@@ -169,7 +169,7 @@ rebooot
 </li>
 <li>
 <p>Deepin-TIM或Deepin-QQ调整界面DPI字体大小的方法</p>
-<pre><code>#首先退出 QQ 或 TIM
+<pre><code class="language-bash">#首先退出 QQ 或 TIM
 #进 gotop dd 可以彻底关闭
 nv WINEPREFIX=&quot;$HOME/.deepinwine/Deepin-TIM&quot; winecfg
 #显示 中 设置dpi 建议120
@@ -177,19 +177,19 @@ nv WINEPREFIX=&quot;$HOME/.deepinwine/Deepin-TIM&quot; winecfg
 </li>
 <li>
 <p>科学上网 <a href="https://github.com/shadowsocksrr/electron-ssr/releases/download/v0.2.7/electron-ssr-0.2.7.tar.gz">下载地址</a></p>
-<pre><code>#先下载文件进入下载目录
+<pre><code class="language-bash">#先下载文件进入下载目录
 yay -U electron-ssr-0.2.7.tar.gz
 </code></pre>
 </li>
 <li>
 <p>远程协助软件 TeamViewer 无法连接</p>
-<pre><code>sudo systemctl enable teamviewerd
+<pre><code class="language-bash">sudo systemctl enable teamviewerd
 reboot
 </code></pre>
 </li>
 <li>
 <p>Manjaro安装virtualbox并安装扩展</p>
-<pre><code>#包管理器搜索virtualbox
+<pre><code class="language-bash">#包管理器搜索virtualbox
 #安装一下包
 #Oracle VM VirtualBox (virtualbox)
 virtualbox-ext-oracle

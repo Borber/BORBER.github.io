@@ -1,11 +1,11 @@
 <html>
 <head>
-    <meta charset="utf-8" />
+  <meta charset="utf-8" />
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="robots" content="all,follow">
 <meta name="googlebot" content="index,follow,snippet,archive">
-<title>桌面 | BORBER</title>
+<title>Test Code Highlight | BORBER</title>
 <link rel="shortcut icon" href="https://borber.github.io/favicon.ico?v=1560793463000">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 <link rel="stylesheet" href="https://borber.github.io/styles/main.css" type='text/css' media='all'>
@@ -29,7 +29,7 @@
 </head>
 <body class="home blog ct-body standard">
 <div id="overflow-container" class="overflow-container">
-    <header id="site-header" class="site-header" role="banner">
+  <header id="site-header" class="site-header" role="banner">
 
 
     <div class="container">
@@ -79,142 +79,139 @@
 
 </header>
 
-        <div class="main-content">
-            <div class="current-tag-container">
-                <h2 class="title">
-                    标签：#桌面
-                </h2>
-            </div>
-        </div>
-    <div id="main" class="main" role="main">
-  <h1 class="screen-reader-text">Posts</h1>
-  
-  <div id="loop-container" class="loop-container">
-    <div class="post type-post status-publish format-standard   has-post-thumbnail hentry category-design tag-memories
-    tag-normal-post tag-standard-2 excerpt zoom full-without-featured
-      
-      even
-       excerpt">
-      
-      <a class="featured-image-link" href="https://borber.github.io/post/kde-without-bug">
-        <div class='featured-image lazy lazy-bg-image' data-background="https://www.z4a.net/images/2019/06/17/LonelyParade.jpg"></div>
-      </a>
-      
-      <div class="excerpt-container">
-        <div class="excerpt-meta">
-          <span class="date">  · 2019-06-17 ·</span>
-            
-                <span> / </span>
-                <span class="category">
-                        <a href="https://borber.github.io/tag/oH1pINPLi">BUG</a>
-                </span>
-            
-                <span> / </span>
-                <span class="category">
-                        <a href="https://borber.github.io/tag/JlXEuRwI4">Manjaro</a>
-                </span>
-            
-                <span> / </span>
-                <span class="category">
-                        <a href="https://borber.github.io/tag/CnDx3GpBp">KDE</a>
-                </span>
-            
-                <span> / </span>
-                <span class="category">
-                        <a href="https://borber.github.io/tag/Wes_HVTVd">Linux</a>
-                </span>
-            
-                <span> / </span>
-                <span class="category">
-                        <a href="https://borber.github.io/tag/3YQBc-530">桌面</a>
-                </span>
-            
 
-        </div>
-        <div class='excerpt-header'>
-          <h2 class='excerpt-title'>
-            <a href="https://borber.github.io/post/kde-without-bug"> KDE without BUG </a>
-          </h2>
-        </div>
-        <div class='excerpt-content'>
-          <article>
-              <p>​		本文旨在收集Manjaro KDE 系统在日常使用中的BUG解决办法.与君共享.</p>
+  <div id="main" class="main" role="main">
+    <div id="loop-container" class="loop-container">
+      <div class="post type-post status-publish format-standard has-post-thumbnail hentry category-design tag-design tag-standard-2 tag-tagalicious tag-travel entry full-without-featured odd excerpt-1">
+        
+          <div class='featured-image lazy lazy-bg-image' data-background="https://www.z4a.net/images/2019/06/18/father.jpg">
+          </div>
+        
 
-          </article>
+        <div class="entry-meta">
+          <span class="date">· 2019-06-18 ·</span>
+
+          
+            <span class="category">
+                    <span> / </span>
+                    <a href="https://borber.github.io/tag/3zxhdu1jz">测试</a>
+                </span>
+          
         </div>
+        <div class='entry-header'>
+          <h1 class='entry-title'>Test Code Highlight</h1>
+        </div>
+        <div class="entry-container">
+          <div class="entry-content">
+            <article>
+              <p>package forSQL;</p>
+<p>import java.sql.*;</p>
+<p>/**</p>
+<ul>
+<li>
+<p>@author admin</p>
+</li>
+<li>
+<p>@version 1.0.0</p>
+</li>
+<li>
+<p>@ClassName SQL_Constants.java</p>
+</li>
+<li>
+<p>@Description 模块化对 SQL 的操作</p>
+</li>
+<li>
+<p>@createTime 2019年05月17日 16:44
+*/
+public class SQL_Constants {</p>
+<p>/**</p>
+<ul>
+<li>连接全局化 节省连接的时间</li>
+<li>以及 别的可能使用的变量全局化
+*/
+public static Connection CONN = null;</li>
+</ul>
+<p>public static PreparedStatement PST = null;</p>
+<p>public static ResultSet RS = null;</p>
+<p>/**</p>
+<ul>
+<li>字符串待填写
+*/
+private final static String MYSQL_CLASS = &quot;&quot;;
+private final static String MYSQL_URL = &quot;&quot;;
+private final static String MYSQL_NAME = &quot;&quot;;
+private final static String MYSQL_PASSWORD = &quot;&quot;;</li>
+</ul>
+<p>public static void GetConnection(){
+/**
+* @title GetConnection
+* @description
+* @author BORBER
+* @updateTime 2019/5/17 17:10
+* @throws
+*/</p>
+<pre><code> try {
+     CONN = null;
+     Class.forName(MYSQL_CLASS);
+     CONN = DriverManager.getConnection(MYSQL_URL,MYSQL_NAME,MYSQL_PASSWORD);
+     if(CONN != null){
+         System.out.println(&quot;Connect success!&quot;);
+     }
+ }catch (ClassNotFoundException e) {
+     System.out.println(&quot;Class not found!&quot;);
+ } catch (SQLException e) {
+     System.out.println(&quot;Connect fail!&quot;);
+ }
+</code></pre>
+<p>}</p>
+</li>
+</ul>
+<p>}</p>
+
+            </article>
+          </div>
+        </div>
+          
+            <nav class="navigation pagination" role="navigation">
+              <h2 class="screen-reader-text">Posts navigation</h2>
+              <div class="nav-links">
+                <a class="next page-numbers" style="font-size:20px" href="https://borber.github.io/post/kde-without-bug">下一篇->KDE without BUG</a>
+              </div>
+            </nav>
+          
       </div>
+      <section id="comments" class="comments">
+        
+          
+            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+
+<script>
+
+  var gitalk = new Gitalk({
+    clientID: '46faa605211a1eadeb3a',
+    clientSecret: 'ac6abe30a4d9f21248acb00499811e3d0537f849',
+    repo: 'gitment-comments',
+    owner: 'Borber',
+    admin: ['Borber'],
+    id: location.pathname,      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+
+</script>
+
+          
+
+          
+        
+      </section>
     </div>
   </div>
-  
-  <div id="loop-container" class="loop-container">
-    <div class="post type-post status-publish format-standard   has-post-thumbnail hentry category-design tag-memories
-    tag-normal-post tag-standard-2 excerpt zoom full-without-featured
-      
-        odd
-       excerpt">
-      
-      <a class="featured-image-link" href="https://borber.github.io/post/kde">
-        <div class='featured-image lazy lazy-bg-image' data-background="https://www.z4a.net/images/2019/06/04/Aeolian3.jpg"></div>
-      </a>
-      
-      <div class="excerpt-container">
-        <div class="excerpt-meta">
-          <span class="date">  · 2019-06-17 ·</span>
-            
-                <span> / </span>
-                <span class="category">
-                        <a href="https://borber.github.io/tag/JlXEuRwI4">Manjaro</a>
-                </span>
-            
-                <span> / </span>
-                <span class="category">
-                        <a href="https://borber.github.io/tag/CnDx3GpBp">KDE</a>
-                </span>
-            
-                <span> / </span>
-                <span class="category">
-                        <a href="https://borber.github.io/tag/7WZTvl4GD">美化</a>
-                </span>
-            
-                <span> / </span>
-                <span class="category">
-                        <a href="https://borber.github.io/tag/Wes_HVTVd">Linux</a>
-                </span>
-            
-                <span> / </span>
-                <span class="category">
-                        <a href="https://borber.github.io/tag/3YQBc-530">桌面</a>
-                </span>
-            
-
-        </div>
-        <div class='excerpt-header'>
-          <h2 class='excerpt-title'>
-            <a href="https://borber.github.io/post/kde"> KDE Beautify </a>
-          </h2>
-        </div>
-        <div class='excerpt-content'>
-          <article>
-              <p>困于Linux美化良久
-今作教程记录历程</p>
-
-          </article>
-        </div>
-      </div>
-    </div>
-  </div>
-  
-</div>
-
-    <nav class="navigation pagination" role="navigation">
-    <h2 class="screen-reader-text">Posts navigation</h2>
-    <div class="nav-links">
-        
-        
-    </div>
-</nav>
-
-    <footer id="site-footer" class="site-footer" role="contentinfo">
+  <footer id="site-footer" class="site-footer" role="contentinfo">
     <h1>
         <a href="https://borber.github.io"> BORBER </a>
     </h1>
@@ -279,3 +276,4 @@
 </div>
 </body>
 </html>
+
