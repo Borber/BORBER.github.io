@@ -1,11 +1,11 @@
 <html>
 <head>
-    <meta charset="utf-8" />
+  <meta charset="utf-8" />
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="robots" content="all,follow">
 <meta name="googlebot" content="index,follow,snippet,archive">
-<title>Manjaro | BORBER</title>
+<title>KDE without BUG | BORBER</title>
 <link rel="shortcut icon" href="https://borber.github.io/favicon.ico?v=1560766417829">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 <link rel="stylesheet" href="https://borber.github.io/styles/main.css" type='text/css' media='all'>
@@ -29,7 +29,8 @@
 </head>
 <body class="home blog ct-body standard">
 <div id="overflow-container" class="overflow-container">
-    <header id="site-header" class="site-header" role="banner">
+  <a class="skip-content" href="#main">Skip to content</a>
+  <header id="site-header" class="site-header" role="banner">
     <div class='top-navigation top-navigation-important'>
         <div class='container'>
             <div id="menu-secondary" class="menu-container menu-secondary" role="navigation">
@@ -160,88 +161,225 @@
 
 </header>
 
-        <div class="main-content">
-            <div class="current-tag-container">
-                <h2 class="title">
-                    标签：#Manjaro
-                </h2>
-            </div>
-        </div>
-    <div id="main" class="main" role="main">
-  <h1 class="screen-reader-text">Posts</h1>
-  
-  <div id="loop-container" class="loop-container">
-    <div class="post type-post status-publish format-standard   has-post-thumbnail hentry category-design tag-memories
-    tag-normal-post tag-standard-2 excerpt zoom full-without-featured
-      
-      even
-       excerpt">
-      
-      <a class="featured-image-link" href="https://borber.github.io/post/kde">
-        <div class='featured-image lazy lazy-bg-image' data-background="https://www.z4a.net/images/2019/06/04/Aeolian3.jpg"></div>
-      </a>
-      
-      <div class="excerpt-container">
-        <div class="excerpt-meta">
-          <span class="date">  · 2019-06-17 ·</span> <span> / </span>
+
+  <div id="main" class="main" role="main">
+    <div id="loop-container" class="loop-container">
+      <div class="post type-post status-publish format-standard has-post-thumbnail hentry category-design tag-design tag-standard-2 tag-tagalicious tag-travel entry full-without-featured odd excerpt-1">
+        
+          <div class='featured-image lazy lazy-bg-image' data-background="https://www.z4a.net/images/2019/06/17/LonelyParade.jpg">
+          </div>
+        
+
+        <div class="entry-meta">
+          <span class="date">· 2019-06-17 ·</span> <span> / </span>
           <span class="author">
-              <a href="https://borber.github.io" title="Posts by  BORBER" rel="author"> BORBER</a>
+            <a href="https://borber.github.io" title="" rel="author"> Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a></a>
           </span>
-            
-                <span> / </span>
-                <span class="category">
-                        <a href="https://borber.github.io/tag/JlXEuRwI4">Manjaro</a>
-                </span>
-            
-                <span> / </span>
-                <span class="category">
-                        <a href="https://borber.github.io/tag/CnDx3GpBp">KDE</a>
-                </span>
-            
-                <span> / </span>
-                <span class="category">
-                        <a href="https://borber.github.io/tag/7WZTvl4GD">美化</a>
-                </span>
-            
-                <span> / </span>
-                <span class="category">
-                        <a href="https://borber.github.io/tag/Wes_HVTVd">Linux</a>
-                </span>
-            
-                <span> / </span>
-                <span class="category">
-                        <a href="https://borber.github.io/tag/3YQBc-530">桌面</a>
-                </span>
-            
+          
+        </div>
+        <div class='entry-header'>
+          <h1 class='entry-title'>KDE without BUG</h1>
+        </div>
+        <div class="entry-container">
+          <div class="entry-content">
+            <article>
+              <p>​		在 KDE的日常使用中,不免会有很多的BUG,这其中有一部分是Linux系统本身的不和谐导致的.但是不可否认的是,有一部分就是因为简单的打包不当,或者因为一个特殊的设置原因罢了.</p>
+<p>​		本文旨在收集Manjaro KDE 系统在日常使用中的BUG解决办法.与君共享.</p>
+<ol>
+<li>
+<p>搜狗输入法 安装 及 BUG 修复</p>
+<pre><code>#使用 yay 包管理
+sudo pacman -S yay
+#下面的默认全选
+sudo yay -S fcitx-sogoupinyin fcitx-configtool fcitx-im
+#因为源的问题 往后如果恢复 可不做
+sudo pacman -U https://arch-archive.tuna.tsinghua.edu.cn/2019/04-29/community/os/x86_64/fcitx-qt4-4.2.9.6-1-x86_64.pkg.tar.xz
+#建议写入 .xprofile 没有的话 就没关系 vim会自己创建
+vim ~/.xprofie
+#在文件末尾写入以下三行：
+GTK_IM_MODULE=fcitx
+QT_IM_MODULE=fcitx
+XMODIFIERS=&quot;@im=fcitx&quot;
+按 ESC 
+输入 :wq 回车
+#要是重启后搜狗还是麻烦用要是重启后搜狗还是麻烦用，应该是少了fcitx-qt4，
+#执行下面的命令
+sudo yay -S fcitx-qt4
+reboot
+</code></pre>
+</li>
+<li>
+<p>deepin.com.qq.office 无法启动 (其他基于deepin-wine的同理)</p>
+<pre><code>yay -S gnome-settings-daemon
+sudo cp /etc/xdg/autostart/org.gnome.SettingsDaemon.XSettings.desktop ~/.config/autostart/
 
-        </div>
-        <div class='excerpt-header'>
-          <h2 class='excerpt-title'>
-            <a href="https://borber.github.io/post/kde"> KDE Beautify </a>
-          </h2>
-        </div>
-        <div class='excerpt-content'>
-          <article>
-              <p>困于Linux美化良久
-今作教程记录历程</p>
+#将GNOME Setting的自启动选项打上勾即可。
+</code></pre>
+</li>
+<li>
+<p>网易云音乐 无法输入中文</p>
+<pre><code>vim /usr/share/applications/netease-cloud-music.desktop
+#修改
+Exec=/opt/netease/netease-cloud-music/netease-cloud-music %U
+yay -S vlc
+rebooot
+</code></pre>
+</li>
+<li>
+<p>Deepin-TIM或Deepin-QQ调整界面DPI字体大小的方法</p>
+<pre><code>#首先退出 QQ 或 TIM
+#进 gotop dd 可以彻底关闭
+nv WINEPREFIX=&quot;$HOME/.deepinwine/Deepin-TIM&quot; winecfg
+#显示 中 设置dpi 建议120
+</code></pre>
+</li>
+<li>
+<p>科学上网 <a href="https://github.com/shadowsocksrr/electron-ssr/releases/download/v0.2.7/electron-ssr-0.2.7.tar.gz">下载地址</a></p>
+<pre><code>#先下载文件进入下载目录
+yay -U electron-ssr-0.2.7.tar.gz
+</code></pre>
+</li>
+<li>
+<p>远程协助软件 TeamViewer 无法连接</p>
+<pre><code>sudo systemctl enable teamviewerd
+reboot
+</code></pre>
+</li>
+<li>
+<p>Manjaro安装virtualbox并安装扩展</p>
+<pre><code>#包管理器搜索virtualbox
+#安装一下包
+#Oracle VM VirtualBox (virtualbox)
+virtualbox-ext-oracle
+linux XXX(内核版本)-virtualbox-guest-mmodules
+linux XXX(内核版本)-virtualbox-host-mmodules
+#扩展包已经安装但是需要设置
+sudo gpasswd -a $USER vboxusers
+sudo modprobe vboxdrv
+reboot
+</code></pre>
+<p>待续</p>
+<p>​    解决方法部分来自 网络 部分来自 QQ群: <a href="https://jq.qq.com/?_wv=1027&amp;k=5zjyKCP">478058928</a> [Manjaro-Linux交流群] 在此感谢</p>
+</li>
+</ol>
 
-          </article>
+            </article>
+          </div>
+          <div class='entry-meta-bottom'>
+            <div class="entry-categories">
+              <p>
+                <span>Categories</span>
+                
+                  
+                    
+                  <a href="https://borber.github.io/tag/JlXEuRwI4" title="View all posts in Manjaro">Manjaro</a>
+                    
+                    
+                    
+                  <a href="https://borber.github.io/tag/CnDx3GpBp" title="View all posts in KDE">KDE</a>
+                    
+                    
+                    
+                  <a href="https://borber.github.io/tag/7WZTvl4GD" title="View all posts in 美化">美化</a>
+                    
+                    
+                    
+                  <a href="https://borber.github.io/tag/Wes_HVTVd" title="View all posts in Linux">Linux</a>
+                    
+                    
+                    
+                  <a href="https://borber.github.io/tag/3YQBc-530" title="View all posts in 桌面">桌面</a>
+                    
+                    
+                    
+                  <a href="https://borber.github.io/tag/gridea" title="View all posts in Gridea">Gridea</a>
+                    
+                    
+              </p>
+            </div>
+            <div class="entry-tags">
+              <p><span>Tags</span>
+              </p>
+            </div>
+          </div>
+          <div class="author-meta">
+            <div class="author">
+              <img alt='' src="https://borber.github.io/images/avatar.png?v=1560766417829" class='avatar avatar-72 photo' height='72' width='72'>
+              <span>WRITTEN BY: &nbsp;&nbsp;&nbsp;<a href='https://borber.github.io'></a> </span>
+            </div>
+            <div class="bio">
+              <p></p>
+              
+                
+                  <a class="github" target="_blank"
+                     href="https://github.com/Borber">
+                    <i class="fab fa-github" title="github"></i>
+                  </a>
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+                  <a class="rss" target="_blank"
+                     href="/atom.xml">
+                    <i class="fa fa-rss" title="rss"></i>
+                  </a>
+                
+              
+            </div>
+          </div>
         </div>
+          
+            <nav class="navigation pagination" role="navigation">
+              <h2 class="screen-reader-text">Posts navigation</h2>
+              <div class="nav-links">
+                <a class="next page-numbers" href="https://borber.github.io/post/linux-gridea-repair">下一篇->Linux Gridea repair</a>
+              </div>
+            </nav>
+          
       </div>
+      <section id="comments" class="comments">
+        
+          
+            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+
+<script>
+
+  var gitalk = new Gitalk({
+    clientID: '46faa605211a1eadeb3a',
+    clientSecret: 'ac6abe30a4d9f21248acb00499811e3d0537f849',
+    repo: 'gitment-comments',
+    owner: 'Borber',
+    admin: ['Borber'],
+    id: location.pathname,      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+
+</script>
+
+          
+
+          
+        
+      </section>
     </div>
   </div>
-  
-</div>
-
-    <nav class="navigation pagination" role="navigation">
-    <h2 class="screen-reader-text">Posts navigation</h2>
-    <div class="nav-links">
-        
-        
-    </div>
-</nav>
-
-    <footer id="site-footer" class="site-footer" role="contentinfo">
+  <footer id="site-footer" class="site-footer" role="contentinfo">
     <h1>
         <a href="https://borber.github.io"> BORBER </a>
     </h1>
@@ -299,3 +437,4 @@
 </div>
 </body>
 </html>
+
