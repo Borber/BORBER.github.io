@@ -1,203 +1,222 @@
 <html>
+
 <head>
-  <meta charset="utf-8" />
+    <meta charset="utf-8" />
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta name="robots" content="all,follow">
-<meta name="googlebot" content="index,follow,snippet,archive">
-<title>关于 | BORBER</title>
-<link rel="shortcut icon" href="https://borber.github.io/favicon.ico?v=1560790650538">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-<link rel="stylesheet" href="https://borber.github.io/styles/main.css" type='text/css' media='all'>
-
+<title>
+    关于 | BORBER
+</title>
+<link rel="shortcut icon" href="https://borber.github.io/favicon.ico?v=1560790842737">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://borber.github.io/styles/main.css">
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://borber.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
 <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
 <script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-142130514-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-142130514-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
 
-  gtag('config', 'UA-142130514-1');
-</script>
+        gtag('config', 'UA-142130514-1');
+    </script>
+    
+        
+            
+                <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+                <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+                
 
-
+                    
+                            
 </head>
-<body class="home blog ct-body standard">
-<div id="overflow-container" class="overflow-container">
-  <header id="site-header" class="site-header" role="banner">
 
-
-    <div class="container">
-        <div id="title-info" class="title-info">
-            <div id='site-title' class='site-title'>
-                <a href="https://borber.github.io">  BORBER </a>
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://borber.github.io">
+                <img class="avatar" src="https://borber.github.io/images/avatar.png?v=1560790842737" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    BORBER
+                </h1>
             </div>
         </div>
-        <button id="toggle-navigation" class="toggle-navigation">
-            <i class="fa fa-bars"></i>
-        </button>
-        <div id="menu-primary-tracks" class="menu-primary-tracks"></div>
-        <div id="menu-primary" class="menu-container menu-primary" role="navigation">
-            <p class="site-description">世俗为枷锁 世人皆自缚</p>
-            <div class="menu">
-                <ul id="menu-primary-items" class="menu-primary-items">
-                     
-                        
-                            <li id="menu-item" class='menu-item menu-item-type-post_type menu-item-object-page current-menu-item current_page_item'>
-                                <a href="/">首页</a>
-                            </li>
-                        
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
                     
-                        
-                            <li id="menu-item" class='menu-item menu-item-type-post_type menu-item-object-page current-menu-item current_page_item'>
-                                <a href="/archives">归档</a>
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
                             </li>
-                        
+                            
+                                
                     
-                        
-                            <li id="menu-item" class='menu-item menu-item-type-post_type menu-item-object-page current-menu-item current_page_item'>
-                                <a href="/tags">标签</a>
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
                             </li>
-                        
+                            
+                                
                     
-                        
-                            <li id="menu-item" class='menu-item menu-item-type-post_type menu-item-object-page current-menu-item current_page_item'>
-                                <a href="/post/about">关于</a>
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
                             </li>
-                        
+                            
+                                
                     
-                </ul>
-            </div>
-        </div>
-    </div>
-
-
-</header>
-
-
-  <div id="main" class="main" role="main">
-    <div id="loop-container" class="loop-container">
-      <div class="post type-post status-publish format-standard has-post-thumbnail hentry category-design tag-design tag-standard-2 tag-tagalicious tag-travel entry full-without-featured odd excerpt-1">
-        
-
-        <div class="entry-meta">
-          <span class="date">· 2019-01-25 ·</span>
-
-          
-        </div>
-        <div class='entry-header'>
-          <h1 class='entry-title'>关于</h1>
-        </div>
-        <div class="entry-container">
-          <div class="entry-content">
-            <article>
-              <pre><code>茫茫人海 皆为缘分
-</code></pre>
-
-            </article>
-          </div>
-        </div>
-          
-      </div>
-      <section id="comments" class="comments">
-        
-          
-            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
-<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
-
-<div id="gitalk-container"></div>
-
-<script>
-
-  var gitalk = new Gitalk({
-    clientID: '46faa605211a1eadeb3a',
-    clientSecret: 'ac6abe30a4d9f21248acb00499811e3d0537f849',
-    repo: 'gitment-comments',
-    owner: 'Borber',
-    admin: ['Borber'],
-    id: location.pathname,      // Ensure uniqueness and length less than 50
-    distractionFreeMode: false  // Facebook-like distraction free mode
-  })
-
-  gitalk.render('gitalk-container')
-
-</script>
-
-          
-
-          
-        
-      </section>
-    </div>
-  </div>
-  <footer id="site-footer" class="site-footer" role="contentinfo">
-    <h1>
-        <a href="https://borber.github.io"> BORBER </a>
-    </h1>
-    <p class="site-description" style="font-size:18px">世俗为枷锁 世人皆自缚</p>
-    <div id="menu-footer" class="menu-container menu-footer" role="navigation">
-        <div class="menu">
-            <ul id="menu-footer-items" class="menu-footer-items">
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
             </ul>
         </div>
     </div>
-    <ul class="social-media-icons">
-        
-            
-                <li>
-                    <a href="https://github.com/Borber" data-animate-hover="pulse" class="github" target="_blank">
-                        <i class="fab fa-github" title="github"></i>
-                        <span class="screen-reader-text">github</span>
-                    </a>
-                </li>
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-                <li>
-                    <a href="https://t.me/BORBERDRUM" data-animate-hover="pulse" class="qq" target="_blank">
-                        <i class="fab fa-qq" title="qq"></i>
-                        <span class="screen-reader-text">qq</span>
-                    </a>
-                </li>
-            
-        
-            
-                <li>
-                    <a href="/atom.xml" data-animate-hover="pulse" class="rss" target="_blank">
-                        <i class="fas fa-rss" title="rss"></i>
-                        <span class="screen-reader-text">rss</span>
-                    </a>
-                </li>
-            
-        
-    </ul>
-    <div class="design-credit">
-        <p>Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a></p>
-    </div>
-</footer>
-<script>
-    hljs.initHighlightingOnLoad()
-</script>
-<script src="https://borber.github.io/media/scripts/lib/jquery.min.js"></script>
-<script src="https://borber.github.io/media/scripts/lib/jquerymigrate.js"></script>
-<script src="https://borber.github.io/media/scripts/lib/production.min.js"></script>
-
 </div>
-</body>
-</html>
 
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            关于
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-01-25</time>
+                            
+                        </div>
+                        
+                                <div class="post-content">
+                                    <pre><code>茫茫人海 皆为缘分
+</code></pre>
+
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                                <!-- id-card -->
+                                
+    <div class="id_card i-card">
+        <div class="id_card-avatar" style="background-image: url(https://borber.github.io/images/avatar.png?v=1560790842737)">
+        </div>
+        <h1 class="id_card-title">
+            BORBER
+        </h1>
+        <h2 class="id_card-description">
+            世俗为枷锁 世人皆自缚
+        </h2>
+        <!--  -->
+        <div class="id_card-sns">
+            <!-- github -->
+            
+                <a href="https://github.com/Borber" target="_blank" rel="noopener noreferrer"><i
+                class="fa fa-github"></i></a>
+                
+                    <!-- twitter -->
+                    
+                            <!-- weibo -->
+                            
+                                    <!-- facebook -->
+                                    
+
+        </div>
+    </div>
+    
+                                    
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | 
+  <a class="rss" href="https://borber.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+        
+            <script>
+    window.onload = function() {
+        var gitalk = new Gitalk({
+            clientID: '46faa605211a1eadeb3a',
+            clientSecret: 'ac6abe30a4d9f21248acb00499811e3d0537f849',
+            repo: 'gitment-comments',
+            owner: 'Borber',
+            admin: ['Borber'],
+            id: (location.pathname).substring(0, 49), // Ensure uniqueness and length less than 50
+            distractionFreeMode: false // Facebook-like distraction free mode
+        })
+
+        gitalk.render('gitalk-container')
+    }
+</script>
+                
+
+                    
+                                
+</body>
+
+</html>
