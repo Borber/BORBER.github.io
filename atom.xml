@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://borber.github.io</id>
     <title>BORBER</title>
-    <updated>2019-06-17T01:07:37.198Z</updated>
+    <updated>2019-06-17T05:50:50.045Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://borber.github.io"/>
     <link rel="self" href="https://borber.github.io/atom.xml"/>
@@ -10,6 +10,47 @@
     <logo>https://borber.github.io/images/avatar.png</logo>
     <icon>https://borber.github.io/favicon.ico</icon>
     <rights>All rights reserved 2019, BORBER</rights>
+    <entry>
+        <title type="html"><![CDATA[Linux Gridea repair]]></title>
+        <id>https://borber.github.io/post/linux-gridea-repair</id>
+        <link href="https://borber.github.io/post/linux-gridea-repair">
+        </link>
+        <updated>2019-06-17T05:47:08.000Z</updated>
+        <content type="html"><![CDATA[<p>​		在我从原始的Hexo 管理博客,转向 <strong><a href="https://gridea.dev">Gridea</a></strong> 时,我遇到了如下的错误:</p>
+<p><img src="https://www.z4a.net/images/2019/06/17/18.png" alt="18.png"></p>
+<p>​		这是在我点击尝试远程连接时,调试台出现的报错信息.但是我不知道问题具体出在哪里,我尝试过与 <strong>Gridea</strong> 的官方人员进行交流,在进行了TeamViewer的远程协助之后,还是无法解决,但是在我询问官方人员,能否直接进行git初始化时,他回到道:“那样可能可以链接,但同步可能不行”,我意识到了这可能是一个正确的方向.</p>
+<p>​		于是我成功了.</p>
+<p>​		我的平台是: Manjaro KDE,Git</p>
+<ul>
+<li>==解决方案:==</li>
+</ul>
+<ol>
+<li>
+<p>按照官方的配置,设置好所有选项.</p>
+</li>
+<li>
+<p>进入 <strong>Gridea</strong> 的根目录 删除 output 文件夹</p>
+<pre><code>rm -rf optput
+</code></pre>
+</li>
+<li>
+<p>将你将要部署的仓库clone到 <strong>Gridea</strong> 根目录下</p>
+<pre><code>git clone git@github.com:NAME/RNAME.git
+</code></pre>
+</li>
+<li>
+<p>修改 clone到本地的仓库文件夹名 为 output</p>
+<pre><code>mv RNAME output
+</code></pre>
+</li>
+<li>
+<p>测试连接性 : ==成功==</p>
+</li>
+</ol>
+<p>以上.</p>
+<p>​		以及在使用 <strong>Gridea</strong> 部署时出现网站显示效果与本地预览不一致时,请尝试使用浏览器无痕模式访问查看.如果是正确的那么是OK的.等一段时间,正常的浏览也会变回正确样式</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[KDE Beautify]]></title>
         <id>https://borber.github.io/post/kde</id>

@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="robots" content="all,follow">
 <meta name="googlebot" content="index,follow,snippet,archive">
-<title>关于 | BORBER</title>
+<title>Linux Gridea repair | BORBER</title>
 <link rel="shortcut icon" href="https://borber.github.io/favicon.ico?v=1560750645086">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 <link rel="stylesheet" href="https://borber.github.io/styles/main.css" type='text/css' media='all'>
@@ -159,22 +159,56 @@
     <div id="loop-container" class="loop-container">
       <div class="post type-post status-publish format-standard has-post-thumbnail hentry category-design tag-design tag-standard-2 tag-tagalicious tag-travel entry full-without-featured odd excerpt-1">
         
+          <div class='featured-image lazy lazy-bg-image' data-background="https://www.z4a.net/images/2019/06/17/wlop-6.jpg">
+          </div>
+        
 
         <div class="entry-meta">
-          <span class="date">· 2019-01-25 ·</span> <span> / </span>
+          <span class="date">· 2019-06-17 ·</span> <span> / </span>
           <span class="author">
             <a href="https://borber.github.io" title="" rel="author"> Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a></a>
           </span>
           
         </div>
         <div class='entry-header'>
-          <h1 class='entry-title'>关于</h1>
+          <h1 class='entry-title'>Linux Gridea repair</h1>
         </div>
         <div class="entry-container">
           <div class="entry-content">
             <article>
-              <pre><code>茫茫人海 皆为缘分
+              <p>​		在我从原始的Hexo 管理博客,转向 <strong><a href="https://gridea.dev">Gridea</a></strong> 时,我遇到了如下的错误:</p>
+<p><img src="https://www.z4a.net/images/2019/06/17/18.png" alt="18.png"></p>
+<p>​		这是在我点击尝试远程连接时,调试台出现的报错信息.但是我不知道问题具体出在哪里,我尝试过与 <strong>Gridea</strong> 的官方人员进行交流,在进行了TeamViewer的远程协助之后,还是无法解决,但是在我询问官方人员,能否直接进行git初始化时,他回到道:“那样可能可以链接,但同步可能不行”,我意识到了这可能是一个正确的方向.</p>
+<p>​		于是我成功了.</p>
+<p>​		我的平台是: Manjaro KDE,Git</p>
+<ul>
+<li>==解决方案:==</li>
+</ul>
+<ol>
+<li>
+<p>按照官方的配置,设置好所有选项.</p>
+</li>
+<li>
+<p>进入 <strong>Gridea</strong> 的根目录 删除 output 文件夹</p>
+<pre><code>rm -rf optput
 </code></pre>
+</li>
+<li>
+<p>将你将要部署的仓库clone到 <strong>Gridea</strong> 根目录下</p>
+<pre><code>git clone git@github.com:NAME/RNAME.git
+</code></pre>
+</li>
+<li>
+<p>修改 clone到本地的仓库文件夹名 为 output</p>
+<pre><code>mv RNAME output
+</code></pre>
+</li>
+<li>
+<p>测试连接性 : ==成功==</p>
+</li>
+</ol>
+<p>以上.</p>
+<p>​		以及在使用 <strong>Gridea</strong> 部署时出现网站显示效果与本地预览不一致时,请尝试使用浏览器无痕模式访问查看.如果是正确的那么是OK的.等一段时间,正常的浏览也会变回正确样式</p>
 
             </article>
           </div>
@@ -247,6 +281,13 @@
             </div>
           </div>
         </div>
+          
+            <nav class="navigation pagination" role="navigation">
+              <h2 class="screen-reader-text">Posts navigation</h2>
+              <div class="nav-links">
+                <a class="next page-numbers" href="https://borber.github.io/post/kde">下一篇->KDE Beautify</a>
+              </div>
+            </nav>
           
       </div>
       <section id="comments" class="comments">
