@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://borber.github.io</id>
     <title>BORBER</title>
-    <updated>2019-06-17T10:13:40.497Z</updated>
+    <updated>2019-06-17T10:14:52.424Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://borber.github.io"/>
     <link rel="self" href="https://borber.github.io/atom.xml"/>
@@ -16,8 +16,11 @@
         <link href="https://borber.github.io/post/kde-without-bug">
         </link>
         <updated>2019-06-17T10:00:43.000Z</updated>
-        <content type="html"><![CDATA[<p>​		在 KDE的日常使用中,不免会有很多的BUG,这其中有一部分是Linux系统本身的不和谐导致的.但是不可否认的是,有一部分就是因为简单的打包不当,或者因为一个特殊的设置原因罢了.</p>
-<p>​		本文旨在收集Manjaro KDE 系统在日常使用中的BUG解决办法.与君共享.</p>
+        <summary type="html"><![CDATA[<p>​		本文旨在收集Manjaro KDE 系统在日常使用中的BUG解决办法.与君共享.</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>​		本文旨在收集Manjaro KDE 系统在日常使用中的BUG解决办法.与君共享.</p>
+<!-- more -->
+<p>​		在 KDE的日常使用中,不免会有很多的BUG,这其中有一部分是Linux系统本身的不和谐导致的.但是不可否认的是,有一部分就是因为简单的打包不当,或者因为一个特殊的设置原因罢了.</p>
 <ol>
 <li>
 <p>搜狗输入法 安装 及 BUG 修复</p>
