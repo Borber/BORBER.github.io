@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://borber.github.io</id>
     <title>BORBER</title>
-    <updated>2019-06-18T06:51:26.938Z</updated>
+    <updated>2019-06-18T07:09:23.950Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://borber.github.io"/>
     <link rel="self" href="https://borber.github.io/atom.xml"/>
@@ -16,7 +16,10 @@
         <link href="https://borber.github.io/post/test-music-player">
         </link>
         <updated>2019-06-18T05:07:59.000Z</updated>
+        <summary type="html"><![CDATA[<p>测试 歌曲 喜欢-阿肆</p>
+]]></summary>
         <content type="html"><![CDATA[<p>测试 歌曲 喜欢-阿肆</p>
+<!-- more -->
 <iframe frameborder="0" border="1" 
             marginwidth="0" marginheight="0" 
             width=333 height=77 
