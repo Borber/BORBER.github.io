@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://borber.github.io</id>
     <title>BORBER</title>
-    <updated>2019-06-18T07:54:40.284Z</updated>
+    <updated>2019-06-18T07:56:00.004Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://borber.github.io"/>
     <link rel="self" href="https://borber.github.io/atom.xml"/>
@@ -16,7 +16,10 @@
         <link href="https://borber.github.io/post/vector-algebra">
         </link>
         <updated>2019-06-18T07:51:00.000Z</updated>
+        <summary type="html"><![CDATA[<h1 id="向量代数与空间解析几何">向量代数与空间解析几何</h1>
+]]></summary>
         <content type="html"><![CDATA[<h1 id="向量代数与空间解析几何">向量代数与空间解析几何</h1>
+<!-- more -->
 <h2 id="第一节-向量及其线性运算">第一节 向量及其线性运算</h2>
 <ol>
 <li>
