@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://borber.github.io</id>
     <title>BORBER</title>
-    <updated>2019-06-18T08:04:42.849Z</updated>
+    <updated>2019-06-18T08:05:38.516Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://borber.github.io"/>
     <link rel="self" href="https://borber.github.io/atom.xml"/>
@@ -21,6 +21,7 @@
         <content type="html"><![CDATA[<p>大一复习计划<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo stretchy="false">(</mo><mn>1</mn><mi mathvariant="normal">/</mi><mi mathvariant="normal">∞</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(1/\infty)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">1</span><span class="mord">/</span><span class="mord">∞</span><span class="mclose">)</span></span></span></span></p>
 <!-- more -->
 <h1 id="向量代数与空间解析几何">向量代数与空间解析几何</h1>
+<hr>
 <h2 id="第一节-向量及其线性运算">第一节 向量及其线性运算</h2>
 <ol>
 <li>
