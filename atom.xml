@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://borber.github.io</id>
     <title>BORBER</title>
-    <updated>2019-06-17T17:49:33.901Z</updated>
+    <updated>2019-06-18T06:49:46.060Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://borber.github.io"/>
     <link rel="self" href="https://borber.github.io/atom.xml"/>
@@ -10,6 +10,20 @@
     <logo>https://borber.github.io/images/avatar.png</logo>
     <icon>https://borber.github.io/favicon.ico</icon>
     <rights>All rights reserved 2019, BORBER</rights>
+    <entry>
+        <title type="html"><![CDATA[Test Music Player]]></title>
+        <id>https://borber.github.io/post/test-music-player</id>
+        <link href="https://borber.github.io/post/test-music-player">
+        </link>
+        <updated>2019-06-18T05:07:59.000Z</updated>
+        <content type="html"><![CDATA[<p>测试 歌曲 喜欢-阿肆</p>
+<iframe frameborder="0" border="1" 
+            marginwidth="0" marginheight="0" 
+            width=333 height=77 
+            src="//music.163.com/outchain/player?type=2&id=526464145&auto=0&height=66">
+    </iframe>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Test Code Highlight]]></title>
         <id>https://borber.github.io/post/test-code-highlight</id>
