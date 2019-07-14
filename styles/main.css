@@ -395,6 +395,8 @@ a img {
 }
 .entry {
   max-width: 1280px;
+  border-radius: 10px 10px 1px 1px;
+  /*我改过的*/
 }
 .infinite-loader,
 #infinite-handle {
@@ -787,6 +789,7 @@ a img {
   backface-visibility: hidden;
   -webkit-transition: -webkit-transform 0.3s ease;
   transition: transform 0.3s ease;
+  border-radius: 10px 10px 1px 1px;
 }
 .zoom .featured-image-link {
   -webkit-backface-visibility: hidden;
@@ -1286,6 +1289,7 @@ a img {
   background: #f1f3f5;
   padding-bottom: 3em;
   max-width: 1280px;
+  border-radius: 1px 1px 10px 10px;
 }
 .comments-number {
   padding: 1.5em 0;
