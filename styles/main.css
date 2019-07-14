@@ -933,6 +933,8 @@ a img {
   }
   .excerpt:first-child {
     padding-top: 0;
+    border-radius: 15px;
+    /*我添加的*/
   }
   .excerpt-container {
     background: white;
