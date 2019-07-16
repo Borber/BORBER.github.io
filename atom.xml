@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://borber.github.io</id>
     <title>BORBER</title>
-    <updated>2019-07-16T08:45:43.614Z</updated>
+    <updated>2019-07-16T14:26:58.415Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://borber.github.io"/>
     <link rel="self" href="https://borber.github.io/atom.xml"/>
@@ -10,6 +10,83 @@
     <logo>https://borber.github.io/images/avatar.png</logo>
     <icon>https://borber.github.io/favicon.ico</icon>
     <rights>All rights reserved 2019, BORBER</rights>
+    <entry>
+        <title type="html"><![CDATA[Third python reptile]]></title>
+        <id>https://borber.github.io/post/third-python-reptile</id>
+        <link href="https://borber.github.io/post/third-python-reptile">
+        </link>
+        <updated>2019-07-16T14:07:02.000Z</updated>
+        <summary type="html"><![CDATA[<p>爬取 58同城 招聘信息 🤩</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>爬取 58同城 招聘信息 🤩</p>
+<!-- more -->
+<p>这是我写的的第三个爬虫用来爬取 58同城上的招聘信息 也没有什么大用只是用来练手的,我觉得 编程是一个只有动手才能学会的东西.</p>
+<p>这次的爬虫和前两次有些许不同,58 同城有自己的反爬措施.所以这次加上了限制请求频率的 time.sleap (其实 第二个爬虫也最好加入,因为我在使用第二个爬虫时,出现了远程服务器拒绝访问)</p>
+<p>58同城不需要注册就可以浏览 所以只要获取cookie就好</p>
+<p>代码如下 :</p>
+<pre><code class="language-python">from bs4 import BeautifulSoup
+import os
+import time
+import urllib
+import requests
+import time
+
+header = {
+    'user-agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3833.0 Safari/537.36',
+    'cookie':'你自己的'
+}
+urls = []
+file = open('E:\CODE\python\out\BORBER.txt','w') #自己写
+def get_urls():
+    for i in range(1,19):
+        url = f'https://bj.58.com/ruanjiangong/pn{i}/?PGTID=0d302f82-0000-1864-07d2-bb7c42c41f7c&amp;ClickID=2'
+        urls.append(url)
+    for each in urls:
+        get_detials(each)
+
+def get_detials(url):
+    wb_data = requests.get(url)
+    soup = BeautifulSoup(wb_data.text,'lxml')
+    Address = soup.select('span.address')
+    Job_names = soup.select('span.name')
+    Job_salarys = soup.select('p.job_salary')
+    Job_wels = soup.select('div.job_wel &gt; span')
+    Com_Names = soup.select('div.comp_name &gt; a')
+    Job_requires = soup.select('p.job_require')
+    for Addres,Job_name,Job_salary,Job_wel,Com_Name,Job_require in zip(Address,Job_names,Job_salarys,Job_wels,Com_Names,Job_requires):
+        data = {
+            'Address':Addres.get_text(),
+            'Job_name':Job_name.get_text(),
+            'Job_salary':Job_salary.get_text(),
+            'Job_wel':Job_wel.get_text(),
+            'Com_Name':Com_Name.get_text(),
+            'Job_require':Job_require.get_text().replace('&amp;nbsp',' ')
+        }
+        fileprint(data)
+def fileprint(data):
+    file.write('地址: ' + data['Address'])
+    file.write('\n')
+    file.write('职位: '+data['Job_name'])
+    file.write('\n')
+    file.write('要求: '+data['Job_require'])
+    file.write('\n')
+    file.write('薪酬: '+data['Job_salary'])
+    file.write('\n')
+    file.write('福利: '+data['Job_wel'])
+    file.write('\n')
+    file.write('公司: '+data['Com_Name'])
+    file.write('\n')
+    file.write('\n===================================\n')
+
+get_urls()
+for url in urls:
+    get_detials(url)
+    time.sleep(2)
+</code></pre>
+<p>看了一下 京城就是京城啊 😅</p>
+<p>附:<a href="https://www.lanzous.com/i50oi6d">爬取结果</a></p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Second python reptile]]></title>
         <id>https://borber.github.io/post/second-python-reptile</id>
@@ -195,13 +272,13 @@ for i in range(1,26514):
 <!-- more -->
 <h2 id="愿望清单">愿望清单</h2>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-1920301"><label class="task-list-item-label" for="task-item-1920301"> 载着我老婆 我老婆搂着我 路过樱花树（不一定是樱花树，主要是搂）</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-2515348"><label class="task-list-item-label" for="task-item-2515348"> 一起去海边</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-8242792"><label class="task-list-item-label" for="task-item-8242792"> 去游乐场 做恐怖的项目</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-1513919"><label class="task-list-item-label" for="task-item-1513919"> 回家</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-4148678"><label class="task-list-item-label" for="task-item-4148678"> 如果要造孩子的话，在高考那天造孩子，哈哈。</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-8579358"><label class="task-list-item-label" for="task-item-8579358"> 教老婆玩万智牌</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-7596262"><label class="task-list-item-label" for="task-item-7596262"> 吃炒饼</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-9891357"><label class="task-list-item-label" for="task-item-9891357"> 载着我老婆 我老婆搂着我 路过樱花树（不一定是樱花树，主要是搂）</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-6460877"><label class="task-list-item-label" for="task-item-6460877"> 一起去海边</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-8832333"><label class="task-list-item-label" for="task-item-8832333"> 去游乐场 做恐怖的项目</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-3413845"><label class="task-list-item-label" for="task-item-3413845"> 回家</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-6845766"><label class="task-list-item-label" for="task-item-6845766"> 如果要造孩子的话，在高考那天造孩子，哈哈。</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-7217835"><label class="task-list-item-label" for="task-item-7217835"> 教老婆玩万智牌</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-4214283"><label class="task-list-item-label" for="task-item-4214283"> 吃炒饼</label></li>
 </ul>
 ]]></content>
     </entry>
