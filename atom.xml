@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://borber.github.io</id>
     <title>BORBER</title>
-    <updated>2019-07-16T14:26:58.415Z</updated>
+    <updated>2019-07-16T14:34:37.103Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://borber.github.io"/>
     <link rel="self" href="https://borber.github.io/atom.xml"/>
@@ -22,6 +22,7 @@
 <!-- more -->
 <p>这是我写的的第三个爬虫用来爬取 58同城上的招聘信息 也没有什么大用只是用来练手的,我觉得 编程是一个只有动手才能学会的东西.</p>
 <p>这次的爬虫和前两次有些许不同,58 同城有自己的反爬措施.所以这次加上了限制请求频率的 time.sleap (其实 第二个爬虫也最好加入,因为我在使用第二个爬虫时,出现了远程服务器拒绝访问)</p>
+<p>这此对于 selector 有的全新的认识 使用大大灵活了</p>
 <p>58同城不需要注册就可以浏览 所以只要获取cookie就好</p>
 <p>代码如下 :</p>
 <pre><code class="language-python">from bs4 import BeautifulSoup
@@ -272,13 +273,13 @@ for i in range(1,26514):
 <!-- more -->
 <h2 id="愿望清单">愿望清单</h2>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-9891357"><label class="task-list-item-label" for="task-item-9891357"> 载着我老婆 我老婆搂着我 路过樱花树（不一定是樱花树，主要是搂）</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-6460877"><label class="task-list-item-label" for="task-item-6460877"> 一起去海边</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-8832333"><label class="task-list-item-label" for="task-item-8832333"> 去游乐场 做恐怖的项目</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-3413845"><label class="task-list-item-label" for="task-item-3413845"> 回家</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-6845766"><label class="task-list-item-label" for="task-item-6845766"> 如果要造孩子的话，在高考那天造孩子，哈哈。</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-7217835"><label class="task-list-item-label" for="task-item-7217835"> 教老婆玩万智牌</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-4214283"><label class="task-list-item-label" for="task-item-4214283"> 吃炒饼</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-9840055"><label class="task-list-item-label" for="task-item-9840055"> 载着我老婆 我老婆搂着我 路过樱花树（不一定是樱花树，主要是搂）</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-2362809"><label class="task-list-item-label" for="task-item-2362809"> 一起去海边</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-8722038"><label class="task-list-item-label" for="task-item-8722038"> 去游乐场 做恐怖的项目</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-8037206"><label class="task-list-item-label" for="task-item-8037206"> 回家</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-1675466"><label class="task-list-item-label" for="task-item-1675466"> 如果要造孩子的话，在高考那天造孩子，哈哈。</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-7853329"><label class="task-list-item-label" for="task-item-7853329"> 教老婆玩万智牌</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-732"><label class="task-list-item-label" for="task-item-732"> 吃炒饼</label></li>
 </ul>
 ]]></content>
     </entry>
