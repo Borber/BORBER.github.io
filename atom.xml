@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://borber.github.io</id>
     <title>BORBER</title>
-    <updated>2019-07-14T08:00:38.379Z</updated>
+    <updated>2019-07-16T04:31:03.320Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://borber.github.io"/>
     <link rel="self" href="https://borber.github.io/atom.xml"/>
@@ -10,6 +10,74 @@
     <logo>https://borber.github.io/images/avatar.png</logo>
     <icon>https://borber.github.io/favicon.ico</icon>
     <rights>All rights reserved 2019, BORBER</rights>
+    <entry>
+        <title type="html"><![CDATA[first python reptile]]></title>
+        <id>https://borber.github.io/post/first-python-reptile</id>
+        <link href="https://borber.github.io/post/first-python-reptile">
+        </link>
+        <updated>2019-07-16T04:27:14.000Z</updated>
+        <summary type="html"><![CDATA[<p>爬取wallhaven壁纸网站NSFW资源</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>爬取wallhaven壁纸网站NSFW资源</p>
+<!-- more -->
+<p>刚刚开始学习 python 写了一个小爬虫来爬取 豆瓣失败了,于是转而爬取 <a href="https://wallhaven.cc/">wallhaven</a> 它拥有大量的超清壁纸资源 并且只要注册就可以开启 NSFW 选项 浏览,下载皆无限制.</p>
+<p>首先 如果你只想爬取普通的资源 就可以不注册 也不使用 cookies .将下面的程序小改就可以做到.但是在此只介绍如何爬取包含NSFW的资源.</p>
+<ol>
+<li>
+<p>首先注册网站 登录</p>
+</li>
+<li>
+<p><img src="https://www.z4a.net/images/2019/07/16/1.png" alt="1.png">在 lastest 页面中选择 NSFW 选项 (蓝色箭头)并点击刷新按钮(红色箭头)</p>
+</li>
+<li>
+<p><img src="https://www.z4a.net/images/2019/07/16/2c6289b60c5340c40.png" alt="2c6289b60c5340c40.png"></p>
+<p>在页面中 按f12调出 network 刷新页面(浏览器的刷新 区别于第二步) 选择第一个 找到 Request Headers 里的 cookie 全部复制</p>
+</li>
+<li>
+<p>将第三步复制的 cookie 黏贴到 下面代码块中的  cookies_text = '你自己的' 替换'你自己的'  filepath 选择一个你想放的地方 然后运行就好了 推荐直接复制到 pychram里面运行</p>
+</li>
+</ol>
+<pre><code class="language-python">from bs4 import BeautifulSoup
+import requests
+cookie = {}
+def get_cookies():
+    cookies_text = '你自己的'
+    for each in cookies_text.split(';'):
+        name,value = each.strip().split('=',1)
+        cookie[name] = value
+def downimg(url):
+    filepath = 'E:\File\Tmp\ ' #自己写
+    r = requests.get(url, stream=True)
+    if r.status_code != 200:
+        return
+    with open(filepath[:-1]+url[-10:], 'wb') as code:
+        for img_data in r.iter_content(128):
+            code.write(img_data)
+
+
+def realimg(url):
+    web_data = requests.get(url,cookies=cookie)
+    Soup = BeautifulSoup(web_data.text, 'lxml')
+    imgs = Soup.select('#wallpaper')
+    for img in imgs:
+        downimg(img.get('src'))
+
+def start(num):
+    url = 'https://wallhaven.cc/search?categories=111&amp;purity=111&amp;sorting=date_added&amp;order=desc&amp;page='+num
+    web_data = requests.get(url,cookies=cookie)
+    Soup = BeautifulSoup(web_data.text, 'lxml')
+    img_web_links = Soup.select('#thumbs &gt; section &gt; ul &gt; li &gt; figure &gt; a.preview')
+    for img_web in img_web_links:
+        realimg(img_web.get('href'))
+
+
+get_cookies()
+for i in range(1,26514):
+    start(str(i))
+</code></pre>
+<p>😂玩的开心</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Todo with my wife]]></title>
         <id>https://borber.github.io/post/todo-with-my-wife</id>
@@ -22,13 +90,13 @@
 <!-- more -->
 <h2 id="愿望清单">愿望清单</h2>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-8651071"><label class="task-list-item-label" for="task-item-8651071"> 载着我老婆 我老婆搂着我 路过樱花树（不一定是樱花树，主要是搂）</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-2615880"><label class="task-list-item-label" for="task-item-2615880"> 一起去海边</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-5816798"><label class="task-list-item-label" for="task-item-5816798"> 去游乐场 做恐怖的项目</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-1088474"><label class="task-list-item-label" for="task-item-1088474"> 回家</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-7245542"><label class="task-list-item-label" for="task-item-7245542"> 如果要造孩子的话，在高考那天造孩子，哈哈。</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-808"><label class="task-list-item-label" for="task-item-808"> 教老婆玩万智牌</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-5726025"><label class="task-list-item-label" for="task-item-5726025"> 吃炒饼</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-3034682"><label class="task-list-item-label" for="task-item-3034682"> 载着我老婆 我老婆搂着我 路过樱花树（不一定是樱花树，主要是搂）</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-5099288"><label class="task-list-item-label" for="task-item-5099288"> 一起去海边</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-3311118"><label class="task-list-item-label" for="task-item-3311118"> 去游乐场 做恐怖的项目</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-8960099"><label class="task-list-item-label" for="task-item-8960099"> 回家</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-3787261"><label class="task-list-item-label" for="task-item-3787261"> 如果要造孩子的话，在高考那天造孩子，哈哈。</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-3479251"><label class="task-list-item-label" for="task-item-3479251"> 教老婆玩万智牌</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-1998709"><label class="task-list-item-label" for="task-item-1998709"> 吃炒饼</label></li>
 </ul>
 ]]></content>
     </entry>
