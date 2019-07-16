@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="robots" content="all,follow">
 <meta name="googlebot" content="index,follow,snippet,archive">
-<title>Test Code Highlight | BORBER</title>
+<title>Second python reptile | BORBER</title>
 <link rel="shortcut icon" href="https://borber.github.io/favicon.ico?v=1563266470380">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 <link rel="stylesheet" href="https://borber.github.io/styles/main.css" type='text/css' media='all'>
@@ -90,89 +90,136 @@
     <div id="loop-container" class="loop-container">
       <div class="post type-post status-publish format-standard has-post-thumbnail hentry category-design tag-design tag-standard-2 tag-tagalicious tag-travel entry full-without-featured odd excerpt-1">
         
-          <div class='featured-image lazy lazy-bg-image' data-background="https://www.z4a.net/images/2019/06/18/father.jpg">
+          <div class='featured-image lazy lazy-bg-image' data-background="https://www.z4a.net/images/2019/07/16/6b8c14f8gw1f0vg7ga9raj21040lzdmx.png">
           </div>
         
 
         <div class="entry-meta">
-          <span class="date">· 2019-06-18 ·</span>
+          <span class="date">· 2019-07-16 ·</span>
 
           
             <span class="category">
                     <span> / </span>
-                    <a href="https://borber.github.io/tag/3zxhdu1jz">测试</a>
+                    <a href="https://borber.github.io/tag/zzy4LPH8S">python</a>
+                </span>
+          
+            <span class="category">
+                    <span> / </span>
+                    <a href="https://borber.github.io/tag/C-16BRfGV">爬虫</a>
+                </span>
+          
+            <span class="category">
+                    <span> / </span>
+                    <a href="https://borber.github.io/tag/mR79ZebU2">编程</a>
+                </span>
+          
+            <span class="category">
+                    <span> / </span>
+                    <a href="https://borber.github.io/tag/qlm952wiz">NSFW</a>
                 </span>
           
         </div>
         <div class='entry-header'>
-          <h1 class='entry-title'>Test Code Highlight</h1>
+          <h1 class='entry-title'>Second python reptile</h1>
         </div>
         <div class="entry-container">
           <div class="entry-content">
             <article>
-              <p>测试代码高亮显示 Java</p>
+              <p>爬取<a href="http://www.zerobyw4.com/">zero搬运网</a> 漫画 有福利哦 🤪</p>
 <!-- more -->
-<p>如下</p>
-<pre><code class="language-java">package forSQL;
-
-import java.sql.*;
-
-/**
- * @author admin
- * @version 1.0.0
- * @ClassName SQL_Constants.java
- * @Description 模块化对 SQL 的操作
- * @createTime 2019年05月17日 16:44
- */
-public class SQL_Constants {
-
-    /**
-     * 连接全局化 节省连接的时间
-     * 以及 别的可能使用的变量全局化
-     */
-    public static Connection CONN = null;
-
-    public static PreparedStatement PST = null;
-
-    public static ResultSet RS = null;
-
-
-
-    /**
-     * 字符串待填写
-     */
-    private final static String MYSQL_CLASS = &quot;&quot;;
-    private final static String MYSQL_URL = &quot;&quot;;
-    private final static String MYSQL_NAME = &quot;&quot;;
-    private final static String MYSQL_PASSWORD = &quot;&quot;;
-
-    public static void GetConnection(){
-        /**
-         * @title GetConnection
-         * @description
-         * @author BORBER
-         * @updateTime 2019/5/17 17:10
-         * @throws
-         */
-
-        try {
-            CONN = null;
-            Class.forName(MYSQL_CLASS);
-            CONN = DriverManager.getConnection(MYSQL_URL,MYSQL_NAME,MYSQL_PASSWORD);
-            if(CONN != null){
-                System.out.println(&quot;Connect success!&quot;);
-            }
-        }catch (ClassNotFoundException e) {
-            System.out.println(&quot;Class not found!&quot;);
-        } catch (SQLException e) {
-            System.out.println(&quot;Connect fail!&quot;);
-        }
-    }
-
+<p>朋友( <a href="https://miracol.cn/">Miracoi</a> )说自己的泡面版没漫画可看,我也正好昨天开始学爬虫 看看能不能爬些漫画给他看,我就找了一个漫画网站,开始了.</p>
+<p><a href="http://www.zerobyw4.com/">zero搬运网</a> 看了一眼 注册用户可以看 除最新章节的所有,但是对应的下载有次数限制,可观看没有啊.嘿嘿嘿 搞起.</p>
+<ol>
+<li>
+<p>注册 登录</p>
+</li>
+<li>
+<p>拿到 cookie 具体可以看 我发布的 <a href="https://borber.xyz/post/first-python-reptile/">First python reptile</a> 其中第三步</p>
+</li>
+<li>
+<p>替换下面代码的 cookie 以及 你的文档储存地址</p>
+<pre><code class="language-python">from bs4 import BeautifulSoup
+import requests
+import os
+header = {
+    'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3833.0 Safari/537.36',
+    'Cookie':'你自己的'
 
 }
+web_head = 'http://www.zerobyw4.com'
+rootpath = 'E:\File\Tmp\ ' #自己改
+seq = '\ '
+filend = '.jpg'
+
+def mkdir(path):
+    folder = os.path.exists(path)
+
+    if not folder:  # 判断是否存在文件夹如果不存在则创建为文件夹
+        os.makedirs(path)  # makedirs 创建文件时如果路径不存在会创建这个路径
+        print
+        &quot;---  new folder...  ---&quot;
+        print
+        &quot;---  OK  ---&quot;
+
+    else:
+        print
+        &quot;---  There is this folder!  ---&quot;
+
+
+
+def start():
+    for NUM in range(1,46):
+        url = 'http://www.zerobyw4.com/plugin.php?id=jameson_manhua&amp;c=index&amp;a=ku&amp;&amp;page=' +str(NUM)
+        web_data = requests.get(url)
+        Soup = BeautifulSoup(web_data.text, 'lxml')
+        urls = Soup.select('div.uk-card &gt; div &gt; a')
+        for each in urls:
+            one(web_head+each.get('href')[1:])
+
+def one(url):
+    web_data = requests.get(url)
+    Soup = BeautifulSoup(web_data.text, 'lxml')
+    details = Soup.select('a.uk-button-default')
+    title = Soup.select('h3.uk-heading-line')
+    folderpath = ''
+    for each in title:
+        if len(each.get_text()) &gt; 4:
+            folderpath = rootpath[:-1] + each.get_text()
+            mkdir(folderpath)
+            break
+    chapterNum = 0
+    for each in details:
+        filepath = folderpath+seq[0]+str(chapterNum)
+        mkdir(filepath)
+        chapterNum = chapterNum+1
+        realimg(web_head+each.get('href')[1:],filepath)
+
+
+def realimg(url,filepath):
+    web_data = requests.get(url,headers=header)
+    Soup = BeautifulSoup(web_data.text, 'lxml')
+    imgs = Soup.select('div.mb0 &gt; img')
+    NUM = 0
+    for img in imgs:
+        downimg(img.get('src'),filepath,NUM)
+        NUM = NUM+1
+
+
+def downimg(url,filepath,NUM):
+    r = requests.get(url, stream=True)
+    if r.status_code != 200:
+        return
+    filename = filepath+seq[0]+str(NUM)+filend
+    with open(filename, 'wb') as code:
+       for img_data in r.iter_content(128):
+           code.write(img_data)
+
+start()
 
 </code></pre>
+<p>漫画哪有 python有趣 嘿嘿嘿 😃</p>
+</li>
+</ol>
 
             </article>
           </div>
@@ -181,7 +228,7 @@ public class SQL_Constants {
             <nav class="navigation pagination" role="navigation">
               <h2 class="screen-reader-text">Posts navigation</h2>
               <div class="nav-links">
-                <a class="next page-numbers" style="font-size:20px" href="https://borber.github.io/post/kde-without-bug">下一篇->KDE without BUG</a>
+                <a class="next page-numbers" style="font-size:20px" href="https://borber.github.io/post/first-python-reptile">下一篇->First python reptile</a>
               </div>
             </nav>
           

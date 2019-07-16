@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://borber.github.io</id>
     <title>BORBER</title>
-    <updated>2019-07-16T04:32:42.739Z</updated>
+    <updated>2019-07-16T08:41:16.139Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://borber.github.io"/>
     <link rel="self" href="https://borber.github.io/atom.xml"/>
@@ -10,6 +10,111 @@
     <logo>https://borber.github.io/images/avatar.png</logo>
     <icon>https://borber.github.io/favicon.ico</icon>
     <rights>All rights reserved 2019, BORBER</rights>
+    <entry>
+        <title type="html"><![CDATA[Second python reptile]]></title>
+        <id>https://borber.github.io/post/second-python-reptile</id>
+        <link href="https://borber.github.io/post/second-python-reptile">
+        </link>
+        <updated>2019-07-16T08:30:35.000Z</updated>
+        <summary type="html"><![CDATA[<p>爬取<a href="http://www.zerobyw4.com/">zero搬运网</a> 漫画 有福利哦 🤪</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>爬取<a href="http://www.zerobyw4.com/">zero搬运网</a> 漫画 有福利哦 🤪</p>
+<!-- more -->
+<p>朋友( <a href="https://miracol.cn/">Miracoi</a> )说自己的泡面版没漫画可看,我也正好昨天开始学爬虫 看看能不能爬些漫画给他看,我就找了一个漫画网站,开始了.</p>
+<p><a href="http://www.zerobyw4.com/">zero搬运网</a> 看了一眼 注册用户可以看 除最新章节的所有,但是对应的下载有次数限制,可观看没有啊.嘿嘿嘿 搞起.</p>
+<ol>
+<li>
+<p>注册 登录</p>
+</li>
+<li>
+<p>拿到 cookie 具体可以看 我发布的 <a href="https://borber.xyz/post/first-python-reptile/">First python reptile</a> 其中第三步</p>
+</li>
+<li>
+<p>替换下面代码的 cookie 以及 你的文档储存地址</p>
+<pre><code class="language-python">from bs4 import BeautifulSoup
+import requests
+import os
+header = {
+    'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3833.0 Safari/537.36',
+    'Cookie':'你自己的'
+
+}
+web_head = 'http://www.zerobyw4.com'
+rootpath = 'E:\File\Tmp\ ' #自己改
+seq = '\ '
+filend = '.jpg'
+
+def mkdir(path):
+    folder = os.path.exists(path)
+
+    if not folder:  # 判断是否存在文件夹如果不存在则创建为文件夹
+        os.makedirs(path)  # makedirs 创建文件时如果路径不存在会创建这个路径
+        print
+        &quot;---  new folder...  ---&quot;
+        print
+        &quot;---  OK  ---&quot;
+
+    else:
+        print
+        &quot;---  There is this folder!  ---&quot;
+
+
+
+def start():
+    for NUM in range(1,46):
+        url = 'http://www.zerobyw4.com/plugin.php?id=jameson_manhua&amp;c=index&amp;a=ku&amp;&amp;page=' +str(NUM)
+        web_data = requests.get(url)
+        Soup = BeautifulSoup(web_data.text, 'lxml')
+        urls = Soup.select('div.uk-card &gt; div &gt; a')
+        for each in urls:
+            one(web_head+each.get('href')[1:])
+
+def one(url):
+    web_data = requests.get(url)
+    Soup = BeautifulSoup(web_data.text, 'lxml')
+    details = Soup.select('a.uk-button-default')
+    title = Soup.select('h3.uk-heading-line')
+    folderpath = ''
+    for each in title:
+        if len(each.get_text()) &gt; 4:
+            folderpath = rootpath[:-1] + each.get_text()
+            mkdir(folderpath)
+            break
+    chapterNum = 0
+    for each in details:
+        filepath = folderpath+seq[0]+str(chapterNum)
+        mkdir(filepath)
+        chapterNum = chapterNum+1
+        realimg(web_head+each.get('href')[1:],filepath)
+
+
+def realimg(url,filepath):
+    web_data = requests.get(url,headers=header)
+    Soup = BeautifulSoup(web_data.text, 'lxml')
+    imgs = Soup.select('div.mb0 &gt; img')
+    NUM = 0
+    for img in imgs:
+        downimg(img.get('src'),filepath,NUM)
+        NUM = NUM+1
+
+
+def downimg(url,filepath,NUM):
+    r = requests.get(url, stream=True)
+    if r.status_code != 200:
+        return
+    filename = filepath+seq[0]+str(NUM)+filend
+    with open(filename, 'wb') as code:
+       for img_data in r.iter_content(128):
+           code.write(img_data)
+
+start()
+
+</code></pre>
+<p>漫画哪有 python有趣 嘿嘿嘿 😃</p>
+</li>
+</ol>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[First python reptile]]></title>
         <id>https://borber.github.io/post/first-python-reptile</id>
@@ -90,13 +195,13 @@ for i in range(1,26514):
 <!-- more -->
 <h2 id="愿望清单">愿望清单</h2>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-5663487"><label class="task-list-item-label" for="task-item-5663487"> 载着我老婆 我老婆搂着我 路过樱花树（不一定是樱花树，主要是搂）</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-8342496"><label class="task-list-item-label" for="task-item-8342496"> 一起去海边</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-9857697"><label class="task-list-item-label" for="task-item-9857697"> 去游乐场 做恐怖的项目</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-8072036"><label class="task-list-item-label" for="task-item-8072036"> 回家</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-3375313"><label class="task-list-item-label" for="task-item-3375313"> 如果要造孩子的话，在高考那天造孩子，哈哈。</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-5872396"><label class="task-list-item-label" for="task-item-5872396"> 教老婆玩万智牌</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-7754776"><label class="task-list-item-label" for="task-item-7754776"> 吃炒饼</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-9602509"><label class="task-list-item-label" for="task-item-9602509"> 载着我老婆 我老婆搂着我 路过樱花树（不一定是樱花树，主要是搂）</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-3858800"><label class="task-list-item-label" for="task-item-3858800"> 一起去海边</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-616443"><label class="task-list-item-label" for="task-item-616443"> 去游乐场 做恐怖的项目</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-8511609"><label class="task-list-item-label" for="task-item-8511609"> 回家</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-6487187"><label class="task-list-item-label" for="task-item-6487187"> 如果要造孩子的话，在高考那天造孩子，哈哈。</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-2720980"><label class="task-list-item-label" for="task-item-2720980"> 教老婆玩万智牌</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-108126"><label class="task-list-item-label" for="task-item-108126"> 吃炒饼</label></li>
 </ul>
 ]]></content>
     </entry>
