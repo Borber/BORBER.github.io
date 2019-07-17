@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="robots" content="all,follow">
 <meta name="googlebot" content="index,follow,snippet,archive">
-<title>Second python crawler | BORBER</title>
+<title>Second python crawler pro | BORBER</title>
 <link rel="shortcut icon" href="https://borber.github.io/favicon.ico?v=1563381253037">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 <link rel="stylesheet" href="https://borber.github.io/styles/main.css" type='text/css' media='all'>
@@ -90,12 +90,12 @@
     <div id="loop-container" class="loop-container">
       <div class="post type-post status-publish format-standard has-post-thumbnail hentry category-design tag-design tag-standard-2 tag-tagalicious tag-travel entry full-without-featured odd excerpt-1">
         
-          <div class='featured-image lazy lazy-bg-image' data-background="https://www.z4a.net/images/2019/07/16/6b8c14f8gw1f0vg7ga9raj21040lzdmx.png">
+          <div class='featured-image lazy lazy-bg-image' data-background="https://www.z4a.net/images/2019/07/18/1.jpg">
           </div>
         
 
         <div class="entry-meta">
-          <span class="date">· 2019-07-16 ·</span>
+          <span class="date">· 2019-07-18 ·</span>
 
           
             <span class="category">
@@ -120,32 +120,37 @@
           
         </div>
         <div class='entry-header'>
-          <h1 class='entry-title'>Second python crawler</h1>
+          <h1 class='entry-title'>Second python crawler pro</h1>
         </div>
         <div class="entry-container">
           <div class="entry-content">
             <article>
-              <p>爬取<a href="http://www.zerobyw4.com/">zero搬运网</a> 漫画 有福利哦 🤪</p>
+              <p>爬取<a href="http://www.zerobyw4.com/">zero搬运网</a> 漫画 有福利哦 🤪 Pro</p>
 <!-- more -->
-<p>朋友( <a href="https://miracol.cn/">Miracoi</a> )说自己的泡面板没漫画可看,我也正好昨天开始学爬虫 看看能不能爬些漫画给他看,我就找了一个漫画网站,开始了.</p>
-<p><a href="http://www.zerobyw4.com/">zero搬运网</a> 看了一眼 注册用户可以看 除最新章节的所有,但是对应的下载有次数限制,可观看没有啊.嘿嘿嘿 搞起.</p>
+<p>​		写完第二个爬虫之后,写了好几个,但是总归是因为技术原因,达不到自己想要的效果,在重写第二个爬虫时这种感觉尤为强烈,所以写完这个之后,回去继续看剩下的网课,充实自己</p>
+<p>​		 因为不会反爬以及多线程 , 以及模拟登录 等等一系列的技术,所以写的非常简陋,但是还是用上了 MongoDB 因为涉及到数据库的操作 所以不是简单复制下来就能跑,需要安装相应的 包,以及软件,但现在比较懒,所以省略,如果有朋友遇见困难,可以评论区留言,我会回复,或者更新的.</p>
 <ol>
-<li>
-<p>注册 登录</p>
-</li>
-<li>
-<p>拿到 cookie 具体可以看 我发布的 <a href="https://borber.xyz/post/first-python-reptile/">First python reptile</a> 其中第三步</p>
-</li>
-<li>
-<p>替换下面代码的 cookie 以及 你的文档储存地址</p>
+<li>爬取全站版本 是我一开始写的,但是由于数据太大,需要长时间的访问,不可避免地导致反爬机制,以及链接断开之后,没有重连手段,导致十分鸡肋,所以产生更改目标,重写爬取单部漫画方案.</li>
+<li>在全站版本上修改的单部版本,但没想到是大改,所以,单部版本更加优秀 可以 参考单部 修改全站版本 还是本人太懒 不想改了.</li>
+</ol>
 <pre><code class="language-python">from bs4 import BeautifulSoup
 import requests
 import os
+import time
+import pymongo
+
+client = pymongo.MongoClient('localhost',27017)
+Mongo_zero = client['zero']
+Mongo_urls = Mongo_zero['urls']
+Mongo_detials = Mongo_zero['detials']
+Mongo_img_links = Mongo_zero['img_links']
+
 header = {
     'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3833.0 Safari/537.36',
     'Cookie':'你自己的'
 
 }
+
 web_head = 'http://www.zerobyw4.com'
 rootpath = 'E:\File\Tmp\ ' #自己改
 seq = '\ '
@@ -168,58 +173,181 @@ def mkdir(path):
 
 
 def start():
+    count = 0
     for NUM in range(1,46):
         url = 'http://www.zerobyw4.com/plugin.php?id=jameson_manhua&amp;c=index&amp;a=ku&amp;&amp;page=' +str(NUM)
         web_data = requests.get(url)
         Soup = BeautifulSoup(web_data.text, 'lxml')
         urls = Soup.select('div.uk-card &gt; div &gt; a')
-        for each in urls:
-            one(web_head+each.get('href')[1:])
+        titles = Soup.select('p.uk-text-truncate &gt; a')
+        for url,title in zip(urls,titles):
+            data = {
+                'index':count,
+                'title':title.get_text(),
+                'url':web_head+url.get('href')[1:]
+            }
+            count += 1
+            print(data)
+            mkdir(rootpath[:-1]+seq[0]+data['title'])
+            Mongo_urls.insert_one(data)
+        time.sleep(2)
 
-def one(url):
+def one():
+    for item in Mongo_urls.find():
+        web_data = requests.get(item['url'])
+        Soup = BeautifulSoup(web_data.text, 'lxml')
+        details = Soup.select('a.uk-button-default')
+        for count,each in enumerate(details):
+            data = {
+                'index':item['index'],
+                'count':count,
+                'url':web_head + each.get('href')[1:]
+            }
+            print(data)
+            mkdir(rootpath[:-1]+seq[0]+item['title']+seq[0]+str(data['count']))
+            Mongo_detials.insert_one(data)
+        time.sleep(2)
+
+
+def realimg():
+    num = 0
+    for item in Mongo_detials.find():
+        web_data = requests.get(item['url'], headers=header)
+        Soup = BeautifulSoup(web_data.text, 'lxml')
+        imgs = Soup.select('div.mb0 &gt; img')
+        NUM = 0
+        for img in imgs:
+            data = {
+                'num':num,
+                'title':Mongo_urls.find({'index':item['index']})[0]['title'],
+                'chapter':item['count'],
+                'count':NUM,
+                'url':img.get('src')
+            }
+            NUM = NUM + 1
+            print(data)
+            Mongo_img_links.insert_one(data)
+        time.sleep(2)
+
+
+
+def downimg():
+    for item in Mongo_img_links.find():
+        filename = rootpath[:-1] + seq[0] + item['title'] + seq[0] + str(item['chapter']) + seq[0] + str(item['count']) + filend
+        if os.path.exists(filename):
+            continue
+        r = requests.get(item['url'], stream=True)
+        if r.status_code != 200:
+            return
+        with open(filename, 'wb') as code:
+            for img_data in r.iter_content(128):
+                code.write(img_data)
+        r.close()
+        time.sleep(1)
+
+start()
+one()
+realimg()
+downimg()
+
+</code></pre>
+<ol start="2">
+<li>爬取单部漫画</li>
+</ol>
+<pre><code class="language-python">from bs4 import BeautifulSoup
+import requests
+import os
+import time
+import pymongo
+
+client = pymongo.MongoClient('localhost',27017)
+Mongo_zero = client['zero']
+Mongo_Detials = Mongo_zero['detials']
+Mongo_img_links = Mongo_zero['img_links']
+
+header = {
+    'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3833.0 Safari/537.36',
+    'Cookie':'你自己的'
+
+}
+
+web_head = 'http://www.zerobyw4.com'
+rootpath = 'E:\File\Tmp\ ' #自己改
+seq = '\ '
+
+def mkdir(path):
+    folder = os.path.exists(path)
+
+    if not folder:  # 判断是否存在文件夹如果不存在则创建为文件夹
+        os.makedirs(path)  # makedirs 创建文件时如果路径不存在会创建这个路径
+
+
+def one(url,rootpath):
     web_data = requests.get(url)
     Soup = BeautifulSoup(web_data.text, 'lxml')
     details = Soup.select('a.uk-button-default')
-    title = Soup.select('h3.uk-heading-line')
-    folderpath = ''
-    for each in title:
-        if len(each.get_text()) &gt; 4:
-            folderpath = rootpath[:-1] + each.get_text()
-            mkdir(folderpath)
-            break
-    chapterNum = 0
-    for each in details:
-        filepath = folderpath+seq[0]+str(chapterNum)
-        mkdir(filepath)
-        chapterNum = chapterNum+1
-        realimg(web_head+each.get('href')[1:],filepath)
+    title = Soup.select('li &gt; h3.uk-heading-line')[0].get_text()
+    rootpath = rootpath[:-1] + seq[0] + title
+    mkdir(rootpath)
+    for index, each in enumerate(details):
+        data = {
+            'chapter':index,
+            'title':each.get_text(),
+            'url': web_head + each.get('href')[1:]
+        }
+        mkdir(rootpath + seq[0] +data['title'])
+        print(data)
+        Mongo_Detials.insert_one(data)
+    return rootpath
 
 
-def realimg(url,filepath):
-    web_data = requests.get(url,headers=header)
-    Soup = BeautifulSoup(web_data.text, 'lxml')
-    imgs = Soup.select('div.mb0 &gt; img')
-    NUM = 0
-    for img in imgs:
-        downimg(img.get('src'),filepath,NUM)
-        NUM = NUM+1
 
 
-def downimg(url,filepath,NUM):
-    r = requests.get(url, stream=True)
-    if r.status_code != 200:
-        return
-    filename = filepath+seq[0]+str(NUM)+filend
-    with open(filename, 'wb') as code:
-       for img_data in r.iter_content(128):
-           code.write(img_data)
+def realimg():
+    num = 0
+    for item in Mongo_Detials.find():
+        web_data = requests.get(item['url'], headers=header)
+        Soup = BeautifulSoup(web_data.text, 'lxml')
+        imgs = Soup.select('div.mb0 &gt; img')
+        NUM = 0
+        for img in imgs:
+            data = {
+                'num':num,
+                'chapter':item['chapter'],
+                'count':NUM,
+                'url':img.get('src')
+            }
+            num += 1
+            NUM += 1
+            print(data)
+            Mongo_img_links.insert_one(data)
 
-start()
+
+
+def downimg(rootpath):
+    for item in Mongo_img_links.find():
+        filename = rootpath + seq[0] + Mongo_Detials.find({'chapter':item['chapter']})[0]['title'] + seq[0] + str(item['count']) + item['url'][-4:]
+        print(filename)
+        # if os.path.exists(filename):
+        #     continue
+        r = requests.get(item['url'], stream=True)
+        with open(filename, 'wb') as code:
+            for img_data in r.iter_content(128):
+                code.write(img_data)
+
+
+Mongo_zero.drop_collection('detials')
+Mongo_zero.drop_collection('img_links')
+print('输入你想下载的漫画详情页网址:')
+url = input()
+rootpath = one(url,rootpath)
+realimg()
+downimg(rootpath)
+
+
 
 </code></pre>
 <p>漫画哪有 python有趣 嘿嘿嘿 😃</p>
-</li>
-</ol>
 
             </article>
           </div>
@@ -228,7 +356,7 @@ start()
             <nav class="navigation pagination" role="navigation">
               <h2 class="screen-reader-text">Posts navigation</h2>
               <div class="nav-links">
-                <a class="next page-numbers" style="font-size:20px" href="https://borber.github.io/post/first-python-reptile">下一篇->First python crawler</a>
+                <a class="next page-numbers" style="font-size:20px" href="https://borber.github.io/post/third-python-reptile">下一篇->Third python crawler</a>
               </div>
             </nav>
           
