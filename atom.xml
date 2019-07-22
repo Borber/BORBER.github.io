@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://borber.github.io</id>
     <title>BORBER</title>
-    <updated>2019-07-17T16:34:17.876Z</updated>
+    <updated>2019-07-22T08:44:14.450Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://borber.github.io"/>
     <link rel="self" href="https://borber.github.io/atom.xml"/>
@@ -20,8 +20,10 @@
 ]]></summary>
         <content type="html"><![CDATA[<p>爬取<a href="http://www.zerobyw4.com/">zero搬运网</a> 漫画 有福利哦 🤪 Pro</p>
 <!-- more -->
-<p>​		写完第二个爬虫之后,写了好几个,但是总归是因为技术原因,达不到自己想要的效果,在重写第二个爬虫时这种感觉尤为强烈,所以写完这个之后,回去继续看剩下的网课,充实自己</p>
-<p>​		 因为不会反爬以及多线程 , 以及模拟登录 等等一系列的技术,所以写的非常简陋,但是还是用上了 MongoDB 因为涉及到数据库的操作 所以不是简单复制下来就能跑,需要安装相应的 包,以及软件,但现在比较懒,所以省略,如果有朋友遇见困难,可以评论区留言,我会回复,或者更新的.</p>
+<pre><code>	写完第二个爬虫之后,写了好几个,但是总归是因为技术原因,达不到自己想要的效果,在重写第二个爬虫时这种感觉尤为强烈,所以写完这个之后,回去继续看剩下的网课,充实自己
+
+	 因为不会反爬以及多线程 , 以及模拟登录 等等一系列的技术,所以写的非常简陋,但是还是用上了 MongoDB 因为涉及到数据库的操作 所以不是简单复制下来就能跑,需要安装相应的 包,以及软件,但现在比较懒,所以省略,如果有朋友遇见困难,可以评论区留言,我会回复,或者更新的.
+</code></pre>
 <ol>
 <li>爬取全站版本 是我一开始写的,但是由于数据太大,需要长时间的访问,不可避免地导致反爬机制,以及链接断开之后,没有重连手段,导致十分鸡肋,所以产生更改目标,重写爬取单部漫画方案.</li>
 <li>在全站版本上修改的单部版本,但没想到是大改,所以,单部版本更加优秀 可以 参考单部 修改全站版本 还是本人太懒 不想改了.</li>
@@ -150,94 +152,88 @@ downimg()
 <pre><code class="language-python">from bs4 import BeautifulSoup
 import requests
 import os
-import time
 import pymongo
 
-client = pymongo.MongoClient('localhost',27017)
+client = pymongo.MongoClient('localhost', 27017)
 Mongo_zero = client['zero']
-Mongo_Detials = Mongo_zero['detials']
+Mongo_Details = Mongo_zero['details']
 Mongo_img_links = Mongo_zero['img_links']
 
 header = {
-    'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3833.0 Safari/537.36',
-    'Cookie':'你自己的'
+    'User-Agent': '',  # yours
+    'Cookie': ''  # yours
 
 }
 
 web_head = 'http://www.zerobyw4.com'
-rootpath = 'E:\File\Tmp\ ' #自己改
-seq = '\ '
+rootpath = '/home/x/BORBER/BORBER/File/Tmp'  # yours
+seq = '/'
+
 
 def mkdir(path):
     folder = os.path.exists(path)
+    if not folder:
+        os.makedirs(path)
 
-    if not folder:  # 判断是否存在文件夹如果不存在则创建为文件夹
-        os.makedirs(path)  # makedirs 创建文件时如果路径不存在会创建这个路径
 
-
-def one(url,rootpath):
-    web_data = requests.get(url)
-    Soup = BeautifulSoup(web_data.text, 'lxml')
-    details = Soup.select('a.uk-button-default')
-    title = Soup.select('li &gt; h3.uk-heading-line')[0].get_text()
-    rootpath = rootpath[:-1] + seq[0] + title
-    mkdir(rootpath)
+def one(url_x, rootpath_s):
+    web_data = requests.get(url_x, headers=header)
+    soup = BeautifulSoup(web_data.text, 'lxml')
+    details = soup.select('a.uk-button-default')
+    title = soup.select('li &gt; h3.uk-heading-line')[0].get_text()
+    rootpath_x = rootpath_s + seq[0] + title
+    mkdir(rootpath_x)
     for index, each in enumerate(details):
         data = {
-            'chapter':index,
-            'title':each.get_text(),
+            'chapter': index,
+            'title': each.get_text(),
             'url': web_head + each.get('href')[1:]
         }
-        mkdir(rootpath + seq[0] +data['title'])
+        mkdir(rootpath_x + seq[0] + data['title'])
         print(data)
-        Mongo_Detials.insert_one(data)
-    return rootpath
-
-
+        Mongo_Details.insert_one(data)
+    return rootpath_x
 
 
 def realimg():
     num = 0
-    for item in Mongo_Detials.find():
+    for item in Mongo_Details.find():
         web_data = requests.get(item['url'], headers=header)
-        Soup = BeautifulSoup(web_data.text, 'lxml')
-        imgs = Soup.select('div.mb0 &gt; img')
-        NUM = 0
+        soup = BeautifulSoup(web_data.text, 'lxml')
+        imgs = soup.select('div.mb0 &gt; img')
+        count = 0
         for img in imgs:
             data = {
-                'num':num,
-                'chapter':item['chapter'],
-                'count':NUM,
-                'url':img.get('src')
+                'num': num,
+                'chapter': item['chapter'],
+                'count': count,
+                'url': img.get('src')
             }
             num += 1
-            NUM += 1
+            count += 1
             print(data)
             Mongo_img_links.insert_one(data)
 
 
-
-def downimg(rootpath):
+def downimg(rootpath_x):
     for item in Mongo_img_links.find():
-        filename = rootpath + seq[0] + Mongo_Detials.find({'chapter':item['chapter']})[0]['title'] + seq[0] + str(item['count']) + item['url'][-4:]
+        filename = rootpath_x + seq[0] + Mongo_Details.find({'chapter': item['chapter']})[0]['title'] + seq[0] + str(item['count']) + item['url'][-4:]
         print(filename)
         # if os.path.exists(filename):
         #     continue
-        r = requests.get(item['url'], stream=True)
+        r = requests.get(item['url'], headers=header, stream=True)
         with open(filename, 'wb') as code:
             for img_data in r.iter_content(128):
                 code.write(img_data)
 
 
-Mongo_zero.drop_collection('detials')
+Mongo_zero.drop_collection('details')
 Mongo_zero.drop_collection('img_links')
 print('输入你想下载的漫画详情页网址:')
 url = input()
-rootpath = one(url,rootpath)
+rootpath = one(url, rootpath)
 realimg()
 downimg(rootpath)
-
-
 
 </code></pre>
 <p>漫画哪有 python有趣 嘿嘿嘿 😃</p>
@@ -506,13 +502,13 @@ for i in range(1,26514):
 <!-- more -->
 <h2 id="愿望清单">愿望清单</h2>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-815188"><label class="task-list-item-label" for="task-item-815188"> 载着我老婆 我老婆搂着我 路过樱花树（不一定是樱花树，主要是搂）</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-5121511"><label class="task-list-item-label" for="task-item-5121511"> 一起去海边</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-5766854"><label class="task-list-item-label" for="task-item-5766854"> 去游乐场 做恐怖的项目</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-7721246"><label class="task-list-item-label" for="task-item-7721246"> 回家</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-6693354"><label class="task-list-item-label" for="task-item-6693354"> 如果要造孩子的话，在高考那天造孩子，哈哈。</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-7309020"><label class="task-list-item-label" for="task-item-7309020"> 教老婆玩万智牌</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-1171555"><label class="task-list-item-label" for="task-item-1171555"> 吃炒饼</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-7977411"><label class="task-list-item-label" for="task-item-7977411"> 载着我老婆 我老婆搂着我 路过樱花树（不一定是樱花树，主要是搂）</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-8468706"><label class="task-list-item-label" for="task-item-8468706"> 一起去海边</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-8697821"><label class="task-list-item-label" for="task-item-8697821"> 去游乐场 做恐怖的项目</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-864216"><label class="task-list-item-label" for="task-item-864216"> 回家</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-7394724"><label class="task-list-item-label" for="task-item-7394724"> 如果要造孩子的话，在高考那天造孩子，哈哈。</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-7000629"><label class="task-list-item-label" for="task-item-7000629"> 教老婆玩万智牌</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-7485183"><label class="task-list-item-label" for="task-item-7485183"> 吃炒饼</label></li>
 </ul>
 ]]></content>
     </entry>
