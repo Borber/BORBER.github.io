@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://borber.github.io</id>
     <title>BORBER</title>
-    <updated>2019-07-23T02:18:05.543Z</updated>
+    <updated>2019-07-23T17:48:08.276Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://borber.github.io"/>
     <link rel="self" href="https://borber.github.io/atom.xml"/>
@@ -10,6 +10,167 @@
     <logo>https://borber.github.io/images/avatar.png</logo>
     <icon>https://borber.github.io/favicon.ico</icon>
     <rights>All rights reserved 2019, BORBER</rights>
+    <entry>
+        <title type="html"><![CDATA[A failed spider]]></title>
+        <id>https://borber.github.io/post/a-failed-spider</id>
+        <link href="https://borber.github.io/post/a-failed-spider">
+        </link>
+        <updated>2019-07-23T17:44:33.000Z</updated>
+        <summary type="html"><![CDATA[<p>失败的爬虫 成功的尝试</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>失败的爬虫 成功的尝试</p>
+<!-- more -->
+<p>在爬取完漫画网站之后，我在想，我还能用自己浅薄的知识做点什么，但实在是因为自己 python的基本功不够扎实，以及自己的需求过于模糊，所以最后还是选择了爬取笔趣阁的小说。练习python，熟悉bs4 和 requsets 的使用。</p>
+<p>因为想要使用多进程，所以是用的与之前不一样的写法，以及困于PyChram的输入网址之后直接回车就会打开浏览器，所以默认多加一个字符长度，默认是空格</p>
+<p>首先是爬取文章标题</p>
+<pre><code class="language-python">#
+
+from bs4 import BeautifulSoup
+import requests
+
+
+def get_titles(urlx):
+    wb_data = requests.get(urlx)
+    wb_data.encoding = 'UTF-8'
+    soup = BeautifulSoup(wb_data.text, 'lxml')
+    return soup.select('h1')[0].get_text()
+
+
+</code></pre>
+<p>其次是 爬取文章目录</p>
+<pre><code class="language-python">#
+
+from bs4 import BeautifulSoup
+import requests
+import pymongo
+
+head = 'https://www.biquge.com.cn'
+client = pymongo.MongoClient('localhost', 27017)
+BQG = client['BQG']
+chapters = BQG['chapters']
+
+
+def get_chapters(urlx):
+    wb_data = requests.get(urlx)
+    wb_data.encoding = 'UTF-8'
+    soup = BeautifulSoup(wb_data.text, 'lxml')
+    local_chapters = soup.select('dd &gt; a')
+    for index, each in enumerate(local_chapters):
+        local_chapter = {
+            'index': index,
+            'url': head+each.get('href')
+        }
+        chapters.insert_one(local_chapter)
+
+
+</code></pre>
+<p>然后是 爬取 文章内容</p>
+<pre><code class="language-python">#
+
+from bs4 import BeautifulSoup
+import requests
+import pymongo
+
+client = pymongo.MongoClient('localhost', 27017)
+BQG = client['BQG']
+books = BQG['books']
+chapters = BQG['chapters']
+articles = BQG['articles']
+
+
+def get_articles(urlx):
+    wb_data = requests.get(urlx)
+    wb_data.encoding = 'UTF-8'
+    soup = BeautifulSoup(wb_data.text, 'lxml')
+    wb_data.close()
+    title = {'T|C': 1, 'm': soup.select('div.bookname &gt; h1')[0].get_text()}
+    articles.insert_one(title)
+    content = soup.select('#content').__str__().replace('[&lt;div id=&quot;content&quot;&gt;', '').replace('&lt;/div&gt;]', '').replace('\xa0', '').split('&lt;br/&gt;&lt;br/&gt;')
+    for each in content:
+        paragraph = {
+            'T|C': 0,
+            'm': each
+        }
+        articles.insert_one(paragraph)
+</code></pre>
+<p>主程序：</p>
+<pre><code class="language-python">import pymongo
+import os
+from multiprocessing import Pool
+from zerox.bqg_get_chapters import get_chapters
+from zerox.bqg_get_articles import get_articles
+from zerox.bqg_get_titles import get_titles
+
+client = pymongo.MongoClient('localhost', 27017)
+BQG = client['BQG']
+books = BQG['books']
+chapters = BQG['chapters']
+articles = BQG['articles']
+rootpath = '/home/x/BORBER/File/Tmp/novel/'
+filend = '.txt'
+
+
+def write_in(item):
+    if item['T|C'] == 1:
+        file.write(item['m'])
+        file.write('\n\n\n\n')
+    else:
+        print('  ')
+        file.write(item['m'])
+        file.write('\n\n')
+
+
+if __name__ == '__main__':
+    BQG.drop_collection('books')
+    BQG.drop_collection('chapters')
+    BQG.drop_collection('articles')
+    pool = Pool()
+    print('Enter the specific link to the novel:')
+    url = input()[:-1]
+    title = get_titles(url)
+    a = rootpath + title + filend
+    file = open(rootpath + title + filend, 'w')
+    get_chapters(url)
+    for item in chapters.find():
+        get_articles(item['url'])
+    for item in articles.find():
+        write_in(item)
+
+
+
+</code></pre>
+<p>以下提供 监测程序：</p>
+<pre><code class="language-python">import time
+import pymongo
+import os
+
+client = pymongo.MongoClient('localhost', 27017)
+BQG = client['BQG']
+books = BQG['books']
+chapters = BQG['chapters']
+articles = BQG['articles']
+
+while True:
+    os.system('clear')
+    print(chapters.find().count()+articles.find().count())
+    time.sleep(2)
+
+</code></pre>
+<p>文件结构：</p>
+<pre><code class="language-shell">-zero
+	-zerox  #python package
+		-bqg_get_chapters.py
+		-bqg_get_articles.py
+		-bqg_get_titles.py
+		-count.py
+		-main.py
+		-__init__.py
+</code></pre>
+<p>但是 为什么文章叫 失败的爬虫呢？ 因为我只成功了两次，后面的话就会报错了，应该是 笔趣阁的反扒手段，所以还是同样，如果以后我的技术进步了，我会着手改进这个爬虫的 ，有想尝试的朋友可以先试着加个 headers 到 get方法。</p>
+<p><strong>此爬虫需要使用 mongoDB</strong></p>
+<p>真的去下苦工 打基础了 (๑•̀ㅂ•́)و✧</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Free is the most expensive]]></title>
         <id>https://borber.github.io/post/free-is-the-most-expensive</id>
@@ -516,13 +677,13 @@ for i in range(1,26514):
 <!-- more -->
 <h2 id="愿望清单">愿望清单</h2>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-3905943"><label class="task-list-item-label" for="task-item-3905943"> 载着我老婆 我老婆搂着我 路过樱花树（不一定是樱花树，主要是搂）</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-1115840"><label class="task-list-item-label" for="task-item-1115840"> 一起去海边</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-7531095"><label class="task-list-item-label" for="task-item-7531095"> 去游乐场 做恐怖的项目</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-1066542"><label class="task-list-item-label" for="task-item-1066542"> 回家</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-2590329"><label class="task-list-item-label" for="task-item-2590329"> 如果要造孩子的话，在高考那天造孩子，哈哈。</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-200269"><label class="task-list-item-label" for="task-item-200269"> 教老婆玩万智牌</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-6762012"><label class="task-list-item-label" for="task-item-6762012"> 吃炒饼</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-5317074"><label class="task-list-item-label" for="task-item-5317074"> 载着我老婆 我老婆搂着我 路过樱花树（不一定是樱花树，主要是搂）</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-4029772"><label class="task-list-item-label" for="task-item-4029772"> 一起去海边</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-301695"><label class="task-list-item-label" for="task-item-301695"> 去游乐场 做恐怖的项目</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-5138999"><label class="task-list-item-label" for="task-item-5138999"> 回家</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-6655714"><label class="task-list-item-label" for="task-item-6655714"> 如果要造孩子的话，在高考那天造孩子，哈哈。</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-4157526"><label class="task-list-item-label" for="task-item-4157526"> 教老婆玩万智牌</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-9417895"><label class="task-list-item-label" for="task-item-9417895"> 吃炒饼</label></li>
 </ul>
 ]]></content>
     </entry>
