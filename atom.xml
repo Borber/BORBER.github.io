@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://borber.github.io</id>
     <title>BORBER</title>
-    <updated>2019-07-23T01:40:28.377Z</updated>
+    <updated>2019-07-23T01:55:12.902Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://borber.github.io"/>
     <link rel="self" href="https://borber.github.io/atom.xml"/>
@@ -11,7 +11,23 @@
     <icon>https://borber.github.io/favicon.ico</icon>
     <rights>All rights reserved 2019, BORBER</rights>
     <entry>
-        <title type="html"><![CDATA[Second python crawler pro]]></title>
+        <title type="html"><![CDATA[Free is the most expensive]]></title>
+        <id>https://borber.github.io/post/free-is-the-most-expensive</id>
+        <link href="https://borber.github.io/post/free-is-the-most-expensive">
+        </link>
+        <updated>2019-07-23T01:49:25.000Z</updated>
+        <summary type="html"><![CDATA[<p>免费才是最贵的</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>免费才是最贵的</p>
+<!-- more -->
+<p>borber.xyz 域名 可以确定之前的IP无法查询是万网的解析被封禁了，因为昨晚实名认证之后就立马能用了 但我也真的不想用了，直接丢了算了，因为它 折腾了不知多久，浪费了大量的时间，以后恐怕还会搞幺蛾子，与其这样还不如不用好了。</p>
+<p>以后 borber.github.io 这个域名我就白嫖到老了。</p>
+<p>但求技术 ， 莫问前程。专注技术，更新博客才是正道，也真的再一次学到了，免费才是最贵的。</p>
+<p>🙂</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Second python spider pro]]></title>
         <id>https://borber.github.io/post/second-python-crawler-pro</id>
         <link href="https://borber.github.io/post/second-python-crawler-pro">
         </link>
@@ -240,7 +256,7 @@ downimg(rootpath)
 ]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[Third python crawler]]></title>
+        <title type="html"><![CDATA[Third python spider]]></title>
         <id>https://borber.github.io/post/third-python-reptile</id>
         <link href="https://borber.github.io/post/third-python-reptile">
         </link>
@@ -318,7 +334,7 @@ for url in urls:
 ]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[Second python crawler]]></title>
+        <title type="html"><![CDATA[Second python spider]]></title>
         <id>https://borber.github.io/post/second-python-reptile</id>
         <link href="https://borber.github.io/post/second-python-reptile">
         </link>
@@ -423,7 +439,7 @@ start()
 ]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[First python crawler]]></title>
+        <title type="html"><![CDATA[First python spider]]></title>
         <id>https://borber.github.io/post/first-python-reptile</id>
         <link href="https://borber.github.io/post/first-python-reptile">
         </link>
@@ -502,13 +518,13 @@ for i in range(1,26514):
 <!-- more -->
 <h2 id="愿望清单">愿望清单</h2>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-8788195"><label class="task-list-item-label" for="task-item-8788195"> 载着我老婆 我老婆搂着我 路过樱花树（不一定是樱花树，主要是搂）</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-8007593"><label class="task-list-item-label" for="task-item-8007593"> 一起去海边</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-8985217"><label class="task-list-item-label" for="task-item-8985217"> 去游乐场 做恐怖的项目</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-1594317"><label class="task-list-item-label" for="task-item-1594317"> 回家</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-6036176"><label class="task-list-item-label" for="task-item-6036176"> 如果要造孩子的话，在高考那天造孩子，哈哈。</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-6948343"><label class="task-list-item-label" for="task-item-6948343"> 教老婆玩万智牌</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-4170803"><label class="task-list-item-label" for="task-item-4170803"> 吃炒饼</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-4896519"><label class="task-list-item-label" for="task-item-4896519"> 载着我老婆 我老婆搂着我 路过樱花树（不一定是樱花树，主要是搂）</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-5012976"><label class="task-list-item-label" for="task-item-5012976"> 一起去海边</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-7558639"><label class="task-list-item-label" for="task-item-7558639"> 去游乐场 做恐怖的项目</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-3205703"><label class="task-list-item-label" for="task-item-3205703"> 回家</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-6886989"><label class="task-list-item-label" for="task-item-6886989"> 如果要造孩子的话，在高考那天造孩子，哈哈。</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-374809"><label class="task-list-item-label" for="task-item-374809"> 教老婆玩万智牌</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-7173001"><label class="task-list-item-label" for="task-item-7173001"> 吃炒饼</label></li>
 </ul>
 ]]></content>
     </entry>
