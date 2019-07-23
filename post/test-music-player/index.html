@@ -1,190 +1,142 @@
-
-<!DOCTYPE html>
-<html lang="zh-CN">
+<html>
 <head>
- <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Test Music Player | BORBER</title>	
-</style>
-<link rel="stylesheet" href="https://borber.github.io/styles/main.css">
-<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+  <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="all,follow">
+<meta name="googlebot" content="index,follow,snippet,archive">
+<title>Test Music Player | BORBER</title>
+<link rel="shortcut icon" href="https://borber.github.io/favicon.ico?v=1563845411018">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+<link rel="stylesheet" href="https://borber.github.io/styles/main.css" type='text/css' media='all'>
+
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
-<script type='text/javascript' src='https://borber.github.io/media/scripts/script.js'></script>
+
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-142130514-1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
+
   gtag('config', 'UA-142130514-1');
 </script>
 
-<style type="text/css">
-header {
-    text-align: center;
-    padding: 120px 0px 40px 0px;
-    background: #515865 center no-repeat;
-    font-size: 16px;
-    color: #fff;
-    background-size: cover;
-    background-image:url(
-			https://www.z4a.net/images/2019/07/23/Jade-Wallpaper.jpg
-			);
-}
-		</style>
 
- 	
 </head>
-<body class="post-template-default single single-post postid-70 single-format-standard">
-    <div id="wrapper">
+<body class="home blog ct-body standard">
+<div id="overflow-container" class="overflow-container">
+  <header id="site-header" class="site-header" role="banner">
+
+
+    <div class="container">
+        <div id="title-info" class="title-info">
+            <div id='site-title' class='site-title'>
+                <a href="https://borber.github.io">  BORBER </a>
+            </div>
+        </div>
+        <button id="toggle-navigation" class="toggle-navigation">
+            <i class="fa fa-bars"></i>
+        </button>
+        <div id="menu-primary-tracks" class="menu-primary-tracks"></div>
+        <div id="menu-primary" class="menu-container menu-primary" role="navigation">
+            <p class="site-description">世俗为枷锁 世人皆自缚</p>
+            <div class="menu">
+                <ul id="menu-primary-items" class="menu-primary-items">
+                     
+                        
+                            <li id="menu-item" class='menu-item menu-item-type-post_type menu-item-object-page current-menu-item current_page_item'>
+                                <a href="/">首页</a>
+                            </li>
+                        
+                    
+                        
+                            <li id="menu-item" class='menu-item menu-item-type-post_type menu-item-object-page current-menu-item current_page_item'>
+                                <a href="/archives">归档</a>
+                            </li>
+                        
+                    
+                        
+                            <li id="menu-item" class='menu-item menu-item-type-post_type menu-item-object-page current-menu-item current_page_item'>
+                                <a href="/tags">标签</a>
+                            </li>
+                        
+                    
+                        
+                            <li id="menu-item" class='menu-item menu-item-type-post_type menu-item-object-page current-menu-item current_page_item'>
+                                <a href="/post/about">关于</a>
+                            </li>
+                        
+                    
+                        
+                            <li id="menu-item" class='menu-item menu-item-type-post_type menu-item-object-page current-menu-item current_page_item'>
+                                <a href="https://borber.github.io/friend/">友链</a>
+                            </li>
+                        
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+</header>
+
+
+  <div id="main" class="main" role="main">
+    <div id="loop-container" class="loop-container">
+      <div class="post type-post status-publish format-standard has-post-thumbnail hentry category-design tag-design tag-standard-2 tag-tagalicious tag-travel entry full-without-featured odd excerpt-1">
         
-			
-		<header id="header ddq" class="site-header" 
-		
-		style="background-image:url(https://www.z4a.net/images/2019/06/18/seria.jpg)"
-		
-		>
-			<div class="site-branding">
-									<h1 class="site-title"><a href="https://borber.github.io" rel="home">BORBER</a></h1>
-										
-					<h2 class="site-description">世俗为枷锁 世人皆自缚</h2>
-										
-							</div>
-			<nav id="nav-wrapper">
-				<div class="container">
-					<div class="nav-toggle">
-						<div class="bars">
-							<div class="bar"></div>
-							<div class="bar"></div>
-							<div class="bar"></div>
-						</div>
-					</div><!-- /nav-toggle -->
-					<div class="clear"></div>
-					<ul id="" class="vtmenu">
-		 
-     			
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12">
-	 
-	<a  href="/"> 首页</a></li>
-	
-    
-     			
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12">
-	 
-	<a  href="/archives"> 归档</a></li>
-	
-    
-     			
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12">
-	 
-	<a  href="/tags"> 标签</a></li>
-	
-    
-     			
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12">
-	 
-	<a  href="/post/about"> 关于</a></li>
-	
-    
-     			
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12">
-	 
-	<a  href="https://borber.github.io/friend/"> 友链</a></li>
-	
-    
+          <div class='featured-image lazy lazy-bg-image' data-background="https://www.z4a.net/images/2019/06/18/seria.jpg">
+          </div>
+        
 
-</ul>
-</li>		
-		
-</ul>				</div>
-			</nav><!-- #navigation -->
-						<div class="jingge">
+        <div class="entry-meta">
+          <span class="date">· 2019-06-18 ·</span>
 
-			
-<a  href="/atom.xml" target="_blank" ><i class="iconfont icon-rss"></i></a>
- 
-    
-
-    
-			
-<a  href="https://github.com/Borber" target="_blank" ><i class="iconfont icon-github"></i></a>
- 
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        </header><!-- #masthead -->
-
-		<div id="content" class="container">
-			<div class="row">
-	<div class="col-md-8 site-main">
-				
-<article id="post-70" class="post-70 post type-post status-publish format-standard hentry category-5 tag-10 tag-9 tag-11">
-
-	
-	                      
-		<div class="entry-content">
-			<h1 class="entry-title">Test Music Player</h1>
-<div class="entry-meta">
-	
-	           <a href="https://borber.github.io/post/test-music-player">
-							 <i class="iconfont icon-rili"> 
-							</i> 2019-06-18</a> 
-			
-</span>
-													 
-		</div>
-                  
-			<div class="entry-summary">
-				<p><p>测试 歌曲 喜欢-阿肆</p>
+          
+            <span class="category">
+                    <span> / </span>
+                    <a href="https://borber.github.io/tag/uC46nU43x">音乐</a>
+                </span>
+          
+            <span class="category">
+                    <span> / </span>
+                    <a href="https://borber.github.io/tag/3zxhdu1jz">测试</a>
+                </span>
+          
+        </div>
+        <div class='entry-header'>
+          <h1 class='entry-title'>Test Music Player</h1>
+        </div>
+        <div class="entry-container">
+          <div class="entry-content">
+            <article>
+              <p>测试 歌曲 喜欢-阿肆</p>
 <!-- more -->
 <iframe frameborder="0" border="1" 
             marginwidth="0" marginheight="0" 
             width=333 height=77 
             src="//music.163.com/outchain/player?type=2&id=526464145&auto=0&height=66">
     </iframe>
-</p>
-							</div>
-	<div class="vt-post-tags">
- 
-				<a href="https://borber.github.io/tag/uC46nU43x" rel="tag">音乐</a>	
-				 
-				<a href="https://borber.github.io/tag/3zxhdu1jz" rel="tag">测试</a>	
-				 
-					</div>						
-<nav class="navigation3 post-navigation3" role="navigation">
-		
-		<div class="nav-links3">
-      
-		 
-		<div class="nav-next3"><a href="https://borber.github.io/post/test-code-highlight" rel="next"> Test Code Highlight</a></div>
-		
-		</div>
-	</nav>
-		</div>
-		
- 
-		
-</article>
 
-<div id="marlin_lite_about_widget-2" class="widget marlin_lite_about_widget">
-			<h4 class="widget-title">评论</h4>	
-
-			 
+            </article>
+          </div>
+        </div>
+          
+            <nav class="navigation pagination" role="navigation">
+              <h2 class="screen-reader-text">Posts navigation</h2>
+              <div class="nav-links">
+                <a class="next page-numbers" style="font-size:20px" href="https://borber.github.io/post/test-code-highlight">下一篇->Test Code Highlight</a>
+              </div>
+            </nav>
+          
+      </div>
+      <section id="comments" class="comments">
+        
           
             <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
 <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
@@ -195,11 +147,11 @@ header {
 
   var gitalk = new Gitalk({
     clientID: '46faa605211a1eadeb3a',
-    clientSecret: 'ac6abe30a4d9f21248acb00499811e3d0537f849',
+    clientSecret: '78d262d72d068322632d74ff2a80439a5c08ead1',
     repo: 'BORBER.github.io',
     owner: 'Borber',
     admin: ['Borber'],
-    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    id: location.pathname,      // Ensure uniqueness and length less than 50
     distractionFreeMode: false  // Facebook-like distraction free mode
   })
 
@@ -208,121 +160,68 @@ header {
 </script>
 
           
+
           
         
-   
-  
- 
-
-		</div>
-
-			</div>
-			
-
-
-<div class="col l3 hide-on-med-and-down">
-	
-        <div class="toc-widget">
-			
-            <div class="toc-title"></div>
-			
-            <div id="toc-content">
-			
-			
-			</div>
+      </section>
+    </div>
+  </div>
+  <footer id="site-footer" class="site-footer" role="contentinfo">
+    <h1>
+        <a href="https://borber.github.io"> BORBER </a>
+    </h1>
+    <p class="site-description" style="font-size:18px">世俗为枷锁 世人皆自缚</p>
+    <div id="menu-footer" class="menu-container menu-footer" role="navigation">
+        <div class="menu">
+            <ul id="menu-footer-items" class="menu-footer-items">
+            </ul>
         </div>
     </div>
-
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.5.0/tocbot.min.js"></script>
+    <ul class="social-media-icons">
+        
+            
+                <li>
+                    <a href="https://github.com/Borber" data-animate-hover="pulse" class="github" target="_blank">
+                        <i class="fab fa-github" title="github"></i>
+                        <span class="screen-reader-text">github</span>
+                    </a>
+                </li>
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+                <li>
+                    <a href="/atom.xml" data-animate-hover="pulse" class="rss" target="_blank">
+                        <i class="fas fa-rss" title="rss"></i>
+                        <span class="screen-reader-text">rss</span>
+                    </a>
+                </li>
+            
+        
+    </ul>
+    <div class="design-credit">
+        <p>Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a></p>
+    </div>
+</footer>
 <script>
-    $(function () {
-        tocbot.init({
-            tocSelector: '#toc-content',
-            contentSelector: '.entry-summary',
-            headingsOffset: -($(window).height() * 0.4 - 45),
-            // headingsOffset: -205,
-            headingSelector: 'h2, h3, h4'
-        });
-
-        // modify the toc link href to support Chinese.
-        let i = 0;
-        let tocHeading = 'toc-heading-';
-        $('#toc-content a').each(function () {
-            $(this).attr('href', '#' + tocHeading + (++i));
-        });
-
-        // modify the heading title id to support Chinese.
-        i = 0;
-        $('.entry-summary').children('h2, h3, h4').each(function () {
-            $(this).attr('id', tocHeading + (++i));
-        });
-
-        // Set scroll toc fixed.
-        let tocHeight = parseInt($(window).height() * 0.4 - 64);
-        let $tocWidget = $('.toc-widget');
-        $(window).scroll(function () {
-            let scroll = $(window).scrollTop();
-            /* add post toc fixed. */
-            if (scroll > tocHeight) {
-                $tocWidget.addClass('toc-fixed');
-            } else {
-                $tocWidget.removeClass('toc-fixed');
-            }
-        });
-    });
-</script>										 
-
- 
-       
-
-
-			</div>
-		</div>
-
-		
-		 	<footer id="colophon" class="site-footer">
-
-			<div class="container">
-	
-				<div class="copyright">Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a><br>Theme:   <a href="https://github.com/alterfang/gridea-theme-pan" target="_blank" title="Pan"><span>Pan</span></a>. Powered by <a href="https://gridea.dev/" target="_blank" title="Gridea"><span>Gridea</span></a></div>		
-			</div><!-- .container -->
-		
-		</footer><!-- #colophon -->
+    hljs.initHighlightingOnLoad()
+</script>
+<script src="https://borber.github.io/media/scripts/lib/jquery.min.js"></script>
+<script src="https://borber.github.io/media/scripts/lib/jquerymigrate.js"></script>
+<script src="https://borber.github.io/media/scripts/lib/production.min.js"></script>
 
 </div>
-
-<script src="https://cdn.bootcss.com/fitvids/1.2.0/jquery.fitvids.min.js"></script>
-<script type='text/javascript' src='https://borber.github.io/media/scripts/marlin-scripts.js'></script>
-
-		<script data-no-instant>
-    (function ($) {
-        $.extend({
-            adamsOverload: function () {
-                $('.navigation:eq(0)').remove();
-                $("").attr("rel" , "external");
-                $("a[rel='external'],a[rel='external nofollow']").attr("target","_blank");
-                $("a.vi").attr("rel" , "");
-                $.viewImage({
-                    'target'  : 'img',
-                    'exclude' : '.vsmile-icons img,.gallery img',
-                    'delay'   : 300
-                });
-                $.lately({
-                    'target' : '.commentmetadata a,.infos time,.post-list time'
-                });
-                prettyPrint();
-                
-                $('ul.links li a').each(function(){
-                    if($(this).parent().find('.bg').length==0){
-                        $(this).parent().append('<!---<div class="bg" style="background-image:url(https://c3.glgoo.top/s2/favicons?domain='+$(this).attr("href")+')"></div>--->')
-                    }
-                });
-            }
-        });
-    })(jQuery);
-    jQuery.adamsOverload();
-</script>
-
 </body>
 </html>
+

@@ -1,332 +1,373 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
+<html>
 <head>
- <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>爬虫 | BORBER</title>	
-</style>
-<link rel="stylesheet" href="https://borber.github.io/styles/main.css">
-<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="all,follow">
+<meta name="googlebot" content="index,follow,snippet,archive">
+<title>爬虫 | BORBER</title>
+<link rel="shortcut icon" href="https://borber.github.io/favicon.ico?v=1563845411018">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+<link rel="stylesheet" href="https://borber.github.io/styles/main.css" type='text/css' media='all'>
+
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
-<script type='text/javascript' src='https://borber.github.io/media/scripts/script.js'></script>
+
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-142130514-1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
+
   gtag('config', 'UA-142130514-1');
 </script>
 
-<style type="text/css">
-header {
-    text-align: center;
-    padding: 120px 0px 40px 0px;
-    background: #515865 center no-repeat;
-    font-size: 16px;
-    color: #fff;
-    background-size: cover;
-    background-image:url(
-			https://www.z4a.net/images/2019/07/23/Jade-Wallpaper.jpg
-			);
-}
-		</style>
 
 </head>
-<body class="home blog">
-    <div id="wrapper">
-        
-		<header id="header headerimg" class="site-header" style="background-image:url(
-			
-			https://www.z4a.net/images/2019/07/23/Jade-Wallpaper.jpg
-			
-			)">
-			<div class="site-branding">
-									<h1 class="site-title"><a href="https://borber.github.io" rel="home">BORBER</a></h1>
-										
-					<h2 class="site-description">世俗为枷锁 世人皆自缚</h2>
-										
-							</div>
-			<nav id="nav-wrapper">
-				<div class="container">
-					<div class="nav-toggle">
-						<div class="bars">
-							<div class="bar"></div>
-							<div class="bar"></div>
-							<div class="bar"></div>
-						</div>
-					</div><!-- /nav-toggle -->
-					<div class="clear"></div>
-					<ul id="" class="vtmenu">
-		 
-     			
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12">
-	 
-	<a  href="/"> 首页</a></li>
-	
-    
-     			
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12">
-	 
-	<a  href="/archives"> 归档</a></li>
-	
-    
-     			
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12">
-	 
-	<a  href="/tags"> 标签</a></li>
-	
-    
-     			
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12">
-	 
-	<a  href="/post/about"> 关于</a></li>
-	
-    
-     			
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12">
-	 
-	<a  href="https://borber.github.io/friend/"> 友链</a></li>
-	
-    
+<body class="home blog ct-body standard">
+<div id="overflow-container" class="overflow-container">
+    <header id="site-header" class="site-header" role="banner">
 
-</ul>
-</li>		
-		
-</ul>				</div>
-			</nav><!-- #navigation -->
 
-<div class="jingge">
+    <div class="container">
+        <div id="title-info" class="title-info">
+            <div id='site-title' class='site-title'>
+                <a href="https://borber.github.io">  BORBER </a>
+            </div>
+        </div>
+        <button id="toggle-navigation" class="toggle-navigation">
+            <i class="fa fa-bars"></i>
+        </button>
+        <div id="menu-primary-tracks" class="menu-primary-tracks"></div>
+        <div id="menu-primary" class="menu-container menu-primary" role="navigation">
+            <p class="site-description">世俗为枷锁 世人皆自缚</p>
+            <div class="menu">
+                <ul id="menu-primary-items" class="menu-primary-items">
+                     
+                        
+                            <li id="menu-item" class='menu-item menu-item-type-post_type menu-item-object-page current-menu-item current_page_item'>
+                                <a href="/">首页</a>
+                            </li>
+                        
+                    
+                        
+                            <li id="menu-item" class='menu-item menu-item-type-post_type menu-item-object-page current-menu-item current_page_item'>
+                                <a href="/archives">归档</a>
+                            </li>
+                        
+                    
+                        
+                            <li id="menu-item" class='menu-item menu-item-type-post_type menu-item-object-page current-menu-item current_page_item'>
+                                <a href="/tags">标签</a>
+                            </li>
+                        
+                    
+                        
+                            <li id="menu-item" class='menu-item menu-item-type-post_type menu-item-object-page current-menu-item current_page_item'>
+                                <a href="/post/about">关于</a>
+                            </li>
+                        
+                    
+                        
+                            <li id="menu-item" class='menu-item menu-item-type-post_type menu-item-object-page current-menu-item current_page_item'>
+                                <a href="https://borber.github.io/friend/">友链</a>
+                            </li>
+                        
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
 
-			
-<a  href="/atom.xml" target="_blank" ><i class="iconfont icon-rss"></i></a>
- 
-    
-
-    
-			
-<a  href="https://github.com/Borber" target="_blank" ><i class="iconfont icon-github"></i></a>
- 
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        </header><!-- #masthead -->
-
-		<div id="content" class="container">
-			<div class="row">
-	<div class="col-md-8 site-main">
-		
-		<div class="archive-box">
-			  <header class="page-header">
-				  
-				<h1 class="page-title">爬虫</h1> 
 
 </header>
-			</div>	
- 		
- 						
-<article class="post post-index  post-318 type-post status-publish format-standard hentry category-uncategorized tag-40 tag-39">
-	
-	 
-	 <a href="https://borber.github.io/post/second-python-crawler-pro">
-		<div class="posttou" style="background-image:url(https://www.z4a.net/images/2019/07/18/1.jpg)"></div>	
-		</a>		
-  	 
-	   
-	<div class="entry-content">
-		<h1 class="entry-title"><a href="https://borber.github.io/post/second-python-crawler-pro" rel="bookmark">Second python crawler pro</a></h1>
-		<div class="entry-meta">
-						<a href="https://borber.github.io/post/second-python-crawler-pro">
-							 <i class="iconfont icon-rili"> 
-							</i> 2019-07-18</a>  
-			
-		</div>
 
-		<div class="entry-summary">
-			<p><p>爬取<a href="http://www.zerobyw4.com/">zero搬运网</a> 漫画 有福利哦 🤪 Pro</p>
-</p>
-			<p class="readmore">
-				<a href="https://borber.github.io/post/second-python-crawler-pro" class="link-more">Read more</a>
-			</p>
-		</div><!-- .entry-summary -->
-		
-	</div><!-- entry-content -->
-	
-</article><!-- #post-## -->			
-		
- 						
-<article class="post post-index  post-318 type-post status-publish format-standard hentry category-uncategorized tag-40 tag-39">
-	
-	 
-	 <a href="https://borber.github.io/post/third-python-reptile">
-		<div class="posttou" style="background-image:url(https://www.z4a.net/images/2019/07/16/2018-07-13-010717.jpg)"></div>	
-		</a>		
-  	 
-	   
-	<div class="entry-content">
-		<h1 class="entry-title"><a href="https://borber.github.io/post/third-python-reptile" rel="bookmark">Third python crawler</a></h1>
-		<div class="entry-meta">
-						<a href="https://borber.github.io/post/third-python-reptile">
-							 <i class="iconfont icon-rili"> 
-							</i> 2019-07-16</a>  
-			
-		</div>
-
-		<div class="entry-summary">
-			<p><p>爬取 58同城 招聘信息 🤩</p>
-</p>
-			<p class="readmore">
-				<a href="https://borber.github.io/post/third-python-reptile" class="link-more">Read more</a>
-			</p>
-		</div><!-- .entry-summary -->
-		
-	</div><!-- entry-content -->
-	
-</article><!-- #post-## -->			
-		
- 						
-<article class="post post-index  post-318 type-post status-publish format-standard hentry category-uncategorized tag-40 tag-39">
-	
-	 
-	 <a href="https://borber.github.io/post/second-python-reptile">
-		<div class="posttou" style="background-image:url(https://www.z4a.net/images/2019/07/16/6b8c14f8gw1f0vg7ga9raj21040lzdmx.png)"></div>	
-		</a>		
-  	 
-	   
-	<div class="entry-content">
-		<h1 class="entry-title"><a href="https://borber.github.io/post/second-python-reptile" rel="bookmark">Second python crawler</a></h1>
-		<div class="entry-meta">
-						<a href="https://borber.github.io/post/second-python-reptile">
-							 <i class="iconfont icon-rili"> 
-							</i> 2019-07-16</a>  
-			
-		</div>
-
-		<div class="entry-summary">
-			<p><p>爬取<a href="http://www.zerobyw4.com/">zero搬运网</a> 漫画 有福利哦 🤪</p>
-</p>
-			<p class="readmore">
-				<a href="https://borber.github.io/post/second-python-reptile" class="link-more">Read more</a>
-			</p>
-		</div><!-- .entry-summary -->
-		
-	</div><!-- entry-content -->
-	
-</article><!-- #post-## -->			
-		
- 						
-<article class="post post-index  post-318 type-post status-publish format-standard hentry category-uncategorized tag-40 tag-39">
-	
-	 
-	 <a href="https://borber.github.io/post/first-python-reptile">
-		<div class="posttou" style="background-image:url(https://www.z4a.net/images/2019/07/16/2018-07-13-005825.jpg)"></div>	
-		</a>		
-  	 
-	   
-	<div class="entry-content">
-		<h1 class="entry-title"><a href="https://borber.github.io/post/first-python-reptile" rel="bookmark">First python crawler</a></h1>
-		<div class="entry-meta">
-						<a href="https://borber.github.io/post/first-python-reptile">
-							 <i class="iconfont icon-rili"> 
-							</i> 2019-07-16</a>  
-			
-		</div>
-
-		<div class="entry-summary">
-			<p><p>爬取wallhaven壁纸网站NSFW资源😍</p>
-</p>
-			<p class="readmore">
-				<a href="https://borber.github.io/post/first-python-reptile" class="link-more">Read more</a>
-			</p>
-		</div><!-- .entry-summary -->
-		
-	</div><!-- entry-content -->
-	
-</article><!-- #post-## -->			
-		
- 
-
-
-
-
-							
-	</div><!-- site-main -->
+        <div class="main-content">
+            <div class="current-tag-container">
+                <h2 class="title">
+                    标签：#爬虫
+                </h2>
+            </div>
+        </div>
+    <div id="main" class="main" role="main">
+  <h1 class="screen-reader-text">Posts</h1>
+  
+  <div id="loop-container" class="loop-container">
+    <div class="post type-post status-publish format-standard   has-post-thumbnail hentry category-design tag-memories
+    tag-normal-post tag-standard-2 excerpt zoom full-without-featured
+      
+      even
+       excerpt">
+      
+      <a class="featured-image-link" href="https://borber.github.io/post/second-python-crawler-pro">
+        <div class='featured-image lazy lazy-bg-image' data-background="https://www.z4a.net/images/2019/07/18/1.jpg"></div>
+      </a>
+      
+      <div class="excerpt-container">
+        <div class="excerpt-meta">
+          <span class="date">  · 2019-07-18 ·</span>
+            
+                <span> / </span>
+                <span class="category">
+                        <a href="https://borber.github.io/tag/zzy4LPH8S">python</a>
+                </span>
+            
+                <span> / </span>
+                <span class="category">
+                        <a href="https://borber.github.io/tag/C-16BRfGV">爬虫</a>
+                </span>
+            
+                <span> / </span>
+                <span class="category">
+                        <a href="https://borber.github.io/tag/mR79ZebU2">编程</a>
+                </span>
+            
+                <span> / </span>
+                <span class="category">
+                        <a href="https://borber.github.io/tag/qlm952wiz">NSFW</a>
+                </span>
             
 
+        </div>
+        <div class='excerpt-header'>
+          <h2 class='excerpt-title'>
+            <a href="https://borber.github.io/post/second-python-crawler-pro"> Second python crawler pro </a>
+          </h2>
+        </div>
+        <div class='excerpt-content'>
+          <article>
+              <p>爬取<a href="http://www.zerobyw4.com/">zero搬运网</a> 漫画 有福利哦 🤪 Pro</p>
 
-			</div><!-- #end row-->
-													   
-			<nav class="navigation pagination" role="navigation">
-	
-			
-	</nav>	
-    	<script type="text/javascript">
-//点击加载更多
-jQuery(document).ready(function($) {
-    //点击下一页的链接(即那个a标签)
-    $(' .next').click(function() {
-        $this = $(this);
-        $this.addClass('loading').text('正在努力加载'); //给a标签加载一个loading的class属性，用来添加加载效果
-        var href = $this.attr('href'); //获取下一页的链接地址
-        if (href != undefined) { //如果地址存在
-            $.ajax({ //发起ajax请求
-                url: href,
-                //请求的地址就是下一页的链接
-                type: 'get',
-                //请求类型是get
-                error: function(request) {
-                    //如果发生错误怎么处理
-                },
-                success: function(data) { //请求成功
-                    $this.removeClass('loading').text('点击查看更多'); //移除loading属性
-                    var $res = $(data).find('.post-318 '); //从数据中挑出文章数据，请根据实际情况更改
-                    $('.col-md-8').append($res.fadeIn(500)); //将数据加载加进posts-loop的标签中。
-                    var newhref = $(data).find(' .next').attr('href'); //找出新的下一页链接
-                    if (newhref != undefined) {
-                        $('.next').attr('href', newhref);
-                    } else {
-                        $('.next').remove(); //如果没有下一页了，隐藏
-                    }
-                }
-            });
-        }
-        return false;
-    });
-});
+          </article>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div id="loop-container" class="loop-container">
+    <div class="post type-post status-publish format-standard   has-post-thumbnail hentry category-design tag-memories
+    tag-normal-post tag-standard-2 excerpt zoom full-without-featured
+      
+        odd
+       excerpt">
+      
+      <a class="featured-image-link" href="https://borber.github.io/post/third-python-reptile">
+        <div class='featured-image lazy lazy-bg-image' data-background="https://www.z4a.net/images/2019/07/16/2018-07-13-010717.jpg"></div>
+      </a>
+      
+      <div class="excerpt-container">
+        <div class="excerpt-meta">
+          <span class="date">  · 2019-07-16 ·</span>
+            
+                <span> / </span>
+                <span class="category">
+                        <a href="https://borber.github.io/tag/zzy4LPH8S">python</a>
+                </span>
+            
+                <span> / </span>
+                <span class="category">
+                        <a href="https://borber.github.io/tag/C-16BRfGV">爬虫</a>
+                </span>
+            
+                <span> / </span>
+                <span class="category">
+                        <a href="https://borber.github.io/tag/mR79ZebU2">编程</a>
+                </span>
+            
+
+        </div>
+        <div class='excerpt-header'>
+          <h2 class='excerpt-title'>
+            <a href="https://borber.github.io/post/third-python-reptile"> Third python crawler </a>
+          </h2>
+        </div>
+        <div class='excerpt-content'>
+          <article>
+              <p>爬取 58同城 招聘信息 🤩</p>
+
+          </article>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div id="loop-container" class="loop-container">
+    <div class="post type-post status-publish format-standard   has-post-thumbnail hentry category-design tag-memories
+    tag-normal-post tag-standard-2 excerpt zoom full-without-featured
+      
+      even
+       excerpt">
+      
+      <a class="featured-image-link" href="https://borber.github.io/post/second-python-reptile">
+        <div class='featured-image lazy lazy-bg-image' data-background="https://www.z4a.net/images/2019/07/16/6b8c14f8gw1f0vg7ga9raj21040lzdmx.png"></div>
+      </a>
+      
+      <div class="excerpt-container">
+        <div class="excerpt-meta">
+          <span class="date">  · 2019-07-16 ·</span>
+            
+                <span> / </span>
+                <span class="category">
+                        <a href="https://borber.github.io/tag/zzy4LPH8S">python</a>
+                </span>
+            
+                <span> / </span>
+                <span class="category">
+                        <a href="https://borber.github.io/tag/C-16BRfGV">爬虫</a>
+                </span>
+            
+                <span> / </span>
+                <span class="category">
+                        <a href="https://borber.github.io/tag/mR79ZebU2">编程</a>
+                </span>
+            
+                <span> / </span>
+                <span class="category">
+                        <a href="https://borber.github.io/tag/qlm952wiz">NSFW</a>
+                </span>
+            
+
+        </div>
+        <div class='excerpt-header'>
+          <h2 class='excerpt-title'>
+            <a href="https://borber.github.io/post/second-python-reptile"> Second python crawler </a>
+          </h2>
+        </div>
+        <div class='excerpt-content'>
+          <article>
+              <p>爬取<a href="http://www.zerobyw4.com/">zero搬运网</a> 漫画 有福利哦 🤪</p>
+
+          </article>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div id="loop-container" class="loop-container">
+    <div class="post type-post status-publish format-standard   has-post-thumbnail hentry category-design tag-memories
+    tag-normal-post tag-standard-2 excerpt zoom full-without-featured
+      
+        odd
+       excerpt">
+      
+      <a class="featured-image-link" href="https://borber.github.io/post/first-python-reptile">
+        <div class='featured-image lazy lazy-bg-image' data-background="https://www.z4a.net/images/2019/07/16/2018-07-13-005825.jpg"></div>
+      </a>
+      
+      <div class="excerpt-container">
+        <div class="excerpt-meta">
+          <span class="date">  · 2019-07-16 ·</span>
+            
+                <span> / </span>
+                <span class="category">
+                        <a href="https://borber.github.io/tag/zzy4LPH8S">python</a>
+                </span>
+            
+                <span> / </span>
+                <span class="category">
+                        <a href="https://borber.github.io/tag/C-16BRfGV">爬虫</a>
+                </span>
+            
+                <span> / </span>
+                <span class="category">
+                        <a href="https://borber.github.io/tag/8IAnIMJ0D">壁纸</a>
+                </span>
+            
+                <span> / </span>
+                <span class="category">
+                        <a href="https://borber.github.io/tag/mR79ZebU2">编程</a>
+                </span>
+            
+                <span> / </span>
+                <span class="category">
+                        <a href="https://borber.github.io/tag/qlm952wiz">NSFW</a>
+                </span>
+            
+
+        </div>
+        <div class='excerpt-header'>
+          <h2 class='excerpt-title'>
+            <a href="https://borber.github.io/post/first-python-reptile"> First python crawler </a>
+          </h2>
+        </div>
+        <div class='excerpt-content'>
+          <article>
+              <p>爬取wallhaven壁纸网站NSFW资源😍</p>
+
+          </article>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+    <nav class="navigation pagination" role="navigation">
+    <h2 class="screen-reader-text">Posts navigation</h2>
+    <div class="nav-links">
+        
+        
+    </div>
+</nav>
+
+    <footer id="site-footer" class="site-footer" role="contentinfo">
+    <h1>
+        <a href="https://borber.github.io"> BORBER </a>
+    </h1>
+    <p class="site-description" style="font-size:18px">世俗为枷锁 世人皆自缚</p>
+    <div id="menu-footer" class="menu-container menu-footer" role="navigation">
+        <div class="menu">
+            <ul id="menu-footer-items" class="menu-footer-items">
+            </ul>
+        </div>
+    </div>
+    <ul class="social-media-icons">
+        
+            
+                <li>
+                    <a href="https://github.com/Borber" data-animate-hover="pulse" class="github" target="_blank">
+                        <i class="fab fa-github" title="github"></i>
+                        <span class="screen-reader-text">github</span>
+                    </a>
+                </li>
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+                <li>
+                    <a href="/atom.xml" data-animate-hover="pulse" class="rss" target="_blank">
+                        <i class="fas fa-rss" title="rss"></i>
+                        <span class="screen-reader-text">rss</span>
+                    </a>
+                </li>
+            
+        
+    </ul>
+    <div class="design-credit">
+        <p>Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a></p>
+    </div>
+</footer>
+<script>
+    hljs.initHighlightingOnLoad()
 </script>
-													   
-		</div><!-- #end container-->
+<script src="https://borber.github.io/media/scripts/lib/jquery.min.js"></script>
+<script src="https://borber.github.io/media/scripts/lib/jquerymigrate.js"></script>
+<script src="https://borber.github.io/media/scripts/lib/production.min.js"></script>
 
-		
-	 	<footer id="colophon" class="site-footer">
-
-			<div class="container">
-	
-				<div class="copyright">Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a><br>Theme:   <a href="https://github.com/alterfang/gridea-theme-pan" target="_blank" title="Pan"><span>Pan</span></a>. Powered by <a href="https://gridea.dev/" target="_blank" title="Gridea"><span>Gridea</span></a></div>		
-			</div><!-- .container -->
-		
-		</footer><!-- #colophon -->
-
-</div><!-- #end wrapper-->
-
-<script src="https://cdn.bootcss.com/fitvids/1.2.0/jquery.fitvids.min.js"></script>
-<script type='text/javascript' src='https://borber.github.io/media/scripts/marlin-scripts.js'></script>
-
-		
+</div>
 </body>
 </html>

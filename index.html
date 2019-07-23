@@ -1,655 +1,863 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>BORBER</title>	
-</style>
-<link rel="stylesheet" href="https://borber.github.io/styles/main.css">
-<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="all,follow">
+<meta name="googlebot" content="index,follow,snippet,archive">
+<title>BORBER</title>
+<link rel="shortcut icon" href="https://borber.github.io/favicon.ico?v=1563845411018">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+<link rel="stylesheet" href="https://borber.github.io/styles/main.css" type='text/css' media='all'>
+
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
-<script type='text/javascript' src='https://borber.github.io/media/scripts/script.js'></script>
+
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-142130514-1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
+
   gtag('config', 'UA-142130514-1');
 </script>
 
-<style type="text/css">
-header {
-    text-align: center;
-    padding: 120px 0px 40px 0px;
-    background: #515865 center no-repeat;
-    font-size: 16px;
-    color: #fff;
-    background-size: cover;
-    background-image:url(
-			https://www.z4a.net/images/2019/07/23/Jade-Wallpaper.jpg
-			);
-}
-		</style>
 
-</head>
-<body class="home blog">
-    <div id="wrapper">
-        
-		<header id="header headerimg" class="site-header" style="background-image:url(
-			
-			https://www.z4a.net/images/2019/07/23/Jade-Wallpaper.jpg
-			
-			)">
-			<div class="site-branding">
-									<h1 class="site-title"><a href="https://borber.github.io" rel="home">BORBER</a></h1>
-										
-					<h2 class="site-description">世俗为枷锁 世人皆自缚</h2>
-										
-							</div>
-			<nav id="nav-wrapper">
-				<div class="container">
-					<div class="nav-toggle">
-						<div class="bars">
-							<div class="bar"></div>
-							<div class="bar"></div>
-							<div class="bar"></div>
-						</div>
-					</div><!-- /nav-toggle -->
-					<div class="clear"></div>
-					<ul id="" class="vtmenu">
-		 
-     			
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12">
-	 
-	<a  href="/"> 首页</a></li>
-	
-    
-     			
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12">
-	 
-	<a  href="/archives"> 归档</a></li>
-	
-    
-     			
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12">
-	 
-	<a  href="/tags"> 标签</a></li>
-	
-    
-     			
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12">
-	 
-	<a  href="/post/about"> 关于</a></li>
-	
-    
-     			
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12">
-	 
-	<a  href="https://borber.github.io/friend/"> 友链</a></li>
-	
-    
+  </head>
+  <body class="home blog ct-body standard">
+    <div id="overflow-container" class="overflow-container">
 
-</ul>
-</li>		
-		
-</ul>				</div>
-			</nav><!-- #navigation -->
+        <header id="site-header" class="site-header" role="banner">
 
-<div class="jingge">
 
-			
-<a  href="/atom.xml" target="_blank" ><i class="iconfont icon-rss"></i></a>
- 
-    
+    <div class="container">
+        <div id="title-info" class="title-info">
+            <div id='site-title' class='site-title'>
+                <a href="https://borber.github.io">  BORBER </a>
+            </div>
+        </div>
+        <button id="toggle-navigation" class="toggle-navigation">
+            <i class="fa fa-bars"></i>
+        </button>
+        <div id="menu-primary-tracks" class="menu-primary-tracks"></div>
+        <div id="menu-primary" class="menu-container menu-primary" role="navigation">
+            <p class="site-description">世俗为枷锁 世人皆自缚</p>
+            <div class="menu">
+                <ul id="menu-primary-items" class="menu-primary-items">
+                     
+                        
+                            <li id="menu-item" class='menu-item menu-item-type-post_type menu-item-object-page current-menu-item current_page_item'>
+                                <a href="/">首页</a>
+                            </li>
+                        
+                    
+                        
+                            <li id="menu-item" class='menu-item menu-item-type-post_type menu-item-object-page current-menu-item current_page_item'>
+                                <a href="/archives">归档</a>
+                            </li>
+                        
+                    
+                        
+                            <li id="menu-item" class='menu-item menu-item-type-post_type menu-item-object-page current-menu-item current_page_item'>
+                                <a href="/tags">标签</a>
+                            </li>
+                        
+                    
+                        
+                            <li id="menu-item" class='menu-item menu-item-type-post_type menu-item-object-page current-menu-item current_page_item'>
+                                <a href="/post/about">关于</a>
+                            </li>
+                        
+                    
+                        
+                            <li id="menu-item" class='menu-item menu-item-type-post_type menu-item-object-page current-menu-item current_page_item'>
+                                <a href="https://borber.github.io/friend/">友链</a>
+                            </li>
+                        
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
 
-    
-			
-<a  href="https://github.com/Borber" target="_blank" ><i class="iconfont icon-github"></i></a>
- 
-    
 
-    
+</header>
 
-    
 
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        </header><!-- #masthead -->
-
-		<div id="content" class="container">
-			<div class="row">
-	<div class="col-md-8 site-main">
-		
- 						
-<article class="post post-index  post-318 type-post status-publish format-standard hentry category-uncategorized tag-40 tag-39">
-	
-	 
-	 <a href="https://borber.github.io/post/second-python-crawler-pro">
-		<div class="posttou" style="background-image:url(https://www.z4a.net/images/2019/07/18/1.jpg)"></div>	
-		</a>		
-  	 
-	   
-	<div class="entry-content">
-		<h1 class="entry-title"><a href="https://borber.github.io/post/second-python-crawler-pro" rel="bookmark">Second python crawler pro</a></h1>
-		<div class="entry-meta">
-						<a href="https://borber.github.io/post/second-python-crawler-pro">
-							 <i class="iconfont icon-rili"> 
-							</i> 2019-07-18</a>  
-			
-		</div>
-
-		<div class="entry-summary">
-			<p><p>爬取<a href="http://www.zerobyw4.com/">zero搬运网</a> 漫画 有福利哦 🤪 Pro</p>
-</p>
-			<p class="readmore">
-				<a href="https://borber.github.io/post/second-python-crawler-pro" class="link-more">Read more</a>
-			</p>
-		</div><!-- .entry-summary -->
-		
-	</div><!-- entry-content -->
-	
-</article><!-- #post-## -->			
-		
- 						
-<article class="post post-index  post-318 type-post status-publish format-standard hentry category-uncategorized tag-40 tag-39">
-	
-	 
-	 <a href="https://borber.github.io/post/third-python-reptile">
-		<div class="posttou" style="background-image:url(https://www.z4a.net/images/2019/07/16/2018-07-13-010717.jpg)"></div>	
-		</a>		
-  	 
-	   
-	<div class="entry-content">
-		<h1 class="entry-title"><a href="https://borber.github.io/post/third-python-reptile" rel="bookmark">Third python crawler</a></h1>
-		<div class="entry-meta">
-						<a href="https://borber.github.io/post/third-python-reptile">
-							 <i class="iconfont icon-rili"> 
-							</i> 2019-07-16</a>  
-			
-		</div>
-
-		<div class="entry-summary">
-			<p><p>爬取 58同城 招聘信息 🤩</p>
-</p>
-			<p class="readmore">
-				<a href="https://borber.github.io/post/third-python-reptile" class="link-more">Read more</a>
-			</p>
-		</div><!-- .entry-summary -->
-		
-	</div><!-- entry-content -->
-	
-</article><!-- #post-## -->			
-		
- 						
-<article class="post post-index  post-318 type-post status-publish format-standard hentry category-uncategorized tag-40 tag-39">
-	
-	 
-	 <a href="https://borber.github.io/post/second-python-reptile">
-		<div class="posttou" style="background-image:url(https://www.z4a.net/images/2019/07/16/6b8c14f8gw1f0vg7ga9raj21040lzdmx.png)"></div>	
-		</a>		
-  	 
-	   
-	<div class="entry-content">
-		<h1 class="entry-title"><a href="https://borber.github.io/post/second-python-reptile" rel="bookmark">Second python crawler</a></h1>
-		<div class="entry-meta">
-						<a href="https://borber.github.io/post/second-python-reptile">
-							 <i class="iconfont icon-rili"> 
-							</i> 2019-07-16</a>  
-			
-		</div>
-
-		<div class="entry-summary">
-			<p><p>爬取<a href="http://www.zerobyw4.com/">zero搬运网</a> 漫画 有福利哦 🤪</p>
-</p>
-			<p class="readmore">
-				<a href="https://borber.github.io/post/second-python-reptile" class="link-more">Read more</a>
-			</p>
-		</div><!-- .entry-summary -->
-		
-	</div><!-- entry-content -->
-	
-</article><!-- #post-## -->			
-		
- 						
-<article class="post post-index  post-318 type-post status-publish format-standard hentry category-uncategorized tag-40 tag-39">
-	
-	 
-	 <a href="https://borber.github.io/post/first-python-reptile">
-		<div class="posttou" style="background-image:url(https://www.z4a.net/images/2019/07/16/2018-07-13-005825.jpg)"></div>	
-		</a>		
-  	 
-	   
-	<div class="entry-content">
-		<h1 class="entry-title"><a href="https://borber.github.io/post/first-python-reptile" rel="bookmark">First python crawler</a></h1>
-		<div class="entry-meta">
-						<a href="https://borber.github.io/post/first-python-reptile">
-							 <i class="iconfont icon-rili"> 
-							</i> 2019-07-16</a>  
-			
-		</div>
-
-		<div class="entry-summary">
-			<p><p>爬取wallhaven壁纸网站NSFW资源😍</p>
-</p>
-			<p class="readmore">
-				<a href="https://borber.github.io/post/first-python-reptile" class="link-more">Read more</a>
-			</p>
-		</div><!-- .entry-summary -->
-		
-	</div><!-- entry-content -->
-	
-</article><!-- #post-## -->			
-		
- 						
-<article class="post post-index  post-318 type-post status-publish format-standard hentry category-uncategorized tag-40 tag-39">
-	
-	 
-	 <a href="https://borber.github.io/post/todo-with-my-wife">
-		<div class="posttou" style="background-image:url(https://www.z4a.net/images/2019/07/12/298f1f7261e4694fc.jpg)"></div>	
-		</a>		
-  	 
-	   
-	<div class="entry-content">
-		<h1 class="entry-title"><a href="https://borber.github.io/post/todo-with-my-wife" rel="bookmark">Todo with my wife</a></h1>
-		<div class="entry-meta">
-						<a href="https://borber.github.io/post/todo-with-my-wife">
-							 <i class="iconfont icon-rili"> 
-							</i> 2019-07-12</a>  
-			
-		</div>
-
-		<div class="entry-summary">
-			<p><p>很多很多想和你做的</p>
-</p>
-			<p class="readmore">
-				<a href="https://borber.github.io/post/todo-with-my-wife" class="link-more">Read more</a>
-			</p>
-		</div><!-- .entry-summary -->
-		
-	</div><!-- entry-content -->
-	
-</article><!-- #post-## -->			
-		
- 						
-<article class="post post-index  post-318 type-post status-publish format-standard hentry category-uncategorized tag-40 tag-39">
-	
-	 
-	 <a href="https://borber.github.io/post/studying-with-my-wife">
-		<div class="posttou" style="background-image:url(https://www.z4a.net/images/2019/07/06/IMG_20190619_100356.jpg)"></div>	
-		</a>		
-  	 
-	   
-	<div class="entry-content">
-		<h1 class="entry-title"><a href="https://borber.github.io/post/studying-with-my-wife" rel="bookmark">Studying with my wife</a></h1>
-		<div class="entry-meta">
-						<a href="https://borber.github.io/post/studying-with-my-wife">
-							 <i class="iconfont icon-rili"> 
-							</i> 2019-07-06</a>  
-			
-		</div>
-
-		<div class="entry-summary">
-			<p><p>老婆永远是对的 💕</p>
-</p>
-			<p class="readmore">
-				<a href="https://borber.github.io/post/studying-with-my-wife" class="link-more">Read more</a>
-			</p>
-		</div><!-- .entry-summary -->
-		
-	</div><!-- entry-content -->
-	
-</article><!-- #post-## -->			
-		
- 						
-<article class="post post-index  post-318 type-post status-publish format-standard hentry category-uncategorized tag-40 tag-39">
-	
-	 
-	 <a href="https://borber.github.io/post/re-integration">
-		<div class="posttou" style="background-image:url(https://www.z4a.net/images/2019/06/29/Nora-Wallpaper.jpg)"></div>	
-		</a>		
-  	 
-	   
-	<div class="entry-content">
-		<h1 class="entry-title"><a href="https://borber.github.io/post/re-integration" rel="bookmark">Re-integration</a></h1>
-		<div class="entry-meta">
-						<a href="https://borber.github.io/post/re-integration">
-							 <i class="iconfont icon-rili"> 
-							</i> 2019-06-29</a>  
-			
-		</div>
-
-		<div class="entry-summary">
-			<p><p>大一复习计划<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><mn>3</mn><mi mathvariant="normal">/</mi><mi mathvariant="normal">∞</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">(3/\infty)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">3</span><span class="mord">/</span><span class="mord">∞</span><span class="mclose">)</span></span></span></span></p>
-</p>
-			<p class="readmore">
-				<a href="https://borber.github.io/post/re-integration" class="link-more">Read more</a>
-			</p>
-		</div><!-- .entry-summary -->
-		
-	</div><!-- entry-content -->
-	
-</article><!-- #post-## -->			
-		
- 						
-<article class="post post-index  post-318 type-post status-publish format-standard hentry category-uncategorized tag-40 tag-39">
-	
-	 
-	 <a href="https://borber.github.io/post/multivariable-calculus">
-		<div class="posttou" style="background-image:url(https://www.z4a.net/images/2019/06/24/hometown.jpg)"></div>	
-		</a>		
-  	 
-	   
-	<div class="entry-content">
-		<h1 class="entry-title"><a href="https://borber.github.io/post/multivariable-calculus" rel="bookmark">Multivariable calculus</a></h1>
-		<div class="entry-meta">
-						<a href="https://borber.github.io/post/multivariable-calculus">
-							 <i class="iconfont icon-rili"> 
-							</i> 2019-06-24</a>  
-			
-		</div>
-
-		<div class="entry-summary">
-			<p><p>大一复习计划<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><mn>2</mn><mi mathvariant="normal">/</mi><mi mathvariant="normal">∞</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">(2/\infty)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">2</span><span class="mord">/</span><span class="mord">∞</span><span class="mclose">)</span></span></span></span></p>
-</p>
-			<p class="readmore">
-				<a href="https://borber.github.io/post/multivariable-calculus" class="link-more">Read more</a>
-			</p>
-		</div><!-- .entry-summary -->
-		
-	</div><!-- entry-content -->
-	
-</article><!-- #post-## -->			
-		
- 						
-<article class="post post-index  post-318 type-post status-publish format-standard hentry category-uncategorized tag-40 tag-39">
-	
-	 
-	 <a href="https://borber.github.io/post/vector-algebra">
-		<div class="posttou" style="background-image:url(https://www.z4a.net/images/2019/06/18/243.jpg)"></div>	
-		</a>		
-  	 
-	   
-	<div class="entry-content">
-		<h1 class="entry-title"><a href="https://borber.github.io/post/vector-algebra" rel="bookmark">Vector Algebra</a></h1>
-		<div class="entry-meta">
-						<a href="https://borber.github.io/post/vector-algebra">
-							 <i class="iconfont icon-rili"> 
-							</i> 2019-06-18</a>  
-			
-		</div>
-
-		<div class="entry-summary">
-			<p><p>大一复习计划<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><mn>1</mn><mi mathvariant="normal">/</mi><mi mathvariant="normal">∞</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">(1/\infty)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">1</span><span class="mord">/</span><span class="mord">∞</span><span class="mclose">)</span></span></span></span></p>
-</p>
-			<p class="readmore">
-				<a href="https://borber.github.io/post/vector-algebra" class="link-more">Read more</a>
-			</p>
-		</div><!-- .entry-summary -->
-		
-	</div><!-- entry-content -->
-	
-</article><!-- #post-## -->			
-		
- 						
-<article class="post post-index  post-318 type-post status-publish format-standard hentry category-uncategorized tag-40 tag-39">
-	
-	 
-	 <a href="https://borber.github.io/post/test-music-player">
-		<div class="posttou" style="background-image:url(https://www.z4a.net/images/2019/06/18/seria.jpg)"></div>	
-		</a>		
-  	 
-	   
-	<div class="entry-content">
-		<h1 class="entry-title"><a href="https://borber.github.io/post/test-music-player" rel="bookmark">Test Music Player</a></h1>
-		<div class="entry-meta">
-						<a href="https://borber.github.io/post/test-music-player">
-							 <i class="iconfont icon-rili"> 
-							</i> 2019-06-18</a>  
-			
-		</div>
-
-		<div class="entry-summary">
-			<p><p>测试 歌曲 喜欢-阿肆</p>
-</p>
-			<p class="readmore">
-				<a href="https://borber.github.io/post/test-music-player" class="link-more">Read more</a>
-			</p>
-		</div><!-- .entry-summary -->
-		
-	</div><!-- entry-content -->
-	
-</article><!-- #post-## -->			
-		
- 						
-<article class="post post-index  post-318 type-post status-publish format-standard hentry category-uncategorized tag-40 tag-39">
-	
-	 
-	 <a href="https://borber.github.io/post/test-code-highlight">
-		<div class="posttou" style="background-image:url(https://www.z4a.net/images/2019/06/18/father.jpg)"></div>	
-		</a>		
-  	 
-	   
-	<div class="entry-content">
-		<h1 class="entry-title"><a href="https://borber.github.io/post/test-code-highlight" rel="bookmark">Test Code Highlight</a></h1>
-		<div class="entry-meta">
-						<a href="https://borber.github.io/post/test-code-highlight">
-							 <i class="iconfont icon-rili"> 
-							</i> 2019-06-18</a>  
-			
-		</div>
-
-		<div class="entry-summary">
-			<p><p>测试代码高亮显示 Java</p>
-</p>
-			<p class="readmore">
-				<a href="https://borber.github.io/post/test-code-highlight" class="link-more">Read more</a>
-			</p>
-		</div><!-- .entry-summary -->
-		
-	</div><!-- entry-content -->
-	
-</article><!-- #post-## -->			
-		
- 						
-<article class="post post-index  post-318 type-post status-publish format-standard hentry category-uncategorized tag-40 tag-39">
-	
-	 
-	 <a href="https://borber.github.io/post/kde-without-bug">
-		<div class="posttou" style="background-image:url(https://www.z4a.net/images/2019/06/17/LonelyParade.jpg)"></div>	
-		</a>		
-  	 
-	   
-	<div class="entry-content">
-		<h1 class="entry-title"><a href="https://borber.github.io/post/kde-without-bug" rel="bookmark">KDE without BUG</a></h1>
-		<div class="entry-meta">
-						<a href="https://borber.github.io/post/kde-without-bug">
-							 <i class="iconfont icon-rili"> 
-							</i> 2019-06-17</a>  
-			
-		</div>
-
-		<div class="entry-summary">
-			<p><p>​		本文旨在收集Manjaro KDE 系统在日常使用中的BUG解决办法.与君共享.</p>
-</p>
-			<p class="readmore">
-				<a href="https://borber.github.io/post/kde-without-bug" class="link-more">Read more</a>
-			</p>
-		</div><!-- .entry-summary -->
-		
-	</div><!-- entry-content -->
-	
-</article><!-- #post-## -->			
-		
- 						
-<article class="post post-index  post-318 type-post status-publish format-standard hentry category-uncategorized tag-40 tag-39">
-	
-	 
-	 <a href="https://borber.github.io/post/linux-gridea-repair">
-		<div class="posttou" style="background-image:url(https://www.z4a.net/images/2019/06/17/wlop-6.jpg)"></div>	
-		</a>		
-  	 
-	   
-	<div class="entry-content">
-		<h1 class="entry-title"><a href="https://borber.github.io/post/linux-gridea-repair" rel="bookmark">Linux Gridea repair</a></h1>
-		<div class="entry-meta">
-						<a href="https://borber.github.io/post/linux-gridea-repair">
-							 <i class="iconfont icon-rili"> 
-							</i> 2019-06-17</a>  
-			
-		</div>
-
-		<div class="entry-summary">
-			<p><p>​		在我从原始的Hexo 管理博客,转向 <strong><a href="https://gridea.dev">Gridea</a></strong> 时,我遇到了如下的错误:</p>
-</p>
-			<p class="readmore">
-				<a href="https://borber.github.io/post/linux-gridea-repair" class="link-more">Read more</a>
-			</p>
-		</div><!-- .entry-summary -->
-		
-	</div><!-- entry-content -->
-	
-</article><!-- #post-## -->			
-		
- 						
-<article class="post post-index  post-318 type-post status-publish format-standard hentry category-uncategorized tag-40 tag-39">
-	
-	 
-	 <a href="https://borber.github.io/post/kde">
-		<div class="posttou" style="background-image:url(https://www.z4a.net/images/2019/06/04/Aeolian3.jpg)"></div>	
-		</a>		
-  	 
-	   
-	<div class="entry-content">
-		<h1 class="entry-title"><a href="https://borber.github.io/post/kde" rel="bookmark">KDE Beautify</a></h1>
-		<div class="entry-meta">
-						<a href="https://borber.github.io/post/kde">
-							 <i class="iconfont icon-rili"> 
-							</i> 2019-06-17</a>  
-			
-		</div>
-
-		<div class="entry-summary">
-			<p><p>困于Linux美化良久
-今作教程记录历程</p>
-</p>
-			<p class="readmore">
-				<a href="https://borber.github.io/post/kde" class="link-more">Read more</a>
-			</p>
-		</div><!-- .entry-summary -->
-		
-	</div><!-- entry-content -->
-	
-</article><!-- #post-## -->			
-		
- 						
-<article class="post post-index  post-318 type-post status-publish format-standard hentry category-uncategorized tag-40 tag-39">
-	
-	 
-	 <a href="https://borber.github.io/post/hello-gridea">
-		<div class="posttou" style="background-image:url(https://borber.github.io/post-images/hello-gridea.png)"></div>	
-		</a>		
-  	 
-	   
-	<div class="entry-content">
-		<h1 class="entry-title"><a href="https://borber.github.io/post/hello-gridea" rel="bookmark">Hello Gridea</a></h1>
-		<div class="entry-meta">
-						<a href="https://borber.github.io/post/hello-gridea">
-							 <i class="iconfont icon-rili"> 
-							</i> 2018-12-12</a>  
-			
-		</div>
-
-		<div class="entry-summary">
-			<p><p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
-</p>
-			<p class="readmore">
-				<a href="https://borber.github.io/post/hello-gridea" class="link-more">Read more</a>
-			</p>
-		</div><!-- .entry-summary -->
-		
-	</div><!-- entry-content -->
-	
-</article><!-- #post-## -->			
-		
- 
-
-											   
-	</div><!-- site-main -->
+        <div id="main" class="main" role="main">
+  <h1 class="screen-reader-text">Posts</h1>
+  
+  <div id="loop-container" class="loop-container">
+    <div class="post type-post status-publish format-standard   has-post-thumbnail hentry category-design tag-memories
+    tag-normal-post tag-standard-2 excerpt zoom full-without-featured
+      
+      even
+       excerpt">
+      
+      <a class="featured-image-link" href="https://borber.github.io/post/second-python-crawler-pro">
+        <div class='featured-image lazy lazy-bg-image' data-background="https://www.z4a.net/images/2019/07/18/1.jpg"></div>
+      </a>
+      
+      <div class="excerpt-container">
+        <div class="excerpt-meta">
+          <span class="date">  · 2019-07-18 ·</span>
             
-		
+                <span> / </span>
+                <span class="category">
+                        <a href="https://borber.github.io/tag/zzy4LPH8S">python</a>
+                </span>
+            
+                <span> / </span>
+                <span class="category">
+                        <a href="https://borber.github.io/tag/C-16BRfGV">爬虫</a>
+                </span>
+            
+                <span> / </span>
+                <span class="category">
+                        <a href="https://borber.github.io/tag/mR79ZebU2">编程</a>
+                </span>
+            
+                <span> / </span>
+                <span class="category">
+                        <a href="https://borber.github.io/tag/qlm952wiz">NSFW</a>
+                </span>
+            
 
-			</div><!-- #end row-->
-														   
-			<nav class="navigation pagination" role="navigation">
-	
-			
-	</nav>	
-    	<script type="text/javascript">
-//点击加载更多
-jQuery(document).ready(function($) {
-    //点击下一页的链接(即那个a标签)
-    $(' .next').click(function() {
-        $this = $(this);
-        $this.addClass('loading').text('正在努力加载'); //给a标签加载一个loading的class属性，用来添加加载效果
-        var href = $this.attr('href'); //获取下一页的链接地址
-        if (href != undefined) { //如果地址存在
-            $.ajax({ //发起ajax请求
-                url: href,
-                //请求的地址就是下一页的链接
-                type: 'get',
-                //请求类型是get
-                error: function(request) {
-                    //如果发生错误怎么处理
-                },
-                success: function(data) { //请求成功
-                    $this.removeClass('loading').text('点击查看更多'); //移除loading属性
-                    var $res = $(data).find('.post-318 '); //从数据中挑出文章数据，请根据实际情况更改
-                    $('.col-md-8').append($res.fadeIn(500)); //将数据加载加进posts-loop的标签中。
-                    var newhref = $(data).find(' .next').attr('href'); //找出新的下一页链接
-                    if (newhref != undefined) {
-                        $('.next').attr('href', newhref);
-                    } else {
-                        $('.next').remove(); //如果没有下一页了，隐藏
-                    }
-                }
-            });
-        }
-        return false;
-    });
-});
+        </div>
+        <div class='excerpt-header'>
+          <h2 class='excerpt-title'>
+            <a href="https://borber.github.io/post/second-python-crawler-pro"> Second python crawler pro </a>
+          </h2>
+        </div>
+        <div class='excerpt-content'>
+          <article>
+              <p>爬取<a href="http://www.zerobyw4.com/">zero搬运网</a> 漫画 有福利哦 🤪 Pro</p>
+
+          </article>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div id="loop-container" class="loop-container">
+    <div class="post type-post status-publish format-standard   has-post-thumbnail hentry category-design tag-memories
+    tag-normal-post tag-standard-2 excerpt zoom full-without-featured
+      
+        odd
+       excerpt">
+      
+      <a class="featured-image-link" href="https://borber.github.io/post/third-python-reptile">
+        <div class='featured-image lazy lazy-bg-image' data-background="https://www.z4a.net/images/2019/07/16/2018-07-13-010717.jpg"></div>
+      </a>
+      
+      <div class="excerpt-container">
+        <div class="excerpt-meta">
+          <span class="date">  · 2019-07-16 ·</span>
+            
+                <span> / </span>
+                <span class="category">
+                        <a href="https://borber.github.io/tag/zzy4LPH8S">python</a>
+                </span>
+            
+                <span> / </span>
+                <span class="category">
+                        <a href="https://borber.github.io/tag/C-16BRfGV">爬虫</a>
+                </span>
+            
+                <span> / </span>
+                <span class="category">
+                        <a href="https://borber.github.io/tag/mR79ZebU2">编程</a>
+                </span>
+            
+
+        </div>
+        <div class='excerpt-header'>
+          <h2 class='excerpt-title'>
+            <a href="https://borber.github.io/post/third-python-reptile"> Third python crawler </a>
+          </h2>
+        </div>
+        <div class='excerpt-content'>
+          <article>
+              <p>爬取 58同城 招聘信息 🤩</p>
+
+          </article>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div id="loop-container" class="loop-container">
+    <div class="post type-post status-publish format-standard   has-post-thumbnail hentry category-design tag-memories
+    tag-normal-post tag-standard-2 excerpt zoom full-without-featured
+      
+      even
+       excerpt">
+      
+      <a class="featured-image-link" href="https://borber.github.io/post/second-python-reptile">
+        <div class='featured-image lazy lazy-bg-image' data-background="https://www.z4a.net/images/2019/07/16/6b8c14f8gw1f0vg7ga9raj21040lzdmx.png"></div>
+      </a>
+      
+      <div class="excerpt-container">
+        <div class="excerpt-meta">
+          <span class="date">  · 2019-07-16 ·</span>
+            
+                <span> / </span>
+                <span class="category">
+                        <a href="https://borber.github.io/tag/zzy4LPH8S">python</a>
+                </span>
+            
+                <span> / </span>
+                <span class="category">
+                        <a href="https://borber.github.io/tag/C-16BRfGV">爬虫</a>
+                </span>
+            
+                <span> / </span>
+                <span class="category">
+                        <a href="https://borber.github.io/tag/mR79ZebU2">编程</a>
+                </span>
+            
+                <span> / </span>
+                <span class="category">
+                        <a href="https://borber.github.io/tag/qlm952wiz">NSFW</a>
+                </span>
+            
+
+        </div>
+        <div class='excerpt-header'>
+          <h2 class='excerpt-title'>
+            <a href="https://borber.github.io/post/second-python-reptile"> Second python crawler </a>
+          </h2>
+        </div>
+        <div class='excerpt-content'>
+          <article>
+              <p>爬取<a href="http://www.zerobyw4.com/">zero搬运网</a> 漫画 有福利哦 🤪</p>
+
+          </article>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div id="loop-container" class="loop-container">
+    <div class="post type-post status-publish format-standard   has-post-thumbnail hentry category-design tag-memories
+    tag-normal-post tag-standard-2 excerpt zoom full-without-featured
+      
+        odd
+       excerpt">
+      
+      <a class="featured-image-link" href="https://borber.github.io/post/first-python-reptile">
+        <div class='featured-image lazy lazy-bg-image' data-background="https://www.z4a.net/images/2019/07/16/2018-07-13-005825.jpg"></div>
+      </a>
+      
+      <div class="excerpt-container">
+        <div class="excerpt-meta">
+          <span class="date">  · 2019-07-16 ·</span>
+            
+                <span> / </span>
+                <span class="category">
+                        <a href="https://borber.github.io/tag/zzy4LPH8S">python</a>
+                </span>
+            
+                <span> / </span>
+                <span class="category">
+                        <a href="https://borber.github.io/tag/C-16BRfGV">爬虫</a>
+                </span>
+            
+                <span> / </span>
+                <span class="category">
+                        <a href="https://borber.github.io/tag/8IAnIMJ0D">壁纸</a>
+                </span>
+            
+                <span> / </span>
+                <span class="category">
+                        <a href="https://borber.github.io/tag/mR79ZebU2">编程</a>
+                </span>
+            
+                <span> / </span>
+                <span class="category">
+                        <a href="https://borber.github.io/tag/qlm952wiz">NSFW</a>
+                </span>
+            
+
+        </div>
+        <div class='excerpt-header'>
+          <h2 class='excerpt-title'>
+            <a href="https://borber.github.io/post/first-python-reptile"> First python crawler </a>
+          </h2>
+        </div>
+        <div class='excerpt-content'>
+          <article>
+              <p>爬取wallhaven壁纸网站NSFW资源😍</p>
+
+          </article>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div id="loop-container" class="loop-container">
+    <div class="post type-post status-publish format-standard   has-post-thumbnail hentry category-design tag-memories
+    tag-normal-post tag-standard-2 excerpt zoom full-without-featured
+      
+      even
+       excerpt">
+      
+      <a class="featured-image-link" href="https://borber.github.io/post/todo-with-my-wife">
+        <div class='featured-image lazy lazy-bg-image' data-background="https://www.z4a.net/images/2019/07/12/298f1f7261e4694fc.jpg"></div>
+      </a>
+      
+      <div class="excerpt-container">
+        <div class="excerpt-meta">
+          <span class="date">  · 2019-07-12 ·</span>
+            
+                <span> / </span>
+                <span class="category">
+                        <a href="https://borber.github.io/tag/tdIplkXkA">TODO</a>
+                </span>
+            
+                <span> / </span>
+                <span class="category">
+                        <a href="https://borber.github.io/tag/Iz-JaXt1o">老婆</a>
+                </span>
+            
+
+        </div>
+        <div class='excerpt-header'>
+          <h2 class='excerpt-title'>
+            <a href="https://borber.github.io/post/todo-with-my-wife"> Todo with my wife </a>
+          </h2>
+        </div>
+        <div class='excerpt-content'>
+          <article>
+              <p>很多很多想和你做的</p>
+
+          </article>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div id="loop-container" class="loop-container">
+    <div class="post type-post status-publish format-standard   has-post-thumbnail hentry category-design tag-memories
+    tag-normal-post tag-standard-2 excerpt zoom full-without-featured
+      
+        odd
+       excerpt">
+      
+      <a class="featured-image-link" href="https://borber.github.io/post/studying-with-my-wife">
+        <div class='featured-image lazy lazy-bg-image' data-background="https://www.z4a.net/images/2019/07/06/IMG_20190619_100356.jpg"></div>
+      </a>
+      
+      <div class="excerpt-container">
+        <div class="excerpt-meta">
+          <span class="date">  · 2019-07-06 ·</span>
+            
+                <span> / </span>
+                <span class="category">
+                        <a href="https://borber.github.io/tag/Iz-JaXt1o">老婆</a>
+                </span>
+            
+                <span> / </span>
+                <span class="category">
+                        <a href="https://borber.github.io/tag/Xhg1oQO3y">自习</a>
+                </span>
+            
+                <span> / </span>
+                <span class="category">
+                        <a href="https://borber.github.io/tag/y0BJL2VbC">学习</a>
+                </span>
+            
+
+        </div>
+        <div class='excerpt-header'>
+          <h2 class='excerpt-title'>
+            <a href="https://borber.github.io/post/studying-with-my-wife"> Studying with my wife </a>
+          </h2>
+        </div>
+        <div class='excerpt-content'>
+          <article>
+              <p>老婆永远是对的 💕</p>
+
+          </article>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div id="loop-container" class="loop-container">
+    <div class="post type-post status-publish format-standard   has-post-thumbnail hentry category-design tag-memories
+    tag-normal-post tag-standard-2 excerpt zoom full-without-featured
+      
+      even
+       excerpt">
+      
+      <a class="featured-image-link" href="https://borber.github.io/post/re-integration">
+        <div class='featured-image lazy lazy-bg-image' data-background="https://www.z4a.net/images/2019/06/29/Nora-Wallpaper.jpg"></div>
+      </a>
+      
+      <div class="excerpt-container">
+        <div class="excerpt-meta">
+          <span class="date">  · 2019-06-29 ·</span>
+            
+                <span> / </span>
+                <span class="category">
+                        <a href="https://borber.github.io/tag/P8rYWkO7Y">高数</a>
+                </span>
+            
+                <span> / </span>
+                <span class="category">
+                        <a href="https://borber.github.io/tag/y0BJL2VbC">学习</a>
+                </span>
+            
+
+        </div>
+        <div class='excerpt-header'>
+          <h2 class='excerpt-title'>
+            <a href="https://borber.github.io/post/re-integration"> Re-integration </a>
+          </h2>
+        </div>
+        <div class='excerpt-content'>
+          <article>
+              <p>大一复习计划<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><mn>3</mn><mi mathvariant="normal">/</mi><mi mathvariant="normal">∞</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">(3/\infty)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">3</span><span class="mord">/</span><span class="mord">∞</span><span class="mclose">)</span></span></span></span></p>
+
+          </article>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div id="loop-container" class="loop-container">
+    <div class="post type-post status-publish format-standard   has-post-thumbnail hentry category-design tag-memories
+    tag-normal-post tag-standard-2 excerpt zoom full-without-featured
+      
+        odd
+       excerpt">
+      
+      <a class="featured-image-link" href="https://borber.github.io/post/multivariable-calculus">
+        <div class='featured-image lazy lazy-bg-image' data-background="https://www.z4a.net/images/2019/06/24/hometown.jpg"></div>
+      </a>
+      
+      <div class="excerpt-container">
+        <div class="excerpt-meta">
+          <span class="date">  · 2019-06-24 ·</span>
+            
+                <span> / </span>
+                <span class="category">
+                        <a href="https://borber.github.io/tag/P8rYWkO7Y">高数</a>
+                </span>
+            
+                <span> / </span>
+                <span class="category">
+                        <a href="https://borber.github.io/tag/y0BJL2VbC">学习</a>
+                </span>
+            
+
+        </div>
+        <div class='excerpt-header'>
+          <h2 class='excerpt-title'>
+            <a href="https://borber.github.io/post/multivariable-calculus"> Multivariable calculus </a>
+          </h2>
+        </div>
+        <div class='excerpt-content'>
+          <article>
+              <p>大一复习计划<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><mn>2</mn><mi mathvariant="normal">/</mi><mi mathvariant="normal">∞</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">(2/\infty)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">2</span><span class="mord">/</span><span class="mord">∞</span><span class="mclose">)</span></span></span></span></p>
+
+          </article>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div id="loop-container" class="loop-container">
+    <div class="post type-post status-publish format-standard   has-post-thumbnail hentry category-design tag-memories
+    tag-normal-post tag-standard-2 excerpt zoom full-without-featured
+      
+      even
+       excerpt">
+      
+      <a class="featured-image-link" href="https://borber.github.io/post/vector-algebra">
+        <div class='featured-image lazy lazy-bg-image' data-background="https://www.z4a.net/images/2019/06/18/243.jpg"></div>
+      </a>
+      
+      <div class="excerpt-container">
+        <div class="excerpt-meta">
+          <span class="date">  · 2019-06-18 ·</span>
+            
+                <span> / </span>
+                <span class="category">
+                        <a href="https://borber.github.io/tag/P8rYWkO7Y">高数</a>
+                </span>
+            
+                <span> / </span>
+                <span class="category">
+                        <a href="https://borber.github.io/tag/y0BJL2VbC">学习</a>
+                </span>
+            
+
+        </div>
+        <div class='excerpt-header'>
+          <h2 class='excerpt-title'>
+            <a href="https://borber.github.io/post/vector-algebra"> Vector Algebra </a>
+          </h2>
+        </div>
+        <div class='excerpt-content'>
+          <article>
+              <p>大一复习计划<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><mn>1</mn><mi mathvariant="normal">/</mi><mi mathvariant="normal">∞</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">(1/\infty)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">1</span><span class="mord">/</span><span class="mord">∞</span><span class="mclose">)</span></span></span></span></p>
+
+          </article>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div id="loop-container" class="loop-container">
+    <div class="post type-post status-publish format-standard   has-post-thumbnail hentry category-design tag-memories
+    tag-normal-post tag-standard-2 excerpt zoom full-without-featured
+      
+        odd
+       excerpt">
+      
+      <a class="featured-image-link" href="https://borber.github.io/post/test-music-player">
+        <div class='featured-image lazy lazy-bg-image' data-background="https://www.z4a.net/images/2019/06/18/seria.jpg"></div>
+      </a>
+      
+      <div class="excerpt-container">
+        <div class="excerpt-meta">
+          <span class="date">  · 2019-06-18 ·</span>
+            
+                <span> / </span>
+                <span class="category">
+                        <a href="https://borber.github.io/tag/uC46nU43x">音乐</a>
+                </span>
+            
+                <span> / </span>
+                <span class="category">
+                        <a href="https://borber.github.io/tag/3zxhdu1jz">测试</a>
+                </span>
+            
+
+        </div>
+        <div class='excerpt-header'>
+          <h2 class='excerpt-title'>
+            <a href="https://borber.github.io/post/test-music-player"> Test Music Player </a>
+          </h2>
+        </div>
+        <div class='excerpt-content'>
+          <article>
+              <p>测试 歌曲 喜欢-阿肆</p>
+
+          </article>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div id="loop-container" class="loop-container">
+    <div class="post type-post status-publish format-standard   has-post-thumbnail hentry category-design tag-memories
+    tag-normal-post tag-standard-2 excerpt zoom full-without-featured
+      
+      even
+       excerpt">
+      
+      <a class="featured-image-link" href="https://borber.github.io/post/test-code-highlight">
+        <div class='featured-image lazy lazy-bg-image' data-background="https://www.z4a.net/images/2019/06/18/father.jpg"></div>
+      </a>
+      
+      <div class="excerpt-container">
+        <div class="excerpt-meta">
+          <span class="date">  · 2019-06-18 ·</span>
+            
+                <span> / </span>
+                <span class="category">
+                        <a href="https://borber.github.io/tag/3zxhdu1jz">测试</a>
+                </span>
+            
+
+        </div>
+        <div class='excerpt-header'>
+          <h2 class='excerpt-title'>
+            <a href="https://borber.github.io/post/test-code-highlight"> Test Code Highlight </a>
+          </h2>
+        </div>
+        <div class='excerpt-content'>
+          <article>
+              <p>测试代码高亮显示 Java</p>
+
+          </article>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div id="loop-container" class="loop-container">
+    <div class="post type-post status-publish format-standard   has-post-thumbnail hentry category-design tag-memories
+    tag-normal-post tag-standard-2 excerpt zoom full-without-featured
+      
+        odd
+       excerpt">
+      
+      <a class="featured-image-link" href="https://borber.github.io/post/kde-without-bug">
+        <div class='featured-image lazy lazy-bg-image' data-background="https://www.z4a.net/images/2019/06/17/LonelyParade.jpg"></div>
+      </a>
+      
+      <div class="excerpt-container">
+        <div class="excerpt-meta">
+          <span class="date">  · 2019-06-17 ·</span>
+            
+                <span> / </span>
+                <span class="category">
+                        <a href="https://borber.github.io/tag/oH1pINPLi">BUG</a>
+                </span>
+            
+                <span> / </span>
+                <span class="category">
+                        <a href="https://borber.github.io/tag/JlXEuRwI4">Manjaro</a>
+                </span>
+            
+                <span> / </span>
+                <span class="category">
+                        <a href="https://borber.github.io/tag/CnDx3GpBp">KDE</a>
+                </span>
+            
+                <span> / </span>
+                <span class="category">
+                        <a href="https://borber.github.io/tag/Wes_HVTVd">Linux</a>
+                </span>
+            
+                <span> / </span>
+                <span class="category">
+                        <a href="https://borber.github.io/tag/3YQBc-530">桌面</a>
+                </span>
+            
+
+        </div>
+        <div class='excerpt-header'>
+          <h2 class='excerpt-title'>
+            <a href="https://borber.github.io/post/kde-without-bug"> KDE without BUG </a>
+          </h2>
+        </div>
+        <div class='excerpt-content'>
+          <article>
+              <p>​		本文旨在收集Manjaro KDE 系统在日常使用中的BUG解决办法.与君共享.</p>
+
+          </article>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div id="loop-container" class="loop-container">
+    <div class="post type-post status-publish format-standard   has-post-thumbnail hentry category-design tag-memories
+    tag-normal-post tag-standard-2 excerpt zoom full-without-featured
+      
+      even
+       excerpt">
+      
+      <a class="featured-image-link" href="https://borber.github.io/post/linux-gridea-repair">
+        <div class='featured-image lazy lazy-bg-image' data-background="https://www.z4a.net/images/2019/06/17/wlop-6.jpg"></div>
+      </a>
+      
+      <div class="excerpt-container">
+        <div class="excerpt-meta">
+          <span class="date">  · 2019-06-17 ·</span>
+            
+                <span> / </span>
+                <span class="category">
+                        <a href="https://borber.github.io/tag/oH1pINPLi">BUG</a>
+                </span>
+            
+                <span> / </span>
+                <span class="category">
+                        <a href="https://borber.github.io/tag/Wes_HVTVd">Linux</a>
+                </span>
+            
+                <span> / </span>
+                <span class="category">
+                        <a href="https://borber.github.io/tag/gridea">Gridea</a>
+                </span>
+            
+
+        </div>
+        <div class='excerpt-header'>
+          <h2 class='excerpt-title'>
+            <a href="https://borber.github.io/post/linux-gridea-repair"> Linux Gridea repair </a>
+          </h2>
+        </div>
+        <div class='excerpt-content'>
+          <article>
+              <p>​		在我从原始的Hexo 管理博客,转向 <strong><a href="https://gridea.dev">Gridea</a></strong> 时,我遇到了如下的错误:</p>
+
+          </article>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div id="loop-container" class="loop-container">
+    <div class="post type-post status-publish format-standard   has-post-thumbnail hentry category-design tag-memories
+    tag-normal-post tag-standard-2 excerpt zoom full-without-featured
+      
+        odd
+       excerpt">
+      
+      <a class="featured-image-link" href="https://borber.github.io/post/kde">
+        <div class='featured-image lazy lazy-bg-image' data-background="https://www.z4a.net/images/2019/06/04/Aeolian3.jpg"></div>
+      </a>
+      
+      <div class="excerpt-container">
+        <div class="excerpt-meta">
+          <span class="date">  · 2019-06-17 ·</span>
+            
+                <span> / </span>
+                <span class="category">
+                        <a href="https://borber.github.io/tag/JlXEuRwI4">Manjaro</a>
+                </span>
+            
+                <span> / </span>
+                <span class="category">
+                        <a href="https://borber.github.io/tag/CnDx3GpBp">KDE</a>
+                </span>
+            
+                <span> / </span>
+                <span class="category">
+                        <a href="https://borber.github.io/tag/7WZTvl4GD">美化</a>
+                </span>
+            
+                <span> / </span>
+                <span class="category">
+                        <a href="https://borber.github.io/tag/Wes_HVTVd">Linux</a>
+                </span>
+            
+                <span> / </span>
+                <span class="category">
+                        <a href="https://borber.github.io/tag/3YQBc-530">桌面</a>
+                </span>
+            
+
+        </div>
+        <div class='excerpt-header'>
+          <h2 class='excerpt-title'>
+            <a href="https://borber.github.io/post/kde"> KDE Beautify </a>
+          </h2>
+        </div>
+        <div class='excerpt-content'>
+          <article>
+              <p>困于Linux美化良久
+今作教程记录历程</p>
+
+          </article>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div id="loop-container" class="loop-container">
+    <div class="post type-post status-publish format-standard   has-post-thumbnail hentry category-design tag-memories
+    tag-normal-post tag-standard-2 excerpt zoom full-without-featured
+      
+      even
+       excerpt">
+      
+      <a class="featured-image-link" href="https://borber.github.io/post/hello-gridea">
+        <div class='featured-image lazy lazy-bg-image' data-background="https://borber.github.io/post-images/hello-gridea.png"></div>
+      </a>
+      
+      <div class="excerpt-container">
+        <div class="excerpt-meta">
+          <span class="date">  · 2018-12-12 ·</span>
+            
+                <span> / </span>
+                <span class="category">
+                        <a href="https://borber.github.io/tag/gridea">Gridea</a>
+                </span>
+            
+
+        </div>
+        <div class='excerpt-header'>
+          <h2 class='excerpt-title'>
+            <a href="https://borber.github.io/post/hello-gridea"> Hello Gridea </a>
+          </h2>
+        </div>
+        <div class='excerpt-content'>
+          <article>
+              <p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
+✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
+
+          </article>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+        <nav class="navigation pagination" role="navigation">
+    <h2 class="screen-reader-text">Posts navigation</h2>
+    <div class="nav-links">
+        
+        
+    </div>
+</nav>
+
+        <footer id="site-footer" class="site-footer" role="contentinfo">
+    <h1>
+        <a href="https://borber.github.io"> BORBER </a>
+    </h1>
+    <p class="site-description" style="font-size:18px">世俗为枷锁 世人皆自缚</p>
+    <div id="menu-footer" class="menu-container menu-footer" role="navigation">
+        <div class="menu">
+            <ul id="menu-footer-items" class="menu-footer-items">
+            </ul>
+        </div>
+    </div>
+    <ul class="social-media-icons">
+        
+            
+                <li>
+                    <a href="https://github.com/Borber" data-animate-hover="pulse" class="github" target="_blank">
+                        <i class="fab fa-github" title="github"></i>
+                        <span class="screen-reader-text">github</span>
+                    </a>
+                </li>
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+                <li>
+                    <a href="/atom.xml" data-animate-hover="pulse" class="rss" target="_blank">
+                        <i class="fas fa-rss" title="rss"></i>
+                        <span class="screen-reader-text">rss</span>
+                    </a>
+                </li>
+            
+        
+    </ul>
+    <div class="design-credit">
+        <p>Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a></p>
+    </div>
+</footer>
+<script>
+    hljs.initHighlightingOnLoad()
 </script>
-									 
-		</div><!-- #end container-->
+<script src="https://borber.github.io/media/scripts/lib/jquery.min.js"></script>
+<script src="https://borber.github.io/media/scripts/lib/jquerymigrate.js"></script>
+<script src="https://borber.github.io/media/scripts/lib/production.min.js"></script>
 
-		
-	 	<footer id="colophon" class="site-footer">
-
-			<div class="container">
-	
-				<div class="copyright">Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a><br>Theme:   <a href="https://github.com/alterfang/gridea-theme-pan" target="_blank" title="Pan"><span>Pan</span></a>. Powered by <a href="https://gridea.dev/" target="_blank" title="Gridea"><span>Gridea</span></a></div>		
-			</div><!-- .container -->
-		
-		</footer><!-- #colophon -->
-
-</div><!-- #end wrapper-->
-
-<script src="https://cdn.bootcss.com/fitvids/1.2.0/jquery.fitvids.min.js"></script>
-<script type='text/javascript' src='https://borber.github.io/media/scripts/marlin-scripts.js'></script>
-
-	
-	
-														   
-</body>
+      </div>
+  </body>
 </html>
+
