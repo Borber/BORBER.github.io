@@ -789,7 +789,6 @@ a img {
   backface-visibility: hidden;
   -webkit-transition: -webkit-transform 0.3s ease;
   transition: transform 0.3s ease;
-  border-radius: 10px 10px 1px 1px;
 }
 .zoom .featured-image-link {
   -webkit-backface-visibility: hidden;
