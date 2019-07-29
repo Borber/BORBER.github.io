@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://borber.github.io</id>
     <title>BORBER</title>
-    <updated>2019-07-27T17:21:31.172Z</updated>
+    <updated>2019-07-29T05:42:22.728Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://borber.github.io"/>
     <link rel="self" href="https://borber.github.io/atom.xml"/>
@@ -10,6 +10,264 @@
     <logo>https://borber.github.io/images/avatar.png</logo>
     <icon>https://borber.github.io/favicon.ico</icon>
     <rights>All rights reserved 2019, BORBER</rights>
+    <entry>
+        <title type="html"><![CDATA[Fu*k meizitu]]></title>
+        <id>https://borber.github.io/post/fuk-meizitu</id>
+        <link href="https://borber.github.io/post/fuk-meizitu">
+        </link>
+        <updated>2019-07-29T05:36:30.000Z</updated>
+        <summary type="html"><![CDATA[<p>爬取妹子图全站图片</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>爬取妹子图全站图片</p>
+<!-- more -->
+<p>由于我没有提前记录过程 所以没有截图，以后尽量把自己的思考过程都全部截图发出来。</p>
+<p>首先通过 <a href="https://www.mzitu.com">首页</a> 的的所有分页面爬取所有的图片的首页链接 （写完之后发现有另一个界面 更容易爬 但是已经写完了就没有改了 这里放上链接 <a href="https://www.mzitu.com/all/">全部</a>）</p>
+<p>这一步是很简单的， 主要就是吧真正的套图的链接全部整理出来，放在 mongo/meizitu/home 这个表里面，准备二次加工。</p>
+<pre><code class="language-python">#home_url.py
+
+from toolkits.ip_proxies import get_proxies
+from bs4 import BeautifulSoup
+from fake_useragent import UserAgent
+import requests
+import pymongo
+import time
+
+client = pymongo.MongoClient('localhost', 27017)
+meizitu = client['meizitu']
+home = meizitu['home']
+
+ua = UserAgent()
+
+headers = {
+    'User-Agent': ua.random,
+    'Referer': 'https://www.mzitu.com'
+}
+
+
+def get_home_url(i=0):
+    url = f'https://www.mzitu.com/page/{i}'
+    wb_data = requests.get(url, proxies=get_proxies(), headers=headers, timeout=3)
+    soup = BeautifulSoup(wb_data.text, 'lxml')
+    real = soup.select('#pins &gt; li &gt; span &gt; a')
+    for index, each in enumerate(real):
+        home.insert_one({'URL': each.get('href')})
+
+</code></pre>
+<p>接下来就是对爬去的链接做二次加工。</p>
+<p>把每个链接对应的套图的 标题，链接，最大页码数 提取出来，因为妹子图的网页结构非常简单，每张图对应的URL 都是首页后面加页码，所以可以利用这个，减少储存的URL数。保存的 title 是作为以后的储存目录子文件夹名。</p>
+<p>以及一个用于之后下载时提取每个界面图片的函数（get_imgs(url)）</p>
+<p>这里尤其要说 关于</p>
+<pre><code class="language-python">for i in range(10):
+</code></pre>
+<p>的作用。</p>
+<p>不知道是由于网站的反扒措施，还是我使用的代理ip池中有ip失效，总之会有request中断的现象，总会导致爬虫强制退出，这一退出就是浪费几十分钟的时间，所以加上 try 的报错处理之后，程序的鲁棒性会提高非常多，这个结构也出现在随后的几个py文件中，随后不在作解释。</p>
+<p>这里也强烈建议使用 IP代理 可以参考我的上一篇博文。都打包好了可以直接使用。</p>
+<pre><code class="language-python">#find_imgs.py
+
+from toolkits.ip_proxies import get_proxies
+from bs4 import BeautifulSoup
+from fake_useragent import UserAgent
+import requests
+import pymongo
+import time
+
+
+client = pymongo.MongoClient('localhost', 27017)
+meizitu = client['meizitu']
+home = meizitu['home']
+imgs = meizitu['imgs']
+
+ua = UserAgent()
+
+
+def get_title_and_pages(url):
+    headers = {
+        'User-Agent': ua.random,
+        'Referer': 'https://www.mzitu.com'
+    }
+    for i in range(10):
+        try:
+            wb_data = requests.get(url, headers=headers, proxies=get_proxies())
+            while wb_data != 200:
+                wb_data = requests.get(url, headers=headers,proxies=get_proxies())
+        except Exception:
+            if i &gt;= 9:
+                print('Fuck!')
+            else:
+                time.sleep(0.5)
+        else:
+            break
+
+    title = url[-6:]
+    soup = BeautifulSoup(wb_data.text, 'lxml')
+    titles = soup.select('div.main h2')
+    for each in titles:
+        title = each.get_text()
+        break
+    url_max = soup.select('div.pagenavi &gt; a &gt; span')[-2].get_text()
+    imgs.insert_one({'title': title, 'url': url, 'url_max': int(url_max)})
+
+
+def get_imgs(url):
+    headers = {
+        'User-Agent': ua.random,
+        'Referer': 'https://www.mzitu.com'
+    }
+    for i in range(10):
+        try:
+            wb_data = requests.get(url, headers=headers, proxies=get_proxies())
+            while wb_data.status_code != 200:
+                wb_data = requests.get(url, headers=headers, proxies=get_proxies())
+        except Exception:
+            if i &gt;= 9:
+                print('Fuck!')
+            else:
+                time.sleep(0.5)
+        else:
+            break
+    soup = BeautifulSoup(wb_data.text, 'lxml')
+    img_url = soup.select('div.main-image img')[0].get('src')
+    return img_url
+
+
+
+</code></pre>
+<p>接下来是下载模块</p>
+<pre><code class="language-python">#download_imgs.py
+
+from toolkits.ip_proxies import get_proxies
+from fake_useragent import UserAgent
+import requests
+import os
+import time
+
+seq = '/'
+ua = UserAgent()
+
+headers = {
+    'User-Agent': ua.random,
+    'Referer': 'https://www.mzitu.com'
+}
+
+
+def downimg(index, url, path):
+    print(url)
+    filename = path + seq[0] + str(index) + url[-4:]
+    print(filename)
+    if os.path.exists(filename):
+        return
+    for i in range(10):
+        try:
+            r = requests.get(url, headers=headers, proxies=get_proxies(), stream=True)
+        except Exception :
+            if i &gt;= 9:
+                print('Fuck!')
+            else:
+                time.sleep(0.5)
+        else:
+            time.sleep(0.1)
+            break
+    with open(filename, 'wb') as code:
+        for img_data in r.iter_content(128):
+            code.write(img_data)
+
+
+</code></pre>
+<p>最后是主函数：</p>
+<p>这里面有一个大坑，坑的无与伦比，这也是这个爬虫我学到的比较重要的东西之一，pymongo创造的链接，是有时效性的，及时加了 no_cursor_timeout=True 他本身的链接就是以后时效性的，所以，出了跑错处理，还需要进行重连。</p>
+<pre><code class="language-python">def download_all():
+    client_local = pymongo.MongoClient('localhost', 27017)
+    meizitu_local = client_local['meizitu']
+    imgs_local = meizitu_local['imgs']
+    items = imgs_local.find(no_cursor_timeout=True)
+</code></pre>
+<p>这一段 就是在每一次进行 下载 调用时都进行一次重连。当然这一般就是在发生链接断开错误时才会再次调用的。（据网上资料，链接有效时间为10分钟）</p>
+<pre><code class="language-python">#main.py
+
+from test.home_url import get_home_url
+from test.find_imgs import get_title_and_pages,get_imgs
+from test.download_img import downimg
+from bs4 import BeautifulSoup
+from fake_useragent import UserAgent
+import requests
+import pymongo
+import os
+import time
+
+client = pymongo.MongoClient('localhost', 27017)
+meizitu = client['meizitu']
+home = meizitu['home']
+imgs = meizitu['imgs']
+
+rootpath = '/home/x/BORBER/File/Tmp/meizitu' # 自己改
+seq = '/'
+
+
+def mkdir(path):
+    folder = os.path.exists(path)
+    if not folder:
+        os.makedirs(path)
+
+
+def home_all_url():
+    for i in range(1, 226):
+        get_home_url(i)
+        print(f'Now in {i}')
+
+
+def imgs_all_url():
+    for index, each in enumerate(home.find(no_cursor_timeout=True)):
+        print(f'Now in {index}')
+        print(each['URL'])
+        get_title_and_pages(each['URL'])
+        home.delete_one({'URL': each['URL']})
+
+
+def download_all():
+    client_local = pymongo.MongoClient('localhost', 27017)
+    meizitu_local = client_local['meizitu']
+    imgs_local = meizitu_local['imgs']
+    items = imgs_local.find(no_cursor_timeout=True)
+    for item in items:
+        filepath = rootpath + seq[0] + item['title']
+        print(filepath)
+        mkdir(filepath)
+        for i in range(1, item['url_max']):
+            downimg(i, get_imgs(item['url']+seq[0]+str(i)), filepath)
+        imgs.delete_one({'url': item['url']})
+    items.close()
+
+
+def safe_download():
+    for i in range(9999):
+        try:
+            download_all()
+        except Exception:
+            print('Fuck')
+            time.sleep(0.5)
+            download_all()
+        else:
+            break
+
+
+def clear_all():
+    meizitu.drop_collection('home')
+    meizitu.drop_collection('imgs')
+
+
+if __name__ == '__main__':
+    home_all_url()
+    imgs_all_url()
+    safe_download()
+
+</code></pre>
+<p>此版本理论上可以一次运行成功 爬取全站 17万+图片 共计18.1G数据</p>
+<p><img src="https://www.z4a.net/images/2019/07/29/16286196bfda2cc08.png" alt="16286196bfda2cc08.png">
+<img src="https://www.z4a.net/images/2019/07/29/2c6341d3c5e38c041.png" alt="2c6341d3c5e38c041.png">
+<img src="https://www.z4a.net/images/2019/07/29/3a94d521745bd3db4.png" alt="3a94d521745bd3db4.png"></p>
+<p>身体是革命的本钱啊 骚年， 滑稽</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[IP's pool]]></title>
         <id>https://borber.github.io/post/ips-pool</id>
@@ -826,13 +1084,13 @@ for i in range(1,26514):
 <!-- more -->
 <h2 id="愿望清单">愿望清单</h2>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-8501922"><label class="task-list-item-label" for="task-item-8501922"> 载着我老婆 我老婆搂着我 路过樱花树（不一定是樱花树，主要是搂）</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-1395489"><label class="task-list-item-label" for="task-item-1395489"> 一起去海边</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-6739904"><label class="task-list-item-label" for="task-item-6739904"> 去游乐场 做恐怖的项目</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-200555"><label class="task-list-item-label" for="task-item-200555"> 回家</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-4271133"><label class="task-list-item-label" for="task-item-4271133"> 如果要造孩子的话，在高考那天造孩子，哈哈。</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-2359705"><label class="task-list-item-label" for="task-item-2359705"> 教老婆玩万智牌</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-8653113"><label class="task-list-item-label" for="task-item-8653113"> 吃炒饼</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-681436"><label class="task-list-item-label" for="task-item-681436"> 载着我老婆 我老婆搂着我 路过樱花树（不一定是樱花树，主要是搂）</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-5424999"><label class="task-list-item-label" for="task-item-5424999"> 一起去海边</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-5316235"><label class="task-list-item-label" for="task-item-5316235"> 去游乐场 做恐怖的项目</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-3653774"><label class="task-list-item-label" for="task-item-3653774"> 回家</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-9972751"><label class="task-list-item-label" for="task-item-9972751"> 如果要造孩子的话，在高考那天造孩子，哈哈。</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-2884825"><label class="task-list-item-label" for="task-item-2884825"> 教老婆玩万智牌</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-8083496"><label class="task-list-item-label" for="task-item-8083496"> 吃炒饼</label></li>
 </ul>
 ]]></content>
     </entry>
