@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://borber.github.io</id>
     <title>BORBER</title>
-    <updated>2019-07-29T14:45:44.357Z</updated>
+    <updated>2019-07-29T14:51:32.093Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://borber.github.io"/>
     <link rel="self" href="https://borber.github.io/atom.xml"/>
@@ -20,14 +20,21 @@
 ]]></summary>
         <content type="html"><![CDATA[<p>工欲善其事，必先利其器</p>
 <!-- more -->
-<p>这是我的自用python 工具库
-发布在github上 以后经常要用到的工具我都会放在这个里面</p>
-<p>来自网络资源，或者是自己写的，当然还是希望以后是自己写的比较多就更好了</p>
+<p>这是我的自用python 工具库</p>
+<hr>
+<p>发布在<a href="https://github.com/Borber/python-toolkits">github</a>上 以后经常要用到的工具我都会放在这个里面 并且我写的爬虫以后会越来越多的使用其中的代码，所以，不妨star一下，fork一下,在这里谢过了.</p>
+<p>工具是自己写的，也有部分会是来自网络资源，当然还是希望以后是自己写的比较多就更好了</p>
 <p>目前有以下几个模块</p>
-<p>下载模块</p>
-<p>IP代理池构建模块 对应的 代理池文件</p>
+<ol>
+<li>
+<p><a href="https://github.com/Borber/python-toolkits/blob/master/down_load.py">下载模块</a></p>
+</li>
+<li>
+<p><a href="https://github.com/Borber/python-toolkits/blob/master/ip_proxies.py">IP代理池构建模块</a> 对应的 <a href="https://github.com/Borber/python-toolkits/blob/master/ips_pool.csv">代理池文件</a></p>
+</li>
+</ol>
 <p>以后还会更新更多的工具，敬请期待与关注，如果你有什么需要，以及有什么好的工具想要推荐，欢迎提Issues</p>
-<p>也欢迎关注我的博客： BORBER</p>
+<p>也欢迎关注我的博客： <a href="https://borber.github.io">BORBER</a></p>
 <p>LICENSE：</p>
 <p><a href="https://github.com/Borber/python-toolkits/blob/master/LICENSE.md">MIT</a></p>
 ]]></content>
@@ -1106,13 +1113,13 @@ for i in range(1,26514):
 <!-- more -->
 <h2 id="愿望清单">愿望清单</h2>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-9390907"><label class="task-list-item-label" for="task-item-9390907"> 载着我老婆 我老婆搂着我 路过樱花树（不一定是樱花树，主要是搂）</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-4431399"><label class="task-list-item-label" for="task-item-4431399"> 一起去海边</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-7985191"><label class="task-list-item-label" for="task-item-7985191"> 去游乐场 做恐怖的项目</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-3112639"><label class="task-list-item-label" for="task-item-3112639"> 回家</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-4685132"><label class="task-list-item-label" for="task-item-4685132"> 如果要造孩子的话，在高考那天造孩子，哈哈。</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-4766032"><label class="task-list-item-label" for="task-item-4766032"> 教老婆玩万智牌</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-4356822"><label class="task-list-item-label" for="task-item-4356822"> 吃炒饼</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-4139329"><label class="task-list-item-label" for="task-item-4139329"> 载着我老婆 我老婆搂着我 路过樱花树（不一定是樱花树，主要是搂）</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-4638802"><label class="task-list-item-label" for="task-item-4638802"> 一起去海边</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-486845"><label class="task-list-item-label" for="task-item-486845"> 去游乐场 做恐怖的项目</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-7663387"><label class="task-list-item-label" for="task-item-7663387"> 回家</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-2623697"><label class="task-list-item-label" for="task-item-2623697"> 如果要造孩子的话，在高考那天造孩子，哈哈。</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-3948405"><label class="task-list-item-label" for="task-item-3948405"> 教老婆玩万智牌</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-6884749"><label class="task-list-item-label" for="task-item-6884749"> 吃炒饼</label></li>
 </ul>
 ]]></content>
     </entry>
