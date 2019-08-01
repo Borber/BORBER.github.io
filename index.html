@@ -6,7 +6,7 @@
 <meta name="robots" content="all,follow">
 <meta name="googlebot" content="index,follow,snippet,archive">
 <title>BORBER</title>
-<link rel="shortcut icon" href="https://borber.github.io/favicon.ico?v=1564644773010">
+<link rel="shortcut icon" href="https://borber.github.io/favicon.ico?v=1564683307470">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 <link rel="stylesheet" href="https://borber.github.io/styles/main.css" type='text/css' media='all'>
 
@@ -1177,6 +1177,35 @@
 <script src="https://borber.github.io/media/scripts/lib/jquerymigrate.js"></script>
 <script src="https://borber.github.io/media/scripts/lib/production.min.js"></script>
 
+      <a id="back_to_top" href="#" class="back_to_top"><span><i class="iconfont icon-xiangshang"></i></span>
+      </a>
+
+
+      <script>$(document).ready((function(_this) {
+          return function() {
+            var bt;
+            bt = $('#back_to_top');
+            if ($(document).width() > 480) {
+              $(window).scroll(function() {
+                var st;
+                st = $(window).scrollTop();
+                if (st > 30) {
+                  return bt.css('display', 'block');
+                } else {
+                  return bt.css('display', 'none');
+                }
+              });
+              return bt.click(function() {
+                $('body,html').animate({
+                  scrollTop: 0
+                }, 800);
+                return false;
+              });
+            }
+          };
+        })(this));
+      </script>
+      
       </div>
   </body>
 </html>

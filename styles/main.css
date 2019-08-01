@@ -2904,3 +2904,34 @@ pre {
   font-size: 1em;
   /* 2 */
 }
+a.back_to_top {
+  text-decoration: none;
+  position: fixed;
+  bottom: 40px;
+  right: 30px;
+  background: #f0f0f0;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  line-height: 36px;
+  font-size: 18px;
+  text-align: center;
+  transition-duration: 0.5s;
+  transition-propety: background-color;
+  display: none;
+}
+a.back_to_top span {
+  color: #888;
+}
+a.back_to_top:hover {
+  cursor: pointer;
+  background: #dfdfdf;
+}
+a.back_to_top:hover span {
+  color: #555;
+}
+@media print, screen and (max-width: 580px) {
+  .back_to_top {
+    display: none !important;
+  }
+}
