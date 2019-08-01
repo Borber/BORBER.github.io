@@ -6,14 +6,21 @@
 <meta name="robots" content="all,follow">
 <meta name="googlebot" content="index,follow,snippet,archive">
 <title>Third python spider | BORBER</title>
+
 <link rel="shortcut icon" href="https://borber.github.io/favicon.ico?v=1564683307470">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 <link rel="stylesheet" href="https://borber.github.io/styles/main.css" type='text/css' media='all'>
+<link rel="stylesheet" href="https://cdn.bootcss.com/animate.css/3.5.2/animate.min.css"  />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
 <script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+<script src="https://cdn.bootcss.com/wow/1.1.2/wow.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.8/highlight.min.js"></script>
+<script type='text/javascript' src='https://miracol.cn/media/scripts/script.js'></script>
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+
 
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-142130514-1"></script>
@@ -301,6 +308,44 @@ for url in urls:
 <script src="https://borber.github.io/media/scripts/lib/production.min.js"></script>
 
 </div>
+
+<script src="https://cdn.bootcss.com/fitvids/1.2.0/jquery.fitvids.min.js"></script>
+<script type='text/javascript' src='https://miracol.cn/media/scripts/marlin-scripts.js'></script>
+<script src="https://tokinx.github.io/lately/lately.min.js"></script>
+<script>jQuery(document).ready(function(){$.lately({'target':'.lately-a,.lately-b,.lately-c'})});</script>
+
+<a id="back_to_top" href="#" class="back_to_top">
+      <span>
+        <i class="iconfont icon-xiangshang"></i>
+      </span>
+</a>
+
+
+<script>$(document).ready((function(_this) {
+        return function() {
+            var bt;
+            bt = $('#back_to_top');
+            if ($(document).width() > 480) {
+                $(window).scroll(function() {
+                    var st;
+                    st = $(window).scrollTop();
+                    if (st > 30) {
+                        return bt.css('display', 'block');
+                    } else {
+                        return bt.css('display', 'none');
+                    }
+                });
+                return bt.click(function() {
+                    $('body,html').animate({
+                        scrollTop: 0
+                    }, 800);
+                    return false;
+                });
+            }
+        };
+    })(this));
+</script>
+
 </body>
 </html>
 
