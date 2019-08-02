@@ -1,3 +1,6 @@
+import 'https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.css';
+import APlayer from 'APlayer';
+
 const ap = new APlayer({
     container: document.getElementById('player'),
     mini: true,
