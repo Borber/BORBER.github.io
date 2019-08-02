@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://borber.github.io</id>
     <title>BORBER</title>
-    <updated>2019-08-02T12:54:02.382Z</updated>
+    <updated>2019-08-02T13:15:22.573Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://borber.github.io"/>
     <link rel="self" href="https://borber.github.io/atom.xml"/>
@@ -10,6 +10,52 @@
     <logo>https://borber.github.io/images/avatar.png</logo>
     <icon>https://borber.github.io/favicon.ico</icon>
     <rights>All rights reserved 2019, BORBER</rights>
+    <entry>
+        <title type="html"><![CDATA[NederburgNewer]]></title>
+        <id>https://borber.github.io/post/nederburgnewer</id>
+        <link href="https://borber.github.io/post/nederburgnewer">
+        </link>
+        <updated>2019-08-02T13:01:23.000Z</updated>
+        <summary type="html"><![CDATA[<p>开源本站主题NederburgNewer</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>开源本站主题NederburgNewer</p>
+<!-- more -->
+<div class="star" data-v-029b7692=""><div class="gh-button-container" data-v-029b7692=""><a class="gh-button with-count" href="https://github.com/Borber/gridea-theme-nederburgNewer" target="_blank"><svg version="1.1" width="14" height="16" viewBox="0 0 14 16" aria-hidden="true" class="octicon octicon-star"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"></path></svg> 
+	Star
+</a> <a href="https://github.com/Borber/gridea-theme-nederburgNewer/stargazers" target="_blank" class="social-count">
+			1
+		</a></div> <span class="star-tip" data-v-029b7692="">🌟Star 支持作者！</span></div>
+<h1 id="gridea-theme-nederburgnewer">Gridea Theme 「 NederburgNewer 」</h1>
+<hr>
+<p>套用<a href="https://github.com/Suremotoo/gridea-theme-nederburg">Nederburg</a>以及 <a href="https://github.com/sadjjk/gridea-theme-nederburgNew">NederburgNew</a> 主题，在此基础上，进行个人喜好的微调，后续不出意外将一直使用该主题，并不断改进。</p>
+<p>感谢原作者@<a href="https://github.com/Suremotoo">Suremotoo</a></p>
+<h2 id="修改">修改</h2>
+<ul>
+<li>删除顶部菜单栏</li>
+<li>删除多余的文件</li>
+<li>删除文章详细页的左侧标签、底部作者</li>
+<li>增加代码块css样式</li>
+<li>归档风格修改</li>
+<li>首页文章表列增加圆角</li>
+<li>添加 回到顶部功能</li>
+<li>社交选项 添加 telegram</li>
+</ul>
+<h2 id="安装">安装</h2>
+<ol>
+<li>
+<p>如果Gridea正在运行，请先关闭.</p>
+</li>
+<li>
+<p>进入 <strong>&lt;你的Gridea主题文件夹&gt;</strong> 然后执行</p>
+<pre><code class="language-bash"> git clone https://github.com/Borber/gridea-theme-nederburgNew.git
+</code></pre>
+</li>
+<li>
+<p>重新启动Gridea，在「主题」菜单中选择 「nederburgNew」，点击保存！</p>
+</li>
+</ol>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Who killed the robin]]></title>
         <id>https://borber.github.io/post/who-killed-the-robin</id>
@@ -1206,13 +1252,13 @@ for i in range(1,26514):
 <!-- more -->
 <h2 id="愿望清单">愿望清单</h2>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-6751150"><label class="task-list-item-label" for="task-item-6751150"> 载着我老婆 我老婆搂着我 路过樱花树（不一定是樱花树，主要是搂）</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-9187788"><label class="task-list-item-label" for="task-item-9187788"> 一起去海边</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-3976067"><label class="task-list-item-label" for="task-item-3976067"> 去游乐场 做恐怖的项目</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-5479032"><label class="task-list-item-label" for="task-item-5479032"> 回家</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-4211647"><label class="task-list-item-label" for="task-item-4211647"> 如果要造孩子的话，在高考那天造孩子，哈哈。</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-6434130"><label class="task-list-item-label" for="task-item-6434130"> 教老婆玩万智牌</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-7390791"><label class="task-list-item-label" for="task-item-7390791"> 吃炒饼</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-4559818"><label class="task-list-item-label" for="task-item-4559818"> 载着我老婆 我老婆搂着我 路过樱花树（不一定是樱花树，主要是搂）</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-1052017"><label class="task-list-item-label" for="task-item-1052017"> 一起去海边</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-37149"><label class="task-list-item-label" for="task-item-37149"> 去游乐场 做恐怖的项目</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-4586385"><label class="task-list-item-label" for="task-item-4586385"> 回家</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-3411635"><label class="task-list-item-label" for="task-item-3411635"> 如果要造孩子的话，在高考那天造孩子，哈哈。</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-2159515"><label class="task-list-item-label" for="task-item-2159515"> 教老婆玩万智牌</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-7325910"><label class="task-list-item-label" for="task-item-7325910"> 吃炒饼</label></li>
 </ul>
 ]]></content>
     </entry>
