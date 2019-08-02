@@ -1,5 +1,6 @@
 <html>
   <head>
+
     <meta charset="utf-8" />
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -1277,9 +1278,13 @@
 
 
       </div>
+    <!--    点击爆炸特效 start-->
     <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas>
-    <script type =“text/javascript" src ="/media/scripts/lib/fireworks.js"> </script>
+    <script src="https://cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script>
+    <script src ="https://borber.cn/media/scripts/lib/fireworks.js"> </script>
+    <!--    点击爆炸特效 ends-->
 
+    <!--返回顶部 start-->
     <script src="https://cdn.bootcss.com/fitvids/1.2.0/jquery.fitvids.min.js"></script>
     <script src="https://tokinx.github.io/lately/lately.min.js"></script>
     <script>jQuery(document).ready(function(){$.lately({'target':'.lately-a,.lately-b,.lately-c'})});</script>
@@ -1315,6 +1320,8 @@
         };
       })(this));
     </script>
+    
+    <!--返回顶部 ends-->
 
   </body>
 </html>
