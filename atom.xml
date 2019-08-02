@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://borber.github.io</id>
     <title>BORBER</title>
-    <updated>2019-08-02T07:19:07.283Z</updated>
+    <updated>2019-08-02T09:36:02.806Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://borber.github.io"/>
     <link rel="self" href="https://borber.github.io/atom.xml"/>
@@ -10,6 +10,14 @@
     <logo>https://borber.github.io/images/avatar.png</logo>
     <icon>https://borber.github.io/favicon.ico</icon>
     <rights>All rights reserved 2019, BORBER</rights>
+    <entry>
+        <title type="html"><![CDATA[测试视频]]></title>
+        <id>https://borber.github.io/post/ce-shi-shi-pin</id>
+        <link href="https://borber.github.io/post/ce-shi-shi-pin">
+        </link>
+        <updated>2019-08-02T09:26:17.000Z</updated>
+        <content type="html"><![CDATA[<iframe src="//player.bilibili.com/player.html?aid=25777297&cid=44014863&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Fu*k nhentai]]></title>
         <id>https://borber.github.io/post/fuk-nhentai</id>
@@ -1193,13 +1201,13 @@ for i in range(1,26514):
 <!-- more -->
 <h2 id="愿望清单">愿望清单</h2>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-3375544"><label class="task-list-item-label" for="task-item-3375544"> 载着我老婆 我老婆搂着我 路过樱花树（不一定是樱花树，主要是搂）</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-8004027"><label class="task-list-item-label" for="task-item-8004027"> 一起去海边</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-6901488"><label class="task-list-item-label" for="task-item-6901488"> 去游乐场 做恐怖的项目</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-7117620"><label class="task-list-item-label" for="task-item-7117620"> 回家</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-4502446"><label class="task-list-item-label" for="task-item-4502446"> 如果要造孩子的话，在高考那天造孩子，哈哈。</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-8276489"><label class="task-list-item-label" for="task-item-8276489"> 教老婆玩万智牌</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-1530480"><label class="task-list-item-label" for="task-item-1530480"> 吃炒饼</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-8377972"><label class="task-list-item-label" for="task-item-8377972"> 载着我老婆 我老婆搂着我 路过樱花树（不一定是樱花树，主要是搂）</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-2121788"><label class="task-list-item-label" for="task-item-2121788"> 一起去海边</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-5161169"><label class="task-list-item-label" for="task-item-5161169"> 去游乐场 做恐怖的项目</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-8435782"><label class="task-list-item-label" for="task-item-8435782"> 回家</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-8065573"><label class="task-list-item-label" for="task-item-8065573"> 如果要造孩子的话，在高考那天造孩子，哈哈。</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-4909694"><label class="task-list-item-label" for="task-item-4909694"> 教老婆玩万智牌</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-5328091"><label class="task-list-item-label" for="task-item-5328091"> 吃炒饼</label></li>
 </ul>
 ]]></content>
     </entry>
