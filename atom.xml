@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://borber.github.io</id>
     <title>BORBER</title>
-    <updated>2019-08-03T08:03:47.532Z</updated>
+    <updated>2019-08-03T08:19:44.953Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://borber.github.io"/>
     <link rel="self" href="https://borber.github.io/atom.xml"/>
@@ -10,6 +10,75 @@
     <logo>https://borber.github.io/images/avatar.png</logo>
     <icon>https://borber.github.io/favicon.ico</icon>
     <rights>All rights reserved 2019, BORBER</rights>
+    <entry>
+        <title type="html"><![CDATA[Add Aplayer]]></title>
+        <id>https://borber.github.io/post/add-aplayer</id>
+        <link href="https://borber.github.io/post/add-aplayer">
+        </link>
+        <updated>2019-08-03T08:11:22.000Z</updated>
+        <summary type="html"><![CDATA[<p>Gridea 添加 Aplayer 音乐播放插件</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>Gridea 添加 Aplayer 音乐播放插件</p>
+<!-- more -->
+<p>在head.ejs中添加</p>
+<pre><code class="language-html">&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.css&quot;&gt;
+
+</code></pre>
+<p>在footer.ejs中添加</p>
+<pre><code class="language-html">&lt;script src=&quot;https://cdn.jsdelivr.net/npm/color-thief-don@2.0.2/src/color-thief.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;https://cdn.jsdelivr.net/npm/meting@1.1.0/dist/Meting.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.js&quot;&gt;&lt;/script&gt;
+
+</code></pre>
+<p>以下是相应的插入代码， 吸底模式可以在 body的任意地方 推荐顶部（效果可在本博客首页左下角查看） ， 其他的就是在对应位置 可以在 md文件中插入使用 内联html 即 <strong>在文章中插入音乐</strong></p>
+<pre><code class="language-html">&lt;!-- 吸底模式 默认播放表列隐藏 如需默认显示 删除 aplayer-narrow 即可 --&gt;
+  &lt;div id=&quot;aplayer9&quot; class=&quot;aplayer aplayer-fixed aplayer-narrow&quot; data-id=&quot;&quot; data-server=”netease&quot; data-type=&quot;playlist&quot; data-autoplay=”true” data-mode=”circulation”&gt;&lt;/div&gt;
+&lt;!-- 迷你模式 --&gt;
+  &lt;div id=&quot;aplayer6&quot; class=&quot;aplayer aplayer-narrow&quot; data-id=&quot;&quot; data-server=”netease&quot; data-type=&quot;playlist&quot; data-autoplay=”true” data-mode=”circulation”&gt;&lt;/div&gt;
+&lt;!-- 列表模式 --&gt;
+  &lt;div id=&quot;aplayer5&quot; class=&quot;aplayer aplayer-withlrc aplayer-withlist&quot; data-id=&quot;&quot; data-server=”netease&quot; data-type=&quot;playlist&quot; data-autoplay=”true” data-mode=”circulation”&gt;&lt;/div&gt;
+
+</code></pre>
+<p>参数配置如下：</p>
+<ol>
+<li>data-id: 歌曲/专辑/歌单对应的id。注意这里需要是歌曲原本的id,不是你自己歌单中点击后显示的。 （必须）</li>
+<li>data-server: 音乐平台， 大致支持以下几个，我只测了一下网易音乐和虾米音乐。（必须）</li>
+</ol>
+<ul>
+<li>netease(网易云音乐)</li>
+<li>tecent(qq音乐)</li>
+<li>xiami(虾米音乐)</li>
+<li>kugou(酷狗音乐)</li>
+</ul>
+<ol>
+<li>data-type:请求类型（必须）
+<ul>
+<li>song(单曲)</li>
+<li>album(专辑)</li>
+<li>playlist(歌单)</li>
+<li>search(搜索)</li>
+</ul>
+</li>
+<li>data-mode: 播放模式(可选)
+<ul>
+<li>random(随即)</li>
+<li>single(单曲)</li>
+<li>circulation(列表循环)</li>
+<li>order(列表)</li>
+</ul>
+</li>
+<li>data-autoplay: 自动播放(可选)
+<ul>
+<li>false</li>
+<li>true</li>
+</ul>
+</li>
+</ol>
+<p>歌曲id 参见下图</p>
+<p><img src="https://www.z4a.net/images/2019/08/03/1607ae71f0bd3abd9.png" alt="1607ae71f0bd3abd9.png"></p>
+<p>效果</p>
+<div id="aplayer5" class="aplayer aplayer-withlrc aplayer-withlist" data-id="2748492595" data-server=”netease" data-type="playlist" data-autoplay=”false” data-mode=”circulation”></div>]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Click  fireworks]]></title>
         <id>https://borber.github.io/post/click-fireworks</id>
@@ -1290,13 +1359,13 @@ for i in range(1,26514):
 <!-- more -->
 <h2 id="愿望清单">愿望清单</h2>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-9469365"><label class="task-list-item-label" for="task-item-9469365"> 载着我老婆 我老婆搂着我 路过樱花树（不一定是樱花树，主要是搂）</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-4305464"><label class="task-list-item-label" for="task-item-4305464"> 一起去海边</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-6177680"><label class="task-list-item-label" for="task-item-6177680"> 去游乐场 做恐怖的项目</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-801934"><label class="task-list-item-label" for="task-item-801934"> 回家</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-1690622"><label class="task-list-item-label" for="task-item-1690622"> 如果要造孩子的话，在高考那天造孩子，哈哈。</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-6946013"><label class="task-list-item-label" for="task-item-6946013"> 教老婆玩万智牌</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-3012521"><label class="task-list-item-label" for="task-item-3012521"> 吃炒饼</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-7299043"><label class="task-list-item-label" for="task-item-7299043"> 载着我老婆 我老婆搂着我 路过樱花树（不一定是樱花树，主要是搂）</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-9137221"><label class="task-list-item-label" for="task-item-9137221"> 一起去海边</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-4274365"><label class="task-list-item-label" for="task-item-4274365"> 去游乐场 做恐怖的项目</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-5892968"><label class="task-list-item-label" for="task-item-5892968"> 回家</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-3728633"><label class="task-list-item-label" for="task-item-3728633"> 如果要造孩子的话，在高考那天造孩子，哈哈。</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-2885025"><label class="task-list-item-label" for="task-item-2885025"> 教老婆玩万智牌</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-2045848"><label class="task-list-item-label" for="task-item-2045848"> 吃炒饼</label></li>
 </ul>
 ]]></content>
     </entry>
