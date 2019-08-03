@@ -3028,7 +3028,7 @@ a.back_to_top:hover span {
 }
 /* changes BORBER  BILIBILI*/
 .meta-media {
-  position: initial;
+  position: absolute;
   margin-bottom: 30px;
   float: left;
   width: 100%;
@@ -3036,7 +3036,7 @@ a.back_to_top:hover span {
   padding-bottom: 75%;
 }
 .video {
-  position: initial;
+  position: absolute;
   width: 100%;
   height: 100%;
   left: 0;
