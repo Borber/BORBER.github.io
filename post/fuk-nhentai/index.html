@@ -9,7 +9,7 @@
 
 <link rel="shortcut icon" href="https://borber.github.io/favicon.ico?v=1564848826237">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-<link rel="stylesheet" href="https://borber.github.io/styles/main.css?=v9" type='text/css' media='all'>
+<link rel="stylesheet" href="https://borber.github.io/styles/main.css?=v10" type='text/css' media='all'>
 <link rel="stylesheet" href="https://cdn.bootcss.com/animate.css/3.5.2/animate.min.css"  />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.css">
@@ -38,6 +38,13 @@
 
 </head>
 <body class="home blog ct-body standard">
+<div class="loader">
+    <div class="loader-content">
+        <div class="lds-dual-ring"></div>
+        <span class="loading-text">Loading...</span>
+    </div>
+</div>
+
 <div id="overflow-container" class="overflow-container">
   <header id="site-header" class="site-header" role="banner">
 
@@ -367,6 +374,17 @@ if __name__ == '__main__':
 </script>
 
 <!--返回顶部 ends-->
+
+
+<script id="rendered-js">window.onload = function () {
+        setTimeout(function () {
+            var loader = document.getElementsByClassName("loader")[0];
+            loader.className = "loader fadeout"; //使用渐隐的方法淡出loading page
+            setTimeout(function () {loader.style.display = "none";}, 1000);
+        }, 300);
+    };
+</script>
+
 
 </body>
 </html>
