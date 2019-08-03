@@ -3036,7 +3036,7 @@ a.back_to_top:hover span {
   padding-bottom: 75%;
 }
 .video {
-  position: absolute;
+  position: initial;
   width: 100%;
   height: 100%;
   left: 0;
