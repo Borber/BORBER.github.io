@@ -3043,10 +3043,6 @@ a.back_to_top:hover span {
   top: 0;
 }
 /* changes BORBER  For loding*/
-.fadeout {
-  opacity: 0;
-  filter: alpha(opacity=0);
-}
 .loader {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -3057,7 +3053,7 @@ a.back_to_top:hover span {
   z-index: 9999;
   width: 100%;
   height: 100%;
-  background: #000;
+  background: #222222;
   text-align: center;
   -webkit-transition: opacity 0.5s ease;
   -o-transition: opacity 0.5s ease;
@@ -3079,23 +3075,41 @@ a.back_to_top:hover span {
   width: 64px;
   height: 64px;
 }
-.loading-text {
-  display: block;
-  text-align: center;
-  color: #fff;
-  font-size: 0.8em;
-  font-weight: 900;
-  line-height: 1em;
+.loading {
+  width: 80px;
+  height: 40px;
+  margin: 0 auto;
+  margin-top: 100px;
 }
-.lds-dual-ring:after {
-  content: " ";
-  display: block;
-  width: 46px;
-  height: 46px;
-  margin: 1px;
-  border-radius: 50%;
-  border: 5px solid #fff;
-  border-color: #fff transparent #fff transparent;
-  -webkit-animation: lds-dual-ring 1.2s linear infinite;
-  animation: lds-dual-ring 1.2s linear infinite;
+.loading span {
+  display: inline-block;
+  width: 8px;
+  height: 100%;
+  border-radius: 4px;
+  background: lightgreen;
+  -webkit-animation: load 1s ease infinite;
+}
+@-webkit-keyframes load {
+  0%,
+  100% {
+    height: 40px;
+    background: lightgreen;
+  }
+  50% {
+    height: 70px;
+    margin: -15px 0;
+    background: lightblue;
+  }
+}
+.loading span:nth-child(2) {
+  -webkit-animation-delay: 0.2s;
+}
+.loading span:nth-child(3) {
+  -webkit-animation-delay: 0.4s;
+}
+.loading span:nth-child(4) {
+  -webkit-animation-delay: 0.6s;
+}
+.loading span:nth-child(5) {
+  -webkit-animation-delay: 0.8s;
 }
