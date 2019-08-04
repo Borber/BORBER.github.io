@@ -3113,3 +3113,47 @@ a.back_to_top:hover span {
 .loading span:nth-child(5) {
   -webkit-animation-delay: 0.8s;
 }
+/* changes BORBER For author box*/
+.author-info {
+  padding-bottom: 30px;
+  margin-bottom: -50px;
+  margin-top: 30px;
+  overflow: hidden;
+  padding-top: 30px;
+  margin: 50px 0 0 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+.author-avatar {
+  margin-right: 15px;
+  border-radius: 100%;
+}
+.pull-left {
+  float: left !important;
+}
+.author-avatar img {
+  width: 80px;
+  height: 80px;
+  border-radius: 99px;
+}
+.author-description {
+  margin-left: 95px;
+}
+.author-bio {
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 10px 0 0;
+}
+.author-title {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1;
+}
+.fadeInUp {
+  margin: 0 20%;
+}
+.rotated:hover {
+  transition-delay: 10ms;
+  transition-duration: 1s;
+  transform: rotate(360deg);
+}
