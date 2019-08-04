@@ -153,7 +153,7 @@
         <div class="entry-container">
           <div class="entry-content">
             <article>
-              <p>​		在我从原始的Hexo 管理博客,转向 <strong><a href="https://gridea.dev">Gridea</a></strong> 时,我遇到了如下的错误:</p>
+                <p>​		在我从原始的Hexo 管理博客,转向 <strong><a href="https://gridea.dev">Gridea</a></strong> 时,我遇到了如下的错误:</p>
 <!-- more -->
 <p><img src="https://www.z4a.net/images/2019/06/17/18.png" alt="18.png"></p>
 <p>​		这是在我点击尝试远程连接时,调试台出现的报错信息.但是我不知道问题具体出在哪里,我尝试过与 <strong>Gridea</strong> 的官方人员进行交流,在进行了TeamViewer的远程协助之后,还是无法解决,但是在我询问官方人员,能否直接进行git初始化时,他回到道:“那样可能可以链接,但同步可能不行”,我意识到了这可能是一个正确的方向.</p>
@@ -189,6 +189,33 @@
 
             </article>
           </div>
+            
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.5.0/tocbot.css">
+
+<div class="toc "></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.5.0/tocbot.min.js"></script>
+
+
+<script>
+    $(function () {
+        tocbot.init({
+            // Where to render the table of contents.
+            tocSelector: '.toc',
+            // Where to grab the headings to build the table of contents.
+            contentSelector: 'article',
+            // Which headings to grab inside of the contentSelector element.
+            headingSelector: 'h1,h2,h3,h4,h5',
+            // positionFixedSelector: '.toc',
+            // positionFixedClass: 'is-position-fixed',
+            // fixedSidebarOffset: 'auto',
+            scrollSmooth: true,
+            scrollSmoothOffset: -80,
+            headingsOffset: -500
+        });
+    });
+</script>
+
         </div>
           
             <nav class="navigation pagination" role="navigation">
@@ -221,7 +248,7 @@
 </div>
 
 
-          
+
 
 
       </div>

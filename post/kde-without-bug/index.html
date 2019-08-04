@@ -163,7 +163,7 @@
         <div class="entry-container">
           <div class="entry-content">
             <article>
-              <p>​		本文旨在收集Manjaro KDE 系统在日常使用中的BUG解决办法.与君共享.</p>
+                <p>​		本文旨在收集Manjaro KDE 系统在日常使用中的BUG解决办法.与君共享.</p>
 <!-- more -->
 <p>​		在 KDE的日常使用中,不免会有很多的BUG,这其中有一部分是Linux系统本身的不和谐导致的.但是不可否认的是,有一部分就是因为简单的打包不当,或者因为一个特殊的设置原因罢了.</p>
 <ol>
@@ -246,6 +246,33 @@ reboot
 
             </article>
           </div>
+            
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.5.0/tocbot.css">
+
+<div class="toc "></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.5.0/tocbot.min.js"></script>
+
+
+<script>
+    $(function () {
+        tocbot.init({
+            // Where to render the table of contents.
+            tocSelector: '.toc',
+            // Where to grab the headings to build the table of contents.
+            contentSelector: 'article',
+            // Which headings to grab inside of the contentSelector element.
+            headingSelector: 'h1,h2,h3,h4,h5',
+            // positionFixedSelector: '.toc',
+            // positionFixedClass: 'is-position-fixed',
+            // fixedSidebarOffset: 'auto',
+            scrollSmooth: true,
+            scrollSmoothOffset: -80,
+            headingsOffset: -500
+        });
+    });
+</script>
+
         </div>
           
             <nav class="navigation pagination" role="navigation">
@@ -278,7 +305,7 @@ reboot
 </div>
 
 
-          
+
 
 
       </div>

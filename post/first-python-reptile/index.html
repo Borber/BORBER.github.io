@@ -163,7 +163,7 @@
         <div class="entry-container">
           <div class="entry-content">
             <article>
-              <p>爬取wallhaven壁纸网站NSFW资源😍</p>
+                <p>爬取wallhaven壁纸网站NSFW资源😍</p>
 <!-- more -->
 <p>刚刚开始学习 python 写了一个小爬虫来爬取 豆瓣失败了,于是转而爬取 <a href="https://wallhaven.cc/">wallhaven</a> 它拥有大量的超清壁纸资源 并且只要注册就可以开启 NSFW 选项 浏览,下载皆无限制.</p>
 <p>首先 如果你只想爬取普通的资源 就可以不注册 也不使用 cookies .将下面的程序小改就可以做到.但是在此只介绍如何爬取包含NSFW的资源.</p>
@@ -224,6 +224,33 @@ for i in range(1,26514):
 
             </article>
           </div>
+            
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.5.0/tocbot.css">
+
+<div class="toc "></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.5.0/tocbot.min.js"></script>
+
+
+<script>
+    $(function () {
+        tocbot.init({
+            // Where to render the table of contents.
+            tocSelector: '.toc',
+            // Where to grab the headings to build the table of contents.
+            contentSelector: 'article',
+            // Which headings to grab inside of the contentSelector element.
+            headingSelector: 'h1,h2,h3,h4,h5',
+            // positionFixedSelector: '.toc',
+            // positionFixedClass: 'is-position-fixed',
+            // fixedSidebarOffset: 'auto',
+            scrollSmooth: true,
+            scrollSmoothOffset: -80,
+            headingsOffset: -500
+        });
+    });
+</script>
+
         </div>
           
             <nav class="navigation pagination" role="navigation">
@@ -256,7 +283,7 @@ for i in range(1,26514):
 </div>
 
 
-          
+
 
 
       </div>

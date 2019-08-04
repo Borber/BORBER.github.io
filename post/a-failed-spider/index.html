@@ -158,7 +158,7 @@
         <div class="entry-container">
           <div class="entry-content">
             <article>
-              <p>失败的爬虫 成功的尝试</p>
+                <p>失败的爬虫 成功的尝试</p>
 <!-- more -->
 <p>在爬取完漫画网站之后，我在想，我还能用自己浅薄的知识做点什么，但实在是因为自己 python的基本功不够扎实，以及自己的需求过于模糊，所以最后还是选择了爬取笔趣阁的小说。练习python，熟悉bs4 和 requsets 的使用。</p>
 <p>因为想要使用多进程，所以是用的与之前不一样的写法，以及困于PyChram的输入网址之后直接回车就会打开浏览器，所以默认多加一个字符长度，默认是空格</p>
@@ -312,6 +312,33 @@ while True:
 
             </article>
           </div>
+            
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.5.0/tocbot.css">
+
+<div class="toc "></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.5.0/tocbot.min.js"></script>
+
+
+<script>
+    $(function () {
+        tocbot.init({
+            // Where to render the table of contents.
+            tocSelector: '.toc',
+            // Where to grab the headings to build the table of contents.
+            contentSelector: 'article',
+            // Which headings to grab inside of the contentSelector element.
+            headingSelector: 'h1,h2,h3,h4,h5',
+            // positionFixedSelector: '.toc',
+            // positionFixedClass: 'is-position-fixed',
+            // fixedSidebarOffset: 'auto',
+            scrollSmooth: true,
+            scrollSmoothOffset: -80,
+            headingsOffset: -500
+        });
+    });
+</script>
+
         </div>
           
             <nav class="navigation pagination" role="navigation">
@@ -344,7 +371,7 @@ while True:
 </div>
 
 
-          
+
 
 
       </div>

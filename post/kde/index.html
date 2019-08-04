@@ -163,7 +163,7 @@
         <div class="entry-container">
           <div class="entry-content">
             <article>
-              <p>困于Linux美化良久
+                <p>困于Linux美化良久
 今作教程记录历程</p>
 <!-- more -->
 <h2 id="1-系统部分">1. 系统部分：</h2>
@@ -306,6 +306,33 @@ sweet 主题部分这里就结束了</li>
 
             </article>
           </div>
+            
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.5.0/tocbot.css">
+
+<div class="toc "></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.5.0/tocbot.min.js"></script>
+
+
+<script>
+    $(function () {
+        tocbot.init({
+            // Where to render the table of contents.
+            tocSelector: '.toc',
+            // Where to grab the headings to build the table of contents.
+            contentSelector: 'article',
+            // Which headings to grab inside of the contentSelector element.
+            headingSelector: 'h1,h2,h3,h4,h5',
+            // positionFixedSelector: '.toc',
+            // positionFixedClass: 'is-position-fixed',
+            // fixedSidebarOffset: 'auto',
+            scrollSmooth: true,
+            scrollSmoothOffset: -80,
+            headingsOffset: -500
+        });
+    });
+</script>
+
         </div>
           
             <nav class="navigation pagination" role="navigation">
@@ -338,7 +365,7 @@ sweet 主题部分这里就结束了</li>
 </div>
 
 
-          
+
 
 
       </div>

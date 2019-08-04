@@ -153,7 +153,7 @@
         <div class="entry-container">
           <div class="entry-content">
             <article>
-              <p>开源本站主题NederburgNewer</p>
+                <p>开源本站主题NederburgNewer</p>
 <!-- more -->
 <div class="star" data-v-029b7692=""><div class="gh-button-container" data-v-029b7692=""><a class="gh-button with-count" href="https://github.com/Borber/gridea-theme-nederburgNewer" target="_blank"><svg version="1.1" width="14" height="16" viewBox="0 0 14 16" aria-hidden="true" class="octicon octicon-star"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"></path></svg> 
 	Star
@@ -192,6 +192,33 @@
 
             </article>
           </div>
+            
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.5.0/tocbot.css">
+
+<div class="toc "></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.5.0/tocbot.min.js"></script>
+
+
+<script>
+    $(function () {
+        tocbot.init({
+            // Where to render the table of contents.
+            tocSelector: '.toc',
+            // Where to grab the headings to build the table of contents.
+            contentSelector: 'article',
+            // Which headings to grab inside of the contentSelector element.
+            headingSelector: 'h1,h2,h3,h4,h5',
+            // positionFixedSelector: '.toc',
+            // positionFixedClass: 'is-position-fixed',
+            // fixedSidebarOffset: 'auto',
+            scrollSmooth: true,
+            scrollSmoothOffset: -80,
+            headingsOffset: -500
+        });
+    });
+</script>
+
         </div>
           
             <nav class="navigation pagination" role="navigation">
@@ -224,7 +251,7 @@
 </div>
 
 
-          
+
 
 
       </div>

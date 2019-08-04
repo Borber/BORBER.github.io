@@ -163,7 +163,7 @@
         <div class="entry-container">
           <div class="entry-content">
             <article>
-              <p>爬取<a href="http://www.zerobyw4.com/">zero搬运网</a> 漫画 有福利哦 🤪 Pro</p>
+                <p>爬取<a href="http://www.zerobyw4.com/">zero搬运网</a> 漫画 有福利哦 🤪 Pro</p>
 <!-- more -->
 <p>写完第二个爬虫之后,写了好几个,但是总归是因为技术原因,达不到自己想要的效果,在重写第二个爬虫时这种感觉尤为强烈,所以写完这个之后,回去继续看剩下的网课,充实自己</p>
 <p>因为不会反爬以及多线程 , 以及模拟登录 等等一系列的技术,所以写的非常简陋,但是还是用上了 MongoDB 因为涉及到数据库的操作 所以不是简单复制下来就能跑,需要安装相应的 包,以及软件,但现在比较懒,所以省略,如果有朋友遇见困难,可以评论区留言,我会回复,或者更新的.</p>
@@ -383,6 +383,33 @@ downimg(rootpath)
 
             </article>
           </div>
+            
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.5.0/tocbot.css">
+
+<div class="toc "></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.5.0/tocbot.min.js"></script>
+
+
+<script>
+    $(function () {
+        tocbot.init({
+            // Where to render the table of contents.
+            tocSelector: '.toc',
+            // Where to grab the headings to build the table of contents.
+            contentSelector: 'article',
+            // Which headings to grab inside of the contentSelector element.
+            headingSelector: 'h1,h2,h3,h4,h5',
+            // positionFixedSelector: '.toc',
+            // positionFixedClass: 'is-position-fixed',
+            // fixedSidebarOffset: 'auto',
+            scrollSmooth: true,
+            scrollSmoothOffset: -80,
+            headingsOffset: -500
+        });
+    });
+</script>
+
         </div>
           
             <nav class="navigation pagination" role="navigation">
@@ -415,7 +442,7 @@ downimg(rootpath)
 </div>
 
 
-          
+
 
 
       </div>
