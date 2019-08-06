@@ -3158,3 +3158,13 @@ a.back_to_top:hover span {
   transform: rotate(360deg);
 }
 /*changes BORBER for tocbot*/
+.tocc {
+  margin: 50px 0 0 0;
+  display: inline-block;
+  text-align: right;
+  position: fixed;
+  margin-left: 46%;
+  box-sizing: border-box;
+  padding: 0 0.75rem;
+  float: left;
+}
