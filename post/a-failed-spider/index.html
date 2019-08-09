@@ -22,19 +22,18 @@
         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
                  佛祖保佑       永无BUG  By:- borber.cn
 -->
-
 <meta charset="utf-8" />
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="robots" content="all,follow">
 <meta name="googlebot" content="index,follow,snippet,archive">
 <title>A failed spider | BORBER</title>
-
-<link rel="shortcut icon" href="https://borber.github.io/favicon.ico?v=1565058323486">
+<link rel="shortcut icon" href="https://borber.github.io/favicon.ico?v=1565330189952">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-<link rel="stylesheet" href="https://borber.github.io/styles/main.css?=v16" type='text/css' media='all'>
-<link rel="stylesheet" href="https://cdn.bootcss.com/animate.css/3.5.2/animate.min.css"  />
+<link rel="stylesheet" href="https://borber.github.io/styles/main.css" type='text/css' media='all'>
+<link href="https://borber.github.io/media/scripts/autoc.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://cdn.bootcss.com/animate.css/3.5.2/animate.min.css"  />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.css">
 <style type="text/css">
     body{
@@ -48,14 +47,10 @@
     }
 </style>
 
-
-<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
 <script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://cdn.bootcss.com/wow/1.1.2/wow.min.js"></script>
-<!--<script type='text/javascript' src='https://miracol.cn/media/scripts/script.js'></script>-->
-
-
 
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-142130514-1"></script>
@@ -68,116 +63,8 @@
 </script>
 
 
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/styles/default.min.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/highlight.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/highlightjs-line-numbers.js@2.6.0/dist/highlightjs-line-numbers.min.js"></script>
-
-<script>
-    var attributes = [
-        'autocomplete="off"',
-        'autocorrect="off"',
-        'autocapitalize="off"',
-        'spellcheck="false"',
-        'contenteditable="true"'
-    ]
-    var attributesStr = attributes.join(' ')
-
-    $(function (data) {
-        while (/<figure class="highlight ([a-zA-Z]+)">.*?<\/figure>/.test(data.content)) {
-            data.content = data.content.replace(/<figure class="highlight ([a-zA-Z]+)">.*?<\/figure>/, function () {
-                var language = RegExp.$1 || 'plain'
-                var lastMatch = RegExp.lastMatch
-                lastMatch = lastMatch.replace(/<figure class="highlight /, '<figure class="iseeu highlight /')
-                return '<div class="highlight-wrap"' + attributesStr + 'data-rel="' + language.toUpperCase() + '">' + lastMatch + '</div>'
-            })
-        }
-        return data
-    })
-
-</script>
-
-<style type="text/css">
-    .highlight-wrap[data-rel] {
-        position: relative;
-        overflow: hidden;
-        border-radius: 5px;
-        box-shadow: 0 10px 30px 0px rgba(0,0,0,0.4);
-        margin: 35px 0;
-        outline: none;
-    }
-    .highlight-wrap[data-rel] ::-webkit-scrollbar {
-        height: 10px;
-    }
-    .highlight-wrap[data-rel] ::-webkit-scrollbar-track {
-        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-        border-radius: 10px;
-    }
-    .highlight-wrap[data-rel] ::-webkit-scrollbar-thumb {
-        border-radius: 10px;
-        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
-    }
-    .highlight-wrap[data-rel] * {
-        position: static;
-    }
-    .highlight-wrap[data-rel]::before {
-        content: attr(data-rel);
-        height: 38px;
-        line-height: 38px;
-        background: #21252b;
-        color: #fff;
-        font-size: 16px;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        font-family: 'Source Sans Pro', sans-serif;
-        font-weight: bold;
-        padding: 0px 80px;
-        text-indent: 15px;
-        float: left;
-    }
-    .highlight-wrap[data-rel]::after {
-        content: " ";
-        position: absolute;
-        -webkit-border-radius: 50%;
-        border-radius: 50%;
-        background: #fc625d;
-        width: 12px;
-        height: 12px;
-        top: 0;
-        left: 20px;
-        margin-top: 13px;
-        -webkit-box-shadow: 20px 0px #fdbc40, 40px 0px #35cd4b;
-        box-shadow: 20px 0px #fdbc40, 40px 0px #35cd4b;
-        z-index: 3;
-    }
-    .highlight-wrap[data-rel] .code {
-        width: 100%;
-    }
-    .highlight-wrap[data-rel] .highlight.iseeu pre {
-        padding-top: 40px;
-        background-color: #2d2d2d;
-    }
-    .highlight-wrap[data-rel] .highlight,
-    .highlight-wrap[data-rel] pre {
-        margin: 0;
-    }
-
-
-</style>
 </head>
 <body class="home blog ct-body standard">
-<div class="loader fadeout">
-    <div class="loader-content">
-        <div class="loading">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-    </div>
-</div>
 <div id="overflow-container" class="overflow-container">
   <header id="site-header" class="site-header" role="banner">
 
@@ -250,44 +137,179 @@
 
   <div id="main" class="main" role="main">
     <div id="loop-container" class="loop-container">
-        <div class="post type-post status-publish format-standard has-post-thumbnail hentry category-design tag-design tag-standard-2 tag-tagalicious tag-travel entry full-without-featured odd excerpt-1">
-            
-                <div class='featured-image lazy lazy-bg-image' data-background="https://www.z4a.net/images/2019/07/24/2018-05-24-234858.jpg">
-                </div>
-            
+      <div class="post type-post status-publish format-standard has-post-thumbnail hentry category-design tag-design tag-standard-2 tag-tagalicious tag-travel entry full-without-featured odd excerpt-1">
+        
+          <div class='featured-image lazy lazy-bg-image' data-background="https://www.z4a.net/images/2019/07/24/2018-05-24-234858.jpg">
+          </div>
+        
 
-            <div class="entry-meta">
-                <span class="date">· 2019-07-24 ·</span>
+        <div class="entry-meta">
+          <span class="date">· 2019-07-24 ·</span>
 
-                
-                    <span class="category">
+          
+            <span class="category">
                     <span> / </span>
                     <a href="https://borber.github.io/tag/H6i9F8XcP">小说</a>
                 </span>
-                
-                    <span class="category">
+          
+            <span class="category">
                     <span> / </span>
                     <a href="https://borber.github.io/tag/zzy4LPH8S">python</a>
                 </span>
-                
-                    <span class="category">
+          
+            <span class="category">
                     <span> / </span>
                     <a href="https://borber.github.io/tag/C-16BRfGV">爬虫</a>
                 </span>
-                
-                    <span class="category">
+          
+            <span class="category">
                     <span> / </span>
                     <a href="https://borber.github.io/tag/mR79ZebU2">编程</a>
                 </span>
-                
+          
+        </div>
+        <div class='entry-header'>
+          <h1 class='entry-title'>A failed spider</h1>
+        </div>
+        <div class="entry-container">
+          <div class="entry-content">
+            <article id="article">
+
+            </article>
+          </div>
+        </div>
+          
+            <nav class="navigation pagination" role="navigation">
+              <h2 class="screen-reader-text">Posts navigation</h2>
+              <div class="nav-links">
+                <a class="next page-numbers" style="font-size:20px" href="https://borber.github.io/post/free-is-the-most-expensive">下一篇->Free is the most expensive</a>
+              </div>
+            </nav>
+          
+            <div class="fadeInUp author-info">
+    <div class="author-avatar pull-left">
+        <img class="rotated" src="https://borber.github.io/images/avatar.png" >
+    </div>
+    
+    <div class="author-description">
+        <div class="author-title">
+            <div class="author-link" rel="author">
+                BORBER
             </div>
-            <div class='entry-header'>
-                <h1 class='entry-title'>A failed spider</h1>
-            </div>
-            <div class="entry-container">
-                <div class="entry-content">
-                    <article>
-                        <p>失败的爬虫 成功的尝试</p>
+        </div>
+        
+        
+            <p class="author-bio">
+                海南大学 软件工程专业(NIIT)大二在读 Linux,c,c++,java,python,前端，皆略有涉猎。希望暑假能有所精进。
+                <a href="https://borber.cn/post/about">More..</a>
+            </p>
+    </div>
+    
+</div>
+
+
+      </div>
+      <section id="comments" class="comments">
+        
+          
+            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+
+<script>
+
+  var gitalk = new Gitalk({
+    clientID: '46faa605211a1eadeb3a',
+    clientSecret: '78d262d72d068322632d74ff2a80439a5c08ead1',
+    repo: 'BORBER.github.io',
+    owner: 'Borber',
+    admin: ['Borber'],
+    id: location.pathname,      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+
+</script>
+
+          
+
+          
+        
+      </section>
+    </div>
+  </div>
+  <footer id="site-footer" class="site-footer" role="contentinfo">
+    <h1>
+        <a href="https://borber.github.io"> BORBER </a>
+    </h1>
+    <p class="site-description" style="font-size:18px">世俗为枷锁 世人皆自缚</p>
+    <div id="menu-footer" class="menu-container menu-footer" role="navigation">
+        <div class="menu">
+            <ul id="menu-footer-items" class="menu-footer-items">
+            </ul>
+        </div>
+    </div>
+    <ul class="social-media-icons">
+        
+            
+                <li>
+                    <a href="https://github.com/Borber" data-animate-hover="pulse" class="github" target="_blank">
+                        <i class="fab fa-github" title="github"></i>
+                        <span class="screen-reader-text">github</span>
+                    </a>
+                </li>
+            
+        
+            
+        
+            
+                <li>
+                    <a href="https://t.me/BORBERDRUM" data-animate-hover="pulse" class="telegram" target="_blank">
+                        <i class="fab fa-telegram" title="telegram"></i>
+                        <span class="screen-reader-text">telegram</span>
+                    </a>
+                </li>
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+                <li>
+                    <a href="/atom.xml" data-animate-hover="pulse" class="rss" target="_blank">
+                        <i class="fas fa-rss" title="rss"></i>
+                        <span class="screen-reader-text">rss</span>
+                    </a>
+                </li>
+            
+        
+    </ul>
+    <div class="design-credit">
+        <p>Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a></p>
+    </div>
+</footer>
+
+<script>
+hljs.initHighlightingOnLoad()
+</script>
+<script src="https://borber.github.io/media/scripts/lib/autoc.min.js"></script>
+<script src="https://borber.github.io/media/scripts/lib/jquery.min.js"></script>
+<script src="https://borber.github.io/media/scripts/lib/production.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/color-thief-don@2.0.2/src/color-thief.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@1.1.0/dist/Meting.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.js"></script>
+
+  <script>
+    var article = `<p>失败的爬虫 成功的尝试</p>
 <!-- more -->
 <p>在爬取完漫画网站之后，我在想，我还能用自己浅薄的知识做点什么，但实在是因为自己 python的基本功不够扎实，以及自己的需求过于模糊，所以最后还是选择了爬取笔趣阁的小说。练习python，熟悉bs4 和 requsets 的使用。</p>
 <p>因为想要使用多进程，所以是用的与之前不一样的写法，以及困于PyChram的输入网址之后直接回车就会打开浏览器，所以默认多加一个字符长度，默认是空格</p>
@@ -438,230 +460,19 @@ while True:
 <p>但是 为什么文章叫 失败的爬虫呢？ 因为我只成功了两次，后面的话就会报错了，应该是 笔趣阁的反扒手段，所以还是同样，如果以后我的技术进步了，我会着手改进这个爬虫的 ，有想尝试的朋友可以先试着加个 headers 到 get方法。</p>
 <p><strong>此爬虫需要使用 mongoDB</strong></p>
 <p>真的去下苦工 打基础了 (๑•̀ㅂ•́)و✧</p>
+`
+    var content = article.split("<!--more-->")[1]
+    if (content != null)
+        document.getElementById('article').innerHTML = content;
+    else
+        document.getElementById('article').innerHTML = article
 
-                    </article>
-                </div>
-            </div>
-            
-                <nav class="navigation pagination" role="navigation">
-                    <h2 class="screen-reader-text">Posts navigation</h2>
-                    <div class="nav-links">
-                        <a class="next page-numbers" style="font-size:20px" href="https://borber.github.io/post/free-is-the-most-expensive">下一篇->Free is the most expensive</a>
-                    </div>
-                </nav>
-            
-
-            <div class="fadeInUp author-info">
-    <div class="author-avatar pull-left">
-        <img class="rotated" src="https://borber.github.io/images/avatar.png" >
-    </div>
-    
-    <div class="author-description">
-        <div class="author-title">
-            <div class="author-link" rel="author">
-                BORBER
-            </div>
-        </div>
-        
-        
-            <p class="author-bio">
-                海南大学 软件工程专业(NIIT)大二在读 Linux,c,c++,java,python,前端，皆略有涉猎。希望暑假能有所精进。
-                <a href="https://borber.cn/post/about">More..</a>
-            </p>
-    </div>
-    
+    let navigation = new AutocJs({
+        title:'A failed spider',
+        isGenerateOutlineChapterCode: false
+    })
+    </script>
 </div>
-
-
-
-            
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.5.0/tocbot.css">
-
-
-<div class="tocc">
-    <div id="toc-container">
-        <div class="toc">
-
-        </div>
-    </div>
-</div>
-
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.5.0/tocbot.min.js"></script>
-
-
-<script>
-    $(function () {
-        tocbot.init({
-            // Where to render the table of contents.
-            tocSelector: '.toc',
-            // Where to grab the headings to build the table of contents.
-            contentSelector: 'article',
-            // Which headings to grab inside of the contentSelector element.
-            headingSelector: 'h1,h2,h3,h4,h5',
-            positionFixedSelector: '.toc',
-            positionFixedClass: 'is-position-fixed',
-            fixedSidebarOffset: 'auto',
-            scrollSmooth: true,
-            scrollSmoothOffset: -80,
-            headingsOffset: -500
-        });
-    });
-</script>
-
-        </div>
-
-        <section id="comments" class="comments">
-            
-                
-                    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
-<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
-
-<div id="gitalk-container"></div>
-
-<script>
-
-  var gitalk = new Gitalk({
-    clientID: '46faa605211a1eadeb3a',
-    clientSecret: '78d262d72d068322632d74ff2a80439a5c08ead1',
-    repo: 'BORBER.github.io',
-    owner: 'Borber',
-    admin: ['Borber'],
-    id: location.pathname,      // Ensure uniqueness and length less than 50
-    distractionFreeMode: false  // Facebook-like distraction free mode
-  })
-
-  gitalk.render('gitalk-container')
-
-</script>
-
-                
-
-                
-            
-        </section>
-    </div>
-
-  </div>
-  <footer id="site-footer" class="site-footer" role="contentinfo">
-    <h1>
-        <a href="https://borber.github.io"> BORBER </a>
-    </h1>
-    <p class="site-description" style="font-size:18px">世俗为枷锁 世人皆自缚</p>
-    <div id="menu-footer" class="menu-container menu-footer" role="navigation">
-        <div class="menu">
-            <ul id="menu-footer-items" class="menu-footer-items">
-            </ul>
-        </div>
-    </div>
-    <ul class="social-media-icons">
-        
-            
-                <li>
-                    <a href="https://github.com/Borber" data-animate-hover="pulse" class="github" target="_blank">
-                        <i class="fab fa-github" title="github"></i>
-                        <span class="screen-reader-text">github</span>
-                    </a>
-                </li>
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-                <li>
-                    <a href="https://t.me/BORBERDRUM" data-animate-hover="pulse" class="telegram" target="_blank">
-                        <i class="fab fa-telegram" title="telegram"></i>
-                        <span class="screen-reader-text">telegram</span>
-                    </a>
-                </li>
-            
-        
-            
-                <li>
-                    <a href="/atom.xml" data-animate-hover="pulse" class="rss" target="_blank">
-                        <i class="fas fa-rss" title="rss"></i>
-                        <span class="screen-reader-text">rss</span>
-                    </a>
-                </li>
-            
-        
-    </ul>
-    <div class="design-credit">
-        <p>Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a></p>
-    </div>
-</footer>
-<script>
-    hljs.initHighlightingOnLoad()
-</script>
-<script src="https://borber.github.io/media/scripts/lib/jquery.min.js"></script>
-<script src="https://borber.github.io/media/scripts/lib/jquerymigrate.js"></script>
-<script src="https://borber.github.io/media/scripts/lib/production.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/color-thief-don@2.0.2/src/color-thief.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/meting@1.1.0/dist/Meting.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.js"></script>
-
-</div>
-
-        <!--返回顶部 start-->
-<script src="https://cdn.bootcss.com/fitvids/1.2.0/jquery.fitvids.min.js"></script>
-<script src="https://tokinx.github.io/lately/lately.min.js"></script>
-<script>jQuery(document).ready(function(){$.lately({'target':'.lately-a,.lately-b,.lately-c'})});</script>
-
-<a id="back_to_top" href="#" class="back_to_top">
-      <span>
-        <i class="iconfont icon-xiangshang"></i>
-      </span>
-</a>
-
-
-<script>$(document).ready((function(_this) {
-        return function() {
-            var bt;
-            bt = $('#back_to_top');
-            if ($(document).width() > 480) {
-                $(window).scroll(function() {
-                    var st;
-                    st = $(window).scrollTop();
-                    if (st > 30) {
-                        return bt.css('display', 'block');
-                    } else {
-                        return bt.css('display', 'none');
-                    }
-                });
-                return bt.click(function() {
-                    $('body,html').animate({
-                        scrollTop: 0
-                    }, 800);
-                    return false;
-                });
-            }
-        };
-    })(this));
-</script>
-
-<!--返回顶部 ends-->
-
-
-<script id="rendered-js">window.onload = function () {
-        setTimeout(function () {
-            var loader = document.getElementsByClassName("loader")[0];
-            loader.className = "loader fadeout"; //使用渐隐的方法淡出loading page
-            setTimeout(function () {loader.style.display = "none";}, 1000);
-        }, 300);
-    };
-</script>
-
-
 </body>
 </html>
 
