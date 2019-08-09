@@ -2903,6 +2903,9 @@ pre {
 a.next.page-numbers {
   font-size: 20px;
 }
+a.page-numbers {
+  font-size: 20px;
+}
 /* changes BORBER */
 a.back_to_top {
   text-decoration: none;
