@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://borber.github.io</id>
     <title>BORBER</title>
-    <updated>2019-08-11T07:49:55.968Z</updated>
+    <updated>2019-08-14T05:04:50.962Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://borber.github.io"/>
     <link rel="self" href="https://borber.github.io/atom.xml"/>
@@ -10,6 +10,26 @@
     <logo>https://borber.github.io/images/avatar.png</logo>
     <icon>https://borber.github.io/favicon.ico</icon>
     <rights>All rights reserved 2019, BORBER</rights>
+    <entry>
+        <title type="html"><![CDATA[Install mongoDB]]></title>
+        <id>https://borber.github.io/post/install-mongodb</id>
+        <link href="https://borber.github.io/post/install-mongodb">
+        </link>
+        <updated>2019-08-14T05:01:29.000Z</updated>
+        <summary type="html"><![CDATA[<p>Windows 安装  mongoDB</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>Windows 安装  mongoDB</p>
+<!-- more -->
+<p>我在官网下载不了,便在网上查阅了相关资料终于找到了可以下载的网址 <a href="http://dl.mongodb.org/dl/win32/x86_64">MongoDB</a> 访问该网址 找到最新的版本.</p>
+<p>我选择的是<a href="http://downloads.mongodb.org/win32/mongodb-win32-x86_64-2012plus-latest-signed.msi">win32/mongodb-win32-x86_64-2012plus-latest-signed.msi</a></p>
+<p>你可以按照 <a href="https://www.runoob.com/mongodb/mongodb-window-install.html">菜鸟教程</a> 来完成前期安装 但是  这一步</p>
+<p><img src="https://www.runoob.com/wp-content/uploads/2013/10/8F7AF133-BE49-4BAB-9F93-88A9D666F6C0.jpg" alt=""></p>
+<p>之后 你会发现 data 和 log 的路径已经默认配置好了 不用再按照教程 繁琐的配置了.</p>
+<p>直接 图形化安装之后就可以使用了.</p>
+<p>配上我的成功截图</p>
+<p><img src="https://www.z4a.net/images/2019/08/14/2019-08-14_12-59-33.png" alt="2019-08-14_12-59-33.png"></p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Add Aplayer]]></title>
         <id>https://borber.github.io/post/add-aplayer</id>
@@ -1371,13 +1391,13 @@ for i in range(1,26514):
 <!-- more -->
 <h2 id="愿望清单">愿望清单</h2>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-4584581"><label class="task-list-item-label" for="task-item-4584581"> 载着我老婆 我老婆搂着我 路过樱花树（不一定是樱花树，主要是搂）</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-7018721"><label class="task-list-item-label" for="task-item-7018721"> 一起去海边</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-9583432"><label class="task-list-item-label" for="task-item-9583432"> 去游乐场 做恐怖的项目</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-9970992"><label class="task-list-item-label" for="task-item-9970992"> 回家</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-4980311"><label class="task-list-item-label" for="task-item-4980311"> 如果要造孩子的话，在高考那天造孩子，哈哈。</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-4116766"><label class="task-list-item-label" for="task-item-4116766"> 教老婆玩万智牌</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-63175"><label class="task-list-item-label" for="task-item-63175"> 吃炒饼</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-9904686"><label class="task-list-item-label" for="task-item-9904686"> 载着我老婆 我老婆搂着我 路过樱花树（不一定是樱花树，主要是搂）</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-7495565"><label class="task-list-item-label" for="task-item-7495565"> 一起去海边</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-4149406"><label class="task-list-item-label" for="task-item-4149406"> 去游乐场 做恐怖的项目</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-2974781"><label class="task-list-item-label" for="task-item-2974781"> 回家</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-1582970"><label class="task-list-item-label" for="task-item-1582970"> 如果要造孩子的话，在高考那天造孩子，哈哈。</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-3826730"><label class="task-list-item-label" for="task-item-3826730"> 教老婆玩万智牌</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-9990290"><label class="task-list-item-label" for="task-item-9990290"> 吃炒饼</label></li>
 </ul>
 ]]></content>
     </entry>
