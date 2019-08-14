@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://borber.github.io</id>
     <title>BORBER</title>
-    <updated>2019-08-14T05:04:50.962Z</updated>
+    <updated>2019-08-14T15:10:59.808Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://borber.github.io"/>
     <link rel="self" href="https://borber.github.io/atom.xml"/>
@@ -10,6 +10,79 @@
     <logo>https://borber.github.io/images/avatar.png</logo>
     <icon>https://borber.github.io/favicon.ico</icon>
     <rights>All rights reserved 2019, BORBER</rights>
+    <entry>
+        <title type="html"><![CDATA[Use selenium]]></title>
+        <id>https://borber.github.io/post/use-selenium</id>
+        <link href="https://borber.github.io/post/use-selenium">
+        </link>
+        <updated>2019-08-14T15:06:24.000Z</updated>
+        <summary type="html"><![CDATA[<p>使用 <a href="https://www.seleniumhq.org">selenium</a> 抓取网页</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>使用 <a href="https://www.seleniumhq.org">selenium</a> 抓取网页</p>
+<!-- more -->
+<p>之前一直使用的 <a href="https://beautifulsoup.readthedocs.io/zh_CN/v4.4.0/">BeautifulSoup4</a> 以及 少许使用 <a href="https://2.python-requests.org//zh_CN/latest/">Requests</a> 但是由于自身实力关系,爬取动态加载的网页,还是不得不使用  selenium 在实验期间,遇到了一些困难,在此记录.</p>
+<pre><code class="language-python">from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from bs4 import BeautifulSoup
+import time
+
+
+url = &quot;http://www.baidu.com&quot;
+driver.get(url)
+elem = driver.find_element_by_name(&quot;wd&quot;)
+elem.clear()
+elem.send_keys(&quot;BORBER&quot;)
+elem.send_keys(Keys.RETURN)
+
+
+with open(&quot;baidu.html&quot;, &quot;w&quot;, encoding=&quot;utf-8&quot;) as f:
+    f.write(driver.page_source)
+driver.close()
+</code></pre>
+<p>以上这是我最初的代码 它无法抓取 搜索后的界面代码. 以至于我开始怀疑 selenium的效果</p>
+<p>但是经过排查,发现是界面没有加载完成便开始抓取导致.</p>
+<p>在使用 time.sleep() 之后 解决了这个问题,但这不是selenium 的写法.</p>
+<p>以下是修改后,加入了显示等待的代码,</p>
+<pre><code class="language-python">from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from bs4 import BeautifulSoup
+import time
+
+chrome_options = Options()
+chrome_options.add_argument('--headless')
+chrome_options.add_argument('--disable-gpu')
+
+driver = webdriver.Chrome()  # options=chrome_options
+url = &quot;http://www.baidu.com&quot;
+driver.get(url)
+elem = driver.find_element_by_name(&quot;wd&quot;)
+elem.clear()
+elem.send_keys(&quot;BORBER&quot;)
+elem.send_keys(Keys.RETURN)
+
+try:
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, &quot;page&quot;)))
+    with open(&quot;baidu.html&quot;, &quot;w&quot;, encoding=&quot;utf-8&quot;) as f:
+        f.write(driver.page_source)
+finally:
+    time.sleep(2)
+    driver.close()
+with open(&quot;baidu.html&quot;, &quot;w&quot;, encoding=&quot;utf-8&quot;) as f:
+    f.write(driver.page_source)
+driver.close()
+</code></pre>
+<p>不过路途经过 知乎 看见这篇文章 <a href="https://zhuanlan.zhihu.com/p/33542626">为什么不推荐Selenium写爬虫</a>  感觉 selenium 的优势不大 所以不出意外,又要开始学习 <strong><a href="https://scrapy.org">Scrapy</a></strong> 以及  <a href="https://2.python-requests.org//zh_CN/latest/">Requests</a>  了.</p>
+<p>学无止境</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Install mongoDB]]></title>
         <id>https://borber.github.io/post/install-mongodb</id>
@@ -1391,13 +1464,13 @@ for i in range(1,26514):
 <!-- more -->
 <h2 id="愿望清单">愿望清单</h2>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-9904686"><label class="task-list-item-label" for="task-item-9904686"> 载着我老婆 我老婆搂着我 路过樱花树（不一定是樱花树，主要是搂）</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-7495565"><label class="task-list-item-label" for="task-item-7495565"> 一起去海边</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-4149406"><label class="task-list-item-label" for="task-item-4149406"> 去游乐场 做恐怖的项目</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-2974781"><label class="task-list-item-label" for="task-item-2974781"> 回家</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-1582970"><label class="task-list-item-label" for="task-item-1582970"> 如果要造孩子的话，在高考那天造孩子，哈哈。</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-3826730"><label class="task-list-item-label" for="task-item-3826730"> 教老婆玩万智牌</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-9990290"><label class="task-list-item-label" for="task-item-9990290"> 吃炒饼</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-7504483"><label class="task-list-item-label" for="task-item-7504483"> 载着我老婆 我老婆搂着我 路过樱花树（不一定是樱花树，主要是搂）</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-2153704"><label class="task-list-item-label" for="task-item-2153704"> 一起去海边</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-7392994"><label class="task-list-item-label" for="task-item-7392994"> 去游乐场 做恐怖的项目</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-7478529"><label class="task-list-item-label" for="task-item-7478529"> 回家</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-5183498"><label class="task-list-item-label" for="task-item-5183498"> 如果要造孩子的话，在高考那天造孩子，哈哈。</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-8067976"><label class="task-list-item-label" for="task-item-8067976"> 教老婆玩万智牌</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-1739768"><label class="task-list-item-label" for="task-item-1739768"> 吃炒饼</label></li>
 </ul>
 ]]></content>
     </entry>

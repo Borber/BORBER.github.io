@@ -27,7 +27,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="robots" content="all,follow">
 <meta name="googlebot" content="index,follow,snippet,archive">
-<title>Free is the most expensive | BORBER</title>
+<title>Use selenium | BORBER</title>
 <link rel="shortcut icon" href="https://borber.github.io/favicon.ico?v=1565795451420">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 <link rel="stylesheet" href="https://borber.github.io/styles/main.css?v=a2" type='text/css' media='all'>
@@ -150,22 +150,32 @@
     <div id="loop-container" class="loop-container">
       <div class="post type-post status-publish format-standard has-post-thumbnail hentry category-design tag-design tag-standard-2 tag-tagalicious tag-travel entry full-without-featured odd excerpt-1">
         
-          <div class='featured-image lazy lazy-bg-image' data-background="https://www.z4a.net/images/2019/07/23/Jade-Wallpaper.jpg">
+          <div class='featured-image lazy lazy-bg-image' data-background="https://www.z4a.net/images/2019/08/14/2019-08-14_23-09-26.png">
           </div>
         
 
         <div class="entry-meta">
-          <span class="date">· 2019-07-23 ·</span>
+          <span class="date">· 2019-08-14 ·</span>
 
           
             <span class="category">
                     <span> / </span>
-                    <a href="https://borber.github.io/tag/gridea">Gridea</a>
+                    <a href="https://borber.github.io/tag/BEnbRAvKt">selenium</a>
+                </span>
+          
+            <span class="category">
+                    <span> / </span>
+                    <a href="https://borber.github.io/tag/zzy4LPH8S">python</a>
+                </span>
+          
+            <span class="category">
+                    <span> / </span>
+                    <a href="https://borber.github.io/tag/C-16BRfGV">爬虫</a>
                 </span>
           
         </div>
         <div class='entry-header'>
-          <h1 class='entry-title'>Free is the most expensive</h1>
+          <h1 class='entry-title'>Use selenium</h1>
         </div>
         <div class="entry-container">
           <div class="entry-content">
@@ -178,7 +188,7 @@
             <nav class="navigation pagination" role="navigation">
               <h2 class="screen-reader-text">Posts navigation</h2>
               <div class="nav-links">
-                <a class="next page-numbers" style="font-size:20px" href="https://borber.github.io/post/second-python-crawler-pro">下一篇->Second python spider pro</a>
+                <a class="next page-numbers" style="font-size:20px" href="https://borber.github.io/post/install-mongodb">下一篇->Install mongoDB</a>
               </div>
             </nav>
           
@@ -313,12 +323,69 @@ hljs.initHighlightingOnLoad()
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.js"></script>
 
   <script>
-    var article = `<p>免费才是最贵的</p>
+    var article = `<p>使用 <a href="https://www.seleniumhq.org">selenium</a> 抓取网页</p>
 <!-- more -->
-<p>borber.xyz 域名 可以确定之前的IP无法查询是万网的解析被封禁了，因为昨晚实名认证之后就立马能用了 但我也真的不想用了，直接丢了算了，因为它 折腾了不知多久，浪费了大量的时间，以后恐怕还会搞幺蛾子，与其这样还不如不用好了。</p>
-<p>以后 borber.github.io 这个域名我就白嫖到老了。</p>
-<p>但求技术 ， 莫问前程。专注技术，更新博客才是正道，也真的再一次学到了，免费才是最贵的。</p>
-<p>🙂</p>
+<p>之前一直使用的 <a href="https://beautifulsoup.readthedocs.io/zh_CN/v4.4.0/">BeautifulSoup4</a> 以及 少许使用 <a href="https://2.python-requests.org//zh_CN/latest/">Requests</a> 但是由于自身实力关系,爬取动态加载的网页,还是不得不使用  selenium 在实验期间,遇到了一些困难,在此记录.</p>
+<pre><code class="language-python">from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from bs4 import BeautifulSoup
+import time
+
+
+url = &quot;http://www.baidu.com&quot;
+driver.get(url)
+elem = driver.find_element_by_name(&quot;wd&quot;)
+elem.clear()
+elem.send_keys(&quot;BORBER&quot;)
+elem.send_keys(Keys.RETURN)
+
+
+with open(&quot;baidu.html&quot;, &quot;w&quot;, encoding=&quot;utf-8&quot;) as f:
+    f.write(driver.page_source)
+driver.close()
+</code></pre>
+<p>以上这是我最初的代码 它无法抓取 搜索后的界面代码. 以至于我开始怀疑 selenium的效果</p>
+<p>但是经过排查,发现是界面没有加载完成便开始抓取导致.</p>
+<p>在使用 time.sleep() 之后 解决了这个问题,但这不是selenium 的写法.</p>
+<p>以下是修改后,加入了显示等待的代码,</p>
+<pre><code class="language-python">from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from bs4 import BeautifulSoup
+import time
+
+chrome_options = Options()
+chrome_options.add_argument('--headless')
+chrome_options.add_argument('--disable-gpu')
+
+driver = webdriver.Chrome()  # options=chrome_options
+url = &quot;http://www.baidu.com&quot;
+driver.get(url)
+elem = driver.find_element_by_name(&quot;wd&quot;)
+elem.clear()
+elem.send_keys(&quot;BORBER&quot;)
+elem.send_keys(Keys.RETURN)
+
+try:
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, &quot;page&quot;)))
+    with open(&quot;baidu.html&quot;, &quot;w&quot;, encoding=&quot;utf-8&quot;) as f:
+        f.write(driver.page_source)
+finally:
+    time.sleep(2)
+    driver.close()
+with open(&quot;baidu.html&quot;, &quot;w&quot;, encoding=&quot;utf-8&quot;) as f:
+    f.write(driver.page_source)
+driver.close()
+</code></pre>
+<p>不过路途经过 知乎 看见这篇文章 <a href="https://zhuanlan.zhihu.com/p/33542626">为什么不推荐Selenium写爬虫</a>  感觉 selenium 的优势不大 所以不出意外,又要开始学习 <strong><a href="https://scrapy.org">Scrapy</a></strong> 以及  <a href="https://2.python-requests.org//zh_CN/latest/">Requests</a>  了.</p>
+<p>学无止境</p>
 `
     var content = article.split("<!--more-->")[1]
     if (content != null)
@@ -327,7 +394,7 @@ hljs.initHighlightingOnLoad()
         document.getElementById('article').innerHTML = article
 
     let navigation = new AutocJs({
-        title:'Free is the most expensive',
+        title:'Use selenium',
         isGenerateOutlineChapterCode: false
     })
     </script>
