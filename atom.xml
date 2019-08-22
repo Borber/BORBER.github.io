@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://borber.github.io</id>
     <title>BORBER</title>
-    <updated>2019-08-22T13:38:14.127Z</updated>
+    <updated>2019-08-22T17:23:58.417Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://borber.github.io"/>
     <link rel="self" href="https://borber.github.io/atom.xml"/>
@@ -20,8 +20,10 @@
 ]]></summary>
         <content type="html"><![CDATA[<p><a href="https://zh.wikipedia.org/wiki/IRC">IRC</a> 其主要用于群体聊天，但也可以用于个人的聊天</p>
 <!-- more -->
+<h3 id="介绍">介绍:</h3>
+<p>首先 IRC 可以完全匿名,也没有监控.你只需要遵守你参与的频道的规则即可.你也可以自己创建一个频道 不受任何人的监管.他不要求你的手机号 甚至某种概念下你也不需要一个邮箱 ,因为 你可以在不注册时使用任何一个未被注册的名字作为临时名字. 当然了 使用一个匿名邮箱来注册一个常用名字才是明智之选.</p>
 <h3 id="irc-注册">IRC 注册:</h3>
-<p>首先安装 HexChat 全平台支持 并且免费(Windows 平台 可选择付费 两版本无差别)</p>
+<p>首先安装 <a href="https://hexchat.github.io">HexChat</a> 全平台支持 并且免费(Windows 平台 可选择付费 两版本无差别)</p>
 <p><img src="https://www.z4a.net/images/2019/08/22/1531970365866ed08.png" alt="1531970365866ed08.png"></p>
 <p>点击连接 一般都是直接freenode 服务器</p>
 <p><img src="https://www.z4a.net/images/2019/08/22/2edec82672f97351d.png" alt="2edec82672f97351d.png"></p>
@@ -1573,13 +1575,13 @@ for i in range(1,26514):
 <!-- more -->
 <h2 id="愿望清单">愿望清单</h2>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-511383"><label class="task-list-item-label" for="task-item-511383"> 载着我老婆 我老婆搂着我 路过樱花树（不一定是樱花树，主要是搂）</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-7395552"><label class="task-list-item-label" for="task-item-7395552"> 一起去海边</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-1000598"><label class="task-list-item-label" for="task-item-1000598"> 去游乐场 做恐怖的项目</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-7882885"><label class="task-list-item-label" for="task-item-7882885"> 回家</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-9436234"><label class="task-list-item-label" for="task-item-9436234"> 如果要造孩子的话，在高考那天造孩子，哈哈。</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-2879348"><label class="task-list-item-label" for="task-item-2879348"> 教老婆玩万智牌</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-5621654"><label class="task-list-item-label" for="task-item-5621654"> 吃炒饼</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-8174258"><label class="task-list-item-label" for="task-item-8174258"> 载着我老婆 我老婆搂着我 路过樱花树（不一定是樱花树，主要是搂）</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-6822328"><label class="task-list-item-label" for="task-item-6822328"> 一起去海边</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-8096429"><label class="task-list-item-label" for="task-item-8096429"> 去游乐场 做恐怖的项目</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-9492762"><label class="task-list-item-label" for="task-item-9492762"> 回家</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-8106014"><label class="task-list-item-label" for="task-item-8106014"> 如果要造孩子的话，在高考那天造孩子，哈哈。</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-9269338"><label class="task-list-item-label" for="task-item-9269338"> 教老婆玩万智牌</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-7913052"><label class="task-list-item-label" for="task-item-7913052"> 吃炒饼</label></li>
 </ul>
 ]]></content>
     </entry>
