@@ -3309,3 +3309,42 @@ a.back_to_top:hover span {
     width: calc(100% / 1 - 14px);
   }
 }
+/* 首页顶部 */
+.dark {
+  padding: 150px 15px;
+}
+h1.site-title {
+  font-family: Dancing Script, sans-serif;
+  letter-spacing: 2px;
+  font-weight: 700;
+  font-size: 100px;
+  line-height: 1;
+  padding-bottom: 8px;
+}
+h1.site-title a {
+  color: #337ab7;
+}
+h2.site-description {
+  color: #ffffff;
+  font-size: 20px;
+}
+h2.gezi {
+  color: #ffffff;
+  font-size: 0.9375rem;
+}
+h2.gezi a {
+  color: #1abc9c;
+}
+h1.active-title {
+  color: #fff;
+  letter-spacing: 2px;
+  font-size: 35px;
+}
+.active-header {
+  padding-bottom: 5px;
+}
+.active-description {
+  color: #A7ABAC;
+  font-size: 18px;
+  padding: 5px 0;
+}
