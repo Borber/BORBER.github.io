@@ -3348,3 +3348,46 @@ h1.active-title {
   font-size: 18px;
   padding: 5px 0;
 }
+/*上下翻文*/
+.pager {
+  margin: 40px 0;
+  border-top: 1px dashed #ccc;
+  border-bottom: 1px dashed #ccc;
+  text-align: center;
+}
+.pager li {
+  display: inline-block;
+  padding: 20px 0;
+  width: 44%;
+}
+.previous {
+  margin-right: 10%;
+  text-align: right;
+}
+.nextpost {
+  text-align: left;
+}
+.pager .prev:before {
+  margin-right: 45%;
+  padding: 5px 9px;
+  border: 1px solid #bbb;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  color: #999;
+  content: "<";
+}
+.pager .next:after {
+  margin-left: 45%;
+  padding: 5px 9px;
+  border: 1px solid #bbb;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  color: #999;
+  content: ">";
+}
+.prevspan,
+.nextspan {
+  padding: 20px 0px;
+}
