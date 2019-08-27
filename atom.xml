@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://borber.github.io</id>
     <title>BORBER</title>
-    <updated>2019-08-26T04:20:24.336Z</updated>
+    <updated>2019-08-27T15:00:09.127Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://borber.github.io"/>
     <link rel="self" href="https://borber.github.io/atom.xml"/>
@@ -10,6 +10,38 @@
     <logo>https://borber.github.io/images/avatar.png</logo>
     <icon>https://borber.github.io/favicon.ico</icon>
     <rights>All rights reserved 2019, BORBER</rights>
+    <entry>
+        <title type="html"><![CDATA[ Human nature]]></title>
+        <id>https://borber.github.io/post/human-nature</id>
+        <link href="https://borber.github.io/post/human-nature">
+        </link>
+        <updated>2019-08-27T14:54:31.000Z</updated>
+        <summary type="html"><![CDATA[<p>人性本恶还是人性本善? 由美漫 R&amp;M 以及 Brickleberry 有感</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>人性本恶还是人性本善? 由美漫 R&amp;M 以及 Brickleberry 有感</p>
+<!-- more -->
+<div id="aplayer5" class="aplayer aplayer-withlrc " data-id="31460355" data-server=”netease" data-type="song" data-autoplay=”true” data-mode=”circulation”></div>
+<h5 id="我的看法-人性本恶">我的看法: 人性本恶</h5>
+<p>​		我是一直相信人性本恶的,所以才需要教人向善,如果人一开始就是善良的,那直接保持本心就好了嘛.对于赤子之心,我无法做出反驳,只是,人一生下来便攥紧了拳头,便是要去争夺,一开始就嚎嚎大哭,便是开始诉求.</p>
+<h5 id="rm观感">R&amp;M观感:</h5>
+<p>Rick and morty 是我高中二年级接触到的,一接触到便是一发而不可收, 在很短的时间内就看完了前三季的内容,它给予了我无比的震撼.有一段时间我陷入了对生活的怀疑之中,也一度把 Rick 外公的口头禅作为自己的签名</p>
+<blockquote>
+<p>Wubba Lubba dub-dub</p>
+<p>意为: “我在巨大的痛苦之中，请帮帮我”</p>
+</blockquote>
+<p>当然不可否认的是当时是中二的年纪,但是R&amp;M对现实的讽刺,对存在的怀疑,真的一次又一次地打破我对生活的固有印象,我觉得自己有很多的思想路线受到了他潜移默化的影响</p>
+<p><img src="https://www.z4a.net/images/2019/08/27/642540.png" alt="642540.png"></p>
+<p>在现实中 Rick 毫无疑问是个烂人,对自己的女儿不负责任,欺负女婿,成天带着外孙冒险.但是,不知道为什么,我就是喜欢Rick,目空一切,做什么都不用考虑后果,因为再怎么严重的事,最多不过是换一个时空罢了,他有无穷无尽的时空,他就是神,上帝也只是他金灿灿的睾丸.</p>
+<p>我爱R&amp;M,我爱这个世界,为什么呢?用Rick的话来说:</p>
+<blockquote>
+<p>For everything</p>
+</blockquote>
+<h5 id="brickleberry">Brickleberry:</h5>
+<p>刚刚开始看,也已经停不下来了.全剧人渣.以后在做点评吧.</p>
+<p><img src="https://www.z4a.net/images/2019/08/27/2019-08-27_22-07-47.png" alt="2019-08-27_22-07-47.png"></p>
+<h5 id=""></h5>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Cheat wechat]]></title>
         <id>https://borber.github.io/post/cheat-wechat</id>
@@ -1626,13 +1658,13 @@ for i in range(1,26514):
 <!-- more -->
 <h2 id="愿望清单">愿望清单</h2>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-2055540"><label class="task-list-item-label" for="task-item-2055540"> 载着我老婆 我老婆搂着我 路过樱花树（不一定是樱花树，主要是搂）</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-2235009"><label class="task-list-item-label" for="task-item-2235009"> 一起去海边</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-508919"><label class="task-list-item-label" for="task-item-508919"> 去游乐场 做恐怖的项目</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-4468577"><label class="task-list-item-label" for="task-item-4468577"> 回家</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-9322714"><label class="task-list-item-label" for="task-item-9322714"> 如果要造孩子的话，在高考那天造孩子，哈哈。</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-1520777"><label class="task-list-item-label" for="task-item-1520777"> 教老婆玩万智牌</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-274884"><label class="task-list-item-label" for="task-item-274884"> 吃炒饼</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-7055559"><label class="task-list-item-label" for="task-item-7055559"> 载着我老婆 我老婆搂着我 路过樱花树（不一定是樱花树，主要是搂）</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-8520410"><label class="task-list-item-label" for="task-item-8520410"> 一起去海边</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-2061424"><label class="task-list-item-label" for="task-item-2061424"> 去游乐场 做恐怖的项目</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-2239163"><label class="task-list-item-label" for="task-item-2239163"> 回家</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-9402614"><label class="task-list-item-label" for="task-item-9402614"> 如果要造孩子的话，在高考那天造孩子，哈哈。</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-3278464"><label class="task-list-item-label" for="task-item-3278464"> 教老婆玩万智牌</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-7593746"><label class="task-list-item-label" for="task-item-7593746"> 吃炒饼</label></li>
 </ul>
 ]]></content>
     </entry>
