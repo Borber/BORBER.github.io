@@ -28,7 +28,7 @@
 <meta name="robots" content="all,follow">
 <meta name="googlebot" content="index,follow,snippet,archive">
 <title>关于 | BORBER</title>
-<link rel="shortcut icon" href="https://borber.github.io/favicon.ico?v=1567074021710">
+<link rel="shortcut icon" href="https://borber.github.io/favicon.ico?v=1567096818824">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 <link rel="stylesheet" href="https://borber.github.io/styles/main.css?v=a001" type='text/css' media='all'>
 <link href="https://borber.github.io/media/scripts/autoc.css" rel="stylesheet">
@@ -299,6 +299,29 @@
         
     </ul>
     <div class="design-credit">
+        
+    <!--网站稳定运行代码-->
+    网站已稳定运行：<span id="website_running_time" style="color: #00BFFF;"><font style="color:#FFF">398</font> 天 <font style="color:#FFF">17</font> 时 <font style="color:#FFF">28</font> 分 <font style="color:#FFF">54</font> 秒</span>
+    <script language="javascript">
+        function show_date_time(){
+            window.setTimeout("show_date_time()", 1000);
+            BirthDay=new Date("6/17/2019 00:23:23");
+            today=new Date();
+            timeold=(today.getTime()-BirthDay.getTime());
+            sectimeold=timeold/1000
+            secondsold=Math.floor(sectimeold);
+            msPerDay=24*60*60*1000
+            e_daysold=timeold/msPerDay
+            daysold=Math.floor(e_daysold);
+            e_hrsold=(e_daysold-daysold)*24;
+            hrsold=Math.floor(e_hrsold);
+            e_minsold=(e_hrsold-hrsold)*60;
+            minsold=Math.floor((e_hrsold-hrsold)*60);
+            seconds=Math.floor((e_minsold-minsold)*60);
+            website_running_time.innerHTML='<font style=color:#FFF>'+daysold+'</font> 天 <font style=color:#FFF>'+hrsold+'</font> 时 <font style=color:#FFF>'+minsold+'</font> 分 <font style=color:#FFF>'+seconds+'</font> 秒';}
+        show_date_time();
+    </script>
+
         <p><p>Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> with <a href="https://github.com/Borber/gridea-theme-nederburgNewer">nederburgNewer</a> <small>&copy <a href="https://github.com/Borber" target="_blank">BORBER</a> </small></p>
 </p>
     </div>
