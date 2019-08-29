@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://borber.github.io</id>
     <title>BORBER</title>
-    <updated>2019-08-29T04:52:22.564Z</updated>
+    <updated>2019-08-29T10:20:30.305Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://borber.github.io"/>
     <link rel="self" href="https://borber.github.io/atom.xml"/>
@@ -10,6 +10,71 @@
     <logo>https://borber.github.io/images/avatar.png</logo>
     <icon>https://borber.github.io/favicon.ico</icon>
     <rights>All rights reserved 2019, BORBER</rights>
+    <entry>
+        <title type="html"><![CDATA[Campus Network]]></title>
+        <id>https://borber.github.io/post/campus-network</id>
+        <link href="https://borber.github.io/post/campus-network">
+        </link>
+        <updated>2019-08-29T10:16:31.000Z</updated>
+        <summary type="html"><![CDATA[<p>python自动重联校园网</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>python自动重联校园网</p>
+<!-- more -->
+<p>在大学的朋友都知道,校园网是一个极其操蛋,而且是必须要用的东西,我的大学的价格是28元一月 一个账号,只能一台设备使用,这意味着,如果你手机连接之后,你的电脑就不能使用了,这又是何等的操蛋.</p>
+<p>不过我也是比较幸运的是,在开学的前一个月,在上英语视听说的机房里,看到了校园网的登陆界面是有缓存着账号和密码的,而且不同于我们的学生号,它只有短短的六位,以及我在旁边几台电脑中,皆发现了此账号,我敏锐的意识到,这是一个VIP账号,或者是老师账号.</p>
+<p>在我进入该账号的校园网管理界面时,我就知道这是一个为期四年的长久计划.</p>
+<p><img src="https://www.z4a.net/images/2019/08/29/2019-08-29_13-55-24.png" alt="2019-08-29_13-55-24.png"></p>
+<p>我通过html 元素修改 将 password 改为 text 直接获得了明文密码,并且在之后的实验中,确定 这个账号和学生账号不同,它可以同时登陆,4-5台设备,这也意味着,蹭网的事,不会使账号的主人无网可上.并且,在宿舍时,只要共用一台路由器,便可以通过路由器只占用一个设备位置.</p>
+<p>事情本来到这里就已经完了,但是随后的时间里,特别是到了醉经,我们宿舍的账号会被挤下登录,而我又经常将电脑放在宿舍跑python 之类的脚本.这无疑会对我造成很大的损失.</p>
+<p>于是我决定写一个 python 脚本来自动检测网络,然后自动重连校园网.以下时源码,</p>
+<pre><code class="language-python">from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
+
+import requests
+import time
+
+# 设置 Chrome 无头模式
+chrome_options = Options()
+chrome_options.add_argument('--headless')
+chrome_options.add_argument('--disable-gpu')
+
+# 登录界面
+url = &quot;http://210.37.41.236/eportal/index.jsp?wlanuserip=6b9e0b7cf1ba82f98927ab3dd58dfef5&amp;wlanacname=ce7755baddb6cd2593ede4c17d854ca1&amp;ssid=&amp;nasip=7d60263d360a32aefa21b68e87982d7a&amp;snmpagentip=&amp;mac=ab225743a9a996c006024dd049800474&amp;t=wireless-v2&amp;url=2c0328164651e2b4f13b933ddf36628bea622dedcc302b30&amp;apmac=&amp;nasid=ce7755baddb6cd2593ede4c17d854ca1&amp;vid=606ceeeed9248aad&amp;port=a8318b3106364528&amp;nasportid=f5eb983692924fa26e6431fe9df4835f22c9893813d335dd1c7d4d602b2b63697dd071dc9b821903&quot;
+
+
+def get_connect():
+    driver = webdriver.Chrome(options=chrome_options)  # options=chrome_options
+    driver.get(url)                                                 # 打开浏览器
+    driver.find_element_by_name(&quot;username&quot;).send_keys(&quot;XXXXXX&quot;)     # 输入密码
+    driver.find_element_by_name(&quot;pwd_tip&quot;).click()                  # 这里是一个坑 后面讲
+    driver.find_element_by_name(&quot;pwd&quot;).send_keys(&quot;XXXXXX&quot;)          # 输入密码
+    driver.find_element_by_id(&quot;selectDisname&quot;).click()              # 打开网络模式选择窗口
+    driver.find_element_by_id(&quot;_service_0&quot;).click()                 # 选择外网
+    driver.find_element_by_id(&quot;jizhummNo&quot;).click()                  # 选择记住密码
+    driver.find_element_by_id(&quot;loginLink_div&quot;).click()              # 点击登录
+    driver.close()                                                  # 关闭浏览器
+
+
+count = 0
+while True:                                         # 死循环
+    try:
+        time.sleep(1)                               # 休眠一秒
+        requests.get(&quot;https://www.baidu.com&quot;)       # 通过请求百度 来判断网络状态
+    except Exception:
+        count += 1
+        print(count)
+        get_connect()                               # 一旦无法连接百度 便重新登录
+
+</code></pre>
+<p>这里有一个大坑, 一开始我期望,直接通过寻找 &quot;pwd&quot; 输入密码即可 但是 他会一直报错:</p>
+<pre><code class="language-python"> message: element not interactable
+</code></pre>
+<p>不可交互 我一直不理解,谷歌,百度,了很久,没有解决办法,最后自己通过 Chrome 的 控制台 发现每次点击password ,&quot;pwd&quot; 的属性都会改变一点,但是我尝试 pwd.click() 时发现一样报错,我终于怀疑到 它上面的一个元素了 &quot;pwd_tip&quot; 只有点击一次它 , &quot;pwd&quot; 才能工作. 这个应该就是网站的保护机制吧,但总之 我成功了.</p>
+<p>并且使用 pyinstaller 将其打包成了 exe 可执行文件</p>
+<p><img src="https://www.z4a.net/images/2019/08/29/2019-08-29_14-15-11deb589bcf315b88e.png" alt="2019-08-29_14-15-11deb589bcf315b88e.png"></p>
+<p>如图 它一个白天 为我自动登陆了4次</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[ Human nature]]></title>
         <id>https://borber.github.io/post/human-nature</id>
@@ -1658,13 +1723,13 @@ for i in range(1,26514):
 <!-- more -->
 <h2 id="愿望清单">愿望清单</h2>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-1575268"><label class="task-list-item-label" for="task-item-1575268"> 载着我老婆 我老婆搂着我 路过樱花树（不一定是樱花树，主要是搂）</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-2454994"><label class="task-list-item-label" for="task-item-2454994"> 一起去海边</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-6068266"><label class="task-list-item-label" for="task-item-6068266"> 去游乐场 做恐怖的项目</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-9791871"><label class="task-list-item-label" for="task-item-9791871"> 回家</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-3701441"><label class="task-list-item-label" for="task-item-3701441"> 如果要造孩子的话，在高考那天造孩子，哈哈。</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-8546683"><label class="task-list-item-label" for="task-item-8546683"> 教老婆玩万智牌</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-1256147"><label class="task-list-item-label" for="task-item-1256147"> 吃炒饼</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-3197719"><label class="task-list-item-label" for="task-item-3197719"> 载着我老婆 我老婆搂着我 路过樱花树（不一定是樱花树，主要是搂）</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-3549469"><label class="task-list-item-label" for="task-item-3549469"> 一起去海边</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-8655411"><label class="task-list-item-label" for="task-item-8655411"> 去游乐场 做恐怖的项目</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-4344891"><label class="task-list-item-label" for="task-item-4344891"> 回家</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-5358881"><label class="task-list-item-label" for="task-item-5358881"> 如果要造孩子的话，在高考那天造孩子，哈哈。</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-1884218"><label class="task-list-item-label" for="task-item-1884218"> 教老婆玩万智牌</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-8307539"><label class="task-list-item-label" for="task-item-8307539"> 吃炒饼</label></li>
 </ul>
 ]]></content>
     </entry>
