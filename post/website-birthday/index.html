@@ -27,7 +27,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="robots" content="all,follow">
 <meta name="googlebot" content="index,follow,snippet,archive">
-<title>Test Code Highlight | BORBER</title>
+<title>Website birthday | BORBER</title>
 <link rel="shortcut icon" href="https://borber.github.io/favicon.ico?v=1567098334103">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 <link rel="stylesheet" href="https://borber.github.io/styles/main.css?v=a001" type='text/css' media='all'>
@@ -151,22 +151,32 @@
     <div id="loop-container" class="loop-container">
       <div class="post type-post status-publish format-standard has-post-thumbnail hentry category-design tag-design tag-standard-2 tag-tagalicious tag-travel entry full-without-featured odd excerpt-1">
         
-          <div class='featured-image lazy lazy-bg-image' data-background="https://www.z4a.net/images/2019/06/18/father.jpg">
+          <div class='featured-image lazy lazy-bg-image' data-background="https://www.z4a.net/images/2019/08/30/2019-08-30_01-01-32.png">
           </div>
         
 
         <div class="entry-meta">
-          <span class="date">· 2019-06-18 ·</span>
+          <span class="date">· 2019-08-30 ·</span>
 
           
             <span class="category">
                     <span> / </span>
-                    <a href="https://borber.github.io/tag/3zxhdu1jz">测试</a>
+                    <a href="https://borber.github.io/tag/LDZC4Fg5C">json</a>
+                </span>
+          
+            <span class="category">
+                    <span> / </span>
+                    <a href="https://borber.github.io/tag/7WZTvl4GD">美化</a>
+                </span>
+          
+            <span class="category">
+                    <span> / </span>
+                    <a href="https://borber.github.io/tag/gridea">Gridea</a>
                 </span>
           
         </div>
         <div class='entry-header'>
-          <h1 class='entry-title'>Test Code Highlight</h1>
+          <h1 class='entry-title'>Website birthday</h1>
         </div>
         <div class="entry-container">
           <div class="entry-content">
@@ -180,14 +190,12 @@
 
                 <li class="previous"><a class="prev">上一篇</a>
                     
-                        <a style="display:none" class="prevspan" title="Test Music Player" href="https://borber.github.io/post/test-music-player">Test Music Player</a>
-                    
                 </li>
 
 
                 <li class="nextpost"><a class="next">下一篇</a>
                     
-                        <a style="display:none" class="nextspan" title="KDE without BUG" href="https://borber.github.io/post/kde-without-bug"> KDE without BUG</a>
+                        <a style="display:none" class="nextspan" title="Campus Network" href="https://borber.github.io/post/campus-network"> Campus Network</a>
                     
                 </li>
 
@@ -350,69 +358,59 @@ hljs.initHighlightingOnLoad()
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.js"></script>
 
   <script>
-    var article = `<p>测试代码高亮显示 Java</p>
+    var article = `<p>Gridea 主题 添加 **网站已稳定运行：**XX 天 XX 时 XX 分 XX 秒</p>
 <!-- more -->
-<p>如下</p>
-<pre><code class="language-java">package forSQL;
-
-import java.sql.*;
-
-/**
- * @author admin
- * @version 1.0.0
- * @ClassName SQL_Constants.java
- * @Description 模块化对 SQL 的操作
- * @createTime 2019年05月17日 16:44
- */
-public class SQL_Constants {
-
-    /**
-     * 连接全局化 节省连接的时间
-     * 以及 别的可能使用的变量全局化
-     */
-    public static Connection CONN = null;
-
-    public static PreparedStatement PST = null;
-
-    public static ResultSet RS = null;
-
-
-
-    /**
-     * 字符串待填写
-     */
-    private final static String MYSQL_CLASS = &quot;&quot;;
-    private final static String MYSQL_URL = &quot;&quot;;
-    private final static String MYSQL_NAME = &quot;&quot;;
-    private final static String MYSQL_PASSWORD = &quot;&quot;;
-
-    public static void GetConnection(){
-        /**
-         * @title GetConnection
-         * @description
-         * @author BORBER
-         * @updateTime 2019/5/17 17:10
-         * @throws
-         */
-
-        try {
-            CONN = null;
-            Class.forName(MYSQL_CLASS);
-            CONN = DriverManager.getConnection(MYSQL_URL,MYSQL_NAME,MYSQL_PASSWORD);
-            if(CONN != null){
-                System.out.println(&quot;Connect success!&quot;);
-            }
-        }catch (ClassNotFoundException e) {
-            System.out.println(&quot;Class not found!&quot;);
-        } catch (SQLException e) {
-            System.out.println(&quot;Connect fail!&quot;);
-        }
-    }
-
-
-}
-
+<h3 id="birthdayejs">birthday.ejs:</h3>
+<p>在主题的include 文件夹下 新建 birthday.ejs 将下面的代码复制进去.</p>
+<pre><code class="language-js">
+&lt;% if (site.customConfig['BirthDay']) { %&gt;
+    &lt;!--网站稳定运行代码--&gt;
+    网站已稳定运行：&lt;span id=&quot;website_running_time&quot; style=&quot;color: #00BFFF;&quot;&gt;&lt;font style=&quot;color:#FFF&quot;&gt;398&lt;/font&gt; 天 &lt;font style=&quot;color:#FFF&quot;&gt;17&lt;/font&gt; 时 &lt;font style=&quot;color:#FFF&quot;&gt;28&lt;/font&gt; 分 &lt;font style=&quot;color:#FFF&quot;&gt;54&lt;/font&gt; 秒&lt;/span&gt;
+    &lt;script language=&quot;javascript&quot;&gt;
+        function show_date_time(){
+            window.setTimeout(&quot;show_date_time()&quot;, 1000);
+            BirthDay=new Date(&quot;&lt;%= site.customConfig['BirthDay'] %&gt;&quot;);
+            today=new Date();
+            timeold=(today.getTime()-BirthDay.getTime());
+            sectimeold=timeold/1000
+            secondsold=Math.floor(sectimeold);
+            msPerDay=24*60*60*1000
+            e_daysold=timeold/msPerDay
+            daysold=Math.floor(e_daysold);
+            e_hrsold=(e_daysold-daysold)*24;
+            hrsold=Math.floor(e_hrsold);
+            e_minsold=(e_hrsold-hrsold)*60;
+            minsold=Math.floor((e_hrsold-hrsold)*60);
+            seconds=Math.floor((e_minsold-minsold)*60);
+            website_running_time.innerHTML='&lt;font style=color:#FFF&gt;'+daysold+'&lt;/font&gt; 天 &lt;font style=color:#FFF&gt;'+hrsold+'&lt;/font&gt; 时 &lt;font style=color:#FFF&gt;'+minsold+'&lt;/font&gt; 分 &lt;font style=color:#FFF&gt;'+seconds+'&lt;/font&gt; 秒';}
+        show_date_time();
+    &lt;/script&gt;
+&lt;% } %&gt;
 </code></pre>
+<h3 id="configjson">config.json:</h3>
+<p>然后 在你的 主题config.json中 添加下面一段配置:</p>
+<pre><code class="language-json">{
+      &quot;name&quot;: &quot;BirthDay&quot;,
+      &quot;label&quot;: &quot;建站日期 | 用于显示 网站已经稳定运行 XX 天 XX 时 XX 分&quot;,
+      &quot;group&quot;: &quot;个性化&quot;,
+      &quot;value&quot;: &quot;&quot;,
+      &quot;type&quot;: &quot;input&quot;,
+      &quot;note&quot;: &quot;6/17/2019 00:23:23&quot;
+    },
+</code></pre>
+<p>除了 name,type 其他你都可以改</p>
+<p>然后在你的 footer.ejs 中的合适位置中 加入下方代码(我推荐在 &lt;%-themeConfig.footerInfo%&gt; 上方加入)</p>
+<pre><code class="language-ejs">&lt;%- include('./birthday') %&gt;
+</code></pre>
+<p>如图</p>
+<p><img src="https://www.z4a.net/images/2019/08/30/2019-08-30_00-54-17.png" alt="2019-08-30_00-54-17.png"></p>
+<h3 id="use">USE:</h3>
+<p>重启客户端 填写你网站的生日并保存:</p>
+<p><img src="https://www.z4a.net/images/2019/08/30/2019-08-30_00-55-34.png" alt="2019-08-30_00-55-34.png"></p>
+<blockquote>
+<p>月/日/年 &quot;空格&quot; 时:分:秒</p>
+</blockquote>
+<p>然后预览一下看看效果 就可以点同步了</p>
 `
     var content = article.split("<!--more-->")[1]
     if (content != null)
@@ -421,7 +419,7 @@ public class SQL_Constants {
         document.getElementById('article').innerHTML = article
 
     let navigation = new AutocJs({
-        title:'Test Code Highlight',
+        title:'Website birthday',
         isGenerateOutlineChapterCode: false
     })
     </script>

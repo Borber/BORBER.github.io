@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://borber.github.io</id>
     <title>BORBER</title>
-    <updated>2019-08-29T16:46:51.327Z</updated>
+    <updated>2019-08-29T17:05:38.407Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://borber.github.io"/>
     <link rel="self" href="https://borber.github.io/atom.xml"/>
@@ -10,6 +10,69 @@
     <logo>https://borber.github.io/images/avatar.png</logo>
     <icon>https://borber.github.io/favicon.ico</icon>
     <rights>All rights reserved 2019, BORBER</rights>
+    <entry>
+        <title type="html"><![CDATA[Website birthday]]></title>
+        <id>https://borber.github.io/post/website-birthday</id>
+        <link href="https://borber.github.io/post/website-birthday">
+        </link>
+        <updated>2019-08-29T16:59:27.000Z</updated>
+        <summary type="html"><![CDATA[<p>Gridea 主题 添加 **网站已稳定运行：**XX 天 XX 时 XX 分 XX 秒</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>Gridea 主题 添加 **网站已稳定运行：**XX 天 XX 时 XX 分 XX 秒</p>
+<!-- more -->
+<h3 id="birthdayejs">birthday.ejs:</h3>
+<p>在主题的include 文件夹下 新建 birthday.ejs 将下面的代码复制进去.</p>
+<pre><code class="language-js">
+&lt;% if (site.customConfig['BirthDay']) { %&gt;
+    &lt;!--网站稳定运行代码--&gt;
+    网站已稳定运行：&lt;span id=&quot;website_running_time&quot; style=&quot;color: #00BFFF;&quot;&gt;&lt;font style=&quot;color:#FFF&quot;&gt;398&lt;/font&gt; 天 &lt;font style=&quot;color:#FFF&quot;&gt;17&lt;/font&gt; 时 &lt;font style=&quot;color:#FFF&quot;&gt;28&lt;/font&gt; 分 &lt;font style=&quot;color:#FFF&quot;&gt;54&lt;/font&gt; 秒&lt;/span&gt;
+    &lt;script language=&quot;javascript&quot;&gt;
+        function show_date_time(){
+            window.setTimeout(&quot;show_date_time()&quot;, 1000);
+            BirthDay=new Date(&quot;&lt;%= site.customConfig['BirthDay'] %&gt;&quot;);
+            today=new Date();
+            timeold=(today.getTime()-BirthDay.getTime());
+            sectimeold=timeold/1000
+            secondsold=Math.floor(sectimeold);
+            msPerDay=24*60*60*1000
+            e_daysold=timeold/msPerDay
+            daysold=Math.floor(e_daysold);
+            e_hrsold=(e_daysold-daysold)*24;
+            hrsold=Math.floor(e_hrsold);
+            e_minsold=(e_hrsold-hrsold)*60;
+            minsold=Math.floor((e_hrsold-hrsold)*60);
+            seconds=Math.floor((e_minsold-minsold)*60);
+            website_running_time.innerHTML='&lt;font style=color:#FFF&gt;'+daysold+'&lt;/font&gt; 天 &lt;font style=color:#FFF&gt;'+hrsold+'&lt;/font&gt; 时 &lt;font style=color:#FFF&gt;'+minsold+'&lt;/font&gt; 分 &lt;font style=color:#FFF&gt;'+seconds+'&lt;/font&gt; 秒';}
+        show_date_time();
+    &lt;/script&gt;
+&lt;% } %&gt;
+</code></pre>
+<h3 id="configjson">config.json:</h3>
+<p>然后 在你的 主题config.json中 添加下面一段配置:</p>
+<pre><code class="language-json">{
+      &quot;name&quot;: &quot;BirthDay&quot;,
+      &quot;label&quot;: &quot;建站日期 | 用于显示 网站已经稳定运行 XX 天 XX 时 XX 分&quot;,
+      &quot;group&quot;: &quot;个性化&quot;,
+      &quot;value&quot;: &quot;&quot;,
+      &quot;type&quot;: &quot;input&quot;,
+      &quot;note&quot;: &quot;6/17/2019 00:23:23&quot;
+    },
+</code></pre>
+<p>除了 name,type 其他你都可以改</p>
+<p>然后在你的 footer.ejs 中的合适位置中 加入下方代码(我推荐在 &lt;%-themeConfig.footerInfo%&gt; 上方加入)</p>
+<pre><code class="language-ejs">&lt;%- include('./birthday') %&gt;
+</code></pre>
+<p>如图</p>
+<p><img src="https://www.z4a.net/images/2019/08/30/2019-08-30_00-54-17.png" alt="2019-08-30_00-54-17.png"></p>
+<h3 id="use">USE:</h3>
+<p>重启客户端 填写你网站的生日并保存:</p>
+<p><img src="https://www.z4a.net/images/2019/08/30/2019-08-30_00-55-34.png" alt="2019-08-30_00-55-34.png"></p>
+<blockquote>
+<p>月/日/年 &quot;空格&quot; 时:分:秒</p>
+</blockquote>
+<p>然后预览一下看看效果 就可以点同步了</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Campus Network]]></title>
         <id>https://borber.github.io/post/campus-network</id>
@@ -1723,13 +1786,13 @@ for i in range(1,26514):
 <!-- more -->
 <h2 id="愿望清单">愿望清单</h2>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-7142320"><label class="task-list-item-label" for="task-item-7142320"> 载着我老婆 我老婆搂着我 路过樱花树（不一定是樱花树，主要是搂）</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-1027264"><label class="task-list-item-label" for="task-item-1027264"> 一起去海边</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-8257219"><label class="task-list-item-label" for="task-item-8257219"> 去游乐场 做恐怖的项目</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-6586437"><label class="task-list-item-label" for="task-item-6586437"> 回家</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-3232360"><label class="task-list-item-label" for="task-item-3232360"> 如果要造孩子的话，在高考那天造孩子，哈哈。</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-586801"><label class="task-list-item-label" for="task-item-586801"> 教老婆玩万智牌</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-5652738"><label class="task-list-item-label" for="task-item-5652738"> 吃炒饼</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-7223997"><label class="task-list-item-label" for="task-item-7223997"> 载着我老婆 我老婆搂着我 路过樱花树（不一定是樱花树，主要是搂）</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-4773432"><label class="task-list-item-label" for="task-item-4773432"> 一起去海边</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-3080373"><label class="task-list-item-label" for="task-item-3080373"> 去游乐场 做恐怖的项目</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-2972117"><label class="task-list-item-label" for="task-item-2972117"> 回家</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-3141377"><label class="task-list-item-label" for="task-item-3141377"> 如果要造孩子的话，在高考那天造孩子，哈哈。</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-8776066"><label class="task-list-item-label" for="task-item-8776066"> 教老婆玩万智牌</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-5215871"><label class="task-list-item-label" for="task-item-5215871"> 吃炒饼</label></li>
 </ul>
 ]]></content>
     </entry>
