@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://borber.github.io</id>
     <title>BORBER</title>
-    <updated>2019-09-01T11:19:16.150Z</updated>
+    <updated>2019-09-01T15:37:47.753Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://borber.github.io"/>
     <link rel="self" href="https://borber.github.io/atom.xml"/>
@@ -10,6 +10,16 @@
     <logo>https://borber.github.io/images/avatar.png</logo>
     <icon>https://borber.github.io/favicon.ico</icon>
     <rights>All rights reserved 2019, BORBER</rights>
+    <entry>
+        <title type="html"><![CDATA[OneDrive test]]></title>
+        <id>https://borber.github.io/post/onedrive-test</id>
+        <link href="https://borber.github.io/post/onedrive-test">
+        </link>
+        <updated>2019-09-01T11:44:10.000Z</updated>
+        <content type="html"><![CDATA[<video width="100%" height="400" src="https://onedrive.gimhoy.com/sharepoint/aHR0cHM6Ly9mcmVlc2hhZG93LW15LnNoYXJlcG9pbnQuY29tLzp2Oi9nL3BlcnNvbmFsL3JqeTNkaGttbV9hYmNkYV90ZWNoL0VUX1l5a1hXSk14R2pWTGtQc2N4UnZnQm5TRHlpSU5YdGlWc0l2MElWcUt5b1E/ZT1GNENuN2c=.webm" controls="controls">
+The `<video>` tag is not supported by your browser.
+</video>]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Website birthday]]></title>
         <id>https://borber.github.io/post/website-birthday</id>
@@ -1786,13 +1796,13 @@ for i in range(1,26514):
 <!-- more -->
 <h2 id="愿望清单">愿望清单</h2>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-5354768"><label class="task-list-item-label" for="task-item-5354768"> 载着我老婆 我老婆搂着我 路过樱花树（不一定是樱花树，主要是搂）</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-4667479"><label class="task-list-item-label" for="task-item-4667479"> 一起去海边</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-5023819"><label class="task-list-item-label" for="task-item-5023819"> 去游乐场 做恐怖的项目</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-8349070"><label class="task-list-item-label" for="task-item-8349070"> 回家</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-661866"><label class="task-list-item-label" for="task-item-661866"> 如果要造孩子的话，在高考那天造孩子，哈哈。</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-6339476"><label class="task-list-item-label" for="task-item-6339476"> 教老婆玩万智牌</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-762140"><label class="task-list-item-label" for="task-item-762140"> 吃炒饼</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-3899472"><label class="task-list-item-label" for="task-item-3899472"> 载着我老婆 我老婆搂着我 路过樱花树（不一定是樱花树，主要是搂）</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-2411741"><label class="task-list-item-label" for="task-item-2411741"> 一起去海边</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-7145110"><label class="task-list-item-label" for="task-item-7145110"> 去游乐场 做恐怖的项目</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-364375"><label class="task-list-item-label" for="task-item-364375"> 回家</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-3997906"><label class="task-list-item-label" for="task-item-3997906"> 如果要造孩子的话，在高考那天造孩子，哈哈。</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-5949761"><label class="task-list-item-label" for="task-item-5949761"> 教老婆玩万智牌</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-9673883"><label class="task-list-item-label" for="task-item-9673883"> 吃炒饼</label></li>
 </ul>
 ]]></content>
     </entry>
