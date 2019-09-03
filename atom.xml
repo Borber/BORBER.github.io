@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://borber.github.io</id>
     <title>BORBER</title>
-    <updated>2019-09-01T15:47:29.302Z</updated>
+    <updated>2019-09-03T12:10:43.116Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://borber.github.io"/>
     <link rel="self" href="https://borber.github.io/atom.xml"/>
@@ -10,6 +10,215 @@
     <logo>https://borber.github.io/images/avatar.png</logo>
     <icon>https://borber.github.io/favicon.ico</icon>
     <rights>All rights reserved 2019, BORBER</rights>
+    <entry>
+        <title type="html"><![CDATA[Data Structures in Java (1)]]></title>
+        <id>https://borber.github.io/post/data-structures-in-java-1</id>
+        <link href="https://borber.github.io/post/data-structures-in-java-1">
+        </link>
+        <updated>2019-09-03T12:06:24.000Z</updated>
+        <summary type="html"><![CDATA[<p>数据结构与算法分析 Java语言描述(一)</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>数据结构与算法分析 Java语言描述(一)</p>
+<!-- more -->
+<h3 id="列表">列表:</h3>
+<h5 id="1arraylist">1.ArrayList:</h5>
+<p>这就是对数组进行了一定的封装使用.具体函数作用都在注释中有.就不一一赘述了.</p>
+<pre><code class="language-java">package forList;
+
+/**
+ * @program: MyArrayList
+ * @description: 用来实现ArrayList
+ * @author: BORBER
+ * @create: 2019-09-03 15:47
+ * @version: 1.0
+ **/
+public class MyArrayList {
+    private static final int DEFAULT_CAPACITY = 10;
+    private int theSize;
+    private int[] theItems;
+
+    /**
+    * @Description: 通过调用 doClear() 创造列表数组
+    * @Author: BORBER
+    * @Date: 2019/9/3
+    */
+    public MyArrayList(){
+        doClear();
+    }
+
+    /**
+    * @Description: 通过调用 doClear() 更新列表数组
+    * @return: void
+    * @Author: BORBER
+    * @Date: 2019/9/3
+    */
+    public void clear(){
+        doClear();
+    }
+
+    /**
+    * @Description: 通过调用 ensureCapacity 清零列表长度 返回新的队列
+    * @return: void
+    * @Author: BORBER
+    * @Date: 2019/9/3
+    */
+    private void doClear(){
+        theSize = 0; ensureCapacity( DEFAULT_CAPACITY);
+    }
+
+    /**
+    * @Description: 返回列表元素个数
+    * @return: int
+    * @Author: BORBER
+    * @Date: 2019/9/3
+    */
+    public int size(){
+        return theSize;
+    }
+
+    /**
+    * @Description: 返回列表是否为空
+    * @return: boolean
+    * @Author: BORBER
+    * @Date: 2019/9/3
+    */
+    public boolean isEmpty(){
+        return size() == 0;
+    }
+
+    /**
+    * @Description: 去除多余的列表数组空间
+    * @return: void
+    * @Author: BORBER
+    * @Date: 2019/9/3
+    */
+    public void trimToSize(){
+
+    }
+
+    /**
+    * @Description: 通过下标进行列表查询
+    * @Param: [idx]
+    * @return: int
+    * @Author: BORBER
+    * @Date: 2019/9/3
+    */
+    public int get(int idx){
+        if(idx &lt; 0||idx &gt;= size()) {
+            throw new ArrayIndexOutOfBoundsException();
+        }
+        return theItems[idx];
+    }
+
+    /**
+    * @Description: 通过下标进行元素赋值 并返回旧值
+    * @Param: [idx, newVal]
+    * @return: int
+    * @Author: BORBER
+    * @Date: 2019/9/3
+    */
+    public int set(int idx,int newVal){
+        if(idx &lt; 0||idx &gt;= size()){
+            throw new ArrayIndexOutOfBoundsException();
+        }
+        int old = theItems[idx];
+        theItems[idx] = newVal;
+        return old;
+    }
+
+    /**
+    * @Description: 更新列表数组
+    * @Param: [newCapacity]
+    * @return: void
+    * @Author: BORBER
+    * @Date: 2019/9/3
+    */
+    public void ensureCapacity(int newCapacity){
+        if(newCapacity &lt; theSize){
+            return;
+        }
+        int[] old = theItems;
+        theItems = new int[newCapacity];
+        if (size() &gt;= 0) {
+            System.arraycopy(old, 0, theItems, 0, size());
+        }
+    }
+
+    public boolean add(int x){
+        add( size(), x);
+        return true;
+    }
+
+    /**
+    * @Description: 通过下标插入 下标小于 0 默认为0 大于队列长度 默认为队列末端
+    * @Param: [idx, x]
+    * @return: void
+    * @Author: BORBER
+    * @Date: 2019/9/3
+    */
+    public void add(int idx, int x){
+        x = x&lt;0?0:Math.min(x, size());
+        if(theItems.length == size()){
+            ensureCapacity(size()+DEFAULT_CAPACITY);
+        }
+        if (size() - idx &gt;= 0) {
+            System.arraycopy(theItems, idx, theItems, idx + 1, size() - idx);
+        }
+        theItems[idx] = x;
+        ++theSize;
+    }
+
+    /**
+    * @Description: 通过下标 删除元素
+    * @Param: [idx]
+    * @return: int
+    * @Author: BORBER
+    * @Date: 2019/9/3
+    */
+    public int remove(int idx){
+        if (idx &lt; 0||idx &gt;size()){
+            throw new ArrayIndexOutOfBoundsException();
+        }
+        int removedItem = theItems[idx];
+        if (size() - 1 - idx &gt;= 0) {
+            System.arraycopy(theItems, idx + 1, theItems, idx, size() - 1 - idx);
+        }
+        --theSize;
+        return removedItem;
+    }
+
+    public java.util.Iterator&lt;Integer&gt; iterator(){
+        return new ArrayListIterator();
+    }
+
+    private class ArrayListIterator implements java.util.Iterator&lt;Integer&gt;{
+
+        private int current = 0;
+        @Override
+        public boolean hasNext() {
+            return current&lt;size();
+        }
+
+        @Override
+        public Integer next() {
+            if (!hasNext()){
+                throw new java.util.NoSuchElementException();
+            }
+            return theItems[current++];
+        }
+
+        @Override
+        public void remove() {
+            MyArrayList.this.remove(--current);
+        }
+    }
+}
+
+</code></pre>
+<h5 id="2linkedlist">2.LinkedList</h5>
+<p>待续</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Website birthday]]></title>
         <id>https://borber.github.io/post/website-birthday</id>
@@ -1786,13 +1995,13 @@ for i in range(1,26514):
 <!-- more -->
 <h2 id="愿望清单">愿望清单</h2>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-9903410"><label class="task-list-item-label" for="task-item-9903410"> 载着我老婆 我老婆搂着我 路过樱花树（不一定是樱花树，主要是搂）</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-2593711"><label class="task-list-item-label" for="task-item-2593711"> 一起去海边</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-430016"><label class="task-list-item-label" for="task-item-430016"> 去游乐场 做恐怖的项目</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-1502322"><label class="task-list-item-label" for="task-item-1502322"> 回家</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-8113674"><label class="task-list-item-label" for="task-item-8113674"> 如果要造孩子的话，在高考那天造孩子，哈哈。</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-8566528"><label class="task-list-item-label" for="task-item-8566528"> 教老婆玩万智牌</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-4982667"><label class="task-list-item-label" for="task-item-4982667"> 吃炒饼</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-4390312"><label class="task-list-item-label" for="task-item-4390312"> 载着我老婆 我老婆搂着我 路过樱花树（不一定是樱花树，主要是搂）</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-1245190"><label class="task-list-item-label" for="task-item-1245190"> 一起去海边</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-7252979"><label class="task-list-item-label" for="task-item-7252979"> 去游乐场 做恐怖的项目</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-2806721"><label class="task-list-item-label" for="task-item-2806721"> 回家</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-9936071"><label class="task-list-item-label" for="task-item-9936071"> 如果要造孩子的话，在高考那天造孩子，哈哈。</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-7343040"><label class="task-list-item-label" for="task-item-7343040"> 教老婆玩万智牌</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-1931797"><label class="task-list-item-label" for="task-item-1931797"> 吃炒饼</label></li>
 </ul>
 ]]></content>
     </entry>
