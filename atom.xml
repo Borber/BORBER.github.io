@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://borber.github.io</id>
     <title>BORBER</title>
-    <updated>2019-09-04T12:17:42.667Z</updated>
+    <updated>2019-09-04T12:23:03.979Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://borber.github.io"/>
     <link rel="self" href="https://borber.github.io/atom.xml"/>
@@ -110,6 +110,7 @@ source ~/.zshrc
 <p>​</p>
 <h4 id="接下来是jdk的安装">接下来是JDK的安装:</h4>
 <h5 id="1-首先-下载-jdk">1. 首先 下载 JDK:</h5>
+<p><img src="https://www.z4a.net/images/2019/09/04/2019-09-04_20-21-44.png" alt="2019-09-04_20-21-44.png"></p>
 <pre><code class="language-shell">useradd java
 # 添加 java 用户
 passwd java 
@@ -120,7 +121,7 @@ cd /home/java
 
 wget https://download.oracle.com/otn/java/jdk/8u221-b11/230deb18db3e4014bb8e3e8324f81b43/jdk-8u221-linux-x64.tar.gz
 
-# 这里我吐槽一下 傻逼 oracle 草泥马 下个JDK 搞你X的验证登录  还时效贼短 还他妈得自己提取直链 emmm  结果是 折腾JDK下载时间最久
+# 这里我吐槽一下 傻逼 oracle 草泥马 下个JDK 搞你X的验证登录  还时效贼短 还他妈得自己提取直链 emmm  结果是 折腾JDK下载时间最久 自己前往 https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html 登录之后 再访问一次 然后 同意协议 然后点击JDK-8u221-Linux-x64.tar.gz 下载 在下载软件 或 下载中心里 复制下载连接 替换上面的 链接 上图
 
 mv jdk-8u221-linux-x64.tar.gz\?AuthParam=1567589070_2de7ec2995d3e11bd9f2190f757c3aa4 jdk-8u221-linux-x64.tar.gz
 
@@ -2226,13 +2227,13 @@ for i in range(1,26514):
 <!-- more -->
 <h2 id="愿望清单">愿望清单</h2>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-8492668"><label class="task-list-item-label" for="task-item-8492668"> 载着我老婆 我老婆搂着我 路过樱花树（不一定是樱花树，主要是搂）</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-5933832"><label class="task-list-item-label" for="task-item-5933832"> 一起去海边</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-7320420"><label class="task-list-item-label" for="task-item-7320420"> 去游乐场 做恐怖的项目</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-7723744"><label class="task-list-item-label" for="task-item-7723744"> 回家</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-5801610"><label class="task-list-item-label" for="task-item-5801610"> 如果要造孩子的话，在高考那天造孩子，哈哈。</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-5525656"><label class="task-list-item-label" for="task-item-5525656"> 教老婆玩万智牌</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-6457515"><label class="task-list-item-label" for="task-item-6457515"> 吃炒饼</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-6605524"><label class="task-list-item-label" for="task-item-6605524"> 载着我老婆 我老婆搂着我 路过樱花树（不一定是樱花树，主要是搂）</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-3278674"><label class="task-list-item-label" for="task-item-3278674"> 一起去海边</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-8010220"><label class="task-list-item-label" for="task-item-8010220"> 去游乐场 做恐怖的项目</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-4315172"><label class="task-list-item-label" for="task-item-4315172"> 回家</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-6298431"><label class="task-list-item-label" for="task-item-6298431"> 如果要造孩子的话，在高考那天造孩子，哈哈。</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-5785255"><label class="task-list-item-label" for="task-item-5785255"> 教老婆玩万智牌</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-3271874"><label class="task-list-item-label" for="task-item-3271874"> 吃炒饼</label></li>
 </ul>
 ]]></content>
     </entry>
