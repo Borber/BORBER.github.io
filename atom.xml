@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://borber.github.io</id>
     <title>BORBER</title>
-    <updated>2019-09-04T12:23:21.635Z</updated>
+    <updated>2019-09-04T12:25:15.967Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://borber.github.io"/>
     <link rel="self" href="https://borber.github.io/atom.xml"/>
@@ -21,6 +21,10 @@
         <content type="html"><![CDATA[<p>Centos 安装 jdk8 以及 Tomcat 附 JavaWeb 项目部署</p>
 <!-- more -->
 <p>昨天 帮助很多的朋友白嫖了 阿里云的200元优惠券, 然后大多购买了阿里云的学生机. 我们专业最近在学习,JSP (Java server pages) 所以想着可以利用它来安装一下 Tomcat 来部署自己写的网站.可以带来一些成就感.</p>
+<blockquote>
+<p>注: 本文所有提及软件 均需自己寻找, 博主不提供下载链接</p>
+</blockquote>
+<hr>
 <h4 id="首先是-ssh-连接">首先是 ssh 连接:</h4>
 <h5 id="1-方案一">1. 方案一:</h5>
 <p>​			直接使用,阿里云自带的远程连接,但是体验不太好.</p>
@@ -2227,13 +2231,13 @@ for i in range(1,26514):
 <!-- more -->
 <h2 id="愿望清单">愿望清单</h2>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-7865346"><label class="task-list-item-label" for="task-item-7865346"> 载着我老婆 我老婆搂着我 路过樱花树（不一定是樱花树，主要是搂）</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-561619"><label class="task-list-item-label" for="task-item-561619"> 一起去海边</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-3572177"><label class="task-list-item-label" for="task-item-3572177"> 去游乐场 做恐怖的项目</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-2438264"><label class="task-list-item-label" for="task-item-2438264"> 回家</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-7915616"><label class="task-list-item-label" for="task-item-7915616"> 如果要造孩子的话，在高考那天造孩子，哈哈。</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-6387515"><label class="task-list-item-label" for="task-item-6387515"> 教老婆玩万智牌</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-1130922"><label class="task-list-item-label" for="task-item-1130922"> 吃炒饼</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-9987916"><label class="task-list-item-label" for="task-item-9987916"> 载着我老婆 我老婆搂着我 路过樱花树（不一定是樱花树，主要是搂）</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-7056754"><label class="task-list-item-label" for="task-item-7056754"> 一起去海边</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-3321755"><label class="task-list-item-label" for="task-item-3321755"> 去游乐场 做恐怖的项目</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-7152232"><label class="task-list-item-label" for="task-item-7152232"> 回家</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-3343687"><label class="task-list-item-label" for="task-item-3343687"> 如果要造孩子的话，在高考那天造孩子，哈哈。</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-5205677"><label class="task-list-item-label" for="task-item-5205677"> 教老婆玩万智牌</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-5383618"><label class="task-list-item-label" for="task-item-5383618"> 吃炒饼</label></li>
 </ul>
 ]]></content>
     </entry>
