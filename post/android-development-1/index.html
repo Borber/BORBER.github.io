@@ -27,7 +27,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="robots" content="all,follow">
 <meta name="googlebot" content="index,follow,snippet,archive">
-<title>Third python spider | BORBER</title>
+<title>Android development (1) | BORBER</title>
 <link rel="shortcut icon" href="https://borber.github.io/favicon.ico?v=1567769365776">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 <link rel="stylesheet" href="https://borber.github.io/styles/main.css?v=a001" type='text/css' media='all'>
@@ -151,22 +151,22 @@
     <div id="loop-container" class="loop-container">
       <div class="post type-post status-publish format-standard has-post-thumbnail hentry category-design tag-design tag-standard-2 tag-tagalicious tag-travel entry full-without-featured odd excerpt-1">
         
-          <div class='featured-image lazy lazy-bg-image' data-background="https://www.z4a.net/images/2019/07/16/2018-07-13-010717.jpg">
+          <div class='featured-image lazy lazy-bg-image' data-background="https://www.z4a.net/images/2019/09/06/dimsresize20002C20002Cshrinkimage_urihttps3A2F2Fo.aolcdn.jpg">
           </div>
         
 
         <div class="entry-meta">
-          <span class="date">· 2019-07-16 ·</span>
+          <span class="date">· 2019-09-06 ·</span>
 
           
             <span class="category">
                     <span> / </span>
-                    <a href="https://borber.github.io/tag/zzy4LPH8S">python</a>
+                    <a href="https://borber.github.io/tag/rV64vybnM">Android</a>
                 </span>
           
             <span class="category">
                     <span> / </span>
-                    <a href="https://borber.github.io/tag/C-16BRfGV">爬虫</a>
+                    <a href="https://borber.github.io/tag/3yrWRtYR2">java</a>
                 </span>
           
             <span class="category">
@@ -176,7 +176,7 @@
           
         </div>
         <div class='entry-header'>
-          <h1 class='entry-title'>Third python spider</h1>
+          <h1 class='entry-title'>Android development (1)</h1>
         </div>
         <div class="entry-container">
           <div class="entry-content">
@@ -190,14 +190,12 @@
 
                 <li class="previous"><a class="prev">上一篇</a>
                     
-                        <a style="display:none" class="prevspan" title="Second python spider pro" href="https://borber.github.io/post/second-python-crawler-pro">Second python spider pro</a>
-                    
                 </li>
 
 
                 <li class="nextpost"><a class="next">下一篇</a>
                     
-                        <a style="display:none" class="nextspan" title="Second python spider" href="https://borber.github.io/post/second-python-reptile"> Second python spider</a>
+                        <a style="display:none" class="nextspan" title="Tomcat" href="https://borber.github.io/post/tomcat"> Tomcat</a>
                     
                 </li>
 
@@ -360,74 +358,54 @@ hljs.initHighlightingOnLoad()
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.js"></script>
 
   <script>
-    var article = `<p>爬取 58同城 招聘信息 🤩</p>
-<!-- more -->
-<p>这是我写的的第三个爬虫用来爬取 58同城上的招聘信息 也没有什么大用只是用来练手的,我觉得 编程是一个只有动手才能学会的东西.</p>
-<p>这次的爬虫和前两次有些许不同,58 同城有自己的反爬措施.所以这次加上了限制请求频率的 time.sleap (其实 第二个爬虫也最好加入,因为我在使用第二个爬虫时,出现了远程服务器拒绝访问)</p>
-<p>这此对于 selector 有的全新的认识 使用大大灵活了</p>
-<p>58同城不需要注册就可以浏览 所以只要获取cookie就好</p>
-<p>代码如下 :</p>
-<pre><code class="language-python">from bs4 import BeautifulSoup
-import os
-import time
-import urllib
-import requests
-import time
-
-header = {
-    'user-agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3833.0 Safari/537.36',
-    'cookie':'你自己的'
-}
-urls = []
-file = open('E:\CODE\python\out\BORBER.txt','w') #自己写
-def get_urls():
-    for i in range(1,19):
-        url = f'https://bj.58.com/ruanjiangong/pn{i}/?PGTID=0d302f82-0000-1864-07d2-bb7c42c41f7c&amp;ClickID=2'
-        urls.append(url)
-    for each in urls:
-        get_detials(each)
-
-def get_detials(url):
-    wb_data = requests.get(url)
-    soup = BeautifulSoup(wb_data.text,'lxml')
-    Address = soup.select('span.address')
-    Job_names = soup.select('span.name')
-    Job_salarys = soup.select('p.job_salary')
-    Job_wels = soup.select('div.job_wel &gt; span')
-    Com_Names = soup.select('div.comp_name &gt; a')
-    Job_requires = soup.select('p.job_require')
-    for Addres,Job_name,Job_salary,Job_wel,Com_Name,Job_require in zip(Address,Job_names,Job_salarys,Job_wels,Com_Names,Job_requires):
-        data = {
-            'Address':Addres.get_text(),
-            'Job_name':Job_name.get_text(),
-            'Job_salary':Job_salary.get_text(),
-            'Job_wel':Job_wel.get_text(),
-            'Com_Name':Com_Name.get_text(),
-            'Job_require':Job_require.get_text().replace('&amp;nbsp',' ')
-        }
-        fileprint(data)
-def fileprint(data):
-    file.write('地址: ' + data['Address'])
-    file.write('\n')
-    file.write('职位: '+data['Job_name'])
-    file.write('\n')
-    file.write('要求: '+data['Job_require'])
-    file.write('\n')
-    file.write('薪酬: '+data['Job_salary'])
-    file.write('\n')
-    file.write('福利: '+data['Job_wel'])
-    file.write('\n')
-    file.write('公司: '+data['Com_Name'])
-    file.write('\n')
-    file.write('\n===================================\n')
-
-get_urls()
-for url in urls:
-    get_detials(url)
-    time.sleep(2)
+    var article = `<p>Android 开发系列 之环境搭建 及 运行第一个 APP</p>
+<h4 id="初步安装">初步安装:</h4>
+<p>参考: <a href="https://www.runoob.com/android/android-studio-install.html">菜鸟教程</a> <a href="https://blog.csdn.net/shellching/article/details/70473682">CSDN</a></p>
+<p>注意,需要翻墙环境 才能正常下载 sdk.</p>
+<p>此处 指明一个坑:</p>
+<pre><code class="language-shell">Error:Cause: dl.google.com:443 failed to respond
 </code></pre>
-<p>看了一下 京城就是京城啊 😅</p>
-<p>附:<a href="https://www.lanzous.com/i50oi6d">爬取结果</a></p>
+<p>这个报错 总的来说 还是因为网络环境的不正常.</p>
+<p>解决方案: 修改GradleScripts 中的  bulid.gradle 添加 阿里源</p>
+<pre><code class="language-json">// Top-level build file where you can add configuration options common to all sub-projects/modules.
+ 
+buildscript {
+    repositories {
+ 
+        // 添加阿里云 maven 地址         
+        maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+        maven { url 'http://maven.aliyun.com/nexus/content/repositories/jcenter' }
+ 
+        // jcenter()
+        google()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.2.1'
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+ 
+allprojects {
+    repositories {
+ 
+        // 添加阿里云 maven 地址         
+        maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+        maven { url 'http://maven.aliyun.com/nexus/content/repositories/jcenter' }
+ 
+        // jcenter()
+        google()
+    }
+}
+ 
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+</code></pre>
+<p>再点击 Sync with Gradle Files 一般就在你的右上角 倒数 三四个.</p>
+<p>点击 运行按钮</p>
+<h5 id="运行截图">运行截图:</h5>
+<p><img src="https://www.z4a.net/images/2019/09/06/Screenshot_1567761650.png" alt="Screenshot_1567761650.png"></p>
 `
     var content = article.split("<!--more-->")[1]
     if (content != null)
@@ -436,7 +414,7 @@ for url in urls:
         document.getElementById('article').innerHTML = article
 
     let navigation = new AutocJs({
-        title:'Third python spider',
+        title:'Android development (1)',
         isGenerateOutlineChapterCode: false
     })
     </script>

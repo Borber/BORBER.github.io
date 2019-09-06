@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://borber.github.io</id>
     <title>BORBER</title>
-    <updated>2019-09-04T12:25:15.967Z</updated>
+    <updated>2019-09-06T11:29:34.641Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://borber.github.io"/>
     <link rel="self" href="https://borber.github.io/atom.xml"/>
@@ -10,6 +10,62 @@
     <logo>https://borber.github.io/images/avatar.png</logo>
     <icon>https://borber.github.io/favicon.ico</icon>
     <rights>All rights reserved 2019, BORBER</rights>
+    <entry>
+        <title type="html"><![CDATA[Android development (1)]]></title>
+        <id>https://borber.github.io/post/android-development-1</id>
+        <link href="https://borber.github.io/post/android-development-1">
+        </link>
+        <updated>2019-09-06T11:26:12.000Z</updated>
+        <content type="html"><![CDATA[<p>Android 开发系列 之环境搭建 及 运行第一个 APP</p>
+<h4 id="初步安装">初步安装:</h4>
+<p>参考: <a href="https://www.runoob.com/android/android-studio-install.html">菜鸟教程</a> <a href="https://blog.csdn.net/shellching/article/details/70473682">CSDN</a></p>
+<p>注意,需要翻墙环境 才能正常下载 sdk.</p>
+<p>此处 指明一个坑:</p>
+<pre><code class="language-shell">Error:Cause: dl.google.com:443 failed to respond
+</code></pre>
+<p>这个报错 总的来说 还是因为网络环境的不正常.</p>
+<p>解决方案: 修改GradleScripts 中的  bulid.gradle 添加 阿里源</p>
+<pre><code class="language-json">// Top-level build file where you can add configuration options common to all sub-projects/modules.
+ 
+buildscript {
+    repositories {
+ 
+        // 添加阿里云 maven 地址         
+        maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+        maven { url 'http://maven.aliyun.com/nexus/content/repositories/jcenter' }
+ 
+        // jcenter()
+        google()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.2.1'
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+ 
+allprojects {
+    repositories {
+ 
+        // 添加阿里云 maven 地址         
+        maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+        maven { url 'http://maven.aliyun.com/nexus/content/repositories/jcenter' }
+ 
+        // jcenter()
+        google()
+    }
+}
+ 
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+</code></pre>
+<p>再点击 Sync with Gradle Files 一般就在你的右上角 倒数 三四个.</p>
+<p>点击 运行按钮</p>
+<h5 id="运行截图">运行截图:</h5>
+<p><img src="https://www.z4a.net/images/2019/09/06/Screenshot_1567761650.png" alt="Screenshot_1567761650.png"></p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Tomcat]]></title>
         <id>https://borber.github.io/post/tomcat</id>
@@ -2231,13 +2287,13 @@ for i in range(1,26514):
 <!-- more -->
 <h2 id="愿望清单">愿望清单</h2>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-9987916"><label class="task-list-item-label" for="task-item-9987916"> 载着我老婆 我老婆搂着我 路过樱花树（不一定是樱花树，主要是搂）</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-7056754"><label class="task-list-item-label" for="task-item-7056754"> 一起去海边</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-3321755"><label class="task-list-item-label" for="task-item-3321755"> 去游乐场 做恐怖的项目</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-7152232"><label class="task-list-item-label" for="task-item-7152232"> 回家</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-3343687"><label class="task-list-item-label" for="task-item-3343687"> 如果要造孩子的话，在高考那天造孩子，哈哈。</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-5205677"><label class="task-list-item-label" for="task-item-5205677"> 教老婆玩万智牌</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-5383618"><label class="task-list-item-label" for="task-item-5383618"> 吃炒饼</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-6847606"><label class="task-list-item-label" for="task-item-6847606"> 载着我老婆 我老婆搂着我 路过樱花树（不一定是樱花树，主要是搂）</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-1717549"><label class="task-list-item-label" for="task-item-1717549"> 一起去海边</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-76491"><label class="task-list-item-label" for="task-item-76491"> 去游乐场 做恐怖的项目</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-5550380"><label class="task-list-item-label" for="task-item-5550380"> 回家</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-650450"><label class="task-list-item-label" for="task-item-650450"> 如果要造孩子的话，在高考那天造孩子，哈哈。</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-8302237"><label class="task-list-item-label" for="task-item-8302237"> 教老婆玩万智牌</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-7831075"><label class="task-list-item-label" for="task-item-7831075"> 吃炒饼</label></li>
 </ul>
 ]]></content>
     </entry>
