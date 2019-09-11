@@ -3,10 +3,23 @@
 <head>
     <title>Hainan Univeristy</title>
     <link rel="icon" href="https://upload.wikimedia.org/wikipedia/zh/thumb/5/54/Hainan_University.jpg/200px-Hainan_University.jpg">
+    <link rel="stylesheet" href="https://borber.github.io/styles/main.css?=a3" type='text/css' media='all'>
     <base target="_blank">
     <link rel="stylesheet" href="exercise.css">
 </head>
 <body>
+<div class="loader fadeout">
+    <div class="loader-content">
+        <div class="loading">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</div>
+
 <div class="logo">
     <img src="https://www.hainanu.edu.cn/home2018/imgs/logo.png" alt="图标">
     <div class="list">
@@ -50,5 +63,14 @@
 <script src="https://cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script>
 <script src ="https://borber.cn/media/scripts/lib/fireworks.js"> </script>
 <!--    点击爆炸特效 ends-->
+
+<script id="rendered-js">window.onload = function () {
+    setTimeout(function () {
+        var loader = document.getElementsByClassName("loader")[0];
+        loader.className = "loader fadeout"; //使用渐隐的方法淡出loading page
+        setTimeout(function () {loader.style.display = "none";}, 1000);
+    }, 300);
+};
+</script>
 </body>
 </html>
