@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://borber.github.io</id>
     <title>BORBER</title>
-    <updated>2019-09-11T10:10:10.524Z</updated>
+    <updated>2019-09-11T16:12:38.126Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://borber.github.io"/>
     <link rel="self" href="https://borber.github.io/atom.xml"/>
@@ -330,75 +330,88 @@ Tomcat started.
 public class MyArrayList {
     private static final int DEFAULT_CAPACITY = 10;
     private int theSize;
-    private int[] theItems;
+
+
+
+    static class Doub{
+        int modulus;
+        int index;
+        Doub(int modulus,int index){
+            this.modulus = modulus;
+            this.index = index;
+        }
+    }
+
+    private Doub[] theItems;
+//    private int[] theItems;
 
     /**
-    * @Description: 通过调用 doClear() 创造列表数组
-    * @Author: BORBER
-    * @Date: 2019/9/3
-    */
+     * @Description: 通过调用 doClear() 创造列表数组
+     * @Author: BORBER
+     * @Date: 2019/9/3
+     */
     public MyArrayList(){
         doClear();
     }
 
     /**
-    * @Description: 通过调用 doClear() 更新列表数组
-    * @return: void
-    * @Author: BORBER
-    * @Date: 2019/9/3
-    */
+     * @Description: 通过调用 doClear() 更新列表数组
+     * @return: void
+     * @Author: BORBER
+     * @Date: 2019/9/3
+     */
     public void clear(){
         doClear();
     }
 
     /**
-    * @Description: 通过调用 ensureCapacity 清零列表长度 返回新的队列
-    * @return: void
-    * @Author: BORBER
-    * @Date: 2019/9/3
-    */
+     * @Description: 通过调用 ensureCapacity 清零列表长度 返回新的队列
+     * @return: void
+     * @Author: BORBER
+     * @Date: 2019/9/3
+     */
     private void doClear(){
         theSize = 0; ensureCapacity( DEFAULT_CAPACITY);
     }
 
     /**
-    * @Description: 返回列表元素个数
-    * @return: int
-    * @Author: BORBER
-    * @Date: 2019/9/3
-    */
+     * @Description: 返回列表元素个数
+     * @return: int
+     * @Author: BORBER
+     * @Date: 2019/9/3
+     */
     public int size(){
         return theSize;
     }
 
     /**
-    * @Description: 返回列表是否为空
-    * @return: boolean
-    * @Author: BORBER
-    * @Date: 2019/9/3
-    */
+     * @Description: 返回列表是否为空
+     * @return: boolean
+     * @Author: BORBER
+     * @Date: 2019/9/3
+     */
     public boolean isEmpty(){
         return size() == 0;
     }
 
     /**
-    * @Description: 去除多余的列表数组空间
-    * @return: void
-    * @Author: BORBER
-    * @Date: 2019/9/3
-    */
+     * @Description: 去除多余的列表数组空间
+     * @return: void
+     * @Author: BORBER
+     * @Date: 2019/9/3
+     */
     public void trimToSize(){
 
     }
 
     /**
-    * @Description: 通过下标进行列表查询
-    * @Param: [idx]
-    * @return: int
-    * @Author: BORBER
-    * @Date: 2019/9/3
-    */
-    public int get(int idx){
+     * @Description: 通过下标进行列表查询
+     * @Param: [idx]
+     * @return: int
+     * @Author: BORBER
+     * @Date: 2019/9/3
+     */
+    public Doub get(int idx){
         if(idx &lt; 0||idx &gt;= size()) {
             throw new ArrayIndexOutOfBoundsException();
         }
@@ -406,75 +419,75 @@ public class MyArrayList {
     }
 
     /**
-    * @Description: 通过下标进行元素赋值 并返回旧值
-    * @Param: [idx, newVal]
-    * @return: int
-    * @Author: BORBER
-    * @Date: 2019/9/3
-    */
-    public int set(int idx,int newVal){
+     * @Description: 通过下标进行元素赋值 并返回旧值
+     * @Param: [idx, newVal]
+     * @return: int
+     * @Author: BORBER
+     * @Date: 2019/9/3
+     */
+    public Doub set(int idx,int a,int b){
         if(idx &lt; 0||idx &gt;= size()){
             throw new ArrayIndexOutOfBoundsException();
         }
-        int old = theItems[idx];
-        theItems[idx] = newVal;
+        Doub old = theItems[idx];
+        theItems[idx] = new Doub(a, b);
         return old;
     }
 
     /**
-    * @Description: 更新列表数组
-    * @Param: [newCapacity]
-    * @return: void
-    * @Author: BORBER
-    * @Date: 2019/9/3
-    */
+     * @Description: 更新列表数组
+     * @Param: [newCapacity]
+     * @return: void
+     * @Author: BORBER
+     * @Date: 2019/9/3
+     */
     public void ensureCapacity(int newCapacity){
         if(newCapacity &lt; theSize){
             return;
         }
-        int[] old = theItems;
-        theItems = new int[newCapacity];
-        if (size() &gt;= 0) {
+        Doub[] old = theItems;
+        theItems = new Doub[newCapacity];
+        if (size() &gt; 0) {
             System.arraycopy(old, 0, theItems, 0, size());
         }
     }
 
-    public boolean add(int x){
-        add( size(), x);
+    public boolean add(int a,int b){
+        add( size(), a, b);
         return true;
     }
 
     /**
-    * @Description: 通过下标插入 下标小于 0 默认为0 大于队列长度 默认为队列末端
-    * @Param: [idx, x]
-    * @return: void
-    * @Author: BORBER
-    * @Date: 2019/9/3
-    */
-    public void add(int idx, int x){
-        x = x&lt;0?0:Math.min(x, size());
+     * @Description: 通过下标插入 下标小于 0 默认为0 大于队列长度 默认为队列末端
+     * @Param: [idx, x]
+     * @return: void
+     * @Author: BORBER
+     * @Date: 2019/9/3
+     */
+    public void add(int idx, int a, int b){
+        idx = idx&lt;0?0:Math.min(idx, size());
         if(theItems.length == size()){
             ensureCapacity(size()+DEFAULT_CAPACITY);
         }
         if (size() - idx &gt;= 0) {
             System.arraycopy(theItems, idx, theItems, idx + 1, size() - idx);
         }
-        theItems[idx] = x;
+        theItems[idx] = new Doub(a, b);
         ++theSize;
     }
 
     /**
-    * @Description: 通过下标 删除元素
-    * @Param: [idx]
-    * @return: int
-    * @Author: BORBER
-    * @Date: 2019/9/3
-    */
-    public int remove(int idx){
+     * @Description: 通过下标 删除元素
+     * @Param: [idx]
+     * @return: int
+     * @Author: BORBER
+     * @Date: 2019/9/3
+     */
+    public Doub remove(int idx){
         if (idx &lt; 0||idx &gt;size()){
             throw new ArrayIndexOutOfBoundsException();
         }
-        int removedItem = theItems[idx];
+        Doub removedItem = theItems[idx];
         if (size() - 1 - idx &gt;= 0) {
             System.arraycopy(theItems, idx + 1, theItems, idx, size() - 1 - idx);
         }
@@ -482,11 +495,25 @@ public class MyArrayList {
         return removedItem;
     }
 
-    public java.util.Iterator&lt;Integer&gt; iterator(){
-        return new ArrayListIterator();
+
+    /**
+     * @Description: 返回迭代器
+     * @return: java.util.Iterator&lt;java.lang.Integer&gt;
+     * @Author: BORBER
+     * @Date: 2019/9/3
+     */
+    public java.util.Iterator&lt;Doub&gt; iterator(){
+        return new MyArrayList.ArrayListIterator();
     }
 
-    private class ArrayListIterator implements java.util.Iterator&lt;Integer&gt;{
+
+    /**
+     * @Description: 迭代器接口
+     * @return:
+     * @Author: BORBER
+     * @Date: 2019/9/3
+     */
+    private class ArrayListIterator implements java.util.Iterator&lt;Doub&gt;{
 
         private int current = 0;
         @Override
@@ -495,7 +522,7 @@ public class MyArrayList {
         }
 
         @Override
-        public Integer next() {
+        public Doub next() {
             if (!hasNext()){
                 throw new java.util.NoSuchElementException();
             }
@@ -508,6 +535,7 @@ public class MyArrayList {
         }
     }
 }
+
 
 </code></pre>
 <h5 id="2linkedlist">2.LinkedList</h5>
@@ -2290,13 +2318,13 @@ for i in range(1,26514):
 <!-- more -->
 <h2 id="愿望清单">愿望清单</h2>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-4587165"><label class="task-list-item-label" for="task-item-4587165"> 载着我老婆 我老婆搂着我 路过樱花树（不一定是樱花树，主要是搂）</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-1062898"><label class="task-list-item-label" for="task-item-1062898"> 一起去海边</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-9760440"><label class="task-list-item-label" for="task-item-9760440"> 去游乐场 做恐怖的项目</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-9907236"><label class="task-list-item-label" for="task-item-9907236"> 回家</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-7907209"><label class="task-list-item-label" for="task-item-7907209"> 如果要造孩子的话，在高考那天造孩子，哈哈。</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-4239660"><label class="task-list-item-label" for="task-item-4239660"> 教老婆玩万智牌</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-2066453"><label class="task-list-item-label" for="task-item-2066453"> 吃炒饼</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-5804234"><label class="task-list-item-label" for="task-item-5804234"> 载着我老婆 我老婆搂着我 路过樱花树（不一定是樱花树，主要是搂）</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-6069534"><label class="task-list-item-label" for="task-item-6069534"> 一起去海边</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-4228045"><label class="task-list-item-label" for="task-item-4228045"> 去游乐场 做恐怖的项目</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-680814"><label class="task-list-item-label" for="task-item-680814"> 回家</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-4062296"><label class="task-list-item-label" for="task-item-4062296"> 如果要造孩子的话，在高考那天造孩子，哈哈。</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-5697970"><label class="task-list-item-label" for="task-item-5697970"> 教老婆玩万智牌</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-2216092"><label class="task-list-item-label" for="task-item-2216092"> 吃炒饼</label></li>
 </ul>
 ]]></content>
     </entry>
