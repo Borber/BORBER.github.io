@@ -4,64 +4,7 @@
     <title>Hainan Univeristy</title>
     <link rel="icon" href="https://upload.wikimedia.org/wikipedia/zh/thumb/5/54/Hainan_University.jpg/200px-Hainan_University.jpg">
     <base target="_blank">
-    <style>
-        body{
-            background-color: cadetblue;
-        }
-        .logo{
-            text-align: center;
-            margin: auto;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-        }
-        .imgs{
-            margin: auto;
-            padding-top: 30px;
-            text-align: center;
-            border-radius: 15px;
-        }
-        .list{
-            margin-top: 10px;
-            text-align: center;
-            background: linear-gradient(to right, #1c7ed6, #9c36b5);
-            -webkit-background-clip: text;
-            color: transparent;
-        }
-        .article{
-            width: 1500px;
-            height: 850px;
-            border-radius: 10px;
-            margin: auto;
-            background-color: gainsboro;
-            margin-top: 50px;
-            margin-bottom: 50px;
-        }
-        .title{
-            padding-top: 50px;
-            text-align: center;
-            background: linear-gradient(to right, red, blue);
-            -webkit-background-clip: text;
-            color: transparent;
-        }
-        a{
-            text-decoration: none;
-        }
-        .paragraph{
-            padding-top: 50px;
-            margin: auto;
-            width: 1000px;
-        }
-        .author{
-            text-align: center;
-            font-style: italic;
-            font-weight: bold;
-            background: linear-gradient(to right, blueviolet, aquamarine);
-            -webkit-background-clip: text;
-            color: transparent;
-        }
-    </style>
+    <link rel="stylesheet" href="exercise.css">
 </head>
 <body>
 <div class="logo">
@@ -102,6 +45,10 @@
 
     <p class="author">By: BORBER</p>
 </div>
-
+<!--    点击爆炸特效 start-->
+<canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas>
+<script src="https://cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script>
+<script src ="https://borber.cn/media/scripts/lib/fireworks.js"> </script>
+<!--    点击爆炸特效 ends-->
 </body>
 </html>
