@@ -25,8 +25,7 @@ body{
     color: transparent;
 }
 .article{
-    width: 1500px;
-    height: 850px;
+    width: 90%;
     border-radius: 10px;
     margin: auto;
     background-color: gainsboro;
@@ -46,7 +45,7 @@ a{
 .paragraph{
     padding-top: 50px;
     margin: auto;
-    width: 1000px;
+    width: 90%;
 }
 .author{
     text-align: center;
