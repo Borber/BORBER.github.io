@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://borber.github.io</id>
     <title>BORBER</title>
-    <updated>2019-09-19T05:59:09.724Z</updated>
+    <updated>2019-09-20T11:20:53.650Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://borber.github.io"/>
     <link rel="self" href="https://borber.github.io/atom.xml"/>
@@ -67,11 +67,11 @@
 &lt;/view&gt;
 </code></pre>
 <p>下附微信小程序码 以及 运行截图:</p>
-<p><img src="https://photouploads.com/images/EnwE.png" alt="EnwE.png"></p>
-<p><img src="https://photouploads.com/images/EnwS.png" alt="EnwS.png"></p>
-<p><img src="https://photouploads.com/images/Enwj.png" alt="Enwj.png"></p>
-<p><img src="https://photouploads.com/images/EnwM.png" alt="EnwM.png"></p>
-<p><img src="https://photouploads.com/images/Enwo.jpg" alt="Enwo.jpg"></p>
+<figure data-type="image" tabindex="1"><img src="https://photouploads.com/images/EnwE.png" alt="EnwE.png"></figure>
+<figure data-type="image" tabindex="2"><img src="https://photouploads.com/images/EnwS.png" alt="EnwS.png"></figure>
+<figure data-type="image" tabindex="3"><img src="https://photouploads.com/images/Enwj.png" alt="Enwj.png"></figure>
+<figure data-type="image" tabindex="4"><img src="https://photouploads.com/images/EnwM.png" alt="EnwM.png"></figure>
+<figure data-type="image" tabindex="5"><img src="https://photouploads.com/images/Enwo.jpg" alt="Enwo.jpg"></figure>
 <p>后续会加入 部分 科学计算器功能</p>
 ]]></content>
     </entry>
@@ -131,7 +131,7 @@ task clean(type: Delete) {
 <p>再点击 Sync with Gradle Files 一般就在你的右上角 倒数 三四个.</p>
 <p>点击 运行按钮</p>
 <h5 id="运行截图">运行截图:</h5>
-<p><img src="https://www.z4a.net/images/2019/09/06/Screenshot_1567761650.png" alt="Screenshot_1567761650.png"></p>
+<figure data-type="image" tabindex="1"><img src="https://www.z4a.net/images/2019/09/06/Screenshot_1567761650.png" alt="Screenshot_1567761650.png"></figure>
 ]]></content>
     </entry>
     <entry>
@@ -152,8 +152,8 @@ task clean(type: Delete) {
 <h4 id="首先是-ssh-连接">首先是 ssh 连接:</h4>
 <h5 id="1-方案一">1. 方案一:</h5>
 <p>​			直接使用,阿里云自带的远程连接,但是体验不太好.</p>
-<p><img src="https://www.z4a.net/images/2019/09/04/yuancheng.png" alt="yuancheng.png"></p>
-<p><img src="https://www.z4a.net/images/2019/09/04/lianjiesecc.png" alt="lianjiesecc.png"></p>
+<figure data-type="image" tabindex="1"><img src="https://www.z4a.net/images/2019/09/04/yuancheng.png" alt="yuancheng.png"></figure>
+<figure data-type="image" tabindex="2"><img src="https://www.z4a.net/images/2019/09/04/lianjiesecc.png" alt="lianjiesecc.png"></figure>
 <p>这样就成功的连接到了,不太推荐这个方案,不太稳定,体验也不好.</p>
 <h5 id="2方案二">2.方案二:</h5>
 <ol start="0">
@@ -162,23 +162,23 @@ task clean(type: Delete) {
 </li>
 <li>
 <p>首先 打开 Xshell 新建一个 连接</p>
-<p><img src="https://www.z4a.net/images/2019/09/04/xinjian.png" alt="xinjian.png"></p>
-<p><img src="https://www.z4a.net/images/2019/09/04/xinjian2.png" alt="xinjian2.png"></p>
+<figure data-type="image" tabindex="3"><img src="https://www.z4a.net/images/2019/09/04/xinjian.png" alt="xinjian.png"></figure>
+<figure data-type="image" tabindex="4"><img src="https://www.z4a.net/images/2019/09/04/xinjian2.png" alt="xinjian2.png"></figure>
 <p>你的IP地址可以在 阿里云的控制台找到:</p>
-<p><img src="https://www.z4a.net/images/2019/09/04/2019-09-04_16-24-04.png" alt="2019-09-04_16-24-04.png"></p>
+<figure data-type="image" tabindex="5"><img src="https://www.z4a.net/images/2019/09/04/2019-09-04_16-24-04.png" alt="2019-09-04_16-24-04.png"></figure>
 <p>同时 你可以修改密码</p>
 </li>
 <li>
 <p>设置自动登陆</p>
 <p>用户名填 root</p>
 <p>密码填你刚刚 重置的</p>
-<p><img src="https://www.z4a.net/images/2019/09/04/mima.png" alt="mima.png"></p>
+<figure data-type="image" tabindex="6"><img src="https://www.z4a.net/images/2019/09/04/mima.png" alt="mima.png"></figure>
 <p>然后退出 点连接</p>
-<p><img src="https://www.z4a.net/images/2019/09/04/lianjie.png" alt="lianjie.png"></p>
+<figure data-type="image" tabindex="7"><img src="https://www.z4a.net/images/2019/09/04/lianjie.png" alt="lianjie.png"></figure>
 <p>会弹出一个窗口 点确定就好:</p>
-<p><img src="https://www.z4a.net/images/2019/09/04/ssh3a295ac03b38385c.png" alt="ssh3a295ac03b38385c.png"></p>
+<figure data-type="image" tabindex="8"><img src="https://www.z4a.net/images/2019/09/04/ssh3a295ac03b38385c.png" alt="ssh3a295ac03b38385c.png"></figure>
 <p>如下 连接成功</p>
-<p><img src="https://www.z4a.net/images/2019/09/04/lianjiesecc4be9e291f5a6b532.png" alt="lianjiesecc4be9e291f5a6b532.png"></p>
+<figure data-type="image" tabindex="9"><img src="https://www.z4a.net/images/2019/09/04/lianjiesecc4be9e291f5a6b532.png" alt="lianjiesecc4be9e291f5a6b532.png"></figure>
 <p>为了之后的使用方便 这里推荐优化方案,不想的可以直接跳过:</p>
 <h6 id="优化">优化:</h6>
 <ol>
@@ -209,7 +209,7 @@ ssh -T git@github.com
 
 
 </code></pre>
-<p><img src="https://www.z4a.net/images/2019/09/04/sshkey.png" alt="sshkey.png"></p>
+<figure data-type="image" tabindex="10"><img src="https://www.z4a.net/images/2019/09/04/sshkey.png" alt="sshkey.png"></figure>
 </li>
 <li>
 <p>安装 zsh</p>
@@ -238,7 +238,7 @@ source ~/.zshrc
 <p>​</p>
 <h4 id="接下来是jdk的安装">接下来是JDK的安装:</h4>
 <h5 id="1-首先-下载-jdk">1. 首先 下载 JDK:</h5>
-<p><img src="https://www.z4a.net/images/2019/09/04/2019-09-04_20-21-44.png" alt="2019-09-04_20-21-44.png"></p>
+<figure data-type="image" tabindex="11"><img src="https://www.z4a.net/images/2019/09/04/2019-09-04_20-21-44.png" alt="2019-09-04_20-21-44.png"></figure>
 <pre><code class="language-shell">useradd java
 # 添加 java 用户
 passwd java 
@@ -350,7 +350,7 @@ Tomcat started.
 <p>现在 你只需要 将 你打包好的 War 包 放入 Tomcat 的 wabapps目录下 并  应用就好了</p>
 <p>附:  <a href="https://blog.csdn.net/qq_36523667/article/details/78584488">IDEA打包 Tomcat</a> <a href="https://blog.csdn.net/silleyj/article/details/79493287">eclipse打包Tomcat</a></p>
 <p>我选择使用 xftp  我也推荐你选择它</p>
-<p><img src="https://www.z4a.net/images/2019/09/04/xftp.png" alt="xftp.png"></p>
+<figure data-type="image" tabindex="12"><img src="https://www.z4a.net/images/2019/09/04/xftp.png" alt="xftp.png"></figure>
 <p>再返回 bin 目录</p>
 <pre><code class="language-shell">cd /usr/local/tomcat/bin
 
@@ -365,7 +365,7 @@ Tomcat started.
 # 访问 https://&quot;ipaddress&quot;:8080/&quot;Object Name&quot;
 # ipaddress 用你的 IP地址 替换  Object Name 用你的 war 包名字替换
 </code></pre>
-<p><img src="https://www.z4a.net/images/2019/09/04/BORBER-2.png" alt="BORBER-2.png"></p>
+<figure data-type="image" tabindex="13"><img src="https://www.z4a.net/images/2019/09/04/BORBER-2.png" alt="BORBER-2.png"></figure>
 <p>访问截图</p>
 <p>祝你好运.</p>
 ]]></content>
@@ -660,10 +660,10 @@ public class MyArrayList {
 <pre><code class="language-ejs">&lt;%- include('./birthday') %&gt;
 </code></pre>
 <p>如图</p>
-<p><img src="https://www.z4a.net/images/2019/08/30/2019-08-30_00-54-17.png" alt="2019-08-30_00-54-17.png"></p>
+<figure data-type="image" tabindex="1"><img src="https://www.z4a.net/images/2019/08/30/2019-08-30_00-54-17.png" alt="2019-08-30_00-54-17.png"></figure>
 <h3 id="use">USE:</h3>
 <p>重启客户端 填写你网站的生日并保存:</p>
-<p><img src="https://www.z4a.net/images/2019/08/30/2019-08-30_00-55-34.png" alt="2019-08-30_00-55-34.png"></p>
+<figure data-type="image" tabindex="2"><img src="https://www.z4a.net/images/2019/08/30/2019-08-30_00-55-34.png" alt="2019-08-30_00-55-34.png"></figure>
 <blockquote>
 <p>月/日/年 &quot;空格&quot; 时:分:秒</p>
 </blockquote>
@@ -683,7 +683,7 @@ public class MyArrayList {
 <p>在大学的朋友都知道,校园网是一个极其操蛋,而且是必须要用的东西,我的大学的价格是28元一月 一个账号,只能一台设备使用,这意味着,如果你手机连接之后,你的电脑就不能使用了,这又是何等的操蛋.</p>
 <p>不过我也是比较幸运的是,在开学的前一个月,在上英语视听说的机房里,看到了校园网的登陆界面是有缓存着账号和密码的,而且不同于我们的学生号,它只有短短的六位,以及我在旁边几台电脑中,皆发现了此账号,我敏锐的意识到,这是一个VIP账号,或者是老师账号.</p>
 <p>在我进入该账号的校园网管理界面时,我就知道这是一个为期四年的长久计划.</p>
-<p><img src="https://www.z4a.net/images/2019/08/29/2019-08-29_13-55-24.png" alt="2019-08-29_13-55-24.png"></p>
+<figure data-type="image" tabindex="1"><img src="https://www.z4a.net/images/2019/08/29/2019-08-29_13-55-24.png" alt="2019-08-29_13-55-24.png"></figure>
 <p>我通过html 元素修改 将 password 改为 text 直接获得了明文密码,并且在之后的实验中,确定 这个账号和学生账号不同,它可以同时登陆,4-5台设备,这也意味着,蹭网的事,不会使账号的主人无网可上.并且,在宿舍时,只要共用一台路由器,便可以通过路由器只占用一个设备位置.</p>
 <p>事情本来到这里就已经完了,但是随后的时间里,特别是到了醉经,我们宿舍的账号会被挤下登录,而我又经常将电脑放在宿舍跑python 之类的脚本.这无疑会对我造成很大的损失.</p>
 <p>于是我决定写一个 python 脚本来自动检测网络,然后自动重连校园网.以下时源码,</p>
@@ -731,7 +731,7 @@ while True:                                         # 死循环
 </code></pre>
 <p>不可交互 我一直不理解,谷歌,百度,了很久,没有解决办法,最后自己通过 Chrome 的 控制台 发现每次点击password ,&quot;pwd&quot; 的属性都会改变一点,但是我尝试 pwd.click() 时发现一样报错,我终于怀疑到 它上面的一个元素了 &quot;pwd_tip&quot; 只有点击一次它 , &quot;pwd&quot; 才能工作. 这个应该就是网站的保护机制吧,但总之 我成功了.</p>
 <p>并且使用 pyinstaller 将其打包成了 exe 可执行文件</p>
-<p><img src="https://www.z4a.net/images/2019/08/29/2019-08-29_14-15-11deb589bcf315b88e.png" alt="2019-08-29_14-15-11deb589bcf315b88e.png"></p>
+<figure data-type="image" tabindex="2"><img src="https://www.z4a.net/images/2019/08/29/2019-08-29_14-15-11deb589bcf315b88e.png" alt="2019-08-29_14-15-11deb589bcf315b88e.png"></figure>
 <p>如图 它一个白天 为我自动登陆了4次</p>
 ]]></content>
     </entry>
@@ -755,7 +755,7 @@ while True:                                         # 死循环
 <p>意为: “我在巨大的痛苦之中，请帮帮我”</p>
 </blockquote>
 <p>当然不可否认的是当时是中二的年纪,但是R&amp;M对现实的讽刺,对存在的怀疑,真的一次又一次地打破我对生活的固有印象,我觉得自己有很多的思想路线受到了他潜移默化的影响</p>
-<p><img src="https://www.z4a.net/images/2019/08/27/642540.png" alt="642540.png"></p>
+<figure data-type="image" tabindex="1"><img src="https://www.z4a.net/images/2019/08/27/642540.png" alt="642540.png"></figure>
 <p>在现实中 Rick 毫无疑问是个烂人,对自己的女儿不负责任,欺负女婿,成天带着外孙冒险.但是,不知道为什么,我就是喜欢Rick,目空一切,做什么都不用考虑后果,因为再怎么严重的事,最多不过是换一个时空罢了,他有无穷无尽的时空,他就是神,上帝也只是他金灿灿的睾丸.</p>
 <p>我爱R&amp;M,我爱这个世界,为什么呢?用Rick的话来说:</p>
 <blockquote>
@@ -763,7 +763,7 @@ while True:                                         # 死循环
 </blockquote>
 <h5 id="brickleberry">Brickleberry:</h5>
 <p>刚刚开始看,也已经停不下来了.全剧人渣.以后在做点评吧.</p>
-<p><img src="https://www.z4a.net/images/2019/08/27/2019-08-27_22-07-47.png" alt="2019-08-27_22-07-47.png"></p>
+<figure data-type="image" tabindex="2"><img src="https://www.z4a.net/images/2019/08/27/2019-08-27_22-07-47.png" alt="2019-08-27_22-07-47.png"></figure>
 <h5 id=""></h5>
 ]]></content>
     </entry>
@@ -811,7 +811,7 @@ print(json)
 </li>
 <li>
 <p>愉快的装逼吧.</p>
-<p><img src="https://www.z4a.net/images/2019/08/26/Screenshot_2019-08-26-10-52-47-183_com.tencent.mm.jpg" alt="Screenshot_2019-08-26-10-52-47-183_com.tencent.mm.jpg"></p>
+<figure data-type="image" tabindex="1"><img src="https://www.z4a.net/images/2019/08/26/Screenshot_2019-08-26-10-52-47-183_com.tencent.mm.jpg" alt="Screenshot_2019-08-26-10-52-47-183_com.tencent.mm.jpg"></figure>
 </li>
 </ol>
 <p>按照 原文作者的说法 应该是 一次使用 ,天天帮你刷.</p>
@@ -832,9 +832,9 @@ print(json)
 <p>IRC 可以完全匿名,也没有监控.你只需要遵守你参与的频道的规则即可.这也意味着你可以自己创建一个频道 不受任何人的监管.他不要求你的手机号 甚至某种概念下你也不需要一个邮箱 ,因为 你可以在不注册时使用任何一个未被注册的名字作为临时名字. 当然了 使用一个匿名邮箱来注册一个常用名字才是明智之选.(请注意 是匿名邮箱 而非临时邮箱)</p>
 <h3 id="irc-注册">IRC 注册:</h3>
 <p>首先安装 <a href="https://hexchat.github.io">HexChat</a> 全平台支持 并且免费(Windows 平台 可选择付费 两版本无差别)</p>
-<p><img src="https://www.z4a.net/images/2019/08/22/1531970365866ed08.png" alt="1531970365866ed08.png"></p>
+<figure data-type="image" tabindex="1"><img src="https://www.z4a.net/images/2019/08/22/1531970365866ed08.png" alt="1531970365866ed08.png"></figure>
 <p>点击连接 一般都是直接freenode 服务器</p>
-<p><img src="https://www.z4a.net/images/2019/08/22/2edec82672f97351d.png" alt="2edec82672f97351d.png"></p>
+<figure data-type="image" tabindex="2"><img src="https://www.z4a.net/images/2019/08/22/2edec82672f97351d.png" alt="2edec82672f97351d.png"></figure>
 <p>在这里输入下面的代码</p>
 <pre><code class="language-sh">/nick &quot;your name&quot;
 /msg nickserv register &quot;密码&quot; &quot;邮件地址&quot;
@@ -848,18 +848,18 @@ print(json)
 /msg NickServ identify &quot;password&quot;
 </code></pre>
 <h3 id="hexchat-汉化">HexChat 汉化:</h3>
-<p><img src="https://www.z4a.net/images/2019/08/22/3905330441d5440d3.png" alt="3905330441d5440d3.png"></p>
-<p><img src="https://www.z4a.net/images/2019/08/22/447e31806a0438675.png" alt="447e31806a0438675.png"></p>
+<figure data-type="image" tabindex="3"><img src="https://www.z4a.net/images/2019/08/22/3905330441d5440d3.png" alt="3905330441d5440d3.png"></figure>
+<figure data-type="image" tabindex="4"><img src="https://www.z4a.net/images/2019/08/22/447e31806a0438675.png" alt="447e31806a0438675.png"></figure>
 <p>如图设置即可</p>
 <h3 id="加入频道">加入频道:</h3>
 <p>选择 -&gt; 服务器 -&gt; Channel list</p>
-<p><img src="https://www.z4a.net/images/2019/08/22/52e6217ddbde4e986.png" alt="52e6217ddbde4e986.png"></p>
+<figure data-type="image" tabindex="5"><img src="https://www.z4a.net/images/2019/08/22/52e6217ddbde4e986.png" alt="52e6217ddbde4e986.png"></figure>
 <p>选择一个加入即可 (如果没有显示 点击一下 搜索)</p>
 <h3 id="中文乱码">中文乱码:</h3>
-<p><img src="https://www.z4a.net/images/2019/08/22/6217c0d66a43785b1.png" alt="6217c0d66a43785b1.png"></p>
-<p><img src="https://www.z4a.net/images/2019/08/22/72af7f5c7e5ff8ead.png" alt="72af7f5c7e5ff8ead.png"></p>
+<figure data-type="image" tabindex="6"><img src="https://www.z4a.net/images/2019/08/22/6217c0d66a43785b1.png" alt="6217c0d66a43785b1.png"></figure>
+<figure data-type="image" tabindex="7"><img src="https://www.z4a.net/images/2019/08/22/72af7f5c7e5ff8ead.png" alt="72af7f5c7e5ff8ead.png"></figure>
 <p>字体设置成微软雅黑就好</p>
-<p><img src="https://www.z4a.net/images/2019/08/22/8.png" alt="8.png"></p>
+<figure data-type="image" tabindex="8"><img src="https://www.z4a.net/images/2019/08/22/8.png" alt="8.png"></figure>
 <p>搞定</p>
 <p>以后 可能会有进阶的使用技巧更新</p>
 ]]></content>
@@ -874,34 +874,34 @@ print(json)
 ]]></summary>
         <content type="html"><![CDATA[<p>你爬过山吗?喜欢爬山吗?</p>
 <!-- more -->
-<p><img src="https://www.z4a.net/images/2019/08/16/800w5853h5640rfviewer_4217e9cf0eaeaceff86.jpg" alt="800w5853h5640rfviewer_4217e9cf0eaeaceff86.jpg"></p>
+<figure data-type="image" tabindex="1"><img src="https://www.z4a.net/images/2019/08/16/800w5853h5640rfviewer_4217e9cf0eaeaceff86.jpg" alt="800w5853h5640rfviewer_4217e9cf0eaeaceff86.jpg"></figure>
 <p>说实话我是不太喜欢的,非常累,往往一怕就是大半天,一整天.爬的时候非常的热,到了山顶又是急剧的冷,以及大多数值得爬的山都属于景区,里面的消费也不低.总之有非常多的理由可以说服我,爬山是一个 &quot;费力不讨好,花钱找罪受&quot;的活动,有这个时间,你在空调房里吃西瓜,他不甜吗?他不香吗? 但是几个死党一拉伙,就兴冲冲的去了.</p>
 <p>下场….….</p>
-<p><img src="https://www.z4a.net/images/2019/08/16/800w5640h5853rfviewer_421.jpg" alt="800w5640h5853rfviewer_421.jpg"></p>
+<figure data-type="image" tabindex="2"><img src="https://www.z4a.net/images/2019/08/16/800w5640h5853rfviewer_421.jpg" alt="800w5640h5853rfviewer_421.jpg"></figure>
 <p>这还是开始阶段,后来 我们都累的没有精力拍照了</p>
 <p>望山跑死马 真的是人间至理,看着不远,就在前面,以为上了这个山头就到了,谁知道,一山更比一山高, 这个山头过了 还有下一个.我们就是在一次又一次的绝望与重拾希望中,大概是爬了四个多小时终于登顶了.</p>
 <p>不过中间的景色也是很棒的, 有一条玻璃栈道,也是十分的好看.</p>
-<p><img src="https://www.z4a.net/images/2019/08/16/800w5640h5853rfviewer_421f67dba9d236aebd9.jpg" alt="800w5640h5853rfviewer_421f67dba9d236aebd9.jpg"></p>
-<p><img src="https://www.z4a.net/images/2019/08/16/800w5640h5853rfviewer_42189eb222231e49957.jpg" alt="800w5640h5853rfviewer_42189eb222231e49957.jpg"></p>
+<figure data-type="image" tabindex="3"><img src="https://www.z4a.net/images/2019/08/16/800w5640h5853rfviewer_421f67dba9d236aebd9.jpg" alt="800w5640h5853rfviewer_421f67dba9d236aebd9.jpg"></figure>
+<figure data-type="image" tabindex="4"><img src="https://www.z4a.net/images/2019/08/16/800w5640h5853rfviewer_42189eb222231e49957.jpg" alt="800w5640h5853rfviewer_42189eb222231e49957.jpg"></figure>
 <p>这就是 武功山的金顶了.到金顶时已经是傍晚了,其他几个朋友先行一步到达,租好了帐篷,直接就可以去吃饭真的太幸福了.只是晚上的风是真的冷.以及我老婆抢我的被子...... 就更是雪上加霜.所以放上一张我老婆的丑照.</p>
-<p><img src="https://www.z4a.net/images/2019/08/16/800w5640h5853rfviewer_42183b14a23fe04b516.jpg" alt="800w5640h5853rfviewer_42183b14a23fe04b516.jpg"></p>
+<figure data-type="image" tabindex="5"><img src="https://www.z4a.net/images/2019/08/16/800w5640h5853rfviewer_42183b14a23fe04b516.jpg" alt="800w5640h5853rfviewer_42183b14a23fe04b516.jpg"></figure>
 <blockquote>
 <p>在金顶上抽了两根烟</p>
 </blockquote>
-<p><img src="https://www.z4a.net/images/2019/08/16/800w5640h5853rfviewer_421163d0ca900f039c2.jpg" alt="800w5640h5853rfviewer_421163d0ca900f039c2.jpg"></p>
+<figure data-type="image" tabindex="6"><img src="https://www.z4a.net/images/2019/08/16/800w5640h5853rfviewer_421163d0ca900f039c2.jpg" alt="800w5640h5853rfviewer_421163d0ca900f039c2.jpg"></figure>
 <blockquote>
 <p>某只臭猪猪</p>
 </blockquote>
-<p><img src="https://www.z4a.net/images/2019/08/16/800w5640h5853rfviewer_421dbe6d023494b47ca.jpg" alt="800w5640h5853rfviewer_421dbe6d023494b47ca.jpg"></p>
+<figure data-type="image" tabindex="7"><img src="https://www.z4a.net/images/2019/08/16/800w5640h5853rfviewer_421dbe6d023494b47ca.jpg" alt="800w5640h5853rfviewer_421dbe6d023494b47ca.jpg"></figure>
 <p>晚上的景色, 格外的平静,就算旁边不时会传来旅客的笑语.</p>
 <p>我们在这夜色下聊天,喝酒,吃零食.说了很多很多以前的事,也商量了一些以后的事.有时候突然陷入沉默,总是会有人迅速找到话题. 哎 , 友谊就是这么的神奇.累了一天,只要坐在一起,就仿佛一身疲惫都消失了.</p>
-<p><img src="https://www.z4a.net/images/2019/08/16/800w5853h5640rfviewer_4212f742c213bcc265b.jpg" alt="800w5853h5640rfviewer_4212f742c213bcc265b.jpg"></p>
+<figure data-type="image" tabindex="8"><img src="https://www.z4a.net/images/2019/08/16/800w5853h5640rfviewer_4212f742c213bcc265b.jpg" alt="800w5853h5640rfviewer_4212f742c213bcc265b.jpg"></figure>
 <p>第二天一早就起来等着日出,冷到需要裹着被子才能抵御冷风,很多的游客都出来等待.虽然日出没有想象中的好看,但是也十分的不错</p>
-<p><img src="https://www.z4a.net/images/2019/08/16/0.jpg" alt="0.jpg"></p>
-<p><img src="https://www.z4a.net/images/2019/08/16/07210aa0d1dd61efb.jpg" alt="07210aa0d1dd61efb.jpg"></p>
+<figure data-type="image" tabindex="9"><img src="https://www.z4a.net/images/2019/08/16/0.jpg" alt="0.jpg"></figure>
+<figure data-type="image" tabindex="10"><img src="https://www.z4a.net/images/2019/08/16/07210aa0d1dd61efb.jpg" alt="07210aa0d1dd61efb.jpg"></figure>
 <p>最后是临下山前的合照</p>
-<p><img src="https://www.z4a.net/images/2019/08/16/800w5853h5640rfviewer_421.jpg" alt="800w5853h5640rfviewer_421.jpg"></p>
-<p><img src="https://www.z4a.net/images/2019/08/16/800w5640h5853rfviewer_4212d87e771510b19be.jpg" alt="800w5640h5853rfviewer_4212d87e771510b19be.jpg"></p>
+<figure data-type="image" tabindex="11"><img src="https://www.z4a.net/images/2019/08/16/800w5853h5640rfviewer_421.jpg" alt="800w5853h5640rfviewer_421.jpg"></figure>
+<figure data-type="image" tabindex="12"><img src="https://www.z4a.net/images/2019/08/16/800w5640h5853rfviewer_4212d87e771510b19be.jpg" alt="800w5640h5853rfviewer_4212d87e771510b19be.jpg"></figure>
 <p><strong>此时一别 来年再见</strong></p>
 ]]></content>
     </entry>
@@ -926,7 +926,7 @@ while True:
     print(requests.get(url).json()['content'])
 </code></pre>
 <p>看起来智商不太高的样子</p>
-<p><img src="https://www.z4a.net/images/2019/08/16/2019-08-16_17-32-55.png" alt="2019-08-16_17-32-55.png"></p>
+<figure data-type="image" tabindex="1"><img src="https://www.z4a.net/images/2019/08/16/2019-08-16_17-32-55.png" alt="2019-08-16_17-32-55.png"></figure>
 ]]></content>
     </entry>
     <entry>
@@ -1015,11 +1015,11 @@ driver.close()
 <p>我在官网下载不了,便在网上查阅了相关资料终于找到了可以下载的网址 <a href="http://dl.mongodb.org/dl/win32/x86_64">MongoDB</a> 访问该网址 找到最新的版本.</p>
 <p>我选择的是<a href="http://downloads.mongodb.org/win32/mongodb-win32-x86_64-2012plus-latest-signed.msi">win32/mongodb-win32-x86_64-2012plus-latest-signed.msi</a></p>
 <p>你可以按照 <a href="https://www.runoob.com/mongodb/mongodb-window-install.html">菜鸟教程</a> 来完成前期安装 但是  这一步</p>
-<p><img src="https://www.runoob.com/wp-content/uploads/2013/10/8F7AF133-BE49-4BAB-9F93-88A9D666F6C0.jpg" alt=""></p>
+<figure data-type="image" tabindex="1"><img src="https://www.runoob.com/wp-content/uploads/2013/10/8F7AF133-BE49-4BAB-9F93-88A9D666F6C0.jpg" alt=""></figure>
 <p>之后 你会发现 data 和 log 的路径已经默认配置好了 不用再按照教程 繁琐的配置了.</p>
 <p>直接 图形化安装之后就可以使用了.</p>
 <p>配上我的成功截图</p>
-<p><img src="https://www.z4a.net/images/2019/08/14/2019-08-14_12-59-33.png" alt="2019-08-14_12-59-33.png"></p>
+<figure data-type="image" tabindex="2"><img src="https://www.z4a.net/images/2019/08/14/2019-08-14_12-59-33.png" alt="2019-08-14_12-59-33.png"></figure>
 ]]></content>
     </entry>
     <entry>
@@ -1094,7 +1094,7 @@ driver.close()
 </li>
 </ol>
 <p>歌曲id 参见下图</p>
-<p><img src="https://www.z4a.net/images/2019/08/03/1607ae71f0bd3abd9.png" alt="1607ae71f0bd3abd9.png"></p>
+<figure data-type="image" tabindex="1"><img src="https://www.z4a.net/images/2019/08/03/1607ae71f0bd3abd9.png" alt="1607ae71f0bd3abd9.png"></figure>
 <h3 id="效果">效果</h3>
 <div id="aplayer5" class="aplayer aplayer-withlrc aplayer-withlist" data-id="2748492595" data-server=”netease" data-type="playlist" data-autoplay=”false” data-mode=”circulation”></div>
 <pre><code>																																																																 https://cloud.tencent.com/developer/support-plan?invite_code=3ddc7ex0dku8o</code></pre>
@@ -1304,7 +1304,7 @@ if __name__ == '__main__':
 </ol>
 <p>以后还会更新更多的工具，敬请期待与关注，如果你有什么需要，以及有什么好的工具想要推荐，欢迎提Issues</p>
 <p>也欢迎关注我的博客： <a href="https://borber.github.io">BORBER</a></p>
-<p><img src="https://www.z4a.net/images/2019/07/28/2018-07-13-011243.jpg" alt="2018-07-13-011243.jpg"></p>
+<figure data-type="image" tabindex="1"><img src="https://www.z4a.net/images/2019/07/28/2018-07-13-011243.jpg" alt="2018-07-13-011243.jpg"></figure>
 <p>LICENSE：</p>
 <p><a href="https://github.com/Borber/python-toolkits/blob/master/LICENSE.md">MIT</a></p>
 ]]></content>
@@ -2323,7 +2323,7 @@ start()
 <p><img src="https://www.z4a.net/images/2019/07/16/1.png" alt="1.png">在 lastest 页面中选择 NSFW 选项 (蓝色箭头)并点击刷新按钮(红色箭头)</p>
 </li>
 <li>
-<p><img src="https://www.z4a.net/images/2019/07/16/2c6289b60c5340c40.png" alt="2c6289b60c5340c40.png"></p>
+<figure data-type="image" tabindex="1"><img src="https://www.z4a.net/images/2019/07/16/2c6289b60c5340c40.png" alt="2c6289b60c5340c40.png"></figure>
 <p>在页面中 按f12调出 network 刷新页面(浏览器的刷新 区别于第二步) 选择第一个 找到 Request Headers 里的 cookie 全部复制</p>
 </li>
 <li>
@@ -2383,13 +2383,13 @@ for i in range(1,26514):
 <!-- more -->
 <h2 id="愿望清单">愿望清单</h2>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-2374514"><label class="task-list-item-label" for="task-item-2374514"> 载着我老婆 我老婆搂着我 路过樱花树（不一定是樱花树，主要是搂）</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-6217006"><label class="task-list-item-label" for="task-item-6217006"> 一起去海边</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-8342794"><label class="task-list-item-label" for="task-item-8342794"> 去游乐场 做恐怖的项目</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-8879538"><label class="task-list-item-label" for="task-item-8879538"> 回家</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-3678992"><label class="task-list-item-label" for="task-item-3678992"> 如果要造孩子的话，在高考那天造孩子，哈哈。</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-4403013"><label class="task-list-item-label" for="task-item-4403013"> 教老婆玩万智牌</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-1469109"><label class="task-list-item-label" for="task-item-1469109"> 吃炒饼</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-3239725"><label class="task-list-item-label" for="task-item-3239725"> 载着我老婆 我老婆搂着我 路过樱花树（不一定是樱花树，主要是搂）</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-9039680"><label class="task-list-item-label" for="task-item-9039680"> 一起去海边</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-6190271"><label class="task-list-item-label" for="task-item-6190271"> 去游乐场 做恐怖的项目</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-1106700"><label class="task-list-item-label" for="task-item-1106700"> 回家</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-6261302"><label class="task-list-item-label" for="task-item-6261302"> 如果要造孩子的话，在高考那天造孩子，哈哈。</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-8426933"><label class="task-list-item-label" for="task-item-8426933"> 教老婆玩万智牌</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-1192670"><label class="task-list-item-label" for="task-item-1192670"> 吃炒饼</label></li>
 </ul>
 ]]></content>
     </entry>
@@ -2527,7 +2527,7 @@ c-8,0,-12,-0.7,-12,-2z M1001 80H400000v40H1014z'/></svg></span></span></span><sp
 <h4 id="全微分在近似运算中的应用">全微分在近似运算中的应用</h4>
 <p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>f</mi><mo>(</mo><mi>x</mi><mo>+</mo><mi mathvariant="normal">∂</mi><mi>x</mi><mo separator="true">,</mo><mi>y</mi><mo>+</mo><mi mathvariant="normal">∂</mi><mi>y</mi><mo>)</mo><mo>≈</mo><mi>f</mi><mo>(</mo><mi>x</mi><mo separator="true">,</mo><mi>y</mi><mo>)</mo><mo>+</mo><msub><mi>f</mi><mi>x</mi></msub><mo>(</mo><mi>x</mi><mo separator="true">,</mo><mi>y</mi><mo>)</mo><mi mathvariant="normal">∂</mi><mi>x</mi><mo>+</mo><msub><mi>f</mi><mi>y</mi></msub><mo>(</mo><mi>x</mi><mo separator="true">,</mo><mi>y</mi><mo>)</mo><mi mathvariant="normal">∂</mi><mi>y</mi></mrow><annotation encoding="application/x-tex">f(x+\partial x,y+\partial y) \approx f(x,y)+f_x(x,y)\partial x +f_y(x,y)\partial y</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathdefault">x</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord" style="margin-right:0.05556em;">∂</span><span class="mord mathdefault">x</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord" style="margin-right:0.05556em;">∂</span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≈</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathdefault">x</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.10764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">x</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathdefault">x</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="mclose">)</span><span class="mord" style="margin-right:0.05556em;">∂</span><span class="mord mathdefault">x</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1.036108em;vertical-align:-0.286108em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.15139200000000003em;"><span style="top:-2.5500000000000003em;margin-left:-0.10764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right:0.03588em;">y</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathdefault">x</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="mclose">)</span><span class="mord" style="margin-right:0.05556em;">∂</span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span></span></span></span></p>
 <h2 id="第四节-多元复合函数的求导法则">第四节 多元复合函数的求导法则</h2>
-<p><img src="https://www.z4a.net/images/2019/06/20/fxy.jpg" alt=""></p>
+<figure data-type="image" tabindex="1"><img src="https://www.z4a.net/images/2019/06/20/fxy.jpg" alt=""></figure>
 <p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">令</mi><mi>z</mi><mo>=</mo><mi>f</mi><mo>(</mo><mi>u</mi><mo separator="true">,</mo><mi>v</mi><mo>)</mo><mo separator="true">;</mo><mspace linebreak="newline"></mspace><msub><mi>f</mi><mi>x</mi></msub><mo>(</mo><mi>u</mi><mo separator="true">,</mo><mi>v</mi><mo>)</mo><mo>=</mo><mfrac><mrow><mi mathvariant="normal">∂</mi><mi>z</mi></mrow><mrow><mi mathvariant="normal">∂</mi><mi>u</mi></mrow></mfrac><mfrac><mrow><mi mathvariant="normal">∂</mi><mi>u</mi></mrow><mrow><mi mathvariant="normal">∂</mi><mi>x</mi></mrow></mfrac><mspace linebreak="newline"></mspace><msub><mi>f</mi><mi>y</mi></msub><mo>(</mo><mi>u</mi><mo separator="true">,</mo><mi>v</mi><mo>)</mo><mo>=</mo><mfrac><mrow><mi mathvariant="normal">∂</mi><mi>z</mi></mrow><mrow><mi mathvariant="normal">∂</mi><mi>u</mi></mrow></mfrac><mfrac><mrow><mi mathvariant="normal">∂</mi><mi>u</mi></mrow><mrow><mi mathvariant="normal">∂</mi><mi>y</mi></mrow></mfrac><mo>+</mo><mfrac><mrow><mi mathvariant="normal">∂</mi><mi>z</mi></mrow><mrow><mi mathvariant="normal">∂</mi><mi>v</mi></mrow></mfrac><mfrac><mrow><mi>d</mi><mi>v</mi></mrow><mrow><mi>d</mi><mi>y</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">令 z= f(u,v);\\ f_x(u,v)=\frac{\partial z}{\partial u}\frac{\partial u}{\partial x}\\f_y(u,v)=\frac{\partial z}{\partial u}\frac{\partial u}{\partial y}+\frac{\partial z}{\partial v}\frac{d v}{d y}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord cjk_fallback">令</span><span class="mord mathdefault" style="margin-right:0.04398em;">z</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathdefault">u</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">v</span><span class="mclose">)</span><span class="mpunct">;</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span></span><span class="mspace newline"></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.10764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">x</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathdefault">u</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">v</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.2251079999999999em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8801079999999999em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight" style="margin-right:0.05556em;">∂</span><span class="mord mathdefault mtight">u</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight" style="margin-right:0.05556em;">∂</span><span class="mord mathdefault mtight" style="margin-right:0.04398em;">z</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8801079999999999em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight" style="margin-right:0.05556em;">∂</span><span class="mord mathdefault mtight">x</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight" style="margin-right:0.05556em;">∂</span><span class="mord mathdefault mtight">u</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span><span class="mspace newline"></span><span class="base"><span class="strut" style="height:1.036108em;vertical-align:-0.286108em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.15139200000000003em;"><span style="top:-2.5500000000000003em;margin-left:-0.10764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right:0.03588em;">y</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathdefault">u</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">v</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.3612159999999998em;vertical-align:-0.481108em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8801079999999999em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight" style="margin-right:0.05556em;">∂</span><span class="mord mathdefault mtight">u</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight" style="margin-right:0.05556em;">∂</span><span class="mord mathdefault mtight" style="margin-right:0.04398em;">z</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8801079999999999em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight" style="margin-right:0.05556em;">∂</span><span class="mord mathdefault mtight" style="margin-right:0.03588em;">y</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight" style="margin-right:0.05556em;">∂</span><span class="mord mathdefault mtight">u</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.481108em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1.3612159999999998em;vertical-align:-0.481108em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8801079999999999em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight" style="margin-right:0.05556em;">∂</span><span class="mord mathdefault mtight" style="margin-right:0.03588em;">v</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight" style="margin-right:0.05556em;">∂</span><span class="mord mathdefault mtight" style="margin-right:0.04398em;">z</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8801079999999999em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">d</span><span class="mord mathdefault mtight" style="margin-right:0.03588em;">y</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">d</span><span class="mord mathdefault mtight" style="margin-right:0.03588em;">v</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.481108em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></p>
 <p><mark oncopy=" ">求到底  加起来</mark></p>
 <p>切记  如果 是有多个变量 则使用 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">∂</mi><mtext> </mtext><mo>(</mo><mi>x</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">\partial \ (x)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord" style="margin-right:0.05556em;">∂</span><span class="mspace"> </span><span class="mopen">(</span><span class="mord mathdefault">x</span><span class="mclose">)</span></span></span></span> 如果只有一个变量 则使用 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>d</mi><mtext> </mtext><mo>(</mo><mi>y</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">d\ (y)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">d</span><span class="mspace"> </span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="mclose">)</span></span></span></span></p>
@@ -3155,7 +3155,7 @@ reboot
 ]]></summary>
         <content type="html"><![CDATA[<p>​		在我从原始的Hexo 管理博客,转向 <strong><a href="https://gridea.dev">Gridea</a></strong> 时,我遇到了如下的错误:</p>
 <!-- more -->
-<p><img src="https://www.z4a.net/images/2019/06/17/18.png" alt="18.png"></p>
+<figure data-type="image" tabindex="1"><img src="https://www.z4a.net/images/2019/06/17/18.png" alt="18.png"></figure>
 <p>​		这是在我点击尝试远程连接时,调试台出现的报错信息.但是我不知道问题具体出在哪里,我尝试过与 <strong>Gridea</strong> 的官方人员进行交流,在进行了TeamViewer的远程协助之后,还是无法解决,但是在我询问官方人员,能否直接进行git初始化时,他回到道:“那样可能可以链接,但同步可能不行”,我意识到了这可能是一个正确的方向.</p>
 <p>​		于是我成功了.</p>
 <p>​		我的平台是: Manjaro KDE,Git</p>
@@ -3240,9 +3240,9 @@ reboot
 <h6 id="如下">如下</h6>
 <p>​<br>
 <img src="https://www.z4a.net/images/2019/06/05/a1.png" alt="a1.png"></p>
-<p><img src="https://www.z4a.net/images/2019/06/05/a2.png" alt="a2.png"></p>
-<p><img src="https://www.z4a.net/images/2019/06/05/a3.png" alt="a3.png"></p>
-<p><img src="https://www.z4a.net/images/2019/06/05/a4.png" alt="a4.png"></p>
+<figure data-type="image" tabindex="1"><img src="https://www.z4a.net/images/2019/06/05/a2.png" alt="a2.png"></figure>
+<figure data-type="image" tabindex="2"><img src="https://www.z4a.net/images/2019/06/05/a3.png" alt="a3.png"></figure>
+<figure data-type="image" tabindex="3"><img src="https://www.z4a.net/images/2019/06/05/a4.png" alt="a4.png"></figure>
 <p>上图是调整窗口按钮位置</p>
 <p><mark>最重要的：</mark></p>
 <p><a href="https://store.kde.org/p/1294013/">Sweet Kvantum theme</a></p>
@@ -3288,7 +3288,7 @@ sweet 主题部分这里就结束了</li>
 ​<br>
 <img src="https://www.z4a.net/images/2019/06/05/7.png" alt="7.png"></p>
 <p>因为顶栏的设置界面没法截图 你就爱往哪摆往哪摆吧。下面是建议的设置</p>
-<p><img src="https://www.z4a.net/images/2019/06/05/8.png" alt="8.png"></p>
+<figure data-type="image" tabindex="4"><img src="https://www.z4a.net/images/2019/06/05/8.png" alt="8.png"></figure>
 <p>​</p>
 <ol>
 <li>添加全局菜单 在KDE 自带的部件中有 放在 application title 旁边就好。默认设置<br>
@@ -3306,8 +3306,8 @@ sweet 主题部分这里就结束了</li>
 <p>​<br>
 在桌面右键 最后一个选项（无法截图 故无截图） 选择一个自己喜欢的图片作为背景。（后续会添加动态背景的教程）</p>
 <p>如果你按照上面的所有步骤，你将收获一个下面这样的桌面 <s>富萝莉</s></p>
-<p><img src="https://www.z4a.net/images/2019/06/05/all.png" alt="all.png"></p>
-<p><img src="https://www.z4a.net/images/2019/06/05/b6fd46f98fc0a4dc3.jpg" alt="b6fd46f98fc0a4dc3.jpg"></p>
+<figure data-type="image" tabindex="5"><img src="https://www.z4a.net/images/2019/06/05/all.png" alt="all.png"></figure>
+<figure data-type="image" tabindex="6"><img src="https://www.z4a.net/images/2019/06/05/b6fd46f98fc0a4dc3.jpg" alt="b6fd46f98fc0a4dc3.jpg"></figure>
 <p>​<br>
 •<br>
 ​</p>

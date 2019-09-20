@@ -28,7 +28,7 @@
 <meta name="robots" content="all,follow">
 <meta name="googlebot" content="index,follow,snippet,archive">
 <title>Campus Network | BORBER</title>
-<link rel="shortcut icon" href="https://borber.github.io/favicon.ico?v=1568872114158">
+<link rel="shortcut icon" href="https://borber.github.io/favicon.ico?v=1568972307739">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 <link rel="stylesheet" href="https://borber.github.io/styles/main.css?v=a001" type='text/css' media='all'>
 <link href="https://borber.github.io/media/scripts/autoc.css" rel="stylesheet">
@@ -370,7 +370,7 @@ hljs.initHighlightingOnLoad()
 <p>在大学的朋友都知道,校园网是一个极其操蛋,而且是必须要用的东西,我的大学的价格是28元一月 一个账号,只能一台设备使用,这意味着,如果你手机连接之后,你的电脑就不能使用了,这又是何等的操蛋.</p>
 <p>不过我也是比较幸运的是,在开学的前一个月,在上英语视听说的机房里,看到了校园网的登陆界面是有缓存着账号和密码的,而且不同于我们的学生号,它只有短短的六位,以及我在旁边几台电脑中,皆发现了此账号,我敏锐的意识到,这是一个VIP账号,或者是老师账号.</p>
 <p>在我进入该账号的校园网管理界面时,我就知道这是一个为期四年的长久计划.</p>
-<p><img src="https://www.z4a.net/images/2019/08/29/2019-08-29_13-55-24.png" alt="2019-08-29_13-55-24.png"></p>
+<figure data-type="image" tabindex="1"><img src="https://www.z4a.net/images/2019/08/29/2019-08-29_13-55-24.png" alt="2019-08-29_13-55-24.png"></figure>
 <p>我通过html 元素修改 将 password 改为 text 直接获得了明文密码,并且在之后的实验中,确定 这个账号和学生账号不同,它可以同时登陆,4-5台设备,这也意味着,蹭网的事,不会使账号的主人无网可上.并且,在宿舍时,只要共用一台路由器,便可以通过路由器只占用一个设备位置.</p>
 <p>事情本来到这里就已经完了,但是随后的时间里,特别是到了醉经,我们宿舍的账号会被挤下登录,而我又经常将电脑放在宿舍跑python 之类的脚本.这无疑会对我造成很大的损失.</p>
 <p>于是我决定写一个 python 脚本来自动检测网络,然后自动重连校园网.以下时源码,</p>
@@ -418,7 +418,7 @@ while True:                                         # 死循环
 </code></pre>
 <p>不可交互 我一直不理解,谷歌,百度,了很久,没有解决办法,最后自己通过 Chrome 的 控制台 发现每次点击password ,&quot;pwd&quot; 的属性都会改变一点,但是我尝试 pwd.click() 时发现一样报错,我终于怀疑到 它上面的一个元素了 &quot;pwd_tip&quot; 只有点击一次它 , &quot;pwd&quot; 才能工作. 这个应该就是网站的保护机制吧,但总之 我成功了.</p>
 <p>并且使用 pyinstaller 将其打包成了 exe 可执行文件</p>
-<p><img src="https://www.z4a.net/images/2019/08/29/2019-08-29_14-15-11deb589bcf315b88e.png" alt="2019-08-29_14-15-11deb589bcf315b88e.png"></p>
+<figure data-type="image" tabindex="2"><img src="https://www.z4a.net/images/2019/08/29/2019-08-29_14-15-11deb589bcf315b88e.png" alt="2019-08-29_14-15-11deb589bcf315b88e.png"></figure>
 <p>如图 它一个白天 为我自动登陆了4次</p>
 `
     var content = article.split("<!--more-->")[1]
