@@ -1,17 +1,57 @@
-<html>
-  <head>
-    <meta charset="utf-8" />
+<html lang="zh">
+<head>
+  <!--
+                           _ooOoo_
+                          o8888888o
+                          88" . "88
+                          (| -_- |)
+                          O\  =  /O
+                       ____/`---'\____
+                     .'  \\|     |//  `.
+                    /  \\|||  :  |||//  \
+                   /  _||||| -:- |||||-  \
+                   |   | \\\  -  /// |   |
+                   | \_|  ''\---/''  |   |
+                   \  .-\__  `-`  ___/-. /
+                 ___`. .'  /--.--\  `. . __
+              ."" '<  `.___\_<|>_/___.'  >'"".
+             | | :  `- \`.;`\ _ /`;.`/ - ` : | |
+             \  \ `-.   \_ __\ /__ _/   .-` /  /
+        ======`-.____`-.___\_____/___.-`____.-'======
+                           `=---='
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                 佛祖保佑       永无BUG  By:- borber.cn
+-->
+<meta charset="utf-8" />
+<meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>BORBER</title>
-<meta name="description" content="世俗为枷锁 世人皆自缚" />
-<link rel="shortcut icon" href="https://borber.github.io/favicon.ico?v=1572182072163">
+<meta name="robots" content="all,follow">
+<meta name="googlebot" content="index,follow,snippet,archive">
+<title>Free is the most expensive | BORBER</title>
+<link rel="shortcut icon" href="https://borber.github.io/favicon.ico?v=1572182358440">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+<link rel="stylesheet" href="https://borber.github.io/styles/main.css?v=a001" type='text/css' media='all'>
+<link href="https://borber.github.io/media/scripts/autoc.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
-<link href="https://cdn.remixicon.com/releases/v1.3.1/remixicon.css" rel="stylesheet">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+<link rel="stylesheet" href="https://cdn.bootcss.com/animate.css/3.5.2/animate.min.css"  />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.css">
+<style type="text/css">
+    body{
+        cursor: url("https://borber.github.io/media/scripts/lib/cur/normal-select-teal.cur"),default;
+    }
+    a:hover{
+        cursor: url("https://borber.github.io/media/scripts/lib/cur/link-select.cur"),default;
+    }
+    h1,h2,h3,h4,h5,h6,p:hover{
+        cursor: url("https://borber.github.io/media/scripts/lib/cur/txt-selection-teal.cur"),default;
+    }
+</style>
 
-<link rel="stylesheet" href="https://borber.github.io/styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="BORBER - Atom Feed" href="https://borber.github.io/atom.xml">
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/wow/1.1.2/wow.min.js"></script>
+<script type='text/javascript' src='https://borber.github.io/media/scripts/lib/way.js'></script>
 
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-142130514-1"></script>
@@ -24,131 +64,156 @@
 </script>
 
 
-  </head>
-  <body>
-    <div id="app" class="main px-4 flex flex-col lg:flex-row">
-      <div id="sidebar" class="sidebar-wrapper lg:static lg:w-1/4">
-  <div class="lg:sticky top-0">
-    <div class="sidebar-content">
-      <div class="flex lg:block p-4 lg:px-0 items-center fixed lg:static lg:block top-0 right-0 left-0 bg-white z-50">
-        <i class="remixicon-menu-2-line lg:mt-4 text-2xl cursor-pointer animated fadeIn" onclick="openMenu()"></i>
-        <a href="https://borber.github.io">
-          <img class="animated fadeInLeft avatar rounded-lg mx-4 lg:mt-32 lg:mx-0 mt-0 lg:w-24 lg:h-24 w-12 w-12" src="https://borber.github.io/images/avatar.png?v=1572182072163" alt="">
-        </a>
-        <h1 class="animated fadeInLeft lg:text-4xl font-extrabold lg:mt-8 mt-0 text-xl" style="animation-delay: 0.2s">BORBER</h1>
-      </div>
-      
-        <div class="animated fadeInLeft" style="animation-delay: 0.4s">
-          <p class="my-4 text-gray-600 font-light hidden lg:block">
-            文章目录
-          </p>
-          <div class="toc-container hidden lg:block">
-            
+</head>
+<body class="home blog ct-body standard">
+<div class="loader fadeout">
+    <div class="loader-content">
+        <div class="loading">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</div>
+<div id="overflow-container" class="overflow-container">
+  <header id="site-header" class="site-header" role="banner">
+
+
+    <div class="container">
+        <div id="title-info" class="title-info">
+            <div id='site-title' class='site-title'>
+                <a href="https://borber.github.io">  BORBER </a>
+            </div>
+        </div>
+        <button id="toggle-navigation" class="toggle-navigation">
+            <i class="fa fa-bars"></i>
+        </button>
+        <div id="menu-primary-tracks" class="menu-primary-tracks"></div>
+        <div id="menu-primary" class="menu-container menu-primary" role="navigation">
+            <p class="site-description">世俗为枷锁 世人皆自缚</p>
+            <div class="menu">
+                <ul id="menu-primary-items" class="menu-primary-items">
+                     
+                        
+                            <li id="menu-item" class='menu-item menu-item-type-post_type menu-item-object-page current-menu-item current_page_item'>
+                                <a href="/">首页</a>
+                            </li>
+                        
+                    
+                        
+                            <li id="menu-item" class='menu-item menu-item-type-post_type menu-item-object-page current-menu-item current_page_item'>
+                                <a href="/archives">归档</a>
+                            </li>
+                        
+                    
+                        
+                            <li id="menu-item" class='menu-item menu-item-type-post_type menu-item-object-page current-menu-item current_page_item'>
+                                <a href="/tags">标签</a>
+                            </li>
+                        
+                    
+                        
+                            <li id="menu-item" class='menu-item menu-item-type-post_type menu-item-object-page current-menu-item current_page_item'>
+                                <a href="https://borber.github.io/toolkits">工具</a>
+                            </li>
+                        
+                    
+                        
+                            <li id="menu-item" class='menu-item menu-item-type-post_type menu-item-object-page current-menu-item current_page_item'>
+                                <a href="https://borber.github.io/friend">友链</a>
+                            </li>
+                        
+                    
+                        
+                            <li id="menu-item" class='menu-item menu-item-type-post_type menu-item-object-page current-menu-item current_page_item'>
+                                <a href="/post/about">关于</a>
+                            </li>
+                        
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+</header>
+
+
+  <div id="main" class="main" role="main">
+    <div id="loop-container" class="loop-container">
+      <div class="post type-post status-publish format-standard has-post-thumbnail hentry category-design tag-design tag-standard-2 tag-tagalicious tag-travel entry full-without-featured odd excerpt-1">
+        
+          <div class='featured-image lazy lazy-bg-image' data-background="https://www.z4a.net/images/2019/07/23/Jade-Wallpaper.jpg">
+          </div>
+        
+
+        <div class="entry-meta">
+          <span class="date">· 2019-07-23 ·</span>
+
+          
+            <span class="category">
+                    <span> / </span>
+                    <a href="https://borber.github.io/tag/gridea">Gridea</a>
+                </span>
+          
+        </div>
+        <div class='entry-header'>
+          <h1 class='entry-title'>Free is the most expensive</h1>
+        </div>
+        <div class="entry-container">
+          <div class="entry-content">
+            <article id="article">
+
+            </article>
           </div>
         </div>
-      
+
+            <nav class="pager">
+
+                <li class="previous"><a class="prev">上一篇</a>
+                    
+                        <a style="display:none" class="prevspan" title="A failed spider" href="https://borber.github.io/post/a-failed-spider">A failed spider</a>
+                    
+                </li>
+
+
+                <li class="nextpost"><a class="next">下一篇</a>
+                    
+                        <a style="display:none" class="nextspan" title="Second python spider pro" href="https://borber.github.io/post/second-python-crawler-pro"> Second python spider pro</a>
+                    
+                </li>
+
+            </nav>
+
+
+
+
+            <div class="fadeInUp author-info">
+    <div class="author-avatar pull-left">
+        <img class="rotated" src="https://borber.github.io/images/avatar.png" >
     </div>
-  </div>
-</div>
-
-<div class="menu-container">
-  <i class="remixicon-arrow-left-line text-2xl cursor-pointer animated fadeIn close-menu-btn" onclick="closeMenu()"></i>
-  <div>
     
-      
-        <a href="/" class="menu" style="animation-delay: 0s">
-          首页
-        </a>
-      
-    
-      
-        <a href="/archives" class="menu" style="animation-delay: 0.2s">
-          归档
-        </a>
-      
-    
-      
-        <a href="/tags" class="menu" style="animation-delay: 0.4s">
-          标签
-        </a>
-      
-    
-      
-        <a href="https://borber.github.io/toolkits" class="menu" style="animation-delay: 0.6000000000000001s">
-          工具
-        </a>
-      
-    
-      
-        <a href="https://borber.github.io/friend" class="menu" style="animation-delay: 0.8s">
-          友链
-        </a>
-      
-    
-      
-        <a href="/post/about" class="menu" style="animation-delay: 1s">
-          关于
-        </a>
-      
-    
-  </div>
-  <div class="site-footer">
-    <div class="py-4 text-gray-700"><p>Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> with <a href="https://github.com/Borber/gridea-theme-nederburgNewer">nederburgNewer</a> <small>&copy <a href="https://github.com/Borber" target="_blank">BORBER</a> </small></p>
-</div>
-    <a class="rss" href="https://borber.github.io/atom.xml" target="_blank">RSS</a>
-  </div>
-</div>
-<div class="mask" onclick="closeMenu()">
-</div>
-      <div class="content-wrapper py-32 lg:p-8 lg:w-3/4 post-detail animated fadeIn">
-        <h1 class="text-3xl font-bold lg:mt-16">Free is the most expensive</h1>
-        <div class="text-sm text-gray-700 lg:my-8">
-          2019-07-23 / 1 min read
-        </div>
-        
-          <img class="post-feature-image rounded-lg mx-auto my-4" src="https://www.z4a.net/images/2019/07/23/Jade-Wallpaper.jpg" alt="">
-        
-        <div class="post-content yue">
-          <p>免费才是最贵的</p>
-<!-- more -->
-<p>borber.xyz 域名 可以确定之前的IP无法查询是万网的解析被封禁了，因为昨晚实名认证之后就立马能用了 但我也真的不想用了，直接丢了算了，因为它 折腾了不知多久，浪费了大量的时间，以后恐怕还会搞幺蛾子，与其这样还不如不用好了。</p>
-<p>以后 borber.github.io 这个域名我就白嫖到老了。</p>
-<p>但求技术 ， 莫问前程。专注技术，更新博客才是正道，也真的再一次学到了，免费才是最贵的。</p>
-<p>🙂</p>
-
-        </div>
-
-        
-          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="https://borber.github.io/tag/gridea">
-            <span class="flex-auto">Gridea</span>
-          </a>
-        
-
-
-        <div class="flex justify-between py-8">
-          
-            <div class="prev-post">
-              <a href="https://borber.github.io/post/a-failed-spider">
-                <h3 class="post-title">
-                  <i class="remixicon-arrow-left-line"></i>
-                  A failed spider
-                </h3>
-              </a>
+    <div class="author-description">
+        <div class="author-title">
+            <div class="author-link" rel="author">
+                BORBER
             </div>
-          
-
-          
-            <div class="next-post">
-              <a href="https://borber.github.io/post/second-python-crawler-pro">
-                <h3 class="post-title">
-                  Second python spider pro
-                  <i class="remixicon-arrow-right-line"></i>
-                </h3>
-              </a>
-            </div>
-          
         </div>
+        
+        
+            <p class="author-bio">
+                海南大学 软件工程专业(NIIT)大二在读 Linux,c,c++,java,python,前端，皆略有涉猎。开学开始学着造轮子
+                <a href="https://borber.cn/post/about">More..</a>
+            </p>
+    </div>
+    
+</div>
 
+
+      </div>
+      <section id="comments" class="comments">
         
           
             <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
@@ -164,7 +229,7 @@
     repo: 'BORBER.github.io',
     owner: 'Borber',
     admin: ['Borber'],
-    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    id: location.pathname,      // Ensure uniqueness and length less than 50
     distractionFreeMode: false  // Facebook-like distraction free mode
   })
 
@@ -176,108 +241,138 @@
 
           
         
-
-      </div>
+      </section>
     </div>
+  </div>
+  <footer id="site-footer" class="site-footer" role="contentinfo">
+    <h1>
+        <a href="https://borber.github.io"> BORBER </a>
+    </h1>
+    <p class="site-description" style="font-size:18px">世俗为枷锁 世人皆自缚</p>
+    <div id="menu-footer" class="menu-container menu-footer" role="navigation">
+        <div class="menu">
+            <ul id="menu-footer-items" class="menu-footer-items">
+            </ul>
+        </div>
+    </div>
+    <ul class="social-media-icons">
+        
+            
+                <li>
+                    <a href="https://github.com/Borber" data-animate-hover="pulse" class="github" target="_blank">
+                        <i class="fab fa-github" title="github"></i>
+                        <span class="screen-reader-text">github</span>
+                    </a>
+                </li>
+            
+        
+            
+        
+            
+                <li>
+                    <a href="https://t.me/BORBERDRUM" data-animate-hover="pulse" class="telegram" target="_blank">
+                        <i class="fab fa-telegram" title="telegram"></i>
+                        <span class="screen-reader-text">telegram</span>
+                    </a>
+                </li>
+            
+        
+            
+        
+            
+                <li>
+                    <a href="https://zhuanlan.zhihu.com/c_1143645708895895552" data-animate-hover="pulse" class="zhihu" target="_blank">
+                        <i class="fab fa-zhihu" title="zhihu"></i>
+                        <span class="screen-reader-text">zhihu</span>
+                    </a>
+                </li>
+            
+        
+            
+        
+            
+        
+            
+        
+            
+                <li>
+                    <a href="/atom.xml" data-animate-hover="pulse" class="rss" target="_blank">
+                        <i class="fas fa-rss" title="rss"></i>
+                        <span class="screen-reader-text">rss</span>
+                    </a>
+                </li>
+            
+        
+    </ul>
+    <div class="design-credit">
+        
+    <!--网站稳定运行代码-->
+    网站已稳定运行：<span id="website_running_time" style="color: #00BFFF;"><font style="color:#FFF">398</font> 天 <font style="color:#FFF">17</font> 时 <font style="color:#FFF">28</font> 分 <font style="color:#FFF">54</font> 秒</span>
+    <script language="javascript">
+        function show_date_time(){
+            window.setTimeout("show_date_time()", 1000);
+            BirthDay=new Date("6/17/2019 00:23:23");
+            today=new Date();
+            timeold=(today.getTime()-BirthDay.getTime());
+            sectimeold=timeold/1000
+            secondsold=Math.floor(sectimeold);
+            msPerDay=24*60*60*1000
+            e_daysold=timeold/msPerDay
+            daysold=Math.floor(e_daysold);
+            e_hrsold=(e_daysold-daysold)*24;
+            hrsold=Math.floor(e_hrsold);
+            e_minsold=(e_hrsold-hrsold)*60;
+            minsold=Math.floor((e_hrsold-hrsold)*60);
+            seconds=Math.floor((e_minsold-minsold)*60);
+            website_running_time.innerHTML='<font style=color:#FFF>'+daysold+'</font> 天 <font style=color:#FFF>'+hrsold+'</font> 时 <font style=color:#FFF>'+minsold+'</font> 分 <font style=color:#FFF>'+seconds+'</font> 秒';}
+        show_date_time();
+    </script>
 
-    <script src="https://borber.github.io/media/prism.js"></script>  
+        <p><p>Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> with <a href="https://github.com/Borber/gridea-theme-nederburgNewer">nederburgNewer</a> <small>&copy <a href="https://github.com/Borber" target="_blank">BORBER</a> </small></p>
+</p>
+    </div>
+</footer>
+
 <script>
-
-Prism.highlightAll()
-
-let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
-
-// This should probably be throttled.
-// Especially because it triggers during smooth scrolling.
-// https://lodash.com/docs/4.17.10#throttle
-// You could do like...
-// window.addEventListener("scroll", () => {
-//    _.throttle(doThatStuff, 100);
-// });
-// Only not doing it here to keep this Pen dependency-free.
-
-window.addEventListener("scroll", event => {
-  let fromTop = window.scrollY;
-
-  mainNavLinks.forEach((link, index) => {
-    let section = document.getElementById(decodeURI(link.hash).substring(1));
-    let nextSection = null
-    if (mainNavLinks[index + 1]) {
-      nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
-    }
-    if (section.offsetTop <= fromTop) {
-      if (nextSection) {
-        if (nextSection.offsetTop > fromTop) {
-          link.classList.add("current");
-        } else {
-          link.classList.remove("current");    
-        }
-      } else {
-        link.classList.add("current");
-      }
-    } else {
-      link.classList.remove("current");
-    }
-  });
-});
-
-
-document.addEventListener("DOMContentLoaded", function() {
-  var lazyImages = [].slice.call(document.querySelectorAll(".post-feature-image.lazy"));
-
-  if ("IntersectionObserver" in window) {
-    let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
-      entries.forEach(function(entry) {
-        if (entry.isIntersecting) {
-          let lazyImage = entry.target
-          lazyImage.style.backgroundImage = `url(${lazyImage.dataset.bg})`
-          lazyImage.classList.remove("lazy")
-          lazyImageObserver.unobserve(lazyImage)
-        }
-      });
-    });
-
-    lazyImages.forEach(function(lazyImage) {
-      lazyImageObserver.observe(lazyImage)
-    })
-  } else {
-    // Possibly fall back to a more compatible method here
-  }
-});
-
-const menuContainer = document.querySelector('.menu-container')
-const menus = document.querySelectorAll('.menu-container .menu')
-const mask = document.querySelector('.mask')
-const contentWrapper = document.querySelector('.content-wrapper')
-const latestArticle = document.querySelector('.latest-article')
-const readMore = document.querySelector('.read-more')
-const indexPage = document.querySelector('.index-page')
-
-const isHome = location.pathname === '/'
-if (latestArticle) {
-  latestArticle.style.display = isHome ? 'block' : 'none'
-  readMore.style.display = isHome ? 'block' : 'none'
-  indexPage.style.display = isHome ? 'none' : 'block'
-}
-
-const openMenu = () => {
-  menuContainer.classList.add('open')
-  menus.forEach(menu => {
-    menu.classList.add('animated', 'fadeInLeft')
-  })
-  mask.classList.add('open')
-  contentWrapper.classList.add('is-second')
-}
-
-const closeMenu = () => {
-  menuContainer.classList.remove('open')
-  menus.forEach(menu => {
-    menu.classList.remove('animated', 'fadeInLeft')
-  })
-  mask.classList.remove('open')
-  contentWrapper.classList.remove('is-second')
-}
+hljs.initHighlightingOnLoad()
 </script>
-  
-  </body>
+<script src="https://borber.github.io/media/scripts/lib/autoc.min.js"></script>
+<script src="https://borber.github.io/media/scripts/lib/jquery.min.js"></script>
+<script src="https://borber.github.io/media/scripts/lib/production.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/color-thief-don@2.0.2/src/color-thief.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@1.1.0/dist/Meting.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.js"></script>
+
+  <script>
+    var article = `<p>免费才是最贵的</p>
+<!-- more -->
+<p>borber.xyz 域名 可以确定之前的IP无法查询是万网的解析被封禁了，因为昨晚实名认证之后就立马能用了 但我也真的不想用了，直接丢了算了，因为它 折腾了不知多久，浪费了大量的时间，以后恐怕还会搞幺蛾子，与其这样还不如不用好了。</p>
+<p>以后 borber.github.io 这个域名我就白嫖到老了。</p>
+<p>但求技术 ， 莫问前程。专注技术，更新博客才是正道，也真的再一次学到了，免费才是最贵的。</p>
+<p>🙂</p>
+`
+    var content = article.split("<!--more-->")[1]
+    if (content != null)
+        document.getElementById('article').innerHTML = content;
+    else
+        document.getElementById('article').innerHTML = article
+
+    let navigation = new AutocJs({
+        title:'Free is the most expensive',
+        isGenerateOutlineChapterCode: false
+    })
+    </script>
+</div>
+
+<script id="rendered-js">window.onload = function () {
+        setTimeout(function () {
+            var loader = document.getElementsByClassName("loader")[0];
+            loader.className = "loader fadeout"; //使用渐隐的方法淡出loading page
+            setTimeout(function () {loader.style.display = "none";}, 1000);
+        }, 300);
+    };
+</script>
+
+</body>
 </html>
+
